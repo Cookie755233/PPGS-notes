@@ -1,17 +1,15 @@
 ---
-title: My Site
-toc: false
+title: EVA PPGS Dictionary
+type: docs
+sidebar:
+  hide: true  # Completely removes the left sidebar from this page
+toc: false      # Completely removes the right sidebar from this page
 ---
 
-This is the landing page.
-
-## Explore
+Welcome to the PPGS Dictionary. Click a module below to start exploring terms.
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
+  {{< card link="docs/gn" title="General Navigation (GN)" icon="book-open" >}}
+  {{< card link="docs/met" title="Meteorology (MET)" icon="cloud" >}}
+  {{< card link="docs/pof" title="Principles of Flight (POF)" icon="paper-airplane" >}}
 {{< /cards >}}
-
-## Documentation
-
-For more information, visit [Hextra](https://imfing.github.io/hextra).
