@@ -1,0 +1,37 @@
+/* --- Standard Cards (Without @) --- */
+/* Make light mode background brighter and add a defined border line */
+details:not(.rose-details) {
+  background-color: rgb(
+    248,
+    250,
+    252
+  ) !important; /* brighter slate background */
+  border: 1px solid rgb(226, 232, 240) !important; /* crisp light grey border line */
+  border-radius: 0.5rem;
+}
+
+/* Maintain crisp lines in dark mode */
+.dark details:not(.rose-details) {
+  background-color: rgb(38, 38, 38) !important; /* original dark neutral */
+  border: 1px solid rgb(64, 64, 64) !important; /* distinct dark border line */
+}
+
+/* --- Rose Cards (With @) --- */
+/* Brighten Light Mode Rose and define its outer box line */
+details.rose-details {
+  background-color: rgb(255, 241, 242) !important; /* light rose */
+  border: 1px solid rgb(251, 113, 133) !important; /* sharp rose border line */
+  border-radius: 0.5rem;
+}
+details.rose-details summary strong {
+  color: rgb(159, 18, 57) !important; /* dark rose text */
+}
+
+/* Dark Mode Rose */
+.dark details.rose-details {
+  background-color: rgba(159, 18, 57, 0.2) !important;
+  border: 1px solid rgb(225, 29, 72) !important; /* sharp dark-mode rose border */
+}
+.dark details.rose-details summary strong {
+  color: rgb(254, 205, 211) !important;
+}

@@ -13,11 +13,6 @@
 * **Pitch, Roll, and Yaw control**: Controlled by the control stick, control wheel, and rudder pedals.
 {{< /details >}}
 
-{{< details title="PFD vs MFD" closed="true" >}}
-* **PFD**: Primary Flight Display
-* **MFD**: Multi-Function Display
-{{< /details >}}
-
 ---
 
 ### Atmospheric Physics & Classical Mechanics

@@ -3,7 +3,6 @@ title: Low Subsonic Aerodynamics
 ---
 
 
-
 ### Basic Airflow & Definitions
 
 {{< details closed="true" title="The Relative Wind" >}}
@@ -157,4 +156,24 @@ Skin friction force results in warming of the outer skin of the body, and it wou
 
 {{< details closed="true" title="Interference Drag" >}}
 Interference drag is any ADDITIONAL parasite drag resulting from the aerodynamic interaction of various components as the air flows around the body.
+{{< /details >}}
+
+{{< details title="Induced drag." closed="true" >}}
+Induced drag results from wing tip vortexes caused by the difference between the top and bottom of a wing. Higher pressure wind beneath the wing rolls over to the top of the wing causing a downward force called downwash. 
+
+This force deflects the relative wind downward hence the lift, which is perpendicular to the relative wind, al so inclined rearward aft, and the component of the resultant lift parallel to the wing is called induced drag.
+{{< /details >}}
+
+{{< details title="Induced drag is ____ to the aspect ratio of the wing." closed="true" >}}
+directly proportional.
+{{< /details >}}
+
+{{< details title="Induced drag is ____ to AoA." closed="true" >}}
+directly proportional.
+{{< /details >}}
+
+{{< details title="Ground effect" closed="true" >}}
+Ground surface physically disrupts the formation of wingtip vortices when an aircraft flies at an altitude roughly equal to or less than its own wingspan. 
+
+The decreasing in downwash reduces the induced drag resulting an air cushion effect is called ground effect.
 {{< /details >}}

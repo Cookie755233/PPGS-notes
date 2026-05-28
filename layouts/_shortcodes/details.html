@@ -1,0 +1,13 @@
+{{ $title := .Get "title" }} {{ $isRose := hasPrefix $title "@" }}
+
+<details
+  class="hx:last-of-type:mb-0 hx:p-2 hx:mt-4 hx:group {{ if $isRose }}rose-details{{ end }}"
+>
+  <summary
+    class="hx:flex hx:items-center hx:cursor-pointer hx:select-none hx:list-none hx:p-1 hx:rounded-sm hx:transition-colors hx:hover:bg-gray-200/50 hx:dark:hover:bg-neutral-700/50"
+  >
+    <strong class="hx:text-lg">{{ $title }}</strong>
+  </summary>
+
+  <div class="hx:p-2 hx:overflow-hidden">{{ .Inner | markdownify }}</div>
+</details>

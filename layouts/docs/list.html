@@ -1,0 +1,139 @@
+{{ define "main" }}
+<article class="hx:mx-auto hx:flex hextra-max-page-width">
+  {{ partial "sidebar.html" (dict "context" . "disableSidebar" false) }} {{
+  partial "toc.html" . }}
+
+  <main
+    id="content"
+    class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12"
+  >
+    {{/* CASE 1: The absolute root docs section folder itself or homepage */}}
+    {{ if or (not .Parent) (and (eq .Section "docs") (eq .Page.File.BaseFileName
+    "_index") (not .Parent.Parent)) }}
+    <div class="content">{{ .Content }}</div>
+
+    {{/* CASE 2: Your operational dictionary modules (POF, GN, MET) */}} {{ else
+    if or (and .Parent (eq .Parent.Section "docs")) (eq .Section "docs") }} {{
+    partial "breadcrumb.html" (dict "page" . "enable" true) }}
+    <div class="hx:py-8">
+      <h1
+        class="hx:text-3xl hx:font-bold hx:tracking-tight hx:text-slate-900 dark:hx:text-slate-100"
+      >
+        {{ .Title }}
+      </h1>
+      {{ with .Content }}
+      <div
+        class="hx:mt-3 hx:mb-8 hx:text-gray-500 dark:hx:text-gray-400 hx:leading-relaxed hx:text-sm content"
+      >
+        {{ . }}
+      </div>
+      {{ end }}
+
+      <div class="hx:mt-8">
+        {{/* Sections loop (For nested sub-topics) */}} {{- range .Pages }} {{
+        if .IsSection }}
+        <div class="hx:mb-6">
+          <p
+            class="hx:text-lg hx:font-bold hx:uppercase hx:tracking-wider hx:text-gray-500 dark:hx:text-neutral-400 hx:mb-4 hx:px-1"
+          >
+            {{ $title := .Title }} {{ if not $title }}{{ $title = .File.Dir |
+            path.Base | replaceRE "-" " " | title }}{{ end }}
+            <a
+              href="{{ .RelPermalink }}"
+              class="hx:hover:text-gray-600 dark:hx:hover:text-neutral-300 hx:transition-colors"
+              >{{ $title }}</a
+            >
+          </p>
+          <div
+            class="hextra-cards hx:gap-4 hx:grid not-prose"
+            style="--hextra-cards-grid-cols: 3"
+          >
+            {{ range .RegularPages }} {{ $title := .Title }} {{ if not $title
+            }}{{ $title = .File.BaseFileName | replaceRE "-" " " | title }}{{
+            end }}
+            <a
+              class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:shadow-sm hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:dark:border-neutral-800 hover:hx:bg-slate-50 hx:hover:shadow-md dark:hover:hx:bg-neutral-900"
+              href="{{ .RelPermalink }}"
+            >
+              <div
+                class="hx:flex hx:flex-col hx:h-full"
+                style="padding: 1.5rem"
+              >
+                <span
+                  class="hx:font-semibold"
+                  style="font-size: 1.125rem; line-height: 1.4"
+                  >{{ $title }}</span
+                >
+                {{ with .Params.subtitle }}
+                <div
+                  class="hx:text-gray-500 hx:dark:text-gray-400"
+                  style="
+                    margin-top: 0.5rem;
+                    font-size: 0.875rem;
+                    line-height: 1.5rem;
+                  "
+                >
+                  {{ . }}
+                </div>
+                {{ end }}
+              </div>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        <hr style="margin: 1.5rem 0; border-color: #ccd0da" />
+        {{ end }} {{- end }} {{/* Regular pages loop (Renders items like
+        low-subsonic-aerodynamics.md instantly as cards) */}}
+        <div
+          class="hextra-cards hx:gap-4 hx:grid not-prose"
+          style="--hextra-cards-grid-cols: 3"
+        >
+          {{- range .Pages }} {{ if and (not .IsSection) (ne .File.BaseFileName
+          "_index") }} {{ $title := .Title }} {{ if not $title }}{{ $title =
+          .File.BaseFileName | replaceRE "-" " " | title }}{{ end }}
+          <a
+            class="hextra-card hx:group hx:flex hx:flex-col hx:justify-start hx:overflow-hidden hx:rounded-lg hx:border hx:border-gray-200 hx:text-current hx:no-underline hx:dark:shadow-none hx:shadow-sm hx:transition-all hx:duration-200 hx:hover:border-gray-300 hx:bg-transparent hx:dark:border-neutral-800 hover:hx:bg-slate-50 hx:hover:shadow-md dark:hover:hx:bg-neutral-900"
+            href="{{ .RelPermalink }}"
+          >
+            <div class="hx:flex hx:flex-col hx:h-full" style="padding: 1.5rem">
+              <span
+                class="hx:font-semibold"
+                style="font-size: 1.125rem; line-height: 1.4"
+                >{{ $title }}</span
+              >
+              {{ with .Params.subtitle }}
+              <div
+                class="hx:text-gray-500 hx:dark:text-gray-400"
+                style="
+                  margin-top: 0.5rem;
+                  font-size: 0.875rem;
+                  line-height: 1.5rem;
+                "
+              >
+                {{ . }}
+              </div>
+              {{ end }}
+            </div>
+          </a>
+          {{ end }} {{- end }}
+        </div>
+      </div>
+      {{ partial "components/last-updated.html" . }}
+    </div>
+
+    {{/* CASE 3: Fallback safety */}} {{ else }} {{ partial "breadcrumb.html"
+    (dict "page" . "enable" true) }}
+    <div class="hx:py-8">
+      <h1
+        class="hx:text-3xl hx:font-bold hx:tracking-tight hx:text-slate-900 dark:hx:text-slate-100"
+      >
+        {{ .Title }}
+      </h1>
+      {{ with .Content }}
+      <div class="content">{{ . }}</div>
+      {{ end }} {{ partial "components/last-updated.html" . }}
+    </div>
+    {{ end }}
+  </main>
+</article>
+{{ end }}
