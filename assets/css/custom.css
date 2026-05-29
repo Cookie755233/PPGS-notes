@@ -35,3 +35,29 @@ details.rose-details summary strong {
 .dark details.rose-details summary strong {
   color: rgb(254, 205, 211) !important;
 }
+
+/* Force the main html/body structures to recognize full viewport boundaries */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure Hextra's main wrapper layout allows content to fill vertical space */
+.hextra-main-container,
+#id-wrapper,
+main {
+  min-height: calc(100vh - var(--hextra-navbar-height, 4rem));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Force the footer to lock cleanly to the absolute bottom of its stack */
+footer,
+.hx:footer,
+.hextra-footer {
+  margin-top: auto !important;
+  position: sticky;
+  top: 100vh;
+}

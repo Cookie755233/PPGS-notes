@@ -9,5 +9,5 @@
     <strong class="hx:text-lg">{{ $title }}</strong>
   </summary>
 
-  <div class="hx:p-2 hx:overflow-hidden">{{ .Inner | markdownify }}</div>
+  <div class="hx:p-2 hx:overflow-hidden">{{ .Inner | .Page.RenderString }}</div>
 </details>

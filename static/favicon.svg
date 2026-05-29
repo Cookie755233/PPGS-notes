@@ -1,0 +1,72 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- EVA-inspired green -->
+    <linearGradient id="bg" x1="60" y1="40" x2="452" y2="472">
+      <stop offset="0%" stop-color="#0B6B5C"/>
+      <stop offset="100%" stop-color="#083E36"/>
+    </linearGradient>
+
+    <!-- EVA-inspired gold -->
+    <linearGradient id="gold" x1="150" y1="150" x2="360" y2="360">
+      <stop offset="0%" stop-color="#F7D87C"/>
+      <stop offset="100%" stop-color="#B98A2B"/>
+    </linearGradient>
+
+    <!-- metallic stripe -->
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0%" stop-color="#FFF6D6"/>
+      <stop offset="50%" stop-color="#E7C96B"/>
+      <stop offset="100%" stop-color="#A9781E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="28" y="28" width="456" height="456" rx="110" fill="url(#bg)"/>
+
+  <!-- Full-height pilot stripes -->
+  <!-- Left stripe -->
+  <rect x="150" y="0" width="34" height="512" fill="url(#metal)"/>
+
+  <!-- Right stripe -->
+  <rect x="328" y="0" width="34" height="512" fill="url(#metal)"/>
+
+  <!-- EVA-inspired center emblem -->
+  <g transform="translate(256 256)">
+
+    <!-- Outer ring -->
+    <circle r="118"
+            fill="none"
+            stroke="#F4E4B2"
+            stroke-width="18"/>
+
+    <!-- Gold center -->
+    <circle r="82" fill="url(#gold)"/>
+
+    <!-- EVA-like directional symbol -->
+    <path d="M0 -102
+             L26 -12
+             L0 -30
+             L-26 -12
+             Z"
+          fill="#F4E4B2"/>
+
+    <path d="M84 -16
+             L18 10
+             L28 -10
+             Z"
+          fill="#F4E4B2"/>
+
+    <path d="M-84 -16
+             L-18 10
+             L-28 -10
+             Z"
+          fill="#F4E4B2"/>
+
+    <!-- Inner orbit -->
+    <circle r="50"
+            fill="none"
+            stroke="#F4E4B2"
+            stroke-width="10"
+            opacity="0.95"/>
+  </g>
+</svg>
