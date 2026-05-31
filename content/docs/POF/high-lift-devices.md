@@ -1,5 +1,5 @@
 ---
-title: High Lift Devices
+title: 3. High Lift Devices
 ---
 
 {{< details title="What are flap used for" closed="true" >}}

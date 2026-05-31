@@ -1,3 +1,7 @@
+---
+title: 1. POF Basics
+---
+
 ### Aircraft Architecture & Controls
 
 {{< details title="Aircraft's Five Major Components" closed="true" >}}

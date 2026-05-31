@@ -5,3 +5,12 @@ resources/
 
 # Editor
 .vscode/
+
+# Mac default
+.DS_Store
+
+# Obsidian
+.obsidian/
+templates/
+home.md
+sortspec.md

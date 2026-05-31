@@ -1,6 +1,6 @@
-/* --- Standard Cards (Without @) --- */
-/* Make light mode background brighter and add a defined border line */
-details:not(.rose-details) {
+/* --- Standard Cards (Without @ or #) --- */
+/* Exclude both rose and pine classes so they don't get overwritten */
+details:not(.rose-details):not(.pine-details) {
   background-color: rgb(
     248,
     250,
@@ -11,13 +11,12 @@ details:not(.rose-details) {
 }
 
 /* Maintain crisp lines in dark mode */
-.dark details:not(.rose-details) {
+.dark details:not(.rose-details):not(.pine-details) {
   background-color: rgb(38, 38, 38) !important; /* original dark neutral */
   border: 1px solid rgb(64, 64, 64) !important; /* distinct dark border line */
 }
 
 /* --- Rose Cards (With @) --- */
-/* Brighten Light Mode Rose and define its outer box line */
 details.rose-details {
   background-color: rgb(255, 241, 242) !important; /* light rose */
   border: 1px solid rgb(251, 113, 133) !important; /* sharp rose border line */
@@ -27,7 +26,6 @@ details.rose-details summary strong {
   color: rgb(159, 18, 57) !important; /* dark rose text */
 }
 
-/* Dark Mode Rose */
 .dark details.rose-details {
   background-color: rgba(159, 18, 57, 0.2) !important;
   border: 1px solid rgb(225, 29, 72) !important; /* sharp dark-mode rose border */
@@ -36,28 +34,20 @@ details.rose-details summary strong {
   color: rgb(254, 205, 211) !important;
 }
 
-/* Force the main html/body structures to recognize full viewport boundaries */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+/* --- Pine Cards (With #) --- */
+details.pine-details {
+  background-color: rgb(240, 249, 255) !important; /* light sky/pine tint */
+  border: 1px solid rgb(56, 189, 248) !important; /* sharp pine border line */
+  border-radius: 0.5rem;
+}
+details.pine-details summary strong {
+  color: rgb(49, 116, 143) !important; /* Rose Pine Pine/Blue text */
 }
 
-/* Ensure Hextra's main wrapper layout allows content to fill vertical space */
-.hextra-main-container,
-#id-wrapper,
-main {
-  min-height: calc(100vh - var(--hextra-navbar-height, 4rem));
-  display: flex;
-  flex-direction: column;
+.dark details.pine-details {
+  background-color: rgba(49, 116, 143, 0.15) !important;
+  border: 1px solid rgb(57, 141, 172) !important; /* sharp dark-mode pine border */
 }
-
-/* Force the footer to lock cleanly to the absolute bottom of its stack */
-footer,
-.hx:footer,
-.hextra-footer {
-  margin-top: auto !important;
-  position: sticky;
-  top: 100vh;
+.dark details.pine-details summary strong {
+  color: rgb(156, 207, 216) !important; /* lighter pine text recovery */
 }
