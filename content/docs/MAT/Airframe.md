@@ -53,11 +53,11 @@ Wing spars are built around one or more main load bearing members to absorb the 
 
 {{< details title="@Fuselage construction" closed="true" >}}
 Truss: a load of carrying frmae of meal tubes with a nonstressed covering.\
-Monocoque: just skin and bulkheads. \
-Semi-monocoque: bulkhead, stiffeners (stringers, longerons) and skin.
+Monocoque: The complete stress is carried by outer skin. The bulkheads are only to give shape. \
+Semi-monocoque: The load is carried by the outer skin and stringers on the inner side of the skin.
 {{< /details >}}
 
-{{< details title="@Disadvantages for monocoque." closed="true" >}}
+{{< details title="Disadvantages for monocoque." closed="true" >}}
 Even slight damage to the skin can seriously weaken the structure.
 {{< /details >}}
 

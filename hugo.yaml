@@ -52,8 +52,12 @@ menu:
 params:
   navbar:
     displayTitle: true
-    displayLogo: false
-
+    displayLogo: true
+    logo:
+      path: images/favicon.svg
+      dark: images/favicon.svg
+      width: 20
+      height: 20
   footer:
     displayCopyright: false
     displayPoweredBy: false
@@ -63,7 +67,7 @@ params:
     # base: "https://github.com/Cookie755233/TwoRed-TwoWhite/edit/main/content"
 
   disableSidebar: false
-  displayMainMenus: false # Hides top bar navigation links
+  displayMainMenus: true # Hides top bar navigation links
   sidebar:
     defaultOpenLevel: 2 # Automatically expands GN, MET, POF submenus
     autoCollapse: false
