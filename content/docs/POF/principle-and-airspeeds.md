@@ -1,22 +1,5 @@
 ---
-title: 1. POF Basics
----
-
-### Aircraft Architecture & Controls
-
-{{< details title="Aircraft's Five Major Components" closed="true" >}}
-* Powerplant
-* Landing gear
-* Empennage
-* Wings
-* Fuselage
-{{< /details >}}
-
-{{< details title="Flight Control Inputs" closed="true" >}}
-* **Power (or thrust) control**: Controlled by the power or thrust lever.
-* **Pitch, Roll, and Yaw control**: Controlled by the control stick, control wheel, and rudder pedals.
-{{< /details >}}
-
+title: 1. Aerodynamic Principles and Airspeeds
 ---
 
 ### Atmospheric Physics & Classical Mechanics
@@ -24,7 +7,7 @@ title: 1. POF Basics
 {{< details title="Newton's Laws of Motion" closed="true" >}}
 Laws proposed by Isaac Newton that explain how force and motion work.
 
-* **Newton's first law (The principle of inertia)**: Expressed in simple terms, it can be said that a physical body at rest remains at rest unless another force acts upon it, and that a body that is in motion will not change its velocity unless a resultant force acts upon it. This is known as uniform motion. The unit for inertia is mass.
+* **Newton's first law e(The principle of inertia)**: Expressed in simple terms, it can be said that a physical body at rest remains at rest unless another force acts upon it, and that a body that is in motion will not change its velocity unless a resultant force acts upon it. This is known as uniform motion. The unit for inertia is mass.
 * **Newton's second law (Acceleration)**: If a physical body is affected by a force exerted upon it, then that physical body will be accelerated in the direction of the acting force. Acceleration is directly proportional to the force \(\text{F}\) and inversely proportional to the mass \(\text{m}\) of the physical body.
   
   \(\text{F} = \text{ma}\)
