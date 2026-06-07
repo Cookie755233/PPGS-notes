@@ -1,3 +1,31 @@
+h1:not([class]) {
+  background: #f0a577;
+  padding: 4px 16px;
+}
+
+strong {
+  color: #d20f39; /* Red */
+  font-weight: 600;
+}
+
+em {
+  color: #8839ef; /* Mauve */
+  font-style: italic;
+}
+
+a:not([class*="bg-primary"]) {
+  color: #1e66f5; /* Blue */
+}
+
+a:not([class*="bg-primary"]):hover {
+  color: #04a5e5; /* Sky */
+}
+
+code {
+  background-color: #e6e9ef;
+  color: #4c4f69;
+}
+
 /* --- Standard Cards (Without @ or #) --- */
 /* Exclude both rose and pine classes so they don't get overwritten */
 details:not(.rose-details):not(.pine-details) {

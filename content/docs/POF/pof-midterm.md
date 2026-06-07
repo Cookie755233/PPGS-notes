@@ -80,7 +80,7 @@ $$TAS = CAS \cdot \sqrt{\frac{\rho_0}{\rho}}$$
     
 * **Pitch Attitude Angle:** It is an angle measured between the aircraft *longitudinal axis and the horizon*. It indicates an *inclination of the aircraft relative to the earth.*
 
-## Airfoil Geometry (The 6 Elements)
+## 🗣️ Airfoil Geometry
 ![Airfoil 6 Elements](/images/airfoilelements.png "Airfoil 6 Elements")
 
 1. **The Chord Line:** It is a straight-line connecting the leading and trailing edge of the airfoil, indicating an inclination of the airfoil.
@@ -172,7 +172,7 @@ D_{Parasite}\propto V^2
 $$
 - Increases rapidly with airspeed.
 - Dominates at high speeds.
-#### 1. Form Drag (Pressure Drag)
+#### 1. Form(Pressure) Drag 
 ![Form Drag (Pressure Drag)](/images/formdrag.png "Form Drag (Pressure Drag)")
 - The form drag is mainly caused by the flow separation which lead to a **STATIC pressure difference** at the front and rear part of object. 
 
@@ -250,7 +250,7 @@ $$
 ![](/images/flapsdown.png "")
 ![](/images/claoaflapsdown.png "")
 
-### Types of Trailing Edge Flaps
+### 🗣️ Types of Trailing Edge Flaps
 | Flap Type        | Primary Mechanism                        | Aerodynamic Effect                                                                                                                                                                    | Trade-off                                      |
 |:---------------- |:---------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:---------------------------------------------- |
 | **Plain Flap**   | Deflects rear part downward              | \( \text{Camber} \uparrow \implies \text{Lift} \uparrow \)                                                                                                                            | -                                              |
@@ -495,8 +495,163 @@ Sweepback wing can improvement directional stability oy an increase in lift acco
 
 ## Spiral Instability 
 - **Spiral instability occurs when Directional Stability > Lateral Stability.**
-- When the airplane is brought into a bank oy air disturbance, it may have no sufficient tendency to level the wings, but enters a sideslip.
+- When the airplane is brought into a bank or air disturbance, it may have no sufficient tendency to level the wings, but enters a sideslip.
 
-### Recovery from Spiral Dive
+{{< callout >}}
+Recovery from Spiral Dive
 1. Level the wing
 2. Fly Level
+{{< /callout >}}
+
+---
+
+# 6. Stall and Slow Flight
+
+A stall occurs when an aircraft reaches its critical AoA (\(\alpha_c\)), leading to complete **flow separation** on the upper wing surface.
+
+**An airplane can be stalled at any airspeed, attitude, or power setting.**
+
+## Power off/on Stall
+- Power off Stall: 
+	- Mostly happen on *approach*.
+- Power on stall: 
+	- Stall when it just *departed an airport or has just performed a go-around.* 
+	- Which may occur at **LOWER** than normal stall speed.
+
+$$
+\begin{aligned}
+\text{Climb} &\implies \text{High Power Setting} \\
+&\implies \text{Thrust's verrtical component compensates Weight} \\
+&\implies \text{Effective Weight} \downarrow \\
+&\implies \text{Stall Speed } (V_s) \downarrow
+\end{aligned}
+$$
+![](/images/poweronstall.png "")
+
+## ⭐️ Stall Recovery Procedure
+**Regaining positive control is the primary consideration**. The sequential recovery steps are:
+1. Release back pressure on the elevator (decreases AoA below critical limit).
+2. Apply full power smoothly to minimize altitude loss and increase airspeed.
+3. Level the wings
+	- Level wing *(Neutralize ailerons)*
+	- Level flight path *(Pitch level)*
+
+## Spin
+A spin begins with **asymmetric stall**, which resulting in auto-rotation of aircraft.
+
+$$
+\begin{aligned}
+\text{Asymmetric Stall} &\implies \text{One wing stalls first} \\
+&\implies \text{Relative Wind Shifts Downward} \\
+&\implies \text{AoA}_{downwing} \uparrow\uparrow; \ \text{AoA}_{upwing} \uparrow \\
+&\qquad \rightarrow \text{Lift}_{downwing}\downarrow\downarrow; \ \text{Lift}_{upwing} \downarrow \\
+&\qquad \rightarrow \text{Drag}_{downwing}\uparrow\uparrow; \ \text{Drag}_{upwing} \uparrow \\
+&\implies \text{Spin}
+\end{aligned}
+$$
+
+![AoA-CL(D) Diagram on Spin](/images/aoaclspin.png "AoA-CL(D) Diagram on Spin")
+
+## ⭐️ Spin Recovery 
+1. Apply full **opposite rudder** 
+	- To Regain lift on the lower wing on the *"Swing"* of the wing 
+![Effect on Opposite Rudder](/images/opprudder.png "Effect on Opposite Rudder")
+
+2. **Release elevator** back pressure to *decrease AoA. (Air reattached)* 
+3. Ease the airplane smoothly out of the resulting dive as airspeed increases
+
+## Desirable Stalling behavior
+1. **To have airflow separation at the wing root first for aileron effectiveness,** 
+2. To avoid asymmetric stall, which leads to a spin.
+3. To keep the wings level in a stall.
+
+## Anti-Stall Design
+### Washout
+- *Geometric Twist*: Designing the wing so the wing root features a greater angle of incidence than the wingtip.
+$$
+\begin{aligned}
+\text{Aerodynamic Twist} &\implies \text{Different Airfoils} \\
+&\implies Camber_{ROOT} > Camber_{TIP} \\
+&\implies \text{Wing tip stalls first}
+\end{aligned}
+$$
+
+- *Aerodynamic Twist*: Grading the structural profile along the span by transitioning from high-camber airfoils at the root to low-camber airfoils at the tip.
+
+![Washout](/images/washout.png "Washout")
+
+### Stall Strip
+A stall strip is a **knife-edge like device**, placed to induce wing root stall.
+![Stall strip](/images/stallstrip.png "Stall strip")
+
+### Aileron Slots
+The slots are formed at wing tips or aileron area to prolong the stall.
+
+
+
+## ⭐️ Factors Influencing Stall Speed
+Stall speed fluctuates based on operational variables dictated by the fundamental balance equation:
+$$
+W = L = \frac{1}{2} \cdot \rho \cdot V^2 \cdot S \cdot C_L (\alpha)
+$$
+### Weight (\(\propto V_s\))
+Higher weight will raise the stalling speed due to higher lift required.
+$$
+\begin{aligned}
+\text{Weight Increase} &\implies \underbrace{W}_{\uparrow} = \underbrace{L}_{\uparrow} = \frac{1}{2} \cdot \underbrace{\rho \cdot S}_{\text{Fixed}} \cdot \underbrace{V_s^2}_{\uparrow} \cdot \underbrace{C_{L(MAX)}}_{\text{Fixed}}
+\end{aligned}
+$$
+
+### Flaps  (\(\propto \frac{1}{V_s}\))
+Flap-down will decrease stall speed. Due to higher \(C_{Lmax}\)
+$$
+\begin{aligned}
+\text{Flaps Up} &\implies W = \underbrace{L}_{\text{Fixed}} = \frac{1}{2} \cdot \underbrace{\rho \cdot S}_{\text{Fixed}} \cdot \underbrace{V_s^2}_{\uparrow} \cdot \underbrace{C_{L(MAX)}}_{\downarrow} 
+\end{aligned}
+$$
+
+### Icing (\(\propto V_s\))
+Icing will increase stalling speed due to worsen aerodynamic efficiency.
+
+$$
+\begin{aligned}
+\text{Icing} &\implies W = \underbrace{L}_{\text{Fixed}} = \frac{1}{2} \cdot \underbrace{\rho \cdot S}_{\text{Fixed}} \cdot \underbrace{V_s^2}_{\uparrow} \cdot \underbrace{C_{L(MAX)}}_{\downarrow \text{ (Altered Airfoil Shape)}} 
+\end{aligned}
+$$
+
+### CG (\(Forward \propto V_S\))
+The forward center of gravity requires **higher tail down force**, which resulting in higher lift required and higher stalling speed. 
+
+![CG on Stall Speed](/images/cgstall.png "CG on Stall Speed")
+
+$$
+\begin{aligned}
+\text{CG Forward} &\implies \text{Tail-Down Force (TDF)} \uparrow \\
+&\implies \text{Pitch-UP Moment} \uparrow \\
+&\implies \text{Lift to maintain level} (W + \text{TDF}) \uparrow \\
+&\implies \underbrace{W}_{\uparrow}= \underbrace{L}_{\uparrow} = \frac{1}{2} \cdot \underbrace{\rho \cdot S}_{\text{Fixed}} \cdot \underbrace{V_s^2}_{\uparrow} \cdot \underbrace{C_{L(MAX)}}_{\text{Fixed}} \\
+&\implies V_s \uparrow
+\end{aligned}
+$$
+
+### Power (\(\propto \frac{1}{V_s}\))
+Higher power setting will reduce stalling speed.
+![](/images/poweronstall.png "")
+
+$$
+\begin{aligned}
+\text{Climb} &\implies \text{High Power Setting} \\
+&\implies \text{Thrust's verrtical component compensates Weight} \\
+&\implies \text{Effective Weight} \downarrow \\
+&\implies \text{Stall Speed } (V_s) \downarrow
+\end{aligned}
+$$
+
+### Stall Speed Summary
+| Influencing Factor | Stall Speed (\(V_s\)) |
+| :--- | :--- |
+| **Aircraft Weight** | + |
+| **Flap Position** (Extended) | - |
+| **Structural Icing** | + |
+| **Center of Gravity** (Forward) | + |
+| **Power Setting** (Increased) | - |

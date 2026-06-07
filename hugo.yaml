@@ -23,9 +23,6 @@ markup:
   highlight:
     noClasses: false
 
-  tableOfContents:
-    startLevel: 1
-
 menu:
   main:
     # - name: Docs
