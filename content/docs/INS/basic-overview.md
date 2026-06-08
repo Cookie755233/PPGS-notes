@@ -1,5 +1,5 @@
 ---
-title: 1. INS Basics
+title: 1. Pitot
 ---
 
 ## Basics
@@ -201,4 +201,115 @@ Static port air is directly vented into the ALTIMETER CASE, while air enters the
 
 {{< details title="When will Equivalent airspeed starts to pronounce?" closed="true" >}}
 Compressibility error happens when \(>200\text{ kts}\) or \(>20,000\text{ ft}\).
+{{< /details >}}
+
+
+{{< details title="White arc and its top/bottom V-speed?" closed="true" >}}
+
+Flap down operation range:
+* **$V_{S0}$** = Stall speed in landing configuration (max landing weight) with flaps/gear fully extended (dirty configuration).
+* **$V_{FE}$** = Maximum flap extended speed.
+
+{{< /details >}}
+
+{{< details title="Green arc and its top/bottom V-speed?" closed="true" >}}
+
+Normal operation range:
+* **$V_{S1}$** = Stall speed in clean configuration (gear/flap fully retracted) with maximum takeoff weight.
+* **$V_{NO}$** = Maximum structural cruising speed under calm steady flight conditions.
+
+{{< /details >}}
+
+{{< details title="VA?" closed="true" >}}
+
+Design maneuvering speed: maximum speed one may apply full control without structural damage. It is **proportional** to the weight of the aircraft.
+
+{{< /details >}}
+
+{{< details title="Max T/O weight ____ Max LND weight" closed="true" >}}
+
+Max T/O weight **>** Max LND weight
+
+{{< /details >}}
+
+{{< details title="V_MCA?" closed="true" >}}
+
+Minimum Control speed Airborne: Under **single engine** operations, keep airspeed above this limit.
+
+{{< /details >}}
+
+{{< details title="Which propeller is the critical engine in a clockwise rotation prop?" closed="true" >}}
+
+Left
+
+{{< /details >}}
+
+{{< details title="V_X & V_Y?" closed="true" >}}
+
+* **$V_X$**: Max angle of climb speed $\rightarrow$ Climb up to a certain altitude with the shortest distance.
+* **$V_Y$**: Max rate of climb speed $\rightarrow$ Climb up to a certain altitude with the shortest time.
+
+{{< /details >}}
+
+{{< details title="Pitot tube clogged, drain hole clear, static port clear." closed="true" >}}
+
+Dynamic pressure is leaked and evens out from the drain hole.
+
+* **ASI**: Goes to 0
+* **VSI**: Functioning
+* **ALT**: Functioning
+
+{{< /details >}}
+
+{{< details title="Pitot tube clogged, drain hole clogged, static port clear." closed="true" >}}
+
+Air traps within the pitot tube.
+
+* **ASI**: Behaves like an altimeter (Climb = Speed increases; descent = speed decreases).
+* **VSI**: Functioning
+* **ALT**: Functioning
+
+{{< /details >}}
+
+{{< details title="Pitot tube clogged, drain hole clogged, static port clogged." closed="true" >}}
+
+Air traps within the pitot-static system.
+
+* **ASI**: Freezes
+* **VSI**: Goes to 0 (static pressure leaks from capillary tube)
+* **ALT**: Freezes
+
+{{< /details >}}
+
+{{< details title="Pitot tube clear, drain hole clear, static port clogged." closed="true" >}}
+
+Static pressure remains unchanged.
+
+* **ASI**: Climb = decrease airspeed; descent = increase airspeed
+* **VSI**: Goes to 0 (static pressure leaks from capillary tube)
+* **ALT**: Freezes
+
+{{< /details >}}
+
+{{< details title="A/C climb with constant airspeed. Altimeter climb, VSI climb, but ASI is increasing abnormally." closed="true" >}}
+
+VSI/ALT functioning $\rightarrow$ static port clear. 
+
+Static pressure decreases as you climb while total pressure within the pitot tube remains fixed. This causes the pressure difference to increase, which makes the ASI abnormally increase.
+
+{{< /details >}}
+
+{{< details title="A/C climb with constant airspeed. Altimeter steady, VSI zero, ASI is decreasing abnormally." closed="true" >}}
+
+VSI Zero / ALT freeze $\rightarrow$ static port blocked.
+
+1. If pitot/drain are clear: Total pressure decreases when climbing, causing the ASI to decrease.
+2. If pitot is blocked/drain clear: ASI drops to zero.
+
+{{< /details >}}
+
+{{< details title="Pneumatic stall warning?" closed="true" >}}
+
+The pneumatic stall warning horn is located on the leading edge of the **left** wing. When the Angle of Attack (AoA) increases close to the stagnation point, the pressure from under the tube becomes greater than the pressure at the nose of the tube, creating a horn sound.
+
 {{< /details >}}

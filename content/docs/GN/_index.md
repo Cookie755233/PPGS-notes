@@ -1,3 +1,3 @@
 ---
-title: General Navigation (GN)
+title: GN
 ---

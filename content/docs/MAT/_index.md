@@ -1,3 +1,3 @@
 ---
-title: Material (MAT)
+title: MAT
 ---

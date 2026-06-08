@@ -1,3 +1,3 @@
 ---
-title: Meterorolgy (MET)
+title: MET
 ---
