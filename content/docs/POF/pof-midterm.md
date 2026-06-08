@@ -42,7 +42,12 @@ Airspeed indicators cannot directly measure true speed because air density chang
 
 The raw speed reading shown directly on the cockpit's airspeed indicator. It is based solely on the raw pressure difference (\(P_t - P_s\)) calibrated for **standard sea-level air density** (\(\rho_0\)).
 
-$$IAS = \sqrt{\frac{2(P_t - P_s)}{\rho_0}}$$
+$$
+\begin{aligned}
+\text{IAS} &= \sqrt{\frac{2(P_t - P_s)}{\rho_0}} \\[1em]
+&\rho_0 = \text{Standard Sea Level Air Density} = 1.225 \text{ kg/m}^3
+\end{aligned}
+$$
 
 
 ### 2. Calibrated Airspeed (CAS)
@@ -101,7 +106,7 @@ $$TAS = CAS \cdot \sqrt{\frac{\rho_0}{\rho}}$$
     
 * **The Wing Area (\( S \)):** It is the plan surface area of a wing. When a portion of the plan area is covered with the fuselage or nacelle, the pressure can be carried over on these surfaces. 
     
-* **The Aspect Ratio (\( AR \)):** It is the ratio of the wing span (the length) to the chord (the width). The wing span (\( b \)) is the length measured from tip to tip. The aspect ratio may range from 35 for gliders to 3.5 for jet fighters.
+* **⭐️ The Aspect Ratio (\( AR \)):** It is the ratio of the wing span (the length) to the chord (the width). The wing span (\( b \)) is the length measured from tip to tip. The aspect ratio may range from 35 for gliders to 3.5 for jet fighters.
 ![](/images/aspectratio.png "")
     * For a rectangular wing planform:
       $$AR = \frac{b}{c}$$
@@ -202,7 +207,8 @@ High-pressure air beneath the wing moves toward the low-pressure region above th
 {{< callout >}}
 $$\begin{aligned}
 \text{Induced Drag} &= \underbrace{C_{D0}}_{\text{Const}} + \underbrace{K \cdot C_L^2}_{D_{i}} \\
-&\propto C_L \propto \alpha \text{ (AoA)}\\
+&\propto C_L \\
+&\propto \alpha \text{ (AoA)}\\
 &\propto \frac{1}{V^2}
 \end{aligned}$$
 {{< /callout >}}
@@ -443,12 +449,12 @@ $$
 ## Lateral Stability (Roll)
 *Lateral stability is the stability about an airplane's longitudinal axis*,  indicating its attitude response to a disturbance. 
 
-### Dihedral
+### ⭐️ Dihedral
 - This is the upward angle of the wings with respect to the horizontal.
 - Creating increased lift on the lower wing and decreased lift on the higher wing to level the airplane.
 ![](/images/dihedral.png "")
 
-### Wing Position
+### ⭐️ Wing Position
 - During a sideslip, airflow around the fuselage creates local upwash and downwash
 - A *high wing* design produces positive lateral stability due to this local upwash.
 - A *low wing* shows negative stability, while a *mid-wing* design has neutral stability.
@@ -480,7 +486,7 @@ Uneven weight distribution, such as fuel imbalance in the wing tanks, causes the
 ### Center of Side Area  
 - A positive static stability is obtained when **more surface area is behind the CG.**
 - A fin added more aft can increase additional side surface and force for more restoring moment and stability.
-| Fin Type        | Directional Stability | Lateral Stability | 
+| Fin Type        | Directional Stability | Lateral Stability |
 |:--------------- |:--------------------- |:----------------- |
 | **Dorsal Fin**  | Increases             | Increases         |
 | **Ventral Fin** | Increases             | Decreases         |
@@ -612,7 +618,7 @@ $$
 $$
 
 ### Flaps  (\(\propto \frac{1}{V_s}\))
-Flap-down will decrease stall speed. Due to higher \(C_{Lmax}\)
+Flap-down will decrease stall speed. Due to higher \(C_{L(MAX)}\)
 $$
 \begin{aligned}
 \text{Flaps Up} &\implies W = \underbrace{L}_{\text{Fixed}} = \frac{1}{2} \cdot \underbrace{\rho \cdot S}_{\text{Fixed}} \cdot \underbrace{V_s^2}_{\uparrow} \cdot \underbrace{C_{L(MAX)}}_{\downarrow} 
