@@ -588,12 +588,21 @@ A stall strip is a **knife-edge like device**, placed to induce wing root stall.
 The slots are formed at wing tips or aileron area to prolong the stall.
 
 
-
-## ⭐️ Factors Influencing Stall Speed
+## ⭐️ Stall Speed Factors
 Stall speed fluctuates based on operational variables dictated by the fundamental balance equation:
 $$
 W = L = \frac{1}{2} \cdot \rho \cdot V^2 \cdot S \cdot C_L (\alpha)
 $$
+
+>[!TLDR]
+> **Aircraft Weight \(\uparrow\)** \(\implies V_s \uparrow\)\
+> **Flap Extended** \(\implies V_s \downarrow\)\
+> **Icing** \(\implies V_s \uparrow\)\
+> **CG Forward** \(\implies V_s \uparrow\)\
+> **Power \(\uparrow\)** \(\implies V_s \downarrow\)\
+> **Load Factor (\(n\)) \(\uparrow\)** \(\implies V_s \uparrow\)
+
+
 ### Weight (\(\propto V_s\))
 Higher weight will raise the stalling speed due to higher lift required.
 $$
@@ -634,24 +643,63 @@ $$
 \end{aligned}
 $$
 
-### Power (\(\propto \frac{1}{V_s}\))
+### Power (\(\propto \frac{1}{V_s}\)) 
 Higher power setting will reduce stalling speed.
 ![](/images/poweronstall.png "")
 
 $$
 \begin{aligned}
 \text{Climb} &\implies \text{High Power Setting} \\
-&\implies \text{Thrust's verrtical component compensates Weight} \\
+&\implies \text{Thrust's vertical component compensates Weight} \\
 &\implies \text{Effective Weight} \downarrow \\
-&\implies \text{Stall Speed } (V_s) \downarrow
+&\implies V_s \downarrow
 \end{aligned}
 $$
 
-### Stall Speed Summary
-| Influencing Factor | Stall Speed (\(V_s\)) |
-| :--- | :--- |
-| **Aircraft Weight** | + |
-| **Flap Position** (Extended) | - |
-| **Structural Icing** | + |
-| **Center of Gravity** (Forward) | + |
-| **Power Setting** (Increased) | - |
+### Load Factor (Turn) (\(\propto V_s\))
+The stalling speed is increased with bank angle (load factor +)
+$$
+\begin{aligned}
+\text{Bank} &\implies \text{Load Factor(n)} \uparrow \\
+&\implies \text{Total Required Lift } (L = n \cdot W) \uparrow \\
+&\implies \underbrace{n \cdot W}_{\uparrow} = L_{bank} = \frac{1}{2} \cdot \underbrace{\rho \cdot S}_{\text{Fixed}} \cdot \underbrace{V^2}_{\uparrow} \cdot \underbrace{C_{L(MAX)}}_{\text{Fixed}} \\
+&\implies V_s \uparrow
+\end{aligned}
+$$
+
+---
+
+# 7. Aircraft Maneuver
+## Load Factor (n)
+The load factor is the **ratio of the actual lift to the weight of aircraft.**
+
+$$
+\begin{aligned}
+&n = \frac{\text{Lift}}{\text{Weight}} = \frac{L}{L \cos\theta} = \frac{1}{\cos\theta} \\[1.5em]
+&\implies \text{Bank } 60^\circ \rightarrow 2\text{G} \\
+&\phantom{\implies \text{Bank } 60^\circ} \rightarrow V_{s} = \sqrt{2} \cdot V_{s0}
+\end{aligned}
+$$
+
+## Rate/Radius of Turn
+- The rate of turn is the amount of **time** an airplane takes to turn a specific degrees.
+	- **All planes should have a same radius of turn given the same speed and bank angle regardless of weight.**
+- The radius of turn is the amount of **horizontal distance** an airplane travels to complete a turn.
+
+{{< callout >}}
+$$
+\begin{aligned}
+&\text{Constant Airspeed} \rightarrow \text{Bank Angle} \uparrow \\
+&\implies \text{Radius of Turn} \downarrow \\
+&\implies \text{Rate of Turn} \uparrow
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\text{Constant Bank Angle} \rightarrow \text{Speed} \uparrow \\
+&\implies \text{Radius of Turn} \uparrow \\
+&\implies \text{Rate of Turn} \downarrow
+\end{aligned}
+$$
+{{< /callout >}}
