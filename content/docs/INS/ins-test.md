@@ -58,15 +58,19 @@ Flux Valve is used to sense the Earth's magnetic field, and installed in the win
 ![](/images/fluxvalve.png "")
 
 ## ⭐️ GMU44
-GMU44 is a **magnetometer** that measures the Earth's magnetic field and provides this data to the GRS 77 **Attitude and Heading Reference System (AHRS)**. 
+GMU44 is a **magnetometer** that measures the Earth's magnetic field and provides this data to the GRS 77 Attitude and Heading Reference System (AHRS). 
 
 It is located in the **right wing close to the wingtip,** which is easily identified by the black, non-magnetic screws used to hold it in place
 
 
 ## AHRS
+AHRS is Attitude and Heading Reference System (AHRS)
+
 Attitude Heading Reference System measures **acceleration**, rate of turn and mag components relative to three axes of the aircraft and converts them to an attitude and direction relative to the earth. 
 
 *It consists of "Micro Electro-Mechanical Sensors" (MEMs)*
+
+The AHRS system in DA40 is GRS77.
 
 ## Stall warning method
 Using pneumatic principles, if the airspeed drop below 10~5 knots above the stalling speed, the stall warning horn, which located in the instrument panel, will sound.
