@@ -1,7 +1,6 @@
 ---
-title: "@POF MIDTERM"
+title: "@POF"
 ---
-
 
 # 1. Fundamental Equations
 ## Continuity Equation
@@ -687,10 +686,19 @@ $$
 \end{aligned}
 $$
 
+### ⭐️ Limit Load Factor
+![](/images/limitn.png "")
+
+- The maneuvering speed (\(V_A\)) is related to the load factor and the stall speed.
+- **\(V_A\) represents the maximum speed at which full, abrupt control movement can be used without over-stressing the airframe.**
+	- *Why is it recommended to operate under \(V_A\)? \
+	  \(\implies\) The plane would enters the "stall" region first instead of "structural damage" region.*
 ## Rate/Radius of Turn
 - The rate of turn is the amount of **time** an airplane takes to turn a specific degrees.
 	- **All planes should have a same radius of turn given the same speed and bank angle regardless of weight.**
 - The radius of turn is the amount of **horizontal distance** an airplane travels to complete a turn.
+
+![](/images/rateofturn.png "")
 
 {{< callout >}}
 $$
@@ -709,3 +717,86 @@ $$
 \end{aligned}
 $$
 {{< /callout >}}
+
+## ⭐️ Slip and Skid
+> [!IMPORTANT]
+> Slip: Centrifugal < Centripetal; Ball inward \
+> \(\implies\)Rudder inward/ Speed \(\uparrow\)/ Bank \(\downarrow\)\
+> Skid: Centrifugal > Centripetal; Ball outward \
+> \(\implies\)Rudder outward/ Speed \(\downarrow\)/ Bank \(\uparrow\)\
+
+![](/images/slipskid.png "")
+
+## Left Turning Tendency
+A left turning tendency can occur in propeller driven airplanes in **HIGH POWER, LOW AIRSPEED** flight conditions due to four effects.
+### Torque reaction
+The revolving propeller can rotate an airplane in the opposite direction due to torque reaction (based on Newton's third law of motion).
+
+1. Torque on ground\
+For a right turning propeller, the torque reaction forces the left main gear down during takeoff roll. It results in more **ground friction** and a turning to the left.\
+\(\implies\) Right Rudder padel
+
+2. Torque airborne\
+→ The left wing has to create more lift to level the wings.\
+→ The left wing creates more lift down-going wing by using different twist and/or different size or the wings.\
+→ Aileron trim tabs could be used, but adds more *induced* drag and causes a yawing to the left.\
+\(\implies\) Pilot should still correct the yaw by rudder.
+
+### Gyroscopic Precession
+When a force is applies to the rim of a rotating disc. The reacting force acts in the direction of application and 90° ahead in direction of rotation.
+
+![](/images/lefttendencyprecession.png "")
+
+### Asymmetric thrust
+Asymmetric thrust (or P-factor) appears when an airplane is **flown at a High AoA**, due to
+- Different resultant velocities
+- Different angles of attack on the propeller blades
+The descending blade creates more thrust than the ascending blade, because of the higher resultant velocity and the higher angle of attack.
+
+![P-factor](/images/pfactor.png "P-factor")
+
+**The P-factor is most pronounced at a high power, low speed, high AoA setting**
+
+#### 🗣️ Critical Engine
+Critical engine is on the side where the propeller with a greater asymmetric thrust closer to the longitudinal axis, which creates a greater yawing moment. For a clockwise turning propellers, the left engine is called critical engine.
+
+![](/images/criticalengine.png "")
+
+
+#### \(V_{MC}\)
+The lowest speed for **directional control (rudder)** is the minimum control speed (\(V_{MC}\)) .
+- \(V_{MCG}\): on ground. Would **ALWAYS** smaller than V1
+- \(V_{MCA}\): Airborne
+### Corkscrewing effect
+A rotating propeller produces a corkscrewing effect to the air behind the propeller.
+![](/images/spiralsplitstream.png "")
+
+**The splitstream is most effective when SPEED LOW; RPM HIGH**\
+\(\implies\) **Takeoff, climbing or power on stall.**
+
+
+# 8. Wake Turbulence
+![](/images/wake.png "")
+
+- The creation of wake turbulence starts at rotation of aircraft during takeoff roll, continuously existing through cruise and ends at touchdown.
+- Around 2 wing spans width; 1 wing span depth; 
+- **Flaps down would decrease induced drag, reduce wingtip vortexes, and reduce wake.**
+- Wake turbulence travels at about 5 nm/hr
+
+## ⭐️ Factors of Wake
+$$
+\begin{aligned}
+& \qquad \qquad \text{WAKE} \propto \frac{\text{Weight}}{\text{Span} \cdot \text{TAS}} & \\
+& * \text{Increase in weight is to increase } (\Delta P) \\
+& * \text{Decrease in speed is to increase } \text{Circulation intensity} \\
+& * \text{Decrease of wingspan is to increase } \text{induced drag}
+\end{aligned}
+$$
+
+## Safe Areas
+![](/images/safewake1.png "")
+![](/images/safewake2.png "")
+![](/images/safewake3.png "")
+![](/images/safewake4.png "")
+![](/images/safewake5.png "")
+![](/images/safewake6.png "")

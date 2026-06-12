@@ -1,5 +1,5 @@
 ---
-title: "@GN - MIDTERM"
+title: "@GN & RN"
 math: true
 ---
 

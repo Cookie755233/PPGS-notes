@@ -79,3 +79,21 @@ details.pine-details summary strong {
 .dark details.pine-details summary strong {
   color: rgb(156, 207, 216) !important; /* lighter pine text recovery */
 }
+
+/* --- Display math blocks: scroll horizontally instead of overflowing --- */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Needed to prevent a double scrollbar bug */
+.katex-display > .katex {
+  max-width: 100%;
+}
+
+.katex-display > .katex > .katex-html {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 3px 2px 1px; /* small padding so descenders aren't clipped */
+}
