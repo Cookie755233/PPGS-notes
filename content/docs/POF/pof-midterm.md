@@ -185,12 +185,12 @@ Friction drag is created in the **BOUNDARY LAYER** of an aerodynamic body. Due t
 
 ![](/images/frictiondrag.png "")
 
-{{ < callout >}}
+{{< callout >}}
 Aerodynamic shapes on skin friction drag\
 **Blunt body: Pressure drag↑ ; Streamlined body: Skin Friction drag↑**
 ![](/images/laminarboundary.png "")
 ![](/images/dragvsbodytype.png "")
-{{ </ callout >}}
+{{</ callout >}}
 #### 3. Interference Drag
 Interference drag describes any *additional parasite drag* resulting from the aerodynamic interaction of *intersecting bodies* of a streamlined body as the air flows around the body. **Fairing** is used to decrease interference drag.
 
