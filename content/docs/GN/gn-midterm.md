@@ -259,7 +259,7 @@ ADS-B equipped aircraft transmit their GPS positions to ATC, which results in mu
 
 ## Preflight Planning & Regulations
 
-{{< details title="@Preflight Action (14 CFR 91.103)" closed="true" >}}
+{{< details title="Preflight Action (14 CFR 91.103)" closed="true" >}}
 
 For a flight under IFR or a flight not in the vicinity of an airport, preflight action as required by regulation shall include a review of what specific information (NW KRAFT):
 
