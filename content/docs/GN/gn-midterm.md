@@ -3,7 +3,239 @@ title: "@GN & RN"
 math: true
 ---
 
+{{< tabs >}}
 
+  {{< tab name="JDEF" >}}
+
+## Earth Structure & Coordinate Systems
+
+- **Great Circle:**\
+  The intersection of the Earth's surface and the plane which passes through the Earth's center.
+    
+- **Small Circle:**\
+  A small circle of a sphere is the circle constructed by a plane crossing the sphere not in its center. Small circles always have a smaller diameter than the sphere itself.
+    
+- **Rhumb Line:** *X meridian*\
+  A line on the Earth's surface which has a constant angle to the meridian.
+    
+- **Geographic North/South Pole:**\
+  The point where the Earth's axis of rotation intersects the Earth's surface.
+    
+- **Geocentric Latitude:**\
+  The angle at the center of the Earth between the equator and a parallel of latitude.
+    
+- **Geodetic Latitude:**\
+  The angle between the normal line of the Earth's surface and the plane of the equator (also called Geographic Latitude).
+    
+
+## Direction & Magnetism
+
+- **Magnetic North Pole:**\
+  The point on the Earth's surface at which the Earth's magnetic field points vertically downwards.
+    
+- **True North:**\
+  The direction of the geographic North Pole measured from the Earth's surface.
+    
+- **Magnetic North:**\
+  The direction of the local Earth's magnetic field.
+    
+- **Compass North:**\
+  The direction in which an aircraft's compass north end points.
+    
+- **Magnetic Variation:**\
+  The angle between True North and Magnetic North. If magnetic north is on the right side of true north, it is an East variation.
+    
+- **Isogonic Line:**\
+  A line on Earth connecting all points that have the same magnetic variation.
+    
+- **Magnetic Deviation:**\
+  A compass error caused by magnetic disturbances from electrical and metal components in the airplane. The correction for this error is displayed on a compass correction card placed near the magnetic compass in the airplane.
+    
+
+## Flight Vectors & Tracking
+
+- **Heading:** *ref north*\
+  The direction the airplane's longitudinal axis points with respect to the reference north.
+    
+- **Track:**\
+  The actual flight path over the ground.
+    
+- **Course:** *ref north*\
+  The intended or desired direction of flight in the horizontal plane, measured in degrees from reference north.
+    
+- **Relative Bearing:**\
+  The angle between the aircraft's longitudinal axis and the line connecting to the observed target.
+    
+- **Bearing:** *ref north*\
+  The angle between the reference north and the line connecting to the observed target.
+    
+
+## Airspeed Metrics
+
+- **Indicated Airspeed (IAS):**\
+  The speed of the aircraft as shown on the airspeed indicator.
+    
+- **Calibrated Airspeed (CAS):**\
+  Indicated airspeed corrected for pitot system position error. Usually, this error is small.
+    
+- **Equivalent Airspeed (EAS):**\
+  Calibrated airspeed corrected for the compressibility of air.
+    
+- **True Airspeed (TAS):**\
+  The speed of the aircraft relative to the air.
+    
+- **Ground Speed (GS):**\
+  The speed of the aircraft relative to the ground.
+    
+
+## Altimetry & Pressures
+
+- **Indicated Altitude:** *proper*\
+  Altitude measured by an altimeter with a proper altimeter setting.
+    
+- **Pressure Altitude:** *standard datum plane 29.92*\
+  The indicated altitude when the altimeter setting is set to the standard datum plane of **29.92 inHg** (**1013.2 mb**).
+    
+- **Density Altitude:** *temperature*\
+  Pressure altitude corrected for nonstandard temperature variations. It reflects an altitude in the standard atmosphere having the same air density.
+    
+- **True Altitude:**\
+  The actual vertical distance above mean sea level (MSL).
+    
+- **Absolute Altitude:**\
+  The actual vertical distance above the Earth's surface (height above ground level, or AGL).
+    
+- **QNH:**\
+  Barometric pressure adjusted to sea level at your location. If QNH is set correctly, the altimeter will indicate airport elevation when the aircraft touches down.
+    
+- **QNE:**\
+  Denotes the standard altimeter setting of **29.92 inHg** (**1013.2 mb**). At high altitudes, all aircraft use this standard setting.
+    
+- **QFE:**\
+  Airfield barometric pressure. If QFE is set correctly, the altimeter will indicate zero altitude when the aircraft is on the ground at that airport.
+    
+
+## 5 Special Use Areas
+
+1. **Alert Areas:** *unusual, parachute, glider, student*\
+   Shown on aeronautical charts to inform pilots of unusual types of aerial activities, such as parachute jumping and glider towing, or high concentrations of student pilot training.
+    
+2. **Warning Areas:** *3 nm coast US, hazard, nonparticipating*\
+   Extend from 3 nautical miles outward from the coast of the United States and contain activity that may be hazardous to nonparticipating aircraft.
+    
+3. **Restricted Areas:** *invisible hazards, gunnery, need permission*\
+   Often contain invisible hazards to aircraft, such as artillery firing, aerial gunnery, or guided missiles. Permission to fly through restricted areas must be granted by the controlling agency.
+    
+4. **Prohibited Areas:** *no flight, national welfare*\
+   Established for security or other reasons associated with the national welfare; airspace within which the flight of aircraft is prohibited.
+    
+5. **Military Operations Area (MOA):** *VFR OK*\
+   A block of airspace in which military operations are conducted. VFR aircraft are not prevented from flying through active MOAs, but it is wise to avoid them when possible.
+    
+
+## Other Airspaces
+
+- **Temporary Flight Restrictions (TFR):** *temporarily protect p/p*\
+  Regulatory actions that temporarily restrict certain aircraft from operating within a defined area to protect persons or property in the air or on the ground.
+    
+- **Six Types of TFRs (ADVESE):**\
+  Types of TFRs include those that address:
+    - **A**irshow events
+    - **D**isaster and hazards
+    - **V**IP movement
+    - **E**mergency air traffic rules
+    - **S**pace operation
+    - **E**vents - major sport events
+        
+- **Air Defense Identification Zones (ADIZ):** *vicinity US boundary*\
+  Established to facilitate the identification of aircraft in the vicinity of U.S. international airspace boundaries.
+    
+
+## Engine & Mixture Operations
+
+- **Best Economy Mixture:** *pwr 75%, lean to rough, rich smooth, EGT MAX*\
+  This setting may only be used up to a power setting of **75%**. To obtain the lowest specific fuel consumption at a particular power setting: slowly pull the mixture control lever back toward LEAN until the engine starts to run roughly, then push the mixture control lever forward just far enough to restore smooth running. At the same time, the exhaust gas temperature (EGT) should reach a maximum.
+    
+- **Best Power Mixture:** *all pwr, best economy → 100F(55C), mainly high pwr*\
+  This mixture can be set for maximum performance at all power settings. The mixture should first be set as for "best economy" and then enriched until the exhaust gas temperature is approximately **100°F** (**55°C**) lower. This setting produces the maximum performance for a given manifold pressure and is mainly used for high power settings (approximately **75%**).
+    
+
+- **Displaced Threshold:** *other than designated runway, NO landing, obstructure*\
+  When the landing area begins at a point on the runway other than the designated physical beginning of the runway. It can be used for taxi, takeoff, and landing rollout, but landing touchdown before this point is prohibited due to obstructions at the end of the runway like trees or buildings.
+    
+- **Blast Pad / Stopway Area:** *prop/jet blast, reject TO, NO operation*\
+  The blast pad is an area where propeller or jet blast can dissipate without creating a hazard. The stopway area is paved so that in the event of a rejected takeoff, an aircraft can decelerate safely; it cannot be used for routine landing, takeoff, or taxiing.
+    
+
+- **VOR Test Facilities (VOT):** *360, to/from 0/180, ±4*\
+  Enables precise VOR accuracy checks regardless of your airplane's position because VOTs broadcast a signal for only one radial: **360°**.
+    - Tune your VOR receiver to the VOT frequency and identify the signal (a series of dots or a continuous tone). Next, set a course of either **0°** or **180°** on the VOR indicator.
+	- If you set **0°**, the CDI should center with a **FROM** indication.
+	- If you set **180°**, the CDI should center with a **TO** indication.
+	- The checked course should be within **±4°** of the test course.
+            
+- **NOTAM(D):** *info disseminated for nav fac, airspace, airports, chart sup*\
+  Information disseminated for all navigational facilities that are part of the U.S. airspace system and all public-use airports, seaplane bases, and heliports listed in the Chart Supplements.
+    
+- **FDC NOTAM:** *TFR, amendments to aeronautical charts*\
+  Issued by the National Flight Data Center; these contain regulatory information, such as TFRs or amendments to aeronautical charts.
+    
+- **Distance Measuring Equipment (DME):** *A2G, slant, nm,  from navaid*\
+  Airborne and ground equipment used to measure, in nautical miles, the slant range distance of an aircraft from the navigation aid.
+    
+- **Receiver Autonomous Integrity Monitoring (RAIM):** *software, detects and deselects, warning*\
+  A software function within a GPS receiver to detect and deselect a failed satellite while providing a warning to the pilot.
+    
+- **DME Arc Execution Steps:** *lead 0.5, 5~10 ahead→ behind tip, downward*
+    1. Lead your turn onto the arc about **0.5 nautical miles** prior to reaching the arc. Continue turning to the heading shown at the wingtip reference.
+    2. Turn to a heading that puts the bearing pointer **5° to 10° ahead** of the wingtip, and hold that heading until the bearing pointer moves **5° to 10° behind** the wingtip.
+    3. Visualize the wind direction on the compass card or RMI and correct accordingly. If correcting away from the VOR, the bearing pointer moves behind the wingtip. If correcting toward the VOR, the pointer moves ahead of the wingtip.
+        
+- **ADS-B:** *A2ATC; accurate than radar*\
+  **Automatic Dependent Surveillance-Broadcast** equipped aircraft transmit their GPS positions to ATC, resulting in much better accuracy and coverage than traditional radar.
+    
+
+---
+
+- **Preflight Action (14 CFR 91.103):**\
+  For an IFR flight or a flight not in the vicinity of an airport, preflight action requires a review of specific information summarized by the acronym **NW KRAFT**:
+    - **N**OTAMs
+    - **W**eather reports and forecasts
+    - **K**now ATC traffic delays
+    - **R**unway lengths at the airports of intended use
+    - **A**lternatives available if the planned flight cannot be completed
+    - **F**uel requirements
+    - **T**akeoff and landing distance data
+
+- **Three Common Ways to Navigate:**\
+  Position may be determined by:
+    1. **Pilotage:** By reference to visible landmarks.
+    2. **Dead Reckoning:** By computing direction and distance from a known position.
+    3. **Radio Navigation:** By use of radio aids.
+        
+- **Pilotage Navigation:**\
+  Navigation by reference to landmarks or checkpoints. The pilot visually identifies landmarks outside the aircraft and compares their position with their location on a chart relative to the plotted course line.
+    
+- **Dead Reckoning:**\
+  Navigation solely by means of computations based on time, airspeed, distance, and direction. Adjusted by wind speed and velocity, these variables yield heading and ground speed (GS). GS establishes the time to arrive at checkpoints and the destination.
+    
+- **Checkpoint Selection Factors:**\
+  Checkpoints should be easy-to-locate points like large towns, lakes, rivers, or combinations like towns with an airport or highway network. Normally, choose towns indicated by yellow splashes on the chart; do not rely solely on towns represented by small circles unless in isolated areas.
+    
+- **VFR Cross-Country Route Planning Factors:**
+    - **Airspace:**\
+      Various classes of airspace and requirements to operate within; avoidance of certain Special Use airspaces.
+    - **Airports:**\
+      Availability of airports or suitable landing areas for emergencies, diversions, fuel, and services.
+    - **Terrain and obstacle clearance:**\
+      Ability to safely overfly or divert around rugged or hostile terrain.
+    - **Navigation/communication capability:**\
+      Availability of landmarks, VOR signal reception, and communication options for contacting FSS or ATC.
+  
+  {{< /tab >}}
+  
+  {{< tab name="QUIZ" >}}
+  
 ## Earth Structure & Coordinate Systems
 
 {{< details title="@Great Circle" closed="true" >}}
@@ -308,3 +540,7 @@ Normally, choose only towns indicated by splashes of yellow on the chart. Do not
 - **Terrain and obstacle clearance**—Can the aircraft safely overfly, or must it divert around it? Also, avoidance of rugged or hostile terrain.
 - **Navigation/communication capability**—Availability of landmarks; VOR signal reception if using VOR navigation; communication availability for contacting FSS, ATC, etc.
 {{< /details >}}
+
+  
+  {{< /tab >}}
+{{< /tabs >}}

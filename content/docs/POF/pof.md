@@ -573,6 +573,9 @@ $$
 ## Anti-Stall Design
 ### Washout
 - *Geometric Twist*: Designing the wing so the wing root features a greater angle of incidence than the wingtip.
+
+- *Aerodynamic Twist*: Grading the structural profile along the span by transitioning from high-camber airfoils at the root to low-camber airfoils at the tip.
+- 
 $$
 \begin{aligned}
 \text{Aerodynamic Twist} &\implies \text{Different Airfoils} \\
@@ -580,8 +583,6 @@ $$
 &\implies \text{Wing tip stalls first}
 \end{aligned}
 $$
-
-- *Aerodynamic Twist*: Grading the structural profile along the span by transitioning from high-camber airfoils at the root to low-camber airfoils at the tip.
 
 ![Washout](/images/washout.png "Washout")
 
