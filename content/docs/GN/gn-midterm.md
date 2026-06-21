@@ -18,7 +18,7 @@ math: true
 - **Rhumb Line:** *X meridian*\
   A line on the Earth's surface which has a constant angle to the meridian.
     
-- **Geographic North/South Pole:**\
+- **⭐️Geographic North/South Pole:**\
   The point where the Earth's axis of rotation intersects the Earth's surface.
     
 - **Geocentric Latitude:**\
@@ -36,7 +36,7 @@ math: true
 - **True North:**\
   The direction of the geographic North Pole measured from the Earth's surface.
     
-- **Magnetic North:**\
+- **⭐️Magnetic North:**\
   The direction of the local Earth's magnetic field.
     
 - **Compass North:**\
@@ -45,17 +45,17 @@ math: true
 - **Magnetic Variation:**\
   The angle between True North and Magnetic North. If magnetic north is on the right side of true north, it is an East variation.
     
-- **Isogonic Line:**\
+- **⭐️Isogonic Line:**\
   A line on Earth connecting all points that have the same magnetic variation.
     
-- **Magnetic Deviation:**\
+- **⭐️Magnetic Deviation:**\
   A compass error caused by magnetic disturbances from electrical and metal components in the airplane. The correction for this error is displayed on a compass correction card placed near the magnetic compass in the airplane.
     
 
 ## Flight Vectors & Tracking
 
 - **Heading:** *ref north*\
-  The direction the airplane's longitudinal axis points with respect to the reference north.
+  The direction the airplane's longitudinal axis points **with respect to** the reference north.
     
 - **Track:**\
   The actual flight path over the ground.
@@ -75,10 +75,10 @@ math: true
 - **Indicated Airspeed (IAS):**\
   The speed of the aircraft as shown on the airspeed indicator.
     
-- **Calibrated Airspeed (CAS):**\
+- **⭐️Calibrated Airspeed (CAS):**\
   Indicated airspeed corrected for pitot system position error. Usually, this error is small.
     
-- **Equivalent Airspeed (EAS):**\
+- **⭐️Equivalent Airspeed (EAS):**\
   Calibrated airspeed corrected for the compressibility of air.
     
 - **True Airspeed (TAS):**\
@@ -108,10 +108,10 @@ math: true
 - **QNH:**\
   Barometric pressure adjusted to sea level at your location. If QNH is set correctly, the altimeter will indicate airport elevation when the aircraft touches down.
     
-- **QNE:**\
+- **⭐️QNE:**\
   Denotes the standard altimeter setting of **29.92 inHg** (**1013.2 mb**). At high altitudes, all aircraft use this standard setting.
     
-- **QFE:**\
+- **⭐️QFE:**\
   Airfield barometric pressure. If QFE is set correctly, the altimeter will indicate zero altitude when the aircraft is on the ground at that airport.
     
 
@@ -123,7 +123,7 @@ math: true
 2. **Warning Areas:** *3 nm coast US, hazard, nonparticipating*\
    Extend from 3 nautical miles outward from the coast of the United States and contain activity that may be hazardous to nonparticipating aircraft.
     
-3. **Restricted Areas:** *invisible hazards, gunnery, need permission*\
+3. **⭐️Restricted Areas:** *invisible hazards, gunnery, need permission*\
    Often contain invisible hazards to aircraft, such as artillery firing, aerial gunnery, or guided missiles. Permission to fly through restricted areas must be granted by the controlling agency.
     
 4. **Prohibited Areas:** *no flight, national welfare*\
@@ -138,7 +138,7 @@ math: true
 - **Temporary Flight Restrictions (TFR):** *temporarily protect p/p*\
   Regulatory actions that temporarily restrict certain aircraft from operating within a defined area to protect persons or property in the air or on the ground.
     
-- **Six Types of TFRs (ADVESE):**\
+- **⭐️Six Types of TFRs (ADVESE):**\
   Types of TFRs include those that address:
     - **A**irshow events
     - **D**isaster and hazards
@@ -153,17 +153,17 @@ math: true
 
 ## Engine & Mixture Operations
 
-- **Best Economy Mixture:** *pwr 75%, lean to rough, rich smooth, EGT MAX*\
+- **⭐️Best Economy Mixture:** *pwr 75%, lean to rough, rich smooth, EGT MAX*\
   This setting may only be used up to a power setting of **75%**. To obtain the lowest specific fuel consumption at a particular power setting: slowly pull the mixture control lever back toward LEAN until the engine starts to run roughly, then push the mixture control lever forward just far enough to restore smooth running. At the same time, the exhaust gas temperature (EGT) should reach a maximum.
     
-- **Best Power Mixture:** *all pwr, best economy → 100F(55C), mainly high pwr*\
+- **⭐️Best Power Mixture:** *all pwr, best economy → 100F(55C), mainly high pwr*\
   This mixture can be set for maximum performance at all power settings. The mixture should first be set as for "best economy" and then enriched until the exhaust gas temperature is approximately **100°F** (**55°C**) lower. This setting produces the maximum performance for a given manifold pressure and is mainly used for high power settings (approximately **75%**).
     
 
-- **Displaced Threshold:** *other than designated runway, NO landing, obstructure*\
+- **⭐️Displaced Threshold:** *other than designated runway, NO landing, obstructure*\
   When the landing area begins at a point on the runway other than the designated physical beginning of the runway. It can be used for taxi, takeoff, and landing rollout, but landing touchdown before this point is prohibited due to obstructions at the end of the runway like trees or buildings.
     
-- **Blast Pad / Stopway Area:** *prop/jet blast, reject TO, NO operation*\
+- **⭐️Blast Pad / Stopway Area:** *prop/jet blast, reject TO, NO operation*\
   The blast pad is an area where propeller or jet blast can dissipate without creating a hazard. The stopway area is paved so that in the event of a rejected takeoff, an aircraft can decelerate safely; it cannot be used for routine landing, takeoff, or taxiing.
     
 
@@ -183,17 +183,33 @@ math: true
 - **Distance Measuring Equipment (DME):** *A2G, slant, nm,  from navaid*\
   Airborne and ground equipment used to measure, in nautical miles, the slant range distance of an aircraft from the navigation aid.
     
-- **Receiver Autonomous Integrity Monitoring (RAIM):** *software, detects and deselects, warning*\
+- **⭐️Receiver Autonomous Integrity Monitoring (RAIM):** *software, detects and deselects, warning*\
   A software function within a GPS receiver to detect and deselect a failed satellite while providing a warning to the pilot.
     
-- **DME Arc Execution Steps:** *lead 0.5, 5~10 ahead→ behind tip, downward*
+- **⭐️DME Arc Execution Steps:** *lead 0.5, 5~10 ahead→ behind tip, downward*
     1. Lead your turn onto the arc about **0.5 nautical miles** prior to reaching the arc. Continue turning to the heading shown at the wingtip reference.
     2. Turn to a heading that puts the bearing pointer **5° to 10° ahead** of the wingtip, and hold that heading until the bearing pointer moves **5° to 10° behind** the wingtip.
     3. Visualize the wind direction on the compass card or RMI and correct accordingly. If correcting away from the VOR, the bearing pointer moves behind the wingtip. If correcting toward the VOR, the pointer moves ahead of the wingtip.
         
 - **ADS-B:** *A2ATC; accurate than radar*\
   **Automatic Dependent Surveillance-Broadcast** equipped aircraft transmit their GPS positions to ATC, resulting in much better accuracy and coverage than traditional radar.
-    
+
+- **⭐️DTK:**\
+  Desired track (or course) is the route direction between waypoints.
+
+- **⭐️TRK:**\
+  Track is the direction that the airplane is currently moving over the ground.
+
+- **⭐️TKE:**\
+  Track angle error is the angular difference in direction between the desired track and the aircraft’s actual track.
+
+- **⭐️XTK:**\
+  Cross-track error is the distance, left or right, from your present position to the desired track, measured in nautical miles.
+
+
+- **⭐️What are the three main GPS segments**: Satellite segment, Control segment, User segment.
+
+
 
 ---
 
