@@ -9,6 +9,7 @@ toc: false      # Completely removes the right sidebar from this page
 Welcome to the PPGS Dictionary. Click a module below to start exploring terms.
 
 {{< cards >}}
+  {{< card link="docs/far" title="FAR/AIM" icon="book-open" >}}
   {{< card link="docs/gn" title="General Navigation (GN)" icon="book-open" >}}
   {{< card link="docs/ins" title="Instruments (INS)" icon="adjustments" >}}
   {{< card link="docs/pof" title="Principles of Flight (POF)" icon="paper-airplane" >}}
