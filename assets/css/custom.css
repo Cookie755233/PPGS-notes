@@ -97,3 +97,15 @@ details.pine-details summary strong {
   overflow-y: hidden;
   padding: 3px 2px 1px; /* small padding so descenders aren't clipped */
 }
+
+/* Ensure the newly relocated TOC doesn't break the sidebar's internal scrolling */
+aside[class*="sidebar"] nav#TableOfContents {
+  font-size: 0.875rem; /* Matches left menu sizing */
+  border-left: 2px solid #e2e8f0; /* Crisp divider line */
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+}
+
+.dark aside[class*="sidebar"] nav#TableOfContents {
+  border-left-color: #404040;
+}

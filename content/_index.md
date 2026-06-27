@@ -10,8 +10,9 @@ Welcome to the PPGS Dictionary. Click a module below to start exploring terms.
 
 {{< cards >}}
   {{< card link="docs/far" title="FAR/AIM" icon="book-open" >}}
-  {{< card link="docs/gn" title="General Navigation (GN)" icon="book-open" >}}
-  {{< card link="docs/ins" title="Instruments (INS)" icon="adjustments" >}}
-  {{< card link="docs/pof" title="Principles of Flight (POF)" icon="paper-airplane" >}}
-  {{< card link="docs/mat" title="Material (MAT)" icon="cube" >}}
+  {{< card link="docs/met" title="MET" icon="cloud" >}}
+  {{< card link="docs/gn" title="GN&RN" icon="book-open" >}}
+  {{< card link="docs/ins" title="INS" icon="adjustments" >}}
+  {{< card link="docs/pof" title="POF" icon="paper-airplane" >}}
+  {{< card link="docs/mat" title="MAT" icon="cube" >}}
 {{< /cards >}}
