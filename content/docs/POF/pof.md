@@ -600,7 +600,7 @@ $$
 W = L = \frac{1}{2} \cdot \rho \cdot V^2 \cdot S \cdot C_L (\alpha)
 $$
 
->[!TLDR]
+> [!note]
 > **Aircraft Weight \(\uparrow\)** \(\implies V_s \uparrow\)\
 > **Flap Extended** \(\implies V_s \downarrow\)\
 > **Icing** \(\implies V_s \uparrow\)\

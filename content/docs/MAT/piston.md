@@ -154,16 +154,176 @@ To make sure the magnetos are *properly grounded*, **switch set to OFF position 
 As soon as it is sure the engine will die and the magnetos are well grounded, the switch can be turned back to BOTH without having the engine stopped.
 
 
-
 ## Oil System
 The lubrication (oil) system serves for the duties of： 
 - Lubrication 
 - Cooling 
 - Sealing
-- Cleaning *contaminants through filter*
-- Conservation *anti-corrosion* 
-- Power transmission *as hydraulic fuel for propeller control or torque meter system*
+- Cleaning *(contaminants through filter*)
+- Conservation *(anti-corrosion*) 
+- Power transmission *(as hydraulic fuel for propeller control or torque meter system)*
 
 
 ### Wet Sump
 ![](/images/wetsump.png "")
+- *The wet sump does not work in inverted and radial type engine, or acrobatic airplanes (because it's using gravity to move the oil)*
+
+### Oil Check
+- Quantity: Using a dipstick.
+- Pressure: 
+	- To ensure lubrication the **oil pressure should be indicated 30 second after engine start.** (60 seconds in cold weather.)
+- Temperature:
+	- Oil temperature is measured *before* the oil enters the engine.
+
+#### High Oil Temperature
+- Low oil quantity *leakage*
+- High friction in the engine bearings 
+- Insufficient heat transfer due to inoperative oil cooler system
+- **Slow speed with high engine power.** *insufficient air cooling*
+
+{{< callout >}}
+React to High Oil Temperature
+- **D**ecrease climb rate and increase airspeed
+- **O**pen cowl flap *(increases airflow)*
+- **P**ower reduction
+- **E**nrich mixture *(helps cool the engine)*
+{{</ callout >}}
+
+---
+
+#### Low Oil Pressure
+- Low oil quantity *leakage*
+- Obstructed oil cooler
+- Pressure pump failure
+- Pressure relief valve failure
+
+{{< callout >}}
+React to Low Oil Pressure
+$$
+\begin{array}{l}
+\textbf{CASE 1}
+\begin{cases}
+\text{High temp, low pressure} \rightarrow \text{low flow} \\
+\text{Low temp, low pressure} \rightarrow \color{red}{\text{no}} \text{ flow}
+\end{cases} \\
+\implies  \color{red}{\text{landing ASAP}} \\
+\\
+\textbf{CASE 2} - \text{Normal temp, low pressure} \\
+\implies \text{False indication, continue flight and observe}
+\end{array}
+$$
+{{</ callout >}}
+
+
+## Detonation
+![](/images/detonation.png "")
+
+- Knock resistance is determined by self-ignition temperature of the fuel.
+- Detonation is an uncontrolled self-ignition with **explosive** rapidity due to high pressure and high temperature.
+- The area inside a P-V diagram equals **usable power**.
+	- **Normal Combustion:** Fuel burns smoothly, pushing the piston down with a steady, wide force. Result: A wide loop with a **large area** (more power).
+	- **Detonation:** Fuel violently explodes all at once. The pressure spikes too early while the piston is still moving up. The engine fights itself, and energy is wasted slamming the cylinder block as heat. Result: A tall, skinny spike with a **small area**
+
+### Common Causes of Detonation
+- **High MAP with low RPM** → *The mixture cannot expand fast enough after ignition to lower the temperature due to the slow piston speed.*
+- High power with lean mixture
+- High power with low speed →  *poor cooling*
+
+{{< callout >}}
+**Large power setting change must be done in a correct sequence.**
+![](/images/pwrchange.png "")
+{{</ callout >}}
+
+## Vapor Lock
+- The fuel inside the supply line is **heated**  (e.g. start with a hot engine) 
+- Pressure decreases inside the EDP fuel supply line **due to altitude increase.**
+
+\(\implies\) Boost pumps should be switched “ON" to raise the boiling temperature. *(increase pressure)*
+
+
+## ⭐️ Power Equation
+**Power is the work done per unit time,  and work is the force times distance.**
+
+$$
+\begin{aligned}
+\text{Work} &= \text{force} \times \text{distance} \\
+&\implies F \times 2\pi r = 2\pi T \text{ (Torque)} \\
+\\
+\text{Power} &= \frac{\text{Work}}{\text{Time}} \\
+&= 2\pi T \times \text{RPM(rev/min)} \\
+&= T \times \text{RPM} \times C \\
+\implies \text{Power} &\propto \underbrace{T}_{\propto \text{ MAP}} \times \text{RPM}
+\end{aligned}
+$$
+
+
+### Increase Power, Fix RPM (const-prop)
+$$
+\begin{aligned}
+\text{Increase power} \Rightarrow\ & \text{MAP } \uparrow \\
+\Rightarrow\ & \text{Engine Torque } \uparrow \\
+\Rightarrow\ & \uparrow T = I \cdot \alpha \uparrow \implies \text{RPM \underline{wants} to increase} \\
+& (F = m \cdot a) \\
+& \begin{cases}
+\because \text{RPM fixed} \\
+\rightarrow \text{Pitch angle (blade) } \uparrow  \\ 
+\implies \text{Tangential Force } \uparrow
+\end{cases} \\
+\Rightarrow\ & \text{Power } \uparrow \\
+\implies & \text{speed } \uparrow, \text{ GPH } \uparrow
+\end{aligned}
+$$
+
+### Torque Curve
+- Ideally, The air mass inside the cylinder is constant at a fixed throttle position(MAP)
+- **In reality, the amount of air per cycle depends on RPM**
+
+![](/images/torquecurve.png "")
+
+## Manifold Air Pressure (MAP)
+![](/images/map.png "")
+- The change of MAP indicates the power change by the throttle.
+- *MAP slightly decreases at a higher RMP* due to friction.
+- **MAP is the highest when set full throttle (slightly lower than QFE)** and **lowest on idle (~10 in)**
+- Boosted(*supercharged/turbocharged*) engines would have a greater power at a higher **altitude** with the supply of denser air.
+	- supercharged: engine driven pump
+	- turbocharged: more efficient, driven by exhaust gas.
+
+
+## Propeller
+- The propeller is driven by the rotating *crankshaft* of the engine.
+- The thrust is acting *normal to the plane of rotation of the propeller.*
+- **The propeller pitch is the angle between the blade chord line and plane of rotation.**
+- The relative wind to each propeller blade is **an addition of the flight speed und rotational speed.**
+- The angle of attack is the angle between the relative wind and sectional chord line.
+
+### Propeller Twist
+**The optimum AoA for a propeller section will provide the highest ratio of thrust to tangential force. A propeller twist is designed for the prop to obtain an optimum AoA at all point.**
+
+![](/images/proptwist.png "")
+
+
+### Adjustment on Constant Pitch Propeller
+$$
+\begin{align*} 
+\text{Prop Lever} \uparrow \implies \quad
+&\text{RPM} \uparrow \\
+&\text{Prop Pitch} \downarrow \\
+&\text{Power} \uparrow (Power\uparrow = T \times RPM\uparrow)\\
+&\text{MAP} \rightarrow \text{Constant} (\text{drops slightly})\\
+&\text{TAS} \uparrow \\
+&\text{GPH} \uparrow 
+\end{align*}
+$$
+$$
+\begin{align*} 
+\text{Throttle} \uparrow \implies \quad 
+&\text{MAP} \uparrow \\
+&\text{Torque} \uparrow \\
+&\text{Power} \uparrow (Power\uparrow = T\uparrow \times RPM)\\
+&\text{Prop Pitch} \uparrow \\
+&\text{RPM} \rightarrow \text{Constant} \\
+&\text{TAS} \uparrow \\
+&\text{GPH} \uparrow 
+\end{align*}
+$$
