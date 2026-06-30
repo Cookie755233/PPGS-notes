@@ -1,5 +1,5 @@
 ---
-title: EVA PPGS Dictionary
+title: PPGS
 type: docs
 sidebar:
   hide: true  # Completely removes the left sidebar from this page
