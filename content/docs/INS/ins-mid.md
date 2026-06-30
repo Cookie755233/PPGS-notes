@@ -40,6 +40,8 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **GTX345R<br>(Transponder)**              | - Standard transponder modes: **STBY, ON, ALT, GRD** <br> - *Auto Altitude (ALT) mode when groundspeed is greater than 30 knots & auto Ground (GND) mode when under 30 knots.* <br> - **The GTX 345R interfaces with a Traffic Awareness System (TAS),** which displays On the MFD and PFD. <br> - **ADS-B (Automatic Dependent Surveillance-Broadcast)** <br> - **ADS-B TX** shall always be enabled (`XPDR - ADS-B TX`) <br> - In `TIME/REF` window, add a new `FLIGHT ID` entry.                                                                                                                                                                                                                                                                                                  |
 
 ## System Failure Scenarios
+![](/images/error.png "")
+
 1. One GIA fails?\
    COM/NAV/GPS receiver data is not available and automatically replaced by COM/NAV receiver data from another GIA63.
 2. Both GIA fail?\
