@@ -2,44 +2,23 @@
 title: "@INS MID"
 cssclasses:
 - ultra-wide-view
-use_collapsible: true
+use_collapsible: false
 ---
 ## ⭐️ ELT
+{{< callout >}}
 - **Emergency Locator Transmitter**, located in the rear fuselage, below the aft baggage compartment.
 - Frequency: **121.5 MHz(24hr) and 406 MHz(50hr)** 
 - Activation: **Manual switch**, **Sea water**, **Acceleration switch more than 5 G**
 - Purpose: locate survivors for SAR (Search and Rescue)
 - Information sent: **Country of registration, Aircraft Registration,  Position coordinates, Serial number**
+{{</ callout >}}
 
-### ELT Test (FAR/AIM 6-2-4b)
-- **BEFORE FLIGHT**
-- preferably in shielded room.
-- Tested in **first 5 minutes** of any hour
-- Less then **3 sweeps**
-- Call **FSS/FAA** tower for an exception
-- **Airborne not allowed**
-
-### ELT Check 
-- **DURING PARK** to ensure no falsely activation
-- Tune in 121.5 MHz, if sweeping is heard, ELT is activated.
-- Set remote switch **ON**, **if no change in volume,** ELT is transmitting.
-- Switch **ARM** will stop the signal. 
-- **Inform SAR/FSS/FAA** 
-
-### ELT Inspection
-- Must be inspected **within 12 calendar months** after the last inspection
-- Check for 
-	- proper installation, 
-	- battery corrosion, 
-	- operation of the controls and crash sensor
-	- sufficient signal from antenna
-
-### ELT Battery Replacement
-- After emergency use
-- Accidentally activated for *undetermined* period of time.
-- Before battery expiration date (l*ess than 50 % due time*)
-- Cumulative operation of **one hour**
-
+| Avionics Unit / Operation        | System Functions & Key Data                                                                                                                                                                                                                                                                                                                         |
+|:-------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ELT Test<br>(FAR/AIM 6-2-4b)** | - **BEFORE FLIGHT** <br> - preferably in shielded room. <br> - Tested in **first 5 minutes** of any hour <br> - Less then **3 sweeps** <br> - Call **FSS/FAA** tower for an exception <br> - **Airborne not allowed**                                                                                                                               |
+| **ELT Check**                    | - **DURING PARK** to ensure no falsely activation <br> - Tune in 121.5 MHz, if sweeping is heard, ELT is activated. *(press COM frequency transfer key for 2 second for quick setting)* <br> - Set remote switch **ON**, **if no change in volume,** ELT is transmitting. <br> - Switch **ARM** will stop the signal. <br> - **Inform SAR/FSS/FAA** |
+| **ELT Inspection**               | - Must be inspected **within 12 calendar months** after the last inspection <br> - Check for <br> - proper installation, <br> - battery corrosion, <br> - operation of the controls and crash sensor <br> - sufficient signal from antenna                                                                                                          |
+| **ELT Battery Replacement**      | - After emergency use <br> - Accidentally activated for *undetermined* period of time. <br> - Before battery expiration date (l*ess than 50 % due time*) <br> - Cumulative operation of **one hour**                                                                                                                                                |
 
 ## G1000 System
 The G1000 currently has 3 ways of ensuring that its data is correct:
@@ -49,61 +28,38 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 
 ![](/images/g1000.png "")
 
-### GEA 71 (Engine/Airframe Interface)
-- **engine/air frame** data to the G1000 system. The unit interfaces to **transducers**. 
-- *Analog data is received from the transducers and is converted to digital signal by the GEA 71* **(A2D)**. 
-- **Digital information is then sent through the primary RS-485 serial path to the #1 GIA 63**, then on to the MED for display. 
-- A backup data path from the GEA to the #2 GIA 63, then on to the MFD, exists in the event the primary path fails.
-- Interface of 
-	- Extensive input & monitoring capabilities
-	- EGT/CHT on all cylinders
-	- Engine instruments & vital engine data (oil, fuel & electrical) .
-	- Physical conditions (open doors) 
-	- Electrical System data
-	- Also features *lean assist function*
+| Avionics Unit                             | System Functions & Key Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|:----------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **GDU 1040 (Display)**                    | The dispiays communicate with eacn other through a High-speed Data Bus (HSDB) Ethernet connection.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **GEA 71<br>(Engine/Airframe Interface)** | - **engine/air frame** data to the G1000 system. The unit interfaces to **transducers**. <br> - *Analog data is received from the transducers and is converted to digital signal by the GEA 71* **(A2D)**. <br> - **Digital information is then sent through the primary RS-485 serial path to the #1 GIA 63**, then on to the MED for display. <br> - A backup data path from the GEA to the #2 GIA 63, then on to the MFD, exists in the event the primary path fails.<br> - Extensive input & monitoring capabilities <br> - EGT/CHT on all cylinders <br> - Engine instruments & vital engine data (oil, fuel & electrical) . <br> - Physical conditions (open doors) <br> - Electrical System data <br> - Also features *lean assist function* when flying at a higher altitude |
+| **GIA 63<br>(Integrated Avionics)**       | - Communications hub for the systems <br> - System Integration Processors <br> - *I/O Processors* <br> - VHF COM <br> - VHF NAV/LOC <br> - GPS/WAAS <br> - Glideslope                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **⭐️GMA 1347 (Audio)**                   | - Provides manual control of display **Reversionary Mode.** In Reversionary Mode, all important flight information from the PFD is presented on the remaining display in the same format. <br> - It would *auto-switch to reversionary mode if error.* <br> - **Reversionary Mode may be manually activated by pressing the Audio Panel's red `DISPLAY BACKUP` Button.**                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **GRS 77 (AHRS)**                         | - **Attitude and Heading Reference System (AHRS)** <br> - Provides aircraft attitude and heading information. <br> - The AHRS contains advanced sensors including *accelerometers and rate sensors* <br> - The AHRS can be **initialized and running within 45 seconds** of startup. <br> - The expected life of the Garmin AHRS is approximately *10,000 hours*.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **GMU 44 (Magnetometer)**                 | - **The only component that is NOT connected to GIA 63. It interfaces directly with GRS 77 AHRS to provide it with mag hearing input.** <br> - If the magnetometer fail, the G1000 will lose its ability to provide a Stabilized heading, but you will have access to a **rough heading** for the duration of the flight via GPS and the moving map. <br> - *Internal earth magnetic field database needs to be updated about once every 5 years.* <br> - The Magnetometer is located in the right wing and is easily identified by the *black, non-magnetic screws* used to hold it in place.                                                                                                                                                                                       |
+| **GDC 74A<br>(Air Data Computer)**        | - Sense pressure altitude data, through GIA 63, to transponder(GTX345R) for **Mode C capability**. <br> - Accuracy supports **Reduced Vertical Separation Minimum (RVSM)** to increase airspace capacity/efficiency.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **GTX345R<br>(Transponder)**              | - Standard transponder modes: **STBY, ON, ALT, GRD** <br> - *Auto Altitude (ALT) mode when groundspeed is greater than 30 knots & auto Ground (GND) mode when under 30 knots.* <br> - **The GTX 345R interfaces with a Traffic Awareness System (TAS),** which displays On the MFD and PFD. <br> - **ADS-B (Automatic Dependent Surveillance-Broadcast)** <br> - **ADS-B TX** shall always be enabled (`XPDR - ADS-B TX`) <br> - In `TIME/REF` window, add a new `FLIGHT ID` entry.                                                                                                                                                                                                                                                                                                  |
 
-![](/images/gea71.png "")
-
-### GIA 63 (Integrated Avionics)
-- Communications hub for the systems
-	- System Integration Processors
-	- *I/O Processors*
-	- VHF COM
-	- VHF NAV/LOC
-	- GPS/WAAS
-	- Glideslope
-
-### GMA 1347 (Audio)
-- Provides manual control of display **Reversionary Mode.** In Reversionary Mode, all important flight information from the PFD is presented on the remaining display in the same format.
-- It would *auto-switch to reversionary mode if error.* 
-- Reversionary Mode may be manually activated by pressing the Audio Panel's red DISPLAY BACKUP Button.
-
-
-### GRS 77 (AHRS)
-- **Attitude and Heading Reference System (AHRS)**
-- Provides aircraft attitude and heading information.
-- The AHRS contains advanced sensors including *accelerometers and rate sensors*
-- The AHRS can be **initialized and running within 45 seconds** of startup.
-- The expected life of the Garmin AHRS is approximately 10,000 hours.
-
-### GMU 44 (Magnetometer) 
-- **The only component that is NOT connected to GIA 63. It interfaces directly with GRS 77 AHRS to provide it with mag hearing input.**
-- If the magnetometer fail, the G1000 will lose its ability to provide a Stabilized heading, but you will have access to a **rough heading** for the duration of the flight via GPS and the moving map. 
-- *Internal earth magnetic field database needs to be updated about once every 5 years.*
-- The Magnetometer is located in the right wing and is easily identified by the *black, non-magnetic screws* used to hold it in place.
-
-### GDC 74 A (Air Data Computer)
-- Sense pressure altitude data to transponder for Mode C capibility. 
-- Accuracy **supports RVSM.**
-	- Reduced Vertical Separation Minimum (RVSM) to increase airspace capacity/efficiency.
-
-### GTX345R (Transponder)
-- Standard transponder modes: STBY, ON, ALT, GRD
-	- *Auto Altitude (ALT) mode when groundspeed is greater than 30 knots & auto Ground (GND) mode when under 30 knots.*
-- **The GTX 345R interfaces with a Traffic Awareness System (TAS),** which displays On the MFD and PFD.
-- **ADS-B (Automatic Dependent Surveillance-Broadcast)**
-- **ADS-B TX** shall always be enabled (`XPDR - ADS-B TX`)
-- In `TIME/REF` window, add a new `FLIGHT ID` entry.
+## System Failure Scenarios
+1. One GIA fails?\
+   COM/NAV/GPS receiver data is not available and automatically replaced by COM/NAV receiver data from another GIA63.
+2. Both GIA fail?\
+   No COM/NAV/GPS, but AHRS and ADC continue to provide data to GDU.
+3. If one GDU fails?\
+   Changes to "reversionary mode" and no moving map.
+4. GMA 1347 fails?\
+   Automatically connect to COM1, but audio panel/intercom does not work.
+5. GDC74A fails?\
+   Loss OAT, TAS, ASI, ALT and VSI on PDF, transponder loses mode C.
+6. GRS77 fails?\
+   Attitude presentations are removed from PFD and replaced with "X" and "Attitude fail", heading data is lost.
+7. GMU44 fail?\
+   Stabilized heading data is lost.
+8. OAT sensor failure?\
+   Red "X" appears on TAS and OAT
+9. GTX345 failure?\
+   Red "X" appears over transponder box on PFD and advisory message appears.
+10. GEA 71 fails?\
+    ALL engine/airframe data is lost.
 
 ## PFD/MFD Controls
 ![PFD/MFD Controls](/images/pfdmfd.png "PFD/MFD Controls")
@@ -242,3 +198,56 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
     display: none !important;
   }
 </style>
+
+<style>
+  /* 1. Fix standard markdown lists inside tables */
+  .hextra-content table ul {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  .hextra-content table li {
+    display: list-item !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* 2. Manual Column Width Controller */
+  .wide-col {
+    min-width: 350px;
+    display: inline-block;
+  }
+
+  .hextra-toc {
+    display: none !important;
+  }
+
+  /* 3. Star-row highlight */
+  .hextra-content table tr.star-row > td {
+    border-top: 2px solid #e53935 !important;
+    border-bottom: 2px solid #e53935 !important;
+  }
+  .hextra-content table tr.star-row > td:first-child {
+    border-left: 2px solid #e53935 !important;
+  }
+  .hextra-content table tr.star-row > td:last-child {
+    border-right: 2px solid #e53935 !important;
+  }
+</style>
+
+<script>
+  (function () {
+    function highlightStarRows() {
+      document.querySelectorAll(".hextra-content table tbody tr").forEach(function (row) {
+        var firstCell = row.querySelector("td:first-child");
+        if (firstCell && firstCell.textContent.includes("⭐️")) {
+          row.classList.add("star-row");
+        }
+      });
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", highlightStarRows);
+    } else {
+      highlightStarRows();
+    }
+  })();
+</script>
