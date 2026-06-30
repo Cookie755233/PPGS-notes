@@ -304,26 +304,70 @@ $$
 
 
 ### Adjustment on Constant Pitch Propeller
+{{< callout >}}
+RPM Forward; Throttle steady
 $$
 \begin{align*} 
-\text{Prop Lever} \uparrow \implies \quad
-&\text{RPM} \uparrow \\
-&\text{Prop Pitch} \downarrow \\
-&\text{Power} \uparrow (Power\uparrow = T \times RPM\uparrow)\\
-&\text{MAP} \rightarrow \text{Constant} (\text{drops slightly})\\
-&\text{TAS} \uparrow \\
-&\text{GPH} \uparrow 
+\text{Prop Lever} \uparrow \implies
+&\left.
+\begin{aligned}
+& \text{Speeder spring \red{tightens}} \\
+& \text{Fly weight \red{inward}} \\
+& \text{Governor piston } \downarrow \\
+& \text{Oil: Cylinder} \rightarrow \text{reduction gearbox}\\
+& \text{Prop Pitch} \downarrow \\
+& \text{Tangential Force(Drag)} \downarrow \\
+\end{aligned}
+\,\right\} mechanism \\
+\implies &\text{RPM} \uparrow \\
+\implies &\text{Power} \uparrow (\text{Power} \uparrow = \cancel{T} \times \text{RPM} \uparrow)\\
+\implies &\text{MAP} \rightarrow \text{Constant (drops slightly)}\\
+\implies &\text{TAS} \uparrow \\
+\implies &\text{GPH} \uparrow 
 \end{align*}
 $$
+{{</ callout >}}
+
+{{< callout >}}
+Advance throttle; RPM steady
 $$
 \begin{align*} 
-\text{Throttle} \uparrow \implies \quad 
-&\text{MAP} \uparrow \\
-&\text{Torque} \uparrow \\
-&\text{Power} \uparrow (Power\uparrow = T\uparrow \times RPM)\\
-&\text{Prop Pitch} \uparrow \\
-&\text{RPM} \rightarrow \text{Constant} \\
-&\text{TAS} \uparrow \\
-&\text{GPH} \uparrow 
+\text{Throttle} \uparrow \implies &\text{MAP} \uparrow \\
+\implies &\text{Torque} \uparrow \\
+&\left.
+\begin{aligned}
+&\rightarrow \text{spin rate} \uparrow \\
+&\rightarrow \text{Fly weight \color{red}{outward}} \\
+&\rightarrow \text{Governor piston} \uparrow \\
+&\rightarrow \text{Oil: Pump} \rightarrow \text{Cylinder}\\
+&\rightarrow \color{red}{\text{Prop Pitch} \uparrow} \\
+&\rightarrow \text{Tangential Force (Drag)} \uparrow \\
+&\rightarrow \red{\text{RPM Constant}}
+\end{aligned}
+\,\right\} mechanism \\
+\implies &\text{Power} \uparrow (\text{Power} \uparrow = T \uparrow \times \cancel{\text{RPM}})\\
+\implies &\text{TAS} \uparrow \\
+\implies &\text{GPH} \uparrow 
 \end{align*}
 $$
+{{</ callout >}}
+
+
+{{< callout >}}
+TAS increase; RPM/Throttle steady
+$$
+\begin{align*} 
+\text{TAS} \uparrow \implies \quad 
+&\text{AoA} \downarrow \\
+&\text{Drag (tangential force)} \downarrow \\
+&\left.
+\begin{aligned}
+&\rightarrow \text{RPM} \uparrow \text{ (tendency)} \\
+&\rightarrow \text{Prop Pitch} \uparrow \\
+&\rightarrow \text{Drag} \uparrow 
+\end{aligned}
+\,\right\} mechanism \\
+&\text{RPM} \rightarrow \text{remain constant} 
+\end{align*}
+$$
+{{</ callout >}}

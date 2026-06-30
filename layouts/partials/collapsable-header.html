@@ -1,0 +1,162 @@
+<style>
+  .collapsible-section {
+    border: 1px solid #ccd0da;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .dark .collapsible-section {
+    border-color: #403d52;
+  }
+  .collapsible-header {
+    cursor: pointer;
+    padding: 0.9rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.4);
+    user-select: none;
+  }
+  .dark .collapsible-header {
+    background: rgba(38, 35, 58, 0.4);
+  }
+  .collapsible-header:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .dark .collapsible-header:hover {
+    background: rgba(38, 35, 58, 0.6);
+  }
+  .collapsible-arrow {
+    transition: transform 0.2s;
+    font-size: 12px;
+    color: #8c8fa1;
+  }
+  .collapsible-section.open .collapsible-arrow {
+    transform: rotate(90deg);
+  }
+  .collapsible-body {
+    display: none;
+    padding: 0 1.2rem 1.2rem;
+  }
+  .collapsible-section.open .collapsible-body {
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("=== [COLLAPSIBLE-SCRIPT] INITIALIZING ===");
+
+    // Step 1: Find all H2s on the entire page
+    const allH2s = Array.from(document.querySelectorAll("h2"));
+    console.log(
+      `[COLLAPSIBLE-SCRIPT] Found ${allH2s.length} total H2 elements on the page.`,
+      allH2s,
+    );
+
+    if (allH2s.length === 0) {
+      console.error(
+        "[COLLAPSIBLE-SCRIPT] FATAL: Zero H2 elements found. The markdown is not rendering them as H2, or the DOM isn't ready.",
+      );
+      console.trace();
+      return;
+    }
+
+    // Step 2: Identify the main content wrapper by looking at the parent of the first H2
+    const content = allH2s[0].parentElement;
+    console.log(
+      "[COLLAPSIBLE-SCRIPT] Identified the content wrapper as:",
+      content,
+    );
+
+    // Step 3: Only grab H2s that are direct children of this wrapper (avoids UI headers)
+    const targetH2s = Array.from(content.querySelectorAll(":scope > h2"));
+    console.log(
+      `[COLLAPSIBLE-SCRIPT] Filtered down to ${targetH2s.length} valid markdown H2s.`,
+      targetH2s,
+    );
+
+    if (targetH2s.length === 0) {
+      console.error(
+        "[COLLAPSIBLE-SCRIPT] FATAL: Could not find H2s directly inside the wrapper.",
+      );
+      console.trace();
+      return;
+    }
+
+    // Step 4: Build the DOM elements
+    targetH2s.forEach((h2, index) => {
+      console.group(
+        `[COLLAPSIBLE-SCRIPT] Building Section ${index + 1}: "${h2.textContent.trim()}"`,
+      );
+
+      try {
+        const section = document.createElement("div");
+        section.className = "collapsible-section";
+
+        const header = document.createElement("div");
+        header.className = "collapsible-header";
+
+        const titleSpan = document.createElement("span");
+        titleSpan.style.fontWeight = "600";
+        titleSpan.textContent = h2.textContent.replace("#", "").trim();
+
+        const arrow = document.createElement("span");
+        arrow.className = "collapsible-arrow";
+        arrow.textContent = "▸";
+
+        header.appendChild(titleSpan);
+        header.appendChild(arrow);
+
+        const body = document.createElement("div");
+        body.className = "collapsible-body";
+
+        // Step 5: Gather siblings
+        let next = h2.nextElementSibling;
+        const toMove = [];
+
+        while (next && next.tagName !== "H2") {
+          // Safety brake: Stop if we hit pagination, footers, or Hextra's bottom UI
+          if (
+            next.tagName === "FOOTER" ||
+            (next.className &&
+              typeof next.className === "string" &&
+              next.className.includes("mt-16"))
+          ) {
+            console.warn(
+              `[COLLAPSIBLE-SCRIPT] Triggered safety brake at element:`,
+              next,
+            );
+            break;
+          }
+          toMove.push(next);
+          next = next.nextElementSibling;
+        }
+
+        console.log(
+          `[COLLAPSIBLE-SCRIPT] Gathered ${toMove.length} elements for this section.`,
+        );
+        toMove.forEach((el) => body.appendChild(el));
+
+        section.appendChild(header);
+        section.appendChild(body);
+
+        h2.replaceWith(section);
+        console.log(`[COLLAPSIBLE-SCRIPT] Success: Replaced H2 with widget.`);
+
+        header.addEventListener("click", () => {
+          section.classList.toggle("open");
+        });
+      } catch (error) {
+        console.error(
+          `[COLLAPSIBLE-SCRIPT] CRASHED while processing H2: "${h2.textContent}"`,
+        );
+        console.trace(error);
+      }
+
+      console.groupEnd();
+    });
+
+    console.log("=== [COLLAPSIBLE-SCRIPT] EXECUTION COMPLETE ===");
+  });
+</script>

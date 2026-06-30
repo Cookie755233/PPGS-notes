@@ -2,6 +2,7 @@
 title: "@MET Mid"
 cssclasses:
 - ultra-wide-view
+no-toc: true
 ---
 ## Air Movement
 | Movement        | So-called                                                |
@@ -118,8 +119,6 @@ cssclasses:
 | Infrared (IR)       | Show data according to **temperature**. IR images shows the **TOP of clouds**.                                                                  | Cb visible                                                                        |
 
 
-
-
 <style>
   /* 1. Fix standard markdown lists inside tables */
   .hextra-content table ul {
@@ -134,12 +133,11 @@ cssclasses:
 
   /* 2. Manual Column Width Controller */
   .wide-col {
-    min-width: 350px; 
+    min-width: 350px;
     display: inline-block;
   }
 
-.hextra-toc {
+  .hextra-toc {
     display: none !important;
   }
-
 </style>

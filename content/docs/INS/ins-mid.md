@@ -1,7 +1,47 @@
 ---
 title: "@INS MID"
+cssclasses:
+- ultra-wide-view
+use_collapsible: true
 ---
-## G1000 Overview
+## ⭐️ ELT
+- **Emergency Locator Transmitter**, located in the rear fuselage, below the aft baggage compartment.
+- Frequency: **121.5 MHz(24hr) and 406 MHz(50hr)** 
+- Activation: **Manual switch**, **Sea water**, **Acceleration switch more than 5 G**
+- Purpose: locate survivors for SAR (Search and Rescue)
+- Information sent: **Country of registration, Aircraft Registration,  Position coordinates, Serial number**
+
+### ELT Test (FAR/AIM 6-2-4b)
+- **BEFORE FLIGHT**
+- preferably in shielded room.
+- Tested in **first 5 minutes** of any hour
+- Less then **3 sweeps**
+- Call **FSS/FAA** tower for an exception
+- **Airborne not allowed**
+
+### ELT Check 
+- **DURING PARK** to ensure no falsely activation
+- Tune in 121.5 MHz, if sweeping is heard, ELT is activated.
+- Set remote switch **ON**, **if no change in volume,** ELT is transmitting.
+- Switch **ARM** will stop the signal. 
+- **Inform SAR/FSS/FAA** 
+
+### ELT Inspection
+- Must be inspected **within 12 calendar months** after the last inspection
+- Check for 
+	- proper installation, 
+	- battery corrosion, 
+	- operation of the controls and crash sensor
+	- sufficient signal from antenna
+
+### ELT Battery Replacement
+- After emergency use
+- Accidentally activated for *undetermined* period of time.
+- Before battery expiration date (l*ess than 50 % due time*)
+- Cumulative operation of **one hour**
+
+
+## G1000 System
 The G1000 currently has 3 ways of ensuring that its data is correct:
 1. **Internal system monitoring**: Internal monitoring uses built-in algorithm to ensure that displayed data is consistent and fault-free.
 2. **Fault Detection & Exclusion (FDE)** - Assesses any anomalies in the satellite system and removes the “bad" satellite from the data equation, providing a seamless, correct data stream.
@@ -89,13 +129,14 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **17. Softkey Selection Keys**                        | Press to select softkey shown above the bezel key on the PFD/MFD display.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **18. ALT Knob**                                      | Sets the Selected Altitude, shown above the Altimeter (the large knob selects the thousands, the small knob selects the hundreds).                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-## Page Groups (Sam powerpoint)
-| **Map Page Group (MAP)**                                                                                                                      | **Waypoint Page Group (WPT)**                                                                                                                                                                                                                                | **Auxiliary Page Group (AUX)**                                                                                                                                                                                                                                                      | **Nearest Page Group (NRST)**                                                                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| • Navigation Map<br>• Traffic Map<br>• *Weather Data Link*<br>• Terrain Proximity/ TAWS | • Airport<br>• Intersection<br>• NDB<br>• VOR<br>• User Waypoint | • Trip Planning<br>• Utility<br>• GPS Status<br>• System Setup<br>• XM Satellite Screens<br>• System Status | • Airports<br>• Intersections<br>• NDB<br>• VOR<br>• User Waypoints<br>• Frequencies<br>• Airspaces |     | 
+## Page Groups
+| **Map Page Group (MAP)**                                                                | **Waypoint Page Group (WPT)**                                    | **Auxiliary Page Group (AUX)**                                                                              | **Nearest Page Group (NRST)**                                                                       | **Flight Plan Page Group (FPL)**                                       |
+|:--------------------------------------------------------------------------------------- |:---------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------- |
+| • Navigation Map<br>• Traffic Map<br>• *Weather Data Link*<br>• Terrain Proximity/ TAWS | • Airport<br>• Intersection<br>• NDB<br>• VOR<br>• User Waypoint | • Trip Planning<br>• Utility<br>• GPS Status<br>• System Setup<br>• XM Satellite Screens<br>• System Status | • Airports<br>• Intersections<br>• NDB<br>• VOR<br>• User Waypoints<br>• Frequencies<br>• Airspaces | • Active flight plan<br>• Flight plan catalog<br>• Vertical navigation |
+
 
 ## EIS Display (Engine)
-![EIS Display](/images/eisengine.png "EIS Display")
+![](/images/reversionarymode.png "")
 
 | **Indicator / Gauge**                                  | **Description**                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,3 +168,77 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **LOW VOLTS**                | On-board voltage is below 24 V.                       | Single Aural Tone     |
 | **PITOT FAIL**               | Pitot heat is inoperative.                            | Single Aural Tone     |
 | **PITOT OFF**                | Pitot heat is off.                                    | Single Aural Tone     |
+
+
+## Abbreviations
+- ATIS: Automatic Terminal Information Service
+- ASOS: Automatic Surface Observation System
+- AWOS: Automatic Weather Observing System
+- AHRS: Attitude and Heading Reference System
+- AFM: Aircraft Flight Manual
+- FSS: Flight Service Station
+- CTAF: Common Traffic Advisory Frequency
+- HIWAS: Hazardous In-flight Weather Advisory Service
+- SIGMET: Significant Meteorological Information
+- ADS-B: Automatic Dependent Surveillance Broadcast
+- NDB: Non-Directional radio Beacon
+- VOR: Very High Frequency Omnidirectional Range
+- WAAS: Wide Area Augmentation System
+- MEL: Minimum Equipment List
+
+## Radio Comm
+![](/images/radiofreq.png "")
+### MF (300~3000 KHz)
+- NDB
+### VHF (30~300 MHz)
+- Marker beacons (75)
+- ILS 
+	- 108 ~ 111.**9**5 *ODD*
+- VOR 
+	- 108.0 ~ 111.**8**75 *EVEN*
+	- 112.0 ~ 117.975 *ALL*
+- Navigation Satellites (150)
+### UHF(300~3000 MHz)
+- ILS 
+- DME
+
+### Wave Transportation
+1. **Ground Wave**
+	- Radio wave traveling along the earth’s surface.
+	- Depends on : *Power, frequency, electrical conductivity on the surface (water > dry sfc)*
+	- Higher frequency = shorter ground range
+2. **Sky Wave**
+	- Radio wave reflected from the **ionosphere**
+	- Higher frequency wave may penetrate the ionosphere.
+	- *Smaller angle, likely to be a total reflection.*
+	- LF/MF would be absorbed by the D-layer during daytime
+	- **HF allows worldwide coverage regardless of time.**
+	- *UHF travels at line of sight (NOT sky wave)*
+3. **Skip Distance** is the distance from the transmitting station to the point on the surface of the earth at which the first sky wave ca be received.
+4. **Skip zone** is an area on the surface of the earth where no reception of any radio waves is possible. (*End of ground wave ~ start of sky wave*)
+![](/images/skip.png "")
+
+
+
+<style>
+  /* 1. Fix standard markdown lists inside tables */
+  .hextra-content table ul {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  .hextra-content table li {
+    display: list-item !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* 2. Manual Column Width Controller */
+  .wide-col {
+    min-width: 350px;
+    display: inline-block;
+  }
+
+  .hextra-toc {
+    display: none !important;
+  }
+</style>
