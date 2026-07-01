@@ -8,7 +8,7 @@ hide_toc: true
 {{< callout >}}
 **Emergency Locator Transmitter ELT**
 - located in the rear fuselage, below the aft baggage compartment.
-- Frequency: **121.5 MHz(24hr) and 406 MHz(50hr)** 
+- Frequency: **121.5 MHz(50hr) and 406 MHz(24hr)** 
 - Activation: **Manual switch**, **Sea water**, **Acceleration switch more than 5 G**
 - Purpose: locate survivors for SAR (Search and Rescue)
 - Information sent: **Country of registration, Aircraft Registration,  Position coordinates, Serial number**
