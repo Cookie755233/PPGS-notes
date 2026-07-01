@@ -1,0 +1,43 @@
+.content strong em,
+.content em strong {
+  font-size: 1.1em;
+  display: inline-block;
+  padding: 2px 10px;
+  border: 2px solid #ff0000;
+  background-color: #ffe5e5e6;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.content ul {
+  list-style: none;
+  margin-left: 8px;
+}
+
+.content li {
+  list-style: none;
+  margin-left: -1.5em;
+}
+
+.content ul ul,
+.content ol ul,
+.content ul ol,
+.content ol ol {
+  border-left: 1.1px solid #e2e8f0;
+  padding-left: 12px;
+  margin-left: 0.25rem;
+}
+
+.dark .content ul ul,
+.dark .content ol ul,
+.dark .content ul ol,
+.dark .content ol ol {
+  border-left-color: #404040;
+}
+
+.content ul ul li,
+.content ol ul li,
+.content ul ol li,
+.content ol ol li {
+  margin-left: 0;
+}

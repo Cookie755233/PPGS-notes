@@ -1,8 +1,3 @@
-h1:not([class]) {
-  background: #f6c155;
-  padding: 4px 16px;
-}
-
 strong {
   color: #d20f39; /* Red */
   font-weight: 600;
@@ -108,4 +103,16 @@ aside[class*="sidebar"] nav#TableOfContents {
 
 .dark aside[class*="sidebar"] nav#TableOfContents {
   border-left-color: #404040;
+}
+
+mark {
+  background-color: #fff59d; /* soft yellow highlight */
+  color: inherit;
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+
+mark:is(html[class~="dark"] *) {
+  background-color: #a68b00; /* dimmer yellow for dark mode */
+  color: #fff;
 }

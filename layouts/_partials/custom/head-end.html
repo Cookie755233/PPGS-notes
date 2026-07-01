@@ -1,0 +1,17 @@
+{{ if .Params.use_collapsible }} {{ partial "collapsable-header.html" . }} {{
+end }} {{ if index .Page.Params "set-special-rule" }}
+<style>
+  {{ readFile "layouts/_partials/custom/special-rule.css" | safeCSS }}
+</style>
+{{ end }} {{ if index .Page.Params "sticky-list" }}
+<style>
+  {{ readFile "layouts/_partials/custom/sticky-list.css" | safeCSS }}
+</style>
+<script>
+  {{ readFile "layouts/_partials/custom/sticky-list.js" | safeJS }}
+</script>
+{{ end }}
+
+<style>
+  {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
+</style>

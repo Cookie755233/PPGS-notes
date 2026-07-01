@@ -1,7 +1,7 @@
 ---
-title: "Preflight Checklist"
+title: "Preflight Checklist - PAVE"
 ---
-# P.A.V.E
+![](/images/pave.png "")
 ## P - PILOT
 ### S.M.I.L.E (Document)
 - **S**tudent pilot certificate - §61.3(a)
@@ -75,5 +75,3 @@ title: "Preflight Checklist"
 - **I**nvulnerability
 - **I**mpulsivity
 - **M**acho
-
-# Medical

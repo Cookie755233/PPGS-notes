@@ -17,7 +17,7 @@ use_collapsible: false
 |:-------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ELT Test<br>(FAR/AIM 6-2-4b)** | - **BEFORE FLIGHT** <br> - preferably in shielded room. <br> - Tested in **first 5 minutes** of any hour <br> - Less then **3 sweeps** <br> - Call **FSS/FAA** tower for an exception <br> - **Airborne not allowed**                                                                                                                               |
 | **ELT Check**                    | - **DURING PARK** to ensure no falsely activation <br> - Tune in 121.5 MHz, if sweeping is heard, ELT is activated. *(press COM frequency transfer key for 2 second for quick setting)* <br> - Set remote switch **ON**, **if no change in volume,** ELT is transmitting. <br> - Switch **ARM** will stop the signal. <br> - **Inform SAR/FSS/FAA** |
-| **ELT Inspection**               | - Must be inspected **within 12 calendar months** after the last inspection <br> - Check for <br> - proper installation, <br> - battery corrosion, <br> - operation of the controls and crash sensor <br> - sufficient signal from antenna                                                                                                          |
+| **ELT Inspection**               | - Must be inspected **within 12 calendar months** after the last inspection <br> - proper installation, <br> - battery corrosion, <br> - operation of the controls and crash sensor <br> - sufficient signal from antenna                                                                                                          |
 | **ELT Battery Replacement**      | - After emergency use <br> - Accidentally activated for *undetermined* period of time. <br> - Before battery expiration date (l*ess than 50 % due time*) <br> - Cumulative operation of **one hour**                                                                                                                                                |
 
 ## G1000 System
@@ -35,33 +35,36 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **GIA 63<br>(Integrated Avionics)**       | - Communications hub for the systems <br> - System Integration Processors <br> - *I/O Processors* <br> - VHF COM <br> - VHF NAV/LOC <br> - GPS/WAAS <br> - Glideslope                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | **⭐️GMA 1347 (Audio)**                   | - Provides manual control of display **Reversionary Mode.** In Reversionary Mode, all important flight information from the PFD is presented on the remaining display in the same format. <br> - It would *auto-switch to reversionary mode if error.* <br> - **Reversionary Mode may be manually activated by pressing the Audio Panel's red `DISPLAY BACKUP` Button.**                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **GRS 77 (AHRS)**                         | - **Attitude and Heading Reference System (AHRS)** <br> - Provides aircraft attitude and heading information. <br> - The AHRS contains advanced sensors including *accelerometers and rate sensors* <br> - The AHRS can be **initialized and running within 45 seconds** of startup. <br> - The expected life of the Garmin AHRS is approximately *10,000 hours*.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **GMU 44 (Magnetometer)**                 | - **The only component that is NOT connected to GIA 63. It interfaces directly with GRS 77 AHRS to provide it with mag hearing input.** <br> - If the magnetometer fail, the G1000 will lose its ability to provide a Stabilized heading, but you will have access to a **rough heading** for the duration of the flight via GPS and the moving map. <br> - *Internal earth magnetic field database needs to be updated about once every 5 years.* <br> - The Magnetometer is located in the right wing and is easily identified by the *black, non-magnetic screws* used to hold it in place.                                                                                                                                                                                       |
+| **GMU 44 (Magnetometer)**                 | - **The only component that is NOT connected to GIA 63. It interfaces directly with GRS 77 AHRS to provide it with mag hearing input.** <br> - If the magnetometer fail, the G1000 will lose its ability to provide a Stabilized heading, but you will have access to a **rough heading** for the duration of the flight via GPS and the moving map. <br> - Internal earth magnetic field database needs to be **updated about once every 5 years**. <br> - The Magnetometer is located in the right wing and is easily identified by the *black, non-magnetic screws* used to hold it in place.                                                                                                                                                                                       |
 | **GDC 74A<br>(Air Data Computer)**        | - Sense pressure altitude data, through GIA 63, to transponder(GTX345R) for **Mode C capability**. <br> - Accuracy supports **Reduced Vertical Separation Minimum (RVSM)** to increase airspace capacity/efficiency.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | **GTX345R<br>(Transponder)**              | - Standard transponder modes: **STBY, ON, ALT, GRD** <br> - *Auto Altitude (ALT) mode when groundspeed is greater than 30 knots & auto Ground (GND) mode when under 30 knots.* <br> - **The GTX 345R interfaces with a Traffic Awareness System (TAS),** which displays On the MFD and PFD. <br> - **ADS-B (Automatic Dependent Surveillance-Broadcast)** <br> - **ADS-B TX** shall always be enabled (`XPDR - ADS-B TX`) <br> - In `TIME/REF` window, add a new `FLIGHT ID` entry.                                                                                                                                                                                                                                                                                                  |
 
-## System Failure Scenarios
+### GMA 1347
+![](/images/gma1347.png "")
+
+## System Failures
+ - **Stuck Microphone**: If the push-to-talk (PTT) Key becomes stuck, the COM transmitter stops transmitting after **35 seconds** of continuous operation. An alert appears on the PFD to advise the crew of a stuck microphone. The COMI MIC or COM2 MIC Key Annunciator on the Audio Panel continues to flash as long as the PTT Key remains stuck.
+ - **COM Tuning Failure**: In case of a COM system tuning failure, the emergency frequency (121.500 **MHz**) is automatically tuned in the radio in which the tuning failure occurred. *press and hold for 2 second on the freq transfer key to quickly set 121.5*
+ - 
+
+
+
+### Line Replacement Unit (LRU)  Failures
+| Failed Component        | System Functions & Key Data                                                                                        |
+|:----------------------- |:------------------------------------------------------------------------------------------------------------------ |
+| **Single GIA**   | COM/NAV/GPS receiver data is not available and automatically replaced by COM/NAV receiver data from another GIA63. |
+| **Both GIAs**      | No COM/NAV/GPS, but AHRS and ADC continue to provide data to GDU.                                                  |
+| **Single GDU**   | Changes to "reversionary mode" and no moving map.                                                                  |
+| **GMA 1347**     | Automatically connect to COM1, but audio panel/intercom does not work.                                             |
+| **GDC74A**       | Loss OAT, TAS, ASI, ALT and VSI on PDF, transponder loses mode C capabilities.                                                  |
+| **GRS77**        | Attitude presentations are removed from PFD and replaced with "X" and attitude, heading data is lost.       |
+| **GMU44**         | Stabilized heading data is lost.                                                                                   |
+| **OAT sensor** | Red "X" appears on TAS and OAT                                                                                     |
+| **GTX345**     | Red "X" appears over transponder box on PFD and advisory message appears.                                          |
+| **GEA 71**       | ALL engine/airframe data is lost.                                                                                  |
+
 ![](/images/error.png "")
 
-1. One GIA fails?\
-   COM/NAV/GPS receiver data is not available and automatically replaced by COM/NAV receiver data from another GIA63.
-2. Both GIA fail?\
-   No COM/NAV/GPS, but AHRS and ADC continue to provide data to GDU.
-3. If one GDU fails?\
-   Changes to "reversionary mode" and no moving map.
-4. GMA 1347 fails?\
-   Automatically connect to COM1, but audio panel/intercom does not work.
-5. GDC74A fails?\
-   Loss OAT, TAS, ASI, ALT and VSI on PDF, transponder loses mode C.
-6. GRS77 fails?\
-   Attitude presentations are removed from PFD and replaced with "X" and "Attitude fail", heading data is lost.
-7. GMU44 fail?\
-   Stabilized heading data is lost.
-8. OAT sensor failure?\
-   Red "X" appears on TAS and OAT
-9. GTX345 failure?\
-   Red "X" appears over transponder box on PFD and advisory message appears.
-10. GEA 71 fails?\
-    ALL engine/airframe data is lost.
 
 ## PFD/MFD Controls
 ![PFD/MFD Controls](/images/pfdmfd.png "PFD/MFD Controls")
@@ -75,11 +78,11 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **5. Joystick**                                       | **Turn:** Changes map range.<br>**Press:** Activates Map Pointer and moves in desired direction to pan map.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **6. CRS/BARO Knob**                                  | **Turn large knob:** Adjusts altimeter barometric pressure setting.<br>**Turn small knob:** Adjusts course (only when HSI is in VOR or OBS Mode).<br>**Press:** Re-centers the CDI and returns course pointer directly to the bearing of the active waypoint/station.                                                                                                                                                                                                                                                                                        |
 | **7. COM Knob**                                       | **Turn:** Tunes COM transceiver standby frequencies (large knob for MHz; small for kHz).<br>**Press:** Toggles light blue tuning box between COM1 and COM2.<br>_Note:_ The selected COM (green) is controlled with the **COM MIC Key** (Audio Panel).                                                                                                                                                                                                                                                                                                        |
-| **8. COM Frequency Transfer Key (`EMERG`)**             | **Press:** Transfers the standby and active COM frequencies.<br>**Press and hold (two seconds):** Tunes the emergency frequency (121.5 MHz) automatically into the active frequency field.                                                                                                                                                                                                                                                                                                                                                                   |
+| **8. COM Frequency Transfer Key (`EMERG`)**           | **Press:** Transfers the standby and active COM frequencies.<br>**Press and hold (two seconds):** Tunes the emergency frequency (121.5 MHz) automatically into the active frequency field.                                                                                                                                                                                                                                                                                                                                                                   |
 | **9. COM VOL/SQ Knob**                                | **Turn:** Controls COM audio volume level (shown as a percentage in the COM Frequency Box).<br>**Press:** Turns the COM automatic squelch on/off.                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **10. Direct-to Key**                           | Activates the direct-to function and allows the user to enter a destination waypoint and establish a direct course to the selected destination (specified by identifier, chosen from the active route).                                                                                                                                                                                                                                                                                                                                                      |
+| **10. Direct-to Key**                                 | Activates the direct-to function and allows the user to enter a destination waypoint and establish a direct course to the selected destination (specified by identifier, chosen from the active route).                                                                                                                                                                                                                                                                                                                                                      |
 | **11. FPL Key**                                       | Displays flight plan information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **12. CLR Key (`DFLT MAP`)**                            | **Press:** Erases information, cancels entries, or removes menus.<br>**Press and hold:** Displays the MFD Navigation Map Page (MFD only).                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **12. CLR Key (`DFLT MAP`)**                          | **Press:** Erases information, cancels entries, or removes menus.<br>**Press and hold:** Displays the MFD Navigation Map Page (MFD only).                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **13. MENU Key**                                      | Displays a context-sensitive list of options for accessing additional features or making setting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **14. PROC Key**                                      | Gives access to IFR departure procedures (DPs), arrival procedures (STARs), and approach procedures (IAPs) for a flight plan or selected airport.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **15. ENT Key**                                       | Validates/confirms selection or data entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -88,30 +91,16 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **18. ALT Knob**                                      | Sets the Selected Altitude, shown above the Altimeter (the large knob selects the thousands, the small knob selects the hundreds).                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Page Groups
-| **Map Page Group (MAP)**                                                                | **Waypoint Page Group (WPT)**                                    | **Auxiliary Page Group (AUX)**                                                                              | **Nearest Page Group (NRST)**                                                                       | **Flight Plan Page Group (FPL)**                                       |
-|:--------------------------------------------------------------------------------------- |:---------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------- |
-| • Navigation Map<br>• Traffic Map<br>• *Weather Data Link*<br>• Terrain Proximity/ TAWS | • Airport<br>• Intersection<br>• NDB<br>• VOR<br>• User Waypoint | • Trip Planning<br>• Utility<br>• GPS Status<br>• System Setup<br>• XM Satellite Screens<br>• System Status | • Airports<br>• Intersections<br>• NDB<br>• VOR<br>• User Waypoints<br>• Frequencies<br>• Airspaces | • Active flight plan<br>• Flight plan catalog<br>• Vertical navigation |
+| **Map Page Group (MAP)**                                                                | **Waypoint Page Group (WPT)**                                    | **Auxiliary Page Group (AUX)**                                                    | **Nearest Page Group (NRST)**                                                                       | **Flight Plan Page Group (FPL)**                                       |
+|:--------------------------------------------------------------------------------------- |:---------------------------------------------------------------- |:--------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------- |
+| • Navigation Map<br>• Traffic Map<br>• *Weather Data Link*<br>• Terrain Proximity/ TAWS | • Airport<br>• Intersection<br>• NDB<br>• VOR<br>• User Waypoint | • Trip Planning<br>• Utility<br>• GPS Status<br>• System Setup<br>• System Status | • Airports<br>• Intersections<br>• NDB<br>• VOR<br>• User Waypoints<br>• Frequencies<br>• Airspaces | • Active flight plan<br>• Flight plan catalog<br>• Vertical navigation |
 
 
-## EIS Display (Engine)
-![](/images/reversionarymode.png "")
-
-| **Indicator / Gauge**                                  | **Description**                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1. Engine Manifold Pressure Gauge**<br>`(MAN IN HG)` | Displays manifold pressure in inches of Mercury (inHg) to indicate engine power.                                                                                                                                                                                                                                                                                                                                        |
-| **2. Tachometer**<br>`(RPM)`                           | Displays propeller speed in revolutions per minute (rpm); the red band indicates propeller overspeed.                                                                                                                                                                                                                                                                                                                   |
-| **3. Fuel Flow Indicator**<br>`(FUEL FLOW GPH)`        | Displays current fuel flow in gallons per hour (gph).                                                                                                                                                                                                                                                                                                                                                                   |
-| **4. Fuel Pressure Indicator**<br>`(FUEL PRESS PSI)`   | Displays the fuel pressure in pounds per square inch (psi).                                                                                                                                                                                                                                                                                                                                                             |
-| **5. Cylinder Head Temperature Indicator**<br>`(CHT)`  | Displays the head temperature of the hottest cylinder (number is shown in pointer).                                                                                                                                                                                                                                                                                                                                     |
-| **6. Oil Temperature Indicator**<br>`(OIL TEMP)`       | Displays engine oil temperature.                                                                                                                                                                                                                                                                                                                                                                                        |
-| **7. Oil Pressure Indicator**<br>`(OIL PRES)`          | Displays pressure of oil supplied to the engine.                                                                                                                                                                                                                                                                                                                                                                        |
-| **8. Ammeter**<br>`(AMPS)`                             | Displays the alternator load in amperes.                                                                                                                                                                                                                                                                                                                                                                                |
-| **9. Voltmeter**<br>`(VOLTS)`                          | Displays the primary bus voltage.                                                                                                                                                                                                                                                                                                                                                                                       |
-| **10. Fuel Quantity Indicator**<br>`(FUEL QTY GAL)`    | Displays the quantity, in gallons (gal), of fuel in the tanks; pointers labeled L and R indicate the fuel quantity in each tank.> <br>• **Standard Tanks:** Indicator ranges from 0 to 20 gal with tick marks every 5 gal; only displays to 17 gal per side when full.<br>• **Long Range Tanks (optional):** Indicator ranges from 0 to 25 gal with tick marks every 5 gal; only displays to 24 gal per side when full. |
+## Engine Page
+![](/images/enginepage.png "")
 
 
 ## Alert Window Message
-
 | **Annunciation Window Text** | **Alerts Window Message**                             | **Audio Alert**       |
 | ---------------------------- | ----------------------------------------------------- | --------------------- |
 | **OIL PRES LO**              | Oil pressure is below **25** psi.                     | Continuous Aural Tone |
@@ -127,38 +116,13 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **PITOT FAIL**               | Pitot heat is inoperative.                            | Single Aural Tone     |
 | **PITOT OFF**                | Pitot heat is off.                                    | Single Aural Tone     |
 
-
-## Abbreviations
-- ATIS: Automatic Terminal Information Service
-- ASOS: Automatic Surface Observation System
-- AWOS: Automatic Weather Observing System
-- AHRS: Attitude and Heading Reference System
-- AFM: Aircraft Flight Manual
-- FSS: Flight Service Station
-- CTAF: Common Traffic Advisory Frequency
-- HIWAS: Hazardous In-flight Weather Advisory Service
-- SIGMET: Significant Meteorological Information
-- ADS-B: Automatic Dependent Surveillance Broadcast
-- NDB: Non-Directional radio Beacon
-- VOR: Very High Frequency Omnidirectional Range
-- WAAS: Wide Area Augmentation System
-- MEL: Minimum Equipment List
-
 ## Radio Comm
 ![](/images/radiofreq.png "")
-### MF (300~3000 KHz)
-- NDB
-### VHF (30~300 MHz)
-- Marker beacons (75)
-- ILS 
-	- 108 ~ 111.**9**5 *ODD*
-- VOR 
-	- 108.0 ~ 111.**8**75 *EVEN*
-	- 112.0 ~ 117.975 *ALL*
-- Navigation Satellites (150)
-### UHF(300~3000 MHz)
-- ILS 
-- DME
+| Avionics Unit / Band  | System Functions & Key Data                                                                                                                                   |
+|:--------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **MF (300~3000 KHz)** | - NDB                                                                                                                                                         |
+| **VHF (30~300 MHz)**  | - Marker Beacon (75) <br> - ILS (108 ~ 111.**9**5) *ODD* <br> - VOR (108.0 ~ 111.**8**75 *EVEN*  // 112.0 ~ 117.975 *ALL* )<br> - Navigation Satellites (150) |
+| **UHF(300~3000 MHz)** | - ILS <br> - DME                                                                                                                                              |
 
 ### Wave Transportation
 1. **Ground Wave**
@@ -176,6 +140,32 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 4. **Skip zone** is an area on the surface of the earth where no reception of any radio waves is possible. (*End of ground wave ~ start of sky wave*)
 ![](/images/skip.png "")
 
+
+## Lighting
+![](/images/planelight.png "")
+
+|              | Landing *(IN)*                                                                                                                                                                                        | Taxi                                                      | Position                                                                                  | Strobe *(OUT)*                                                                                                                                                   |
+|:------------ |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------- |:----------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Function** | Provide illumination for landing and enhance visibility during critical phases of flight *(taxi, rolling, TOC, under 10,000 ft).*                                                                | Provide illumination for aircraft movement on the ground. | Indicate aircraft orientation and presence during low visibility or nighttime.            | Enhance aircraft visibility to prevent collisions.                                                                                                       |
+| **Timing**   | Turned ON when cleared for takeoff (or when entering the runway at uncontrolled airports before starting rolling). Remain ON during the entire flight and turned OFF after exiting the runway. | ON during aircraft movement on the ground.                | ON from sunset to sunrise and in daylight when weather conditions are below VFR minimums. | ON from prior to engine start until after engine shutdown. (May be turned OFF by PIC if determined to be a hazard to pilots on board or other aircraft). |
+
+
+## Abbreviations
+- ATIS: Automatic Terminal Information **Service**
+- ASOS: Automatic Surface Observation System
+- AWOS: Automatic Weather Observing System
+- AHRS: Attitude and Heading Reference System
+- AFM: Aircraft Flight Manual
+- FSS: Flight Service Station
+- CTAF: Common Traffic Advisory Frequency
+- HIWAS: Hazardous In-flight Weather Advisory Service
+- SIGMET: Significant Meteorological Information
+- **ADS-B: Automatic Dependent Surveillance Broadcast**
+- NDB: Non-Directional radio Beacon
+- VOR: Very High Frequency Omnidirectional Range
+- **WAAS: Wide Area Augmentation System**
+- **RAIM: Receiver Autonomous Integrity Monitoring**
+- MEL: Minimum Equipment List
 
 
 <style>

@@ -7,18 +7,18 @@ module:
     - path: github.com/imfing/hextra
 
 markup:
-  # allow raw html
   goldmark:
     renderer:
       unsafe: true
-
     extensions:
       passthrough:
         delimiters:
           block: [['\[', '\]'], ["$$", "$$"]]
           inline: [['\(', '\)']]
         enable: true
-
+      extras:
+        mark:
+          enable: true
   # enable hextra syntax highlight
   highlight:
     noClasses: false
@@ -71,3 +71,6 @@ params:
   sidebar:
     defaultOpenLevel: 2 # Automatically expands GN, MET, POF submenus
     autoCollapse: false
+
+  imageZoom:
+    enable: true
