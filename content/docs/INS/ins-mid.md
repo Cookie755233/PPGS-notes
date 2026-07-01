@@ -2,11 +2,12 @@
 title: "@INS MID"
 cssclasses:
 - ultra-wide-view
-use_collapsible: false
+hide_toc: true
 ---
-## ⭐️ ELT
+## ELT
 {{< callout >}}
-- **Emergency Locator Transmitter**, located in the rear fuselage, below the aft baggage compartment.
+**Emergency Locator Transmitter ELT**
+- located in the rear fuselage, below the aft baggage compartment.
 - Frequency: **121.5 MHz(24hr) and 406 MHz(50hr)** 
 - Activation: **Manual switch**, **Sea water**, **Acceleration switch more than 5 G**
 - Purpose: locate survivors for SAR (Search and Rescue)
@@ -31,21 +32,25 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | Avionics Unit                             | System Functions & Key Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |:----------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **GDU 1040 (Display)**                    | The dispiays communicate with eacn other through a High-speed Data Bus (HSDB) Ethernet connection.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **GEA 71<br>(Engine/Airframe Interface)** | - **engine/air frame** data to the G1000 system. The unit interfaces to **transducers**. <br> - *Analog data is received from the transducers and is converted to digital signal by the GEA 71* **(A2D)**. <br> - **Digital information is then sent through the primary RS-485 serial path to the #1 GIA 63**, then on to the MED for display. <br> - A backup data path from the GEA to the #2 GIA 63, then on to the MFD, exists in the event the primary path fails.<br> - Extensive input & monitoring capabilities <br> - EGT/CHT on all cylinders <br> - Engine instruments & vital engine data (oil, fuel & electrical) . <br> - Physical conditions (open doors) <br> - Electrical System data <br> - Also features *lean assist function* when flying at a higher altitude |
+| **GEA 71<br>(Engine/Airframe Interface)** | - **engine/air frame** data to the G1000 system. The unit interfaces to **transducers**. <br> - *Analog data is received from the transducers and is converted to digital signal by the GEA 71* **(A2D)**. <br> - **Digital information is then sent to the #1 GIA 63**, then on to the MED for display. A backup data path from the GEA to the #2 GIA 63, then on to the MFD, exists in the event the primary path fails.<br> - Extensive input & monitoring capabilities <br> - EGT/CHT on all cylinders <br> - Engine instruments & vital engine data (oil, fuel & electrical) . <br> - Physical conditions (open doors) <br> - Electrical System data <br> - Also features *lean assist function* when flying at a higher altitude |
 | **GIA 63<br>(Integrated Avionics)**       | - Communications hub for the systems <br> - System Integration Processors <br> - *I/O Processors* <br> - VHF COM <br> - VHF NAV/LOC <br> - GPS/WAAS <br> - Glideslope                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **⭐️GMA 1347 (Audio)**                   | - Provides manual control of display **Reversionary Mode.** In Reversionary Mode, all important flight information from the PFD is presented on the remaining display in the same format. <br> - It would *auto-switch to reversionary mode if error.* <br> - **Reversionary Mode may be manually activated by pressing the Audio Panel's red `DISPLAY BACKUP` Button.**                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **GMA 1347 (Audio)**                      | - Provides manual control of display **Reversionary Mode.** In Reversionary Mode, all important flight information from the PFD is presented on the remaining display in the same format. <br> - It would *auto-switch to reversionary mode if error.* <br> - **Reversionary Mode may be manually activated by pressing the Audio Panel's red `DISPLAY BACKUP` Button.**                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **GRS 77 (AHRS)**                         | - **Attitude and Heading Reference System (AHRS)** <br> - Provides aircraft attitude and heading information. <br> - The AHRS contains advanced sensors including *accelerometers and rate sensors* <br> - The AHRS can be **initialized and running within 45 seconds** of startup. <br> - The expected life of the Garmin AHRS is approximately *10,000 hours*.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **GMU 44 (Magnetometer)**                 | - **The only component that is NOT connected to GIA 63. It interfaces directly with GRS 77 AHRS to provide it with mag hearing input.** <br> - If the magnetometer fail, the G1000 will lose its ability to provide a Stabilized heading, but you will have access to a **rough heading** for the duration of the flight via GPS and the moving map. <br> - Internal earth magnetic field database needs to be **updated about once every 5 years**. <br> - The Magnetometer is located in the right wing and is easily identified by the *black, non-magnetic screws* used to hold it in place.                                                                                                                                                                                       |
+| **GMU 44 (Magnetometer)**                 | - **The only component that is NOT connected to GIA 63. It interfaces directly with GRS 77 AHRS to provide it with mag hearing input.** <br> - If the magnetometer fail, the G1000 will lose its ability to provide a Stabilized heading, but you will have access to a **rough heading** for the duration of the flight via GPS and the moving map. <br> - Internal earth magnetic field database needs to be **updated about once every 5 years**. <br> - The Magnetometer is located in the right wing and is easily identified by the *black, non-magnetic screws* used to hold it in place.                                                                                                                                                                                     |
 | **GDC 74A<br>(Air Data Computer)**        | - Sense pressure altitude data, through GIA 63, to transponder(GTX345R) for **Mode C capability**. <br> - Accuracy supports **Reduced Vertical Separation Minimum (RVSM)** to increase airspace capacity/efficiency.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **GTX345R<br>(Transponder)**              | - Standard transponder modes: **STBY, ON, ALT, GRD** <br> - *Auto Altitude (ALT) mode when groundspeed is greater than 30 knots & auto Ground (GND) mode when under 30 knots.* <br> - **The GTX 345R interfaces with a Traffic Awareness System (TAS),** which displays On the MFD and PFD. <br> - **ADS-B (Automatic Dependent Surveillance-Broadcast)** <br> - **ADS-B TX** shall always be enabled (`XPDR - ADS-B TX`) <br> - In `TIME/REF` window, add a new `FLIGHT ID` entry.                                                                                                                                                                                                                                                                                                  |
+| **GTX345R<br>(Transponder)**              | - Standard transponder modes: **STBY, ON, ALT, GRD** <br> - Auto ALT mode when groundspeed is greater than **30** knots & auto GND mode when under 30 knots. <br> - **The GTX 345R interfaces with a Traffic Awareness System (TAS),** which displays On the MFD and PFD. <br> - **ADS-B TX(Automatic Dependent Surveillance-Broadcast) shall always be enabled** (`XPDR - ADS-B TX`) <br> - In `TIME/REF` window, add a new `FLIGHT ID` entry.                                                                                                                                                                                                                                                                                                                                      |
 
 ### GMA 1347
 ![](/images/gma1347.png "")
 
 ## System Failures
+ - **Complete system Failure**: 
+	 - Essential bus (main battery) may run for **30 minute**. 
+		 - **Stays powered:** NAV/COM 1, transponder, standby/attitude gyro, engine instruments(PFD), annunciator panel, GPS, landing light, pitot heat, and flaps.
+		   - **Shuts off:** Non-essential avionics, autopilot (in some configurations), NAV/COM 2, and other secondary cabin electronics.
+	 - Essential power (lithium power battery) runs **standby attitude indicator** and one **flood light** for 90 minutes. However, no indication of yaw. *(last straw)*
  - **Stuck Microphone**: If the push-to-talk (PTT) Key becomes stuck, the COM transmitter stops transmitting after **35 seconds** of continuous operation. An alert appears on the PFD to advise the crew of a stuck microphone. The COMI MIC or COM2 MIC Key Annunciator on the Audio Panel continues to flash as long as the PTT Key remains stuck.
  - **COM Tuning Failure**: In case of a COM system tuning failure, the emergency frequency (121.500 **MHz**) is automatically tuned in the radio in which the tuning failure occurred. *press and hold for 2 second on the freq transfer key to quickly set 121.5*
- - 
 
 
 
@@ -86,19 +91,27 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **13. MENU Key**                                      | Displays a context-sensitive list of options for accessing additional features or making setting changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **14. PROC Key**                                      | Gives access to IFR departure procedures (DPs), arrival procedures (STARs), and approach procedures (IAPs) for a flight plan or selected airport.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **15. ENT Key**                                       | Validates/confirms selection or data entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **16. FMS Knob**<br>_(Flight Management System Knob)_ | **Press:** Turns the selection cursor on/off.<br>• **Data Entry:** With cursor on, turn to enter data in the highlighted field (large knob moves cursor location; small knob selects character for highlighted cursor location).<br>• **Scrolling:** When a list of information is too long for the window/box, a scroll bar appears. With cursor on, turn large knob to scroll through the list.<br>• **Page Selection:** Turn knob on MFD to select the page to view (large knob selects a page group; small knob selects a specific page from the group). |
+| **16. FMS Knob**<br>_(Flight Management System Knob)_ | **Press:** Turns the selection cursor on/off.<br>- **Data Entry:** With cursor on, turn to enter data in the highlighted field (large knob moves cursor location; small knob selects character for highlighted cursor location).<br>- **Scrolling:** When a list of information is too long for the window/box, a scroll bar appears. With cursor on, turn large knob to scroll through the list.<br>- **Page Selection:** Turn knob on MFD to select the page to view (large knob selects a page group; small knob selects a specific page from the group). |
 | **17. Softkey Selection Keys**                        | Press to select softkey shown above the bezel key on the PFD/MFD display.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **18. ALT Knob**                                      | Sets the Selected Altitude, shown above the Altimeter (the large knob selects the thousands, the small knob selects the hundreds).                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Page Groups
 | **Map Page Group (MAP)**                                                                | **Waypoint Page Group (WPT)**                                    | **Auxiliary Page Group (AUX)**                                                    | **Nearest Page Group (NRST)**                                                                       | **Flight Plan Page Group (FPL)**                                       |
 |:--------------------------------------------------------------------------------------- |:---------------------------------------------------------------- |:--------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------- |:---------------------------------------------------------------------- |
-| • Navigation Map<br>• Traffic Map<br>• *Weather Data Link*<br>• Terrain Proximity/ TAWS | • Airport<br>• Intersection<br>• NDB<br>• VOR<br>• User Waypoint | • Trip Planning<br>• Utility<br>• GPS Status<br>• System Setup<br>• System Status | • Airports<br>• Intersections<br>• NDB<br>• VOR<br>• User Waypoints<br>• Frequencies<br>• Airspaces | • Active flight plan<br>• Flight plan catalog<br>• Vertical navigation |
+| - Navigation Map<br>- Traffic Map<br>- *Weather Data Link*<br>- Terrain Proximity/ TAWS | - Airport<br>- Intersection<br>- NDB<br>- VOR<br>- User Waypoint | - Trip Planning<br>- Utility<br>- GPS Status<br>- System Setup<br>- System Status | - Airports<br>- Intersections<br>- NDB<br>- VOR<br>- User Waypoints<br>- Frequencies<br>- Airspaces | - Active flight plan<br>- Flight plan catalog<br>- Vertical navigation |
 
 
 ## Engine Page
 ![](/images/enginepage.png "")
-
+| Item              |  Red   |   Amber   |    Green    |   Amber   | Red  |
+|:----------------- |:------:|:---------:|:-----------:|:---------:|:----:|
+| **MAP**           |   —    |     —     |   13 ~ 30   |     —     |  —   |
+| **RPM**           |   —    |     —     | 500 ~ **2,700** |     —     |  —   |
+| **Voltage**       | 0 ~ 24 | 24.1 ~ 25 |  25.1 ~ 30  | 30.1 ~ 32 | > 32 |
+| **Fuel pressure** | 0 ~ 14 |     —     |   14 ~ 35   |     —     | > 35 |
+| **Fuel quantity** |   0    |   0 ~ 3   |   3 ~ **17**    |     —     |  —   |
+| Amps              |        |           |   2 ~ 75    |           |      |
+| Oil Temperature   |        |           |  149 ~ 240  | 231 ~ 245 | >245 | 
 
 ## Alert Window Message
 | **Annunciation Window Text** | **Alerts Window Message**                             | **Audio Alert**       |
@@ -125,6 +138,7 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | **UHF(300~3000 MHz)** | - ILS <br> - DME                                                                                                                                              |
 
 ### Wave Transportation
+![](/images/skip.png "")
 1. **Ground Wave**
 	- Radio wave traveling along the earth’s surface.
 	- Depends on : *Power, frequency, electrical conductivity on the surface (water > dry sfc)*
@@ -138,8 +152,12 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 	- *UHF travels at line of sight (NOT sky wave)*
 3. **Skip Distance** is the distance from the transmitting station to the point on the surface of the earth at which the first sky wave ca be received.
 4. **Skip zone** is an area on the surface of the earth where no reception of any radio waves is possible. (*End of ground wave ~ start of sky wave*)
-![](/images/skip.png "")
 
+
+## Remark
+- **Cabin check**: Terrain, Obstacles, Navigation, Airport Directory (TONA)
+- Switch tanks at intervals no greater than 30 minutes. When switching, the **electrical fuel pump shall switch ON** 
+- 7 Checklists: **Check before/after engine start; before takeoff check; climb to cruise check; descent/ approach check; after landing check; parking check.**
 
 ## Lighting
 ![](/images/planelight.png "")
@@ -168,78 +186,3 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 - MEL: Minimum Equipment List
 
 
-<style>
-  /* 1. Fix standard markdown lists inside tables */
-  .hextra-content table ul {
-    list-style-type: disc !important;
-    padding-left: 1.5rem !important;
-    margin: 0.5rem 0 !important;
-  }
-  .hextra-content table li {
-    display: list-item !important;
-    margin-top: 0.25rem !important;
-  }
-
-  /* 2. Manual Column Width Controller */
-  .wide-col {
-    min-width: 350px;
-    display: inline-block;
-  }
-
-  .hextra-toc {
-    display: none !important;
-  }
-</style>
-
-<style>
-  /* 1. Fix standard markdown lists inside tables */
-  .hextra-content table ul {
-    list-style-type: disc !important;
-    padding-left: 1.5rem !important;
-    margin: 0.5rem 0 !important;
-  }
-  .hextra-content table li {
-    display: list-item !important;
-    margin-top: 0.25rem !important;
-  }
-
-  /* 2. Manual Column Width Controller */
-  .wide-col {
-    min-width: 350px;
-    display: inline-block;
-  }
-
-  .hextra-toc {
-    display: none !important;
-  }
-
-  /* 3. Star-row highlight */
-  .hextra-content table tr.star-row > td {
-    border-top: 2px solid #e53935 !important;
-    border-bottom: 2px solid #e53935 !important;
-  }
-  .hextra-content table tr.star-row > td:first-child {
-    border-left: 2px solid #e53935 !important;
-  }
-  .hextra-content table tr.star-row > td:last-child {
-    border-right: 2px solid #e53935 !important;
-  }
-</style>
-
-<script>
-  (function () {
-    function highlightStarRows() {
-      document.querySelectorAll(".hextra-content table tbody tr").forEach(function (row) {
-        var firstCell = row.querySelector("td:first-child");
-        if (firstCell && firstCell.textContent.includes("⭐️")) {
-          row.classList.add("star-row");
-        }
-      });
-    }
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", highlightStarRows);
-    } else {
-      highlightStarRows();
-    }
-  })();
-</script>

@@ -1,9 +1,16 @@
+<!-- FRONTMATTER -->
 {{ if .Params.use_collapsible }} {{ partial "collapsable-header.html" . }} {{
-end }} {{ if index .Page.Params "set-special-rule" }}
+end }}
+
+<!--special rule (FAR/AIM)-->
+{{ if index .Page.Params "set-special-rule" }}
 <style>
   {{ readFile "layouts/_partials/custom/special-rule.css" | safeCSS }}
 </style>
-{{ end }} {{ if index .Page.Params "sticky-list" }}
+{{ end }}
+
+<!--sticky list-->
+{{ if index .Page.Params "sticky-list" }}
 <style>
   {{ readFile "layouts/_partials/custom/sticky-list.css" | safeCSS }}
 </style>
@@ -12,6 +19,20 @@ end }} {{ if index .Page.Params "set-special-rule" }}
 </script>
 {{ end }}
 
+<!--hide toc-->
+{{ if .Params.hide_toc }}
+<style>
+  .hextra-toc {
+    display: none !important;
+  }
+</style>
+{{ end }}
+
+<!-- GLOBAL DEFAULT-->
 <style>
   {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
 </style>
+
+<script>
+  {{ readFile "layouts/_partials/custom/table-list.js" | safeJS }}
+</script>

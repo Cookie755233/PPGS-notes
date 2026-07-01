@@ -116,3 +116,10 @@ mark:is(html[class~="dark"] *) {
   background-color: #a68b00; /* dimmer yellow for dark mode */
   color: #fff;
 }
+
+td li {
+  margin: 3px 0 !important;
+  margin-block: 3px !important;
+  margin-block-start: 3px !important;
+  margin-block-end: 3px !important;
+}
