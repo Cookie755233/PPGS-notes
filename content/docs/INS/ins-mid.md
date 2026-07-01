@@ -22,7 +22,7 @@ hide_toc: true
 | **ELT Battery Replacement**      | - After emergency use <br> - Accidentally activated for *undetermined* period of time. <br> - Before battery expiration date (l*ess than 50 % due time*) <br> - Cumulative operation of **one hour**                                                                                                                                                |
 
 ## G1000 System
-The G1000 currently has 3 ways of ensuring that its data is correct:
+The G1000 currently has 3 ways of ensuring that its data is correct: **(IFR)**
 1. **Internal system monitoring**: Internal monitoring uses built-in algorithm to ensure that displayed data is consistent and fault-free.
 2. **Fault Detection & Exclusion (FDE)** - Assesses any anomalies in the satellite system and removes the “bad" satellite from the data equation, providing a seamless, correct data stream.
 3. **Receiver Autonomous Integrity Monitoring (RAIM)** - FDE RAIM requires a minimum (**five** satellites to be in ‘sight' of the GPS unit in order for it to obtain enough verified information for a GPS approach
@@ -44,10 +44,12 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 ![](/images/gma1347.png "")
 
 ## System Failures
+- **Essential Bus**
+	- Switch location: Lower left corner, **provides 30 minutes battery if alternator fails to shed load from system.**
+	- Only allows essential components to show *( NAV/COM 1, transponder, standby/attitude gyro, engine instruments(PFD), annunciator panel, GPS, landing light, pitot heat, and flaps.)*
+	- Shuts off Non-essential avionics, autopilot (in some configurations), NAV/COM 2, and other secondary cabin electronics.
  - **Complete system Failure**: 
 	 - Essential bus (main battery) may run for **30 minute**. 
-		 - **Stays powered:** NAV/COM 1, transponder, standby/attitude gyro, engine instruments(PFD), annunciator panel, GPS, landing light, pitot heat, and flaps.
-		   - **Shuts off:** Non-essential avionics, autopilot (in some configurations), NAV/COM 2, and other secondary cabin electronics.
 	 - Essential power (lithium power battery) runs **standby attitude indicator** and one **flood light** for 90 minutes. However, no indication of yaw. *(last straw)*
  - **Stuck Microphone**: If the push-to-talk (PTT) Key becomes stuck, the COM transmitter stops transmitting after **35 seconds** of continuous operation. An alert appears on the PFD to advise the crew of a stuck microphone. The COMI MIC or COM2 MIC Key Annunciator on the Audio Panel continues to flash as long as the PTT Key remains stuck.
  - **COM Tuning Failure**: In case of a COM system tuning failure, the emergency frequency (121.500 **MHz**) is automatically tuned in the radio in which the tuning failure occurred. *press and hold for 2 second on the freq transfer key to quickly set 121.5*
@@ -114,20 +116,20 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 | Oil Temperature   |        |           |  149 ~ 240  | 231 ~ 245 | >245 | 
 
 ## Alert Window Message
-| **Annunciation Window Text** | **Alerts Window Message**                             | **Audio Alert**       |
-| ---------------------------- | ----------------------------------------------------- | --------------------- |
-| **OIL PRES LO**              | Oil pressure is below **25** psi.                     | Continuous Aural Tone |
-| **FUEL PRES LO***            | Fuel pressure is below 14 psi.                        | Continuous Aural Tone |
-| **FUEL PRES HI***            | Fuel pressure is greater than 35 psi.                 | Continuous Aural Tone |
-| **ALTERNATOR**               | Alternator failed. Battery is only electrical source. | Continuous Aural Tone |
-| **STARTER ENGD**             | Starter is engaged.                                   | Continuous Aural Tone |
-| **DOOR OPEN**                | **Canopy** and/or rear door is not closed and locked. | Continuous Aural Tone |
-| **TRIM FAIL**                | Autopilot automatic trim is inoperative.              | *None*                |
-| **L FUEL LOW**               | Left fuel quantity is less than **3 gallons**.        | Single Aural Tone     |
-| **R FUEL LOW**               | Right fuel quantity is less than **3 gallons**        | Single Aural Tone     |
-| **LOW VOLTS**                | On-board voltage is below 24 V.                       | Single Aural Tone     |
-| **PITOT FAIL**               | Pitot heat is inoperative.                            | Single Aural Tone     |
-| **PITOT OFF**                | Pitot heat is off.                                    | Single Aural Tone     |
+| **Annunciation Window Text** | **Alerts Window Message**                             | **Remarks**                                                                                                                 |
+| ---------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **OIL PRES LO**              | Oil pressure is below **25** psi.                     |                                                                                                                             |
+| **FUEL PRES LO***            | Fuel pressure is below 14 psi.                        |                                                                                                                             |
+| **FUEL PRES HI***            | Fuel pressure is greater than 35 psi.                 |                                                                                                                             |
+| **ALTERNATOR**               | Alternator failed. Battery is only electrical source. |                                                                                                                             |
+| **STARTER ENGD**             | Starter is engaged.                                   |                                                                                                                             |
+| **DOOR OPEN**                | **Canopy** and/or rear door is not closed and locked. |                                                                                                                             |
+| **TRIM FAIL**                | Autopilot automatic trim is inoperative.              | No audio alert                                                                                                              |
+| **L FUEL LOW**               | Left fuel quantity is less than **3 gallons**.        |                                                                                                                             |
+| **R FUEL LOW**               | Right fuel quantity is less than **3 gallons**        |                                                                                                                             |
+| **LOW VOLTS**                | On-board voltage is below **24 V**.                   |                                                                                                                             |
+| **PITOT FAIL**               | Pitot heat is inoperative.                            | Pitot heat switch off                                                                                                       |
+| **PITOT OFF**                | Pitot heat is off.                                    | - Pitot heat switch is **ON** but thermal fuse **activated**<br> - Pitot heat CB is **OPEN** regardless of switch position. |
 
 ## Radio Comm
 ![](/images/radiofreq.png "")
@@ -154,18 +156,35 @@ The G1000 currently has 3 ways of ensuring that its data is correct:
 4. **Skip zone** is an area on the surface of the earth where no reception of any radio waves is possible. (*End of ground wave ~ start of sky wave*)
 
 
-## Remark
+## Exterior Lights
+![](/images/planelight.png "")
+
+|              | Landing Lights                                                                                                                                                                                 | Taxi Lights *(ground lights)*                             | Position Lights                                                                           | Strobe Lights                                                                                                                                            |
+|:------------ |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------- |:----------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Function** | Provide illumination for landing and enhance visibility during critical phases of flight                                                                                                       | Provide illumination for aircraft movement on the ground. | Indicate aircraft orientation and presence during low visibility or nighttime.            | Enhance aircraft visibility to prevent collisions.                                                                                                       |
+| **Timing**   | Turned ON when cleared for takeoff (or when entering the runway at uncontrolled airports before starting rolling). Remain ON during the entire flight and turned OFF after exiting the runway. | ON during aircraft movement on the ground.                | ON from sunset to sunrise and in daylight when weather conditions are below VFR minimums. | ON from prior to engine start until after engine shutdown. (May be turned OFF by PIC if determined to be a hazard to pilots on board or other aircraft). |
+
+## Altitude Alerting
+![](/images/altannuciation.png "")
+- *DEFAULT: Current and Selected ALT difference ≥ 1000 𝑓𝑡, black background Cyan text*
+- Difference within **1000** 𝑓𝑡, change to **cyan background black text and flashes 5 sec**
+- Difference within **200** 𝑓𝑡, change to **black background Cyan text and flashes 5 sec**
+- Reach selected ALT, no change *(default)*
+- Deviate **± 200** 𝑓𝑡 ，an aural alert **black background Amber text and flashes 5 sec**
+
+## Remarks
 - **Cabin check**: Terrain, Obstacles, Navigation, Airport Directory (TONA)
 - Switch tanks at intervals no greater than 30 minutes. When switching, the **electrical fuel pump shall switch ON** 
 - 7 Checklists: **Check before/after engine start; before takeoff check; climb to cruise check; descent/ approach check; after landing check; parking check.**
-
-## Lighting
-![](/images/planelight.png "")
-
-|              | Landing *(IN)*                                                                                                                                                                                        | Taxi                                                      | Position                                                                                  | Strobe *(OUT)*                                                                                                                                                   |
-|:------------ |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------- |:----------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Function** | Provide illumination for landing and enhance visibility during critical phases of flight *(taxi, rolling, TOC, under 10,000 ft).*                                                                | Provide illumination for aircraft movement on the ground. | Indicate aircraft orientation and presence during low visibility or nighttime.            | Enhance aircraft visibility to prevent collisions.                                                                                                       |
-| **Timing**   | Turned ON when cleared for takeoff (or when entering the runway at uncontrolled airports before starting rolling). Remain ON during the entire flight and turned OFF after exiting the runway. | ON during aircraft movement on the ground.                | ON from sunset to sunrise and in daylight when weather conditions are below VFR minimums. | ON from prior to engine start until after engine shutdown. (May be turned OFF by PIC if determined to be a hazard to pilots on board or other aircraft). |
+- Red extreme pitch warning chevrons would show when **pitch +50 or -30**
+- CO detector located in the top right corner next to ELT
+	- Self test begins when power is applied, flashing *twice*, and remain off until another CO alert.
+	- Stay on until the CO level goes below **50 ppm.**
+	- *Failure indication: Flash every 4 second*
+	- Procedure: 
+		- 1. Press TEST/RESET button to confirm, if continues -
+		- 2. Cabin heat - OFF; Ventilation - OPEN; Emergency Window - OPEN; Canopy - OPEN.
+- Sterile cockpit rules (FAR 121.542): During critical phases of flight, including **all ground operations such as taxiing, takeoff, and landing, and all flight operations below 10,000 ft**, non-essential activities are not allowed.
 
 
 ## Abbreviations
