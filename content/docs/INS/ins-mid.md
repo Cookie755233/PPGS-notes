@@ -105,15 +105,16 @@ The G1000 currently has 3 ways of ensuring that its data is correct: **(IFR)**
 
 ## Engine Page
 ![](/images/enginepage.png "")
-| Item              |  Red   |   Amber   |    Green    |   Amber   | Red  |
-|:----------------- |:------:|:---------:|:-----------:|:---------:|:----:|
-| **MAP**           |   —    |     —     |   13 ~ 30   |     —     |  —   |
+| Item              |  Red   |   Amber   |      Green      |   Amber   | Red  |
+|:----------------- |:------:|:---------:|:---------------:|:---------:|:----:|
+| **MAP**           |   —    |     —     |     13 ~ 30     |     —     |  —   |
 | **RPM**           |   —    |     —     | 500 ~ **2,700** |     —     |  —   |
-| **Voltage**       | 0 ~ 24 | 24.1 ~ 25 |  25.1 ~ 30  | 30.1 ~ 32 | > 32 |
-| **Fuel pressure** | 0 ~ 14 |     —     |   14 ~ 35   |     —     | > 35 |
+| **Voltage**       | 0 ~ 24 | 24.1 ~ 25 |    25.1 ~ 30    | 30.1 ~ 32 | > 32 |
+| **Fuel pressure** | 0 ~ 14 |     —     |     **14 ~ 35**     |     —     | > 35 |
 | **Fuel quantity** |   0    |   0 ~ 3   |   3 ~ **17**    |     —     |  —   |
-| Amps              |        |           |   2 ~ 75    |           |      |
-| Oil Temperature   |        |           |  149 ~ 240  | 231 ~ 245 | >245 | 
+| Amps              |        |           |     2 ~ 75      |           |      |
+| Oil Temperature   |        |           |    149 ~ 240    | 231 ~ 245 | >245 |
+| Oil Pressure      | 0 ~ 25 |  **25 ~ 55**  |     56 ~ 95     | 96 ~ 97          |   >97   |
 
 ## Alert Window Message
 | **Annunciation Window Text** | **Alerts Window Message**                             | **Remarks**                                                                                                                 |
