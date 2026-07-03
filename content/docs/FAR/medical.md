@@ -2,7 +2,7 @@
 set-special-rule: true
 sticky-list: true
 ---
-# Medical Checklist (61.23)
+## Medical Certificate
 - ***§ 61.23 Medical certificates: Requirement and duration***
 	- ![](/images/cplreq.png "")
 	-  (a) Click to open paragraph tools Operations requiring a medical certificate.  Except as provided in paragraphs (b) and (c) of this section, a person—
