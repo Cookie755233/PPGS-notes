@@ -1,124 +1,104 @@
+/* ============================================================
+   ORIGINAL STYLES
+   ============================================================ */
+
 strong {
-  color: #d20f39; /* Red */
+  color: #d20f39;
   font-weight: 600;
 }
-
 em {
-  color: #8839ef; /* Mauve */
+  color: #8839ef;
   font-style: italic;
 }
-
 a:not([class*="bg-primary"]) {
-  color: #1e66f5; /* Blue */
+  color: #1e66f5;
 }
-
 a:not([class*="bg-primary"]):hover {
-  color: #04a5e5; /* Sky */
+  color: #04a5e5;
 }
-
 code {
   background-color: #e6e9ef;
   color: #4c4f69;
 }
-
 li {
   margin-top: 0.2rem !important;
   margin-bottom: 0.2rem !important;
 }
 
-/* --- Standard Cards (Without @ or #) --- */
-/* Exclude both rose and pine classes so they don't get overwritten */
 details:not(.rose-details):not(.pine-details) {
-  background-color: rgb(
-    248,
-    250,
-    252
-  ) !important; /* brighter slate background */
-  border: 1px solid rgb(226, 232, 240) !important; /* crisp light grey border line */
+  background-color: rgb(248, 250, 252) !important;
+  border: 1px solid rgb(226, 232, 240) !important;
   border-radius: 0.5rem;
 }
-
-/* Maintain crisp lines in dark mode */
 .dark details:not(.rose-details):not(.pine-details) {
-  background-color: rgb(38, 38, 38) !important; /* original dark neutral */
-  border: 1px solid rgb(64, 64, 64) !important; /* distinct dark border line */
+  background-color: rgb(38, 38, 38) !important;
+  border: 1px solid rgb(64, 64, 64) !important;
 }
 
-/* --- Rose Cards (With @) --- */
 details.rose-details {
-  background-color: rgb(255, 241, 242) !important; /* light rose */
-  border: 1px solid rgb(251, 113, 133) !important; /* sharp rose border line */
+  background-color: rgb(255, 241, 242) !important;
+  border: 1px solid rgb(251, 113, 133) !important;
   border-radius: 0.5rem;
 }
 details.rose-details summary strong {
-  color: rgb(159, 18, 57) !important; /* dark rose text */
+  color: rgb(159, 18, 57) !important;
 }
-
 .dark details.rose-details {
   background-color: rgba(159, 18, 57, 0.2) !important;
-  border: 1px solid rgb(225, 29, 72) !important; /* sharp dark-mode rose border */
+  border: 1px solid rgb(225, 29, 72) !important;
 }
 .dark details.rose-details summary strong {
   color: rgb(254, 205, 211) !important;
 }
 
-/* --- Pine Cards (With #) --- */
 details.pine-details {
-  background-color: rgb(240, 249, 255) !important; /* light sky/pine tint */
-  border: 1px solid rgb(56, 189, 248) !important; /* sharp pine border line */
+  background-color: rgb(240, 249, 255) !important;
+  border: 1px solid rgb(56, 189, 248) !important;
   border-radius: 0.5rem;
 }
 details.pine-details summary strong {
-  color: rgb(49, 116, 143) !important; /* Rose Pine Pine/Blue text */
+  color: rgb(49, 116, 143) !important;
 }
-
 .dark details.pine-details {
   background-color: rgba(49, 116, 143, 0.15) !important;
-  border: 1px solid rgb(57, 141, 172) !important; /* sharp dark-mode pine border */
+  border: 1px solid rgb(57, 141, 172) !important;
 }
 .dark details.pine-details summary strong {
-  color: rgb(156, 207, 216) !important; /* lighter pine text recovery */
+  color: rgb(156, 207, 216) !important;
 }
 
-/* --- Display math blocks: scroll horizontally instead of overflowing --- */
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
 }
-
-/* Needed to prevent a double scrollbar bug */
 .katex-display > .katex {
   max-width: 100%;
 }
-
 .katex-display > .katex > .katex-html {
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 3px 2px 1px; /* small padding so descenders aren't clipped */
+  padding: 3px 2px 1px;
 }
 
-/* Ensure the newly relocated TOC doesn't break the sidebar's internal scrolling */
 aside[class*="sidebar"] nav#TableOfContents {
-  font-size: 0.875rem; /* Matches left menu sizing */
-  border-left: 2px solid #e2e8f0; /* Crisp divider line */
+  font-size: 0.875rem;
+  border-left: 2px solid #e2e8f0;
   margin-left: 0.5rem;
   padding-left: 1rem;
 }
-
 .dark aside[class*="sidebar"] nav#TableOfContents {
   border-left-color: #404040;
 }
 
 mark {
-  background-color: #fff59d; /* soft yellow highlight */
+  background-color: #fff59d;
   color: inherit;
   padding: 0.05em 0.2em;
   border-radius: 2px;
 }
-
 mark:is(html[class~="dark"] *) {
-  background-color: #a68b00; /* dimmer yellow for dark mode */
+  background-color: #a68b00;
   color: #fff;
 }
 
@@ -127,4 +107,124 @@ td li {
   margin-block: 3px !important;
   margin-block-start: 3px !important;
   margin-block-end: 3px !important;
+}
+
+/* ============================================================
+   NEW — OSAURUS-INSPIRED TYPOGRAPHY & PAGE FEEL
+   ============================================================ */
+
+/* Softer off-white page background (matches Osaurus's near-white canvas) */
+body {
+  background-color: #f9fafb !important;
+}
+.dark body {
+  background-color: #111111 !important;
+}
+
+/* Slightly looser, more readable body text */
+.hextra-content {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #1e1e2e;
+}
+.dark .hextra-content {
+  color: #cdd6f4;
+}
+
+/* Headings: tighter tracking, heavier weight like Osaurus */
+.hextra-content h1,
+.hextra-content h2,
+.hextra-content h3,
+.hextra-content h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #11111a;
+}
+.dark .hextra-content h1,
+.dark .hextra-content h2,
+.dark .hextra-content h3,
+.dark .hextra-content h4 {
+  color: #e6e9ef;
+}
+
+/* Horizontal rule: thin, subtle divider like Osaurus section breaks */
+.hextra-content hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 2rem 0;
+}
+.dark .hextra-content hr {
+  border-top-color: #2e2e3e;
+}
+
+/* Inline code: soft pill, no harsh contrast — matches Osaurus */
+.hextra-content code:not(pre code) {
+  background-color: #eff1f5;
+  color: #4c4f69;
+  border-radius: 0.3em;
+  padding: 0.15em 0.4em;
+  font-size: 0.85em;
+  border: 1px solid #dce0e8;
+}
+.dark .hextra-content code:not(pre code) {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border-color: #313244;
+}
+
+/* Code blocks: clean dark surface, subtle border radius */
+.hextra-content pre {
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background-color: #f5f5f7 !important;
+}
+.dark .hextra-content pre {
+  border-color: #313244;
+  background-color: #181825 !important;
+}
+
+/* Tables: tighter, cleaner lines like Osaurus comparison tables */
+.hextra-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.hextra-content th {
+  background-color: #f1f3f9;
+  color: #11111a;
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 2px solid #d0d4e0;
+  text-align: left;
+}
+.dark .hextra-content th {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border-bottom-color: #313244;
+}
+.hextra-content td {
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid #e8eaf0;
+  vertical-align: top;
+}
+.dark .hextra-content td {
+  border-bottom-color: #2a2a3a;
+}
+.hextra-content tr:last-child td {
+  border-bottom: none;
+}
+
+/* Blockquote: left accent bar, muted text — Osaurus callout style */
+.hextra-content blockquote {
+  border-left: 3px solid #c6d0f5;
+  padding: 0.4rem 1rem;
+  color: #6c6f85;
+  background-color: #f5f5fa;
+  border-radius: 0 0.4rem 0.4rem 0;
+  margin: 1rem 0;
+}
+.dark .hextra-content blockquote {
+  border-left-color: #45475a;
+  background-color: #1e1e2e;
+  color: #a6adc8;
 }

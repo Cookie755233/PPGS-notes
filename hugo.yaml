@@ -72,5 +72,5 @@ params:
     defaultOpenLevel: 2 # Automatically expands GN, MET, POF submenus
     autoCollapse: false
 
-  imageZoom:
-    enable: true
+  # imageZoom:
+  #   enable: true
