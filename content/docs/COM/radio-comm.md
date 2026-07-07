@@ -21,7 +21,7 @@ chat_radio: true
 ## FTA Procedures
 `Operations → Traffic → Ground → Tower → Approach(NORCAL) >>`
 
-
+---
 ### DEPARTING METHAR
 COM2 · 133.3 — EVA Operations
 
@@ -29,15 +29,17 @@ Pilot: EVA Operations, EVASTAR 805, block out 35, full tank
 
 EVA Operations: EVASTAR 805, block out 35, full tank, have a nice flight
 
-Released brakes · Taxiing out of T-shed via T1
+After releasing brakes and taxiing
 
 Pilot: EVA Traffic, EVASTAR 805, taxiing out of T-shed via T1
 
 Hold short Taxiway A at T1
 
-Switches to COM1 · 121.85 — Mather Ground
+Pilot switches from COM2 to COM1 with 121.85 (Mather Ground) active
 
 ### Taxi Clearance
+COM1 on 121.85 (Mather Ground)
+
 Pilot: Mather Ground, EVASTAR 805, hold short taxiway A at T1, ready to taxi with Lima, request local area number 
 
 Mather Ground: EVASTAR 805, taxi Runway 22R via A B, squawk 0365
@@ -47,6 +49,7 @@ Pilot: Taxi Runway 22R via A B, squawk 0365, EVASTAR 805
 Squawked 0365 
 
 Pilot taxis to the runup area via A B, completes the runup and before takeoff check checklist, then proceeds to hold short Runway 22R at taxiway B.
+
 
 ### Takeoff Clearance
 COM1 · 120.65 — Mather Tower
@@ -60,10 +63,23 @@ Pilot: Runway 22R cleared for takeoff, EVASTAR 805
 Pilot takes off
 
 
-### Transfer to NorCal
+## Transfer to NorCal
 
 Mather Tower: EVASTAR 805, contact NorCal Departure 127.4
 
 Pilot: Contact NorCal Departure 127.4, EVASTAR 805
 
 Pilot switches COM1 Active to 127.4 (NorCal Departure)
+
+
+### Flight Following with Norcal
+Initial Contact: COM1 on 127.4 (NorCal Departure)
+
+Pilot: NorCal Departure, EVASTAR 805, 1500 climbing 3500, heading to Franklin for Pattern Work
+
+NorCal: EVASTAR 805, radar contact, Sacramento altimeter settings 29.95
+
+Pilot: 29.95, EVASTAR 805
+
+Pilot sets altimeter settings to 29.95 inHg
+
