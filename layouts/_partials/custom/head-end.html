@@ -28,6 +28,19 @@ end }}
 </style>
 {{ end }}
 
+<!--custom radio format-->
+{{ if index .Page.Params "chat_radio" }}
+<style>
+  {{ readFile "layouts/_partials/custom/chat-radio.css" | safeCSS }}
+</style>
+<script>
+  {{ readFile "layouts/_partials/custom/chat-radio.js" | safeJS }}
+</script>
+<script>
+  document.documentElement.classList.add("chat-radio-page");
+</script>
+{{ end }}
+
 <!-- GLOBAL DEFAULT-->
 <style>
   {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
