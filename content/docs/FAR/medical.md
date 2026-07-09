@@ -4,7 +4,6 @@ sticky-list: true
 ---
 ## Medical Certificate
 - ***§ 61.23 Medical certificates: Requirement and duration***
-	- ![](/images/cplreq.png "")
 	-  (a) Click to open paragraph tools Operations requiring a medical certificate.  Except as provided in paragraphs (b) and (c) of this section, a person—
 		- (1) Must hold a first-class medical certificate ==(ATPL)==
 			- (i) When exercising the **pilot-in-command** privileges of an airline transport pilot certificate; 
@@ -36,3 +35,5 @@ sticky-list: true
 			- (i) The completed medical examination checklist required under [§ 68.7 of this chapter](https://www.ecfr.gov/current/title-14/section-68.7); and
 			- (ii) The certificate of course completion required under [§ 61.23(c)(3)](https://www.ecfr.gov/current/title-14/section-61.23#p-61.23\(c\)\(3\)).
 
+
+![](/images/cplreq.png "")

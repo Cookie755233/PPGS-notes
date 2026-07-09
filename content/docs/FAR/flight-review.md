@@ -13,7 +13,6 @@ sticky-list: true
 {{</ callout >}}
 
 
-
 - ***§ 61.56 Flight review.***
 	- (c) Except as provided in [paragraphs (d)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(d\)), [(e)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(e\)), and [(g)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(g\)) of this section, no person may act as pilot in command of an aircraft unless, since the beginning of the ==24th calendar month before the month in which that pilot acts as pilot in command==, that person has—
 		- (1) Accomplished a flight review given in an aircraft for which that pilot is rated by an authorized instructor and

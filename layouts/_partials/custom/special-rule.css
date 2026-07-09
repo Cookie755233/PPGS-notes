@@ -41,3 +41,22 @@
 .content ol ol li {
   margin-left: 0;
 }
+
+
+/* List item all-caps section labels (applied via JS) */
+.content .list-section-label {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #fff !important;
+  background-color: #1e3a5f;
+  padding: 0.15em 0.6em;
+  border-radius: 0.3em;
+  margin: 0.4rem 0 0.2rem;
+}
+.dark .content .list-section-label {
+  background-color: #2a4975;
+  color: #a8c8ff !important;
+}

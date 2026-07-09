@@ -7,6 +7,9 @@ end }}
 <style>
   {{ readFile "layouts/_partials/custom/special-rule.css" | safeCSS }}
 </style>
+<script>
+  {{ readFile "layouts/_partials/custom/special-rule.js" | safeJS }}
+</script>
 {{ end }}
 
 <!--sticky list-->
