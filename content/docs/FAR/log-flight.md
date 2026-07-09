@@ -26,8 +26,8 @@ sticky-list: true
 
 --
 
+- *Q: WHAT IS AIRCRAFT CATEGORY/CLASS?*
 - ***§ 1.1 General definitions.***
-	- *Q: WHAT IS AIRCRAFT CATEGORY/CLASS?*
 	- **Category**
 		- (1) As used with respect to the certification, ratings, privileges, and limitations of airmen, means a broad classification of aircraft. Examples include: airplane; rotorcraft; glider; and lighter-than-air; and
 		- (2) As used with respect to the certification of aircraft,== means a grouping of aircraft based upon intended use or operating limitation==s. Examples include: transport, normal, utility, acrobatic, limited, restricted, and provisional.
