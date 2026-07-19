@@ -2,10 +2,10 @@
 title: "Preflight Checklist (PAVE)"
 cssclasses:
 - wide-view
+weight: 2
 ---
 
 ## P - PILOT
-
 ### Required Documents & Fitness
 | Category                           | Element | Item & Description           | Reference                                            |
 |:---------------------------------- |:------- |:---------------------------- |:---------------------------------------------------- |
