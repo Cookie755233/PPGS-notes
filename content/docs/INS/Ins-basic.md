@@ -1,5 +1,5 @@
 ---
-title: "@INS BASIC"
+title: "0. Basic"
 ---
 
 ## What is ATIS? What information does it provide?

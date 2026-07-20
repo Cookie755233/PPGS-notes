@@ -2,6 +2,7 @@
 title: "@INS MID"
 cssclasses:
 - ultra-wide-view
+weight: 1
 ---
 
 ## G1000 System
