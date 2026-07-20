@@ -4,7 +4,6 @@ sticky-list: true
 title: "PPL Privileges"
 ---
 
-
 {{< callout >}}
 TL;DR\
 Except incidental, pro rata, search and location operations, charitable or non-profit, flight test, salesman, light-sport category. Read [AC 61-142](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-142.pdf)
