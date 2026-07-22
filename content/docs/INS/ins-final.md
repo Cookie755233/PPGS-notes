@@ -36,7 +36,7 @@ title: "@INS FINAL"
 	- **Gassing (Electrical energy splits water inside the battery into H2 and O2)**
 - Constant voltage charging
 	- Slow, but safe and increased life time.
-	- fill up with distilled water.
+	- fill up with **distilled** water.
 - A value for the energy that can be stored in a battery is called the capacity of the battery. The unit is **Ampere-hours (Ah) .**
 - Battery capacity may drop as the temperature decreases.
 - **DA 40 uses 13.6 Ah, 24 V battery at the right forward side of the firewall.**

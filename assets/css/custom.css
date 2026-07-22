@@ -1,72 +1,132 @@
-/* ============================================================
-   ORIGINAL STYLES
-   ============================================================ */
+/* =====================
+   LIGHT MODE — Catppuccin Latte
+   ===================== */
+
+body {
+  background-color: #eff1f5;
+  color: #4c4f69;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fe640b; /* Peach */
+}
 
 strong {
-  color: #d20f39;
+  color: #d20f39; /* Red */
   font-weight: 600;
 }
+
 em {
-  color: #8839ef;
+  color: #8839ef; /* Mauve */
   font-style: italic;
 }
+
 a:not([class*="bg-primary"]) {
-  color: #1e66f5;
+  color: #1e66f5; /* Blue */
 }
+
 a:not([class*="bg-primary"]):hover {
-  color: #04a5e5;
+  color: #04a5e5; /* Sky */
 }
+
 code {
   background-color: #e6e9ef;
   color: #4c4f69;
 }
-li {
-  margin-top: 0.3rem !important;
-  margin-bottom: 0.3rem !important;
+
+/* =====================
+   DARK MODE — Rosé Pine
+   ===================== */
+
+.dark body {
+  background-color: #191724;
+  color: #e0def4;
 }
 
-details:not(.rose-details):not(.pine-details) {
-  background-color: rgb(248, 250, 252) !important;
-  border: 1px solid rgb(226, 232, 240) !important;
-  border-radius: 0.5rem;
-}
-.dark details:not(.rose-details):not(.pine-details) {
-  background-color: rgb(38, 38, 38) !important;
-  border: 1px solid rgb(64, 64, 64) !important;
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+  color: #f6c177; /* Gold */
 }
 
-details.rose-details {
-  background-color: rgb(255, 241, 242) !important;
-  border: 1px solid rgb(251, 113, 133) !important;
-  border-radius: 0.5rem;
-}
-details.rose-details summary strong {
-  color: rgb(159, 18, 57) !important;
-}
-.dark details.rose-details {
-  background-color: rgba(159, 18, 57, 0.2) !important;
-  border: 1px solid rgb(225, 29, 72) !important;
-}
-.dark details.rose-details summary strong {
-  color: rgb(254, 205, 211) !important;
+.dark strong {
+  color: #eb6f92; /* Rose */
+  font-weight: 600;
 }
 
-details.pine-details {
-  background-color: rgb(240, 249, 255) !important;
-  border: 1px solid rgb(56, 189, 248) !important;
-  border-radius: 0.5rem;
-}
-details.pine-details summary strong {
-  color: rgb(49, 116, 143) !important;
-}
-.dark details.pine-details {
-  background-color: rgba(49, 116, 143, 0.15) !important;
-  border: 1px solid rgb(57, 141, 172) !important;
-}
-.dark details.pine-details summary strong {
-  color: rgb(156, 207, 216) !important;
+.dark em {
+  color: #c4a7e7; /* Iris */
+  font-style: italic;
 }
 
+.dark a:not([class*="bg-primary"]) {
+  color: #9ccfd8; /* Foam */
+}
+
+.dark a:not([class*="bg-primary"]):hover {
+  color: #ebbcba; /* Rose light */
+}
+
+.dark code {
+  background-color: #26233a;
+  color: #e0def4;
+}
+
+/* =====================
+   Cards — Light Mode
+   ===================== */
+
+.hextra-card {
+  background-color: #ffffff !important;
+  border-color: #ccd0da !important;
+}
+
+.hextra-card:hover {
+  background-color: #e7f6ff !important;
+  border-color: #bcc0cc !important;
+}
+
+/* =====================
+   Cards — Dark Mode
+   ===================== */
+
+.dark .hextra-card {
+  background-color: #26233f !important;
+  border-color: #403d52 !important;
+}
+
+.dark .hextra-card:hover {
+  background-color: #2a2740 !important;
+  border-color: #524f67 !important;
+}
+
+/* =====================
+   Fix hardcoded white boxes
+   (sidebar theme toggle + TOC edit footer)
+   ===================== */
+
+[class*="shadow-[0_-12px_16px_#fff]"],
+[class*="shadow-[0_-12px_16px_white]"] {
+  background-color: #eff1f5 !important;
+  box-shadow: 0 -12px 16px #eff1f5 !important;
+}
+
+.dark [class*="shadow-[0_-12px_16px_#fff]"],
+.dark [class*="shadow-[0_-12px_16px_white]"] {
+  background-color: #191724 !important;
+  box-shadow: 0 -12px 16px #191724 !important;
+}
+
+.dark [class*="shadow-[0_-12px_16px_#111]"] {
+  background-color: #191724 !important;
+  box-shadow: 0 -12px 16px #191724 !important;
+}
+
+/* Latex */
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
@@ -81,6 +141,7 @@ details.pine-details summary strong {
   padding: 3px 2px 1px;
 }
 
+/* TOC */
 aside[class*="sidebar"] nav#TableOfContents {
   font-size: 0.875rem;
   border-left: 2px solid #e2e8f0;
