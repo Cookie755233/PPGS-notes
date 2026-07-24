@@ -5,13 +5,12 @@
   color: #3b82f6;
   border-bottom: 1px dotted #3b82f6;
   outline: none;
+  text-indent: 0;      /* ← ADD: stop inheriting parent li's indent */
 }
-
 .dark .hx-tip {
   color: #60a5fa;
   border-bottom-color: #60a5fa;
 }
-
 .hx-tip-text {
   display: none;
   position: absolute;
@@ -29,8 +28,8 @@
   z-index: 30;
   white-space: normal;
   line-height: 1.4;
+  text-indent: 0;      /* ← ADD: this is the actual fix for the left-shift */
 }
-
 .hx-tip:hover .hx-tip-text,
 .hx-tip:focus .hx-tip-text {
   display: block;

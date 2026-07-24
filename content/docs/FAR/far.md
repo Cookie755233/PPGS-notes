@@ -139,7 +139,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 
 
 ## Log Flights
-- ***§ 61.15 Pilot Logbooks***
+- ***§ 61.51 Pilot Logbooks***
 	- *Q: DO YOU NEED TO LOG ALL FLIGHT*
 	- (a) Training time and aeronautical experience.  Each person must document and record the following time in a manner acceptable to the Administrator:
 		- (1)==Training and aeronautical experience== used to meet the requirements for a certificate, rating, or flight review of this part.
@@ -149,6 +149,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (i) ==Is the sole occupant of the aircraft or is performing the duties of pilot of command of an airship requiring more than one pilot flight crewmember;==
 		- (ii) Has a solo flight endorsement as required under [§ 61.87 of this part](https://www.ecfr.gov/current/title-14/part-61/section-61.87); and
 		- (iii) Is undergoing training for a pilot certificate or rating.
+
 - ***§ 61.31 Type rating requirements, additional training, and authorization requirements.***
 	- *Q: DO YOU NEED A TYPE RATING?*
 	- (a) ==Type ratings required==.  A person who acts as a pilot in command of any of the following aircraft must hold a type rating for that aircraft:
@@ -159,6 +160,13 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- *(Complex Aircraft {{< tip "with gear, flaps" >}}/ High Performance Aircraft {{< tip ">250 kts" >}} would  requires endorsements)*
 	- *Q: LIMITATIONS ON THE CARRIAGE OF PERSON & OPERATING AS THE PIC*
 	- (c) Aircraft category, class, and type ratings: Limitations on the carriage of persons, or operating for compensation or hire.  Unless a person holds a category, class, and type rating (if a class and type rating is required) that applies to the aircraft, ==that person may not act as pilot in command of an aircraft that is carrying another person, or is operated for compensation or hire==. That person also may not act as pilot in command of that aircraft for compensation or hire. 
+
+- ***§ 61.15 Offenses involving alcohol or drugs***
+	- (a)Click to open paragraph tools A conviction for the violation of any Federal or State statute relating to the growing, processing, manufacture, sale, disposition, possession, transportation, or importation of narcotic drugs, marijuana, or depressant or stimulant drugs or substances is grounds for ==up to 1 year== after the date of final conviction.
+	- (c) Motor vehicle action means ... ==while impaired by alcohol or a drug, or while under the influence of alcohol or a drug.==
+	- (e) Each person holding a certificate issued under this part ==shall provide a written report of each motor vehicle action to the FAA==, Civil Aviation Security Division (AMC-700), P.O. Box 25810, Oklahoma City, OK 73125, not later than 60 days after the motor vehicle action. ...
+	- (f) Failure to comply with [paragraph (e)](https://www.ecfr.gov/current/title-14/section-61.15#p-61.15\(e\)) of this section is grounds for:
+		- (1) Denial of an application for any certificate, rating, or authorization issued under this part for a period of up to 1 year after the date of the motor vehicle action; 
 
 ## Aircraft Category & Class
 - *Q: WHAT IS AIRCRAFT CATEGORY/CLASS?*
@@ -200,6 +208,151 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (3) The takeoffs and landings required by [paragraph (a)(1)](https://www.ecfr.gov/current/title-14/section-61.57#p-61.57\(a\)\(1\)) of this section ==may be accomplished in a full flight simulator or flight training device== that is—
 	- (b) **Night** takeoff and landing experience. 
 		- (1) Except as provided in paragraph (e) of this section, no person may act as pilot in command of an aircraft carrying persons during the period beginning 1 hour after sunset and ending 1 hour before sunrise, ==unless within the preceding 90 days that person has made at least three takeoffs and three landings to a full stop during the period beginning 1 hour after sunset and ending 1 hour before sunrise==, and—
+
+## Maintenance
+{{< callout >}}
+**TL;DR - Who can maintain an aircraft?** ?\
+• Mechanics, Repairmen\
+• Pilots at least PPL, but only for **preventive maintenance** under **[Appendix A to Part 43 (c)](<https://www.ecfr.gov/current/title-14/appendix-Appendix%20A%20to%20Part%2043#p-Appendix-A-to-Part-43(c)>)**
+{{</ callout >}}
+
+- *Q: CAN WE DO THE MAINTENANCE ON THE AIRCRAFT?*
+- ***§ 43.3 Persons authorized to perform maintenance, preventive maintenance, rebuilding, and alterations.***
+	- (a) Except as provided in this section and § 43.17, no person may maintain, rebuild, alter, or perform preventive maintenance on an aircraft, airframe, aircraft engine, propeller, appliance, or component part to which this part applies. Those items, the performance of which is a major alteration, a major repair, or preventive maintenance, are listed in appendix A.
+	- (b) The holder of a ==mechanic certificate== may perform maintenance, preventive maintenance, and alterations as provided in [Part 65 of this chapter](https://www.ecfr.gov/current/title-14/part-65).
+	- (c) The holder of a ==repairman certificate== may perform maintenance, preventive maintenance, and alterations as provided in [part 65 of this chapter](https://www.ecfr.gov/current/title-14/part-65).
+	- (g) Except for holders of a sport pilot certificate, ==the **holder** of a pilot certificate issued under part 61== may perform *preventive maintenance* on any aircraft owned or operated by that pilot which is not used under [part 121](https://www.ecfr.gov/current/title-14/part-121), [129](https://www.ecfr.gov/current/title-14/part-129), or [135 of this chapter](https://www.ecfr.gov/current/title-14/part-135). The holder of a sport pilot certificate may perform preventive maintenance on an aircraft owned or operated by that pilot and issued a special airworthiness certificate in the light-sport category.
+- ***§ 65.81 General privileges and limitations. (of mechanics)***
+	- (a) A certificated mechanic may perform or supervise the maintenance, preventive maintenance or alteration of an aircraft or appliance, or a part thereof, for which that person is rated (but excluding major repairs to, and major alterations of, propellers, and any repair to, or alteration of, instruments), and may perform additional duties in accordance with [§§ 65.85](https://www.ecfr.gov/current/title-14/section-65.85), [65.87](https://www.ecfr.gov/current/title-14/section-65.87), and [65.95](https://www.ecfr.gov/current/title-14/section-65.95).{{< tip "人話：證照綁人" >}}
+- ***§ 65.103 Repairman certificate: Privileges and limitations.***
+	- (a) A certificated repairman may perform or supervise the maintenance, preventive maintenance, or alteration of aircraft or aircraft components appropriate to the job for which the repairman was employed and certificated, but *only in connection with duties for the certificate holder by whom the repairman was employed and recommended.* {{< tip "人話：綁公司綁機種" >}}
+- *Q: CAN WE FLY STRAIGHT AFTER  MAINTENANCE?*
+- ***§ 91.407 Operation after maintenance, preventive maintenance, rebuilding, or alteration.***
+	- (a) No person may operate any aircraft that has undergone maintenance, preventive maintenance, rebuilding, or alteration unless—
+		- (1) It has ==been approved for return to service== by a person authorized under [§ 43.7 of this chapter](https://www.ecfr.gov/current/title-14/section-43.7); and
+		- (2) The maintenance ==record entry== required by [§ 43.9](https://www.ecfr.gov/current/title-14/section-43.9) or [§ 43.11](https://www.ecfr.gov/current/title-14/section-43.11), as applicable, of this chapter has been made.
+
+{{< callout >}}
+**TL;DR - Who can RETURN to service an aircraft?** ?\
+• Mechanics, \
+• Inspection authorization, \
+• Pilots at least PPL, but only for **preventive maintenance**
+{{</ callout >}}
+
+- *Q: WHO CAN RETURN TO SERVICE THE AIRCRAFT AFTER MAINTENANCE?*
+- ***§ 43.7 Persons authorized to approve aircraft***
+	- (a) Except as provided in this section and [§ 43.17](https://www.ecfr.gov/current/title-14/section-43.17), no person, other than the Administrator, may approve an aircraft, airframe, aircraft engine, propeller, appliance, or component part for return to service after it has undergone maintenance, preventive maintenance, rebuilding, or alteration.
+	- (b) The holder of a mechanic certificate or an inspection authorization may approve an aircraft, airframe, aircraft engine, propeller, appliance, or component part for return to service as provided in [Part 65 of this chapter](https://www.ecfr.gov/current/title-14/part-65).
+	- (f) A person holding ==at least a private pilot certificate== may approve an aircraft for return to service after performing preventive maintenance ==under the provisions of [§ 43.3(g)](https://www.ecfr.gov/current/title-14/section-43.3#p-43.3\(g\))==.
+
+- *Q: WHAT DO WE NEED TO HAVE BEFORE RETURN THE SERVICE THE AIRCRAFT?*
+- ***§ 43.5 Approval for return to service after maintenance, preventive maintenance, rebuilding, or alteration***
+	- (a) The maintenance record entry required by [§ 43.9](https://www.ecfr.gov/current/title-14/section-43.9) or [§ 43.11](https://www.ecfr.gov/current/title-14/section-43.11), as appropriate, has been made;
+- ***§ 43.9 Content, form, and disposition of ==maintenance==, preventive maintenance, rebuilding, and alteration records*** 
+	- (a) _Maintenance record entries._ Except as provided in [paragraphs (b)](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(b\)) and [(c)](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(c\)) of this section, each person who maintains, performs preventive maintenance, rebuilds, or alters an aircraft, airframe, aircraft engine, propeller, appliance, or component part shall make an entry in the maintenance record of that equipment containing the following information:
+		- (1) A ==description== (or reference to data acceptable to the Administrator) of work performed.
+		- (2) The ==date of completion== of the work performed.
+		- (3) The ==name of the person== performing the work if other than the person specified in [paragraph (a)(4)](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(a\)\(4\)) of this section.
+		- (4) If the work performed on the aircraft, airframe, aircraft engine, propeller, appliance, or component part has been performed satisfactorily, ==the signature, certificate number==, and kind of certificate held by the person approving the work. The signature constitutes the approval for return to service only for the work performed.
+- ***§ 43.11 Content, form, and disposition of records for ==inspections== conducted under parts 91 and 125 and [§ 135.411(a)(1)](https://www.ecfr.gov/current/title-14/section-135.411#p-135.411\(a\)\(1\)) and [135.419 of this chapter](https://www.ecfr.gov/current/title-14/section-135.419).***
+	- (a) _Maintenance record entries._ The person approving or disapproving for return to service an aircraft, airframe, aircraft engine, propeller, appliance, or component part after any inspection performed in accordance with part 91, 125, [§ 135.411(a)(1)](https://www.ecfr.gov/current/title-14/section-135.411#p-135.411\(a\)\(1\)), or [§ 135.419](https://www.ecfr.gov/current/title-14/section-135.419) shall make an entry in the maintenance record of that equipment containing the following information:
+		- (1) The ==type of inspection== and a brief description of the extent of the inspection.
+		- (2) The ==date of the inspection== and aircraft total time in service.
+		- (3) The signature, the certificate number, and kind of certificate held by the person ==approving or disapproving== {{< tip "If disapproved, the entry will further state “and a list of discrepancies and unairworthy items dated (date) has been provided to the aircraft owner or operator." >}}for return to service the aircraft, airframe, aircraft engine, propeller, appliance, component part, or portions thereof.
+
+- *Q: WHO CAN DO THE INSPECTION?*
+- ***§ 65.85 Airframe rating; additional privileges.***
+	- (a) Except as provided in [paragraph (b)](https://www.ecfr.gov/current/title-14/section-65.85#p-65.85\(b\)) of this section, a ==certificated mechanic with an airframe rating== may approve for return to service an airframe, or any related part or appliance, after that person has performed, supervised, or inspected its maintenance or alteration (excluding major repairs and major alterations). In addition, a certificated mechanic with an airframe rating may perform the 100-hour inspection required by [part 91 of this chapter](https://www.ecfr.gov/current/title-14/part-91) on an airframe, or any related part or appliance, and approve for return to service.
+- ***§ 65.87 Powerplant rating; additional privileges.***
+	- (a) Except as provided in [paragraph (b)](https://www.ecfr.gov/current/title-14/section-65.87#p-65.87\(b\)) of this section, a ==certificated mechanic with a powerplant rating== may approve for return to service a powerplant or propeller or any related part or appliance, after that person has performed, supervised, or inspected its maintenance or alteration (excluding major repairs and major alterations). In addition, a certificated mechanic with a powerplant rating may perform the 100-hour inspection required by [part 91 of this chapter](https://www.ecfr.gov/current/title-14/part-91) on a powerplant or propeller, or any part thereof, and approve for return to service.
+- ***§ 65.95 Inspection authorization: Privileges and limitations.***
+	- (a) The holder of an ==inspection authorization== may—
+		- (1) Inspect and approve for return to service any aircraft or related part or appliance (except any aircraft maintained in accordance with a continuous airworthiness program under [part 121 of this chapter](https://www.ecfr.gov/current/title-14/part-121)) after a major repair or major alteration to it in accordance with part 43 [New] of this chapter, if the work was done in accordance with technical data approved by the Administrator; and
+		- (2) Perform an ==annual==, or perform or supervise a progressive ==inspection== according to [§§ 43.13](https://www.ecfr.gov/current/title-14/section-43.13) and [43.15 of this chapter](https://www.ecfr.gov/current/title-14/section-43.15).
+
+{{< callout >}}
+**TL;DR - Who may perform an inspection?**\
+• Airframe mechanics: airframe inspection, \
+• Powerplant mechanics: powerplant inspection, \
+• Inspection authorization: ANNUAL inspection
+{{</ callout >}}
+
+- *Q: HOW LONG DO WE KEEP THE RECORDS?*
+- ***§ 91.417 Maintenance records.***
+	- (a) Except for work performed in accordance with [§§ 91.411](https://www.ecfr.gov/current/title-14/section-91.411) and [91.413](https://www.ecfr.gov/current/title-14/section-91.413), each registered owner or operator shall keep the following records for the periods specified in [paragraph (b)](https://www.ecfr.gov/current/title-14/section-91.417#p-91.417\(b\)) of this section:
+		- ==(1) Records of the maintenance==, preventive maintenance, and alteration and records of the 100-hour, annual, progressive, and other required or approved inspections, as appropriate, for each aircraft (including the airframe) and each engine, propeller, rotor, and appliance of an aircraft. The records must include—
+			- (i) A description (or reference to data acceptable to the Administrator) of the work performed; and
+			- (ii) The date of completion of the work performed; and
+			- (iii) The signature, and certificate number of the person approving the aircraft for return to service.
+		- (2) Records containing the following information:
+			- (i) The total time in service of the airframe, each engine, each propeller, and each rotor.
+			- (ii) The current status of life-limited parts of each airframe, engine, propeller, rotor, and appliance.
+			- (iii) The time since last overhaul of all items installed on the aircraft which are required to be overhauled on a specified time basis.
+			- (iv) The current inspection status of the aircraft, including the time since the last inspection required by the inspection program under which the aircraft and its appliances are maintained.
+			- (v) The current status of applicable airworthiness directives (AD) including, for each, the method of compliance, the AD number and revision date. If the AD involves recurring action, the time and date when the next action is required.
+			- (vi) Copies of the forms prescribed by [§ 43.9(d) of this chapter](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(d\)) for each major alteration to the airframe and currently installed engines, rotors, propellers, and appliances.
+	- (b) The owner or operator shall retain the following records for the periods prescribed:
+		- (1) The records specified in [==paragraph (a)(1)==](https://www.ecfr.gov/current/title-14/section-91.417#p-91.417\(a\)\(1\)) of this section shall be retained until the work is repeated or superseded by other work or for ==1 year== after the work is performed.
+		- (2) The records specified in [==paragraph (a)(2)==](https://www.ecfr.gov/current/title-14/section-91.417#p-91.417\(a\)\(2\)) of this section shall be ==retained and transferred with the aircraft at the time the aircraft is sold.==
+		- (3) A list of ==defects furnished== to a registered owner or operator under [§ 43.11 of this chapter](https://www.ecfr.gov/current/title-14/section-43.11) shall be ==retained until the defects are repaired and the aircraft is approved for return to service.==
+
+## Inoperative Equipment
+- ***§ 91.213 Inoperative instruments and equipment.***
+	- (a) Except as provided in [paragraph (d)](https://www.ecfr.gov/current/title-14/section-91.213#p-91.213\(d\)) of this section, no person may take off an aircraft with inoperative instruments or equipment installed unless the following conditions are met: {{< tip "有MEL的飛機" >}}
+		- (1) ==**An approved Minimum Equipment List exists for that aircraft.**==
+		- (2) The aircraft has within it a ==letter of authorization==, issued by the responsible Flight Standards office, authorizing operation of the aircraft under the Minimum Equipment List. The letter of authorization may be obtained by written request of the airworthiness certificate holder. The Minimum Equipment List and the letter of authorization constitute a supplemental type certificate for the aircraft.
+		- (3) The approved Minimum Equipment List must—
+			- (i) Be prepared in accordance with the limitations specified in [paragraph (b)](https://www.ecfr.gov/current/title-14/section-91.213#p-91.213\(b\)) of this section; and
+			- (ii) Provide for the ==operation of the aircraft with the instruments and equipment in an inoperable condition.==
+		- (4) The aircraft records available to the pilot must ==include an entry describing the inoperable instruments and equipment.==
+		- (5) The aircraft is operated under all applicable conditions and limitations contained in the Minimum Equipment List and the letter authorizing the use of the list.
+	- (d) Except for operations conducted in accordance with [paragraph (a)](https://www.ecfr.gov/current/title-14/section-91.213#p-91.213\(a\)) or [(c)](https://www.ecfr.gov/current/title-14/section-91.213#p-91.213\(c\)) of this section, a person may takeoff an aircraft in operations conducted under this part with inoperative instruments and equipment ==without an approved Minimum Equipment List== provided—
+		- (2) The inoperative instruments and equipment are **not**—
+			- (i) Part of the ==VFR-day type certification instruments== and equipment prescribed in the applicable airworthiness regulations under which the aircraft was type certificated;
+			- (ii) Indicated as required on the aircraft's equipment list, or on the ==Kinds of Operations Equipment List== for the kind of flight operation being conducted;
+			- (iii) Required by [==§ 91.205==](https://www.ecfr.gov/current/title-14/section-91.205) {{< tip "ATOMATOFLAMES" >}}or any other rule of this part for the specific kind of flight operation being conducted; or
+			- (iv) Required to be operational by an ==airworthiness directive==; and
+		- (3) The inoperative instruments and equipment are—
+			- (i) ==Removed== from the aircraft, the cockpit control placarded, and the maintenance recorded in accordance with [§ 43.9 of this chapter](https://www.ecfr.gov/current/title-14/section-43.9); or
+			- (ii) ==Deactivated and placarded “Inoperative.”== If deactivation of the inoperative instrument or equipment involves maintenance, it must be accomplished and recorded in accordance with [part 43 of this chapter](https://www.ecfr.gov/current/title-14/part-43); and
+		- (4) A determination is made by a ==pilot==, who is certificated and appropriately rated under [part 61 of this chapter](https://www.ecfr.gov/current/title-14/part-61), ==**or**== by a person, ==who is certificated== and appropriately rated to perform maintenance on the aircraft, that the inoperative instrument or equipment does not constitute a hazard to the aircraft.
+
+
+{{< callout >}}
+**TL;DR - Inoperative instruments?** \
+==4 DOCUMENTS TO CHECK==\
+• MEL/ KOEL if exists *Minimum Equipment List/ Kinds of Equipment List* \
+• TCDS/STC *Type Certificate Data Sheet (原廠)/ Supplemental Type Certificate (改裝)*\
+• ADs *Airworthiness Directive*\
+• ATOMATOFLAMES *§ 91.205*\
+==3 ACTIONS TO DO==\
+• Remove inoperative equipment\
+• Deactivate and placard "INOPERATIVE"\
+• Record in maintenance logbook\
+==2 PERSON TO TALK==\
+• PIC\
+• Maintenance\
+==1 DECISION TO MAKE==\
+• Go or no go.
+{{</ callout >}}
+
+
+
+## Minimum Safe Altitude
+- ***§ 91.119 Minimum safe altitudes: General.***
+- Except when necessary for takeoff or landing, no person may operate an aircraft below the following altitudes:
+	- (a) _Anywhere._ An altitude allowing, if a power unit fails, an emergency landing without undue hazard to persons or property on the surface.
+	- (b) _Over congested areas._ Over any congested area of a city, town, or settlement, or over any open air assembly of persons, an altitude of 1,000 feet above the highest obstacle within a horizontal radius of 2,000 feet of the aircraft.
+	- (c) _Over other than congested areas._ An altitude of 500 feet above the surface, except over open water or sparsely populated areas. In those cases, the aircraft may not be operated closer than 500 feet to any person, vessel, vehicle, or structure.
+- ***FTA FOM § 6.3.7 Minimum Maneuver Altitudes***
+	- a. **Stalls and Slow flight**: execution and recovery shall be accomplished at or above 3,000 feet AGL.
+	- b. **Steep turns**: at or above 2,000 feet AGL.
+	- c. **Simulated emergency landing**
+		- Field/Non-Airport Surface: descent not lower than 500 feet AGL
+		- FTA approved airport: maneuver may be carried through to landing on a suitable runway
+		- Non-FTA approved airport: descent not lower than 500 feet AGL
+	- d. **Night**: The minimum cruise altitude at night will be planned at or
+	- e. **Emergency Descent**: recovery at or above 1500 feet AGL.
 
 
 ## Others
@@ -245,7 +398,44 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 - *Q: WHEN DO YOU NEED TO WEAR PARACHUTE?*
 - ***§ 91.307 Parachutes and parachuting.***
 
+### ATC Light Signals
+- *Q: WHAT IF RADIO FAILS AND DOESN’T KNOW IF CLEARED TO LAND?*
+- ***§ 91.125 ATC Light Signals***
+	- ![](/images/atclight.png "")
 
+### VFR Minimum Cruising Altitude
+- *Q: CAN YOU FLY ANY RANDOM ALTITUDE?*
+- ***§ 91.159 VFR Cruising Altitude or Flight Level***
+	- Except while holding in a holding pattern of 2 minutes or less, or while turning, each person operating an aircraft under VFR in level cruising flight more than 3,000 feet above the surface shall maintain the appropriate altitude or flight level prescribed below, unless otherwise authorized by ATC:
+	- (a) When operating below 18,000 feet MSL and—
+		- (1) On a magnetic course of ==0 degrees through 179 degrees==, any ==odd thousand foot MSL altitude + 500 feet== (such as 3,500, 5,500, or 7,500); or
+		- (2) On a magnetic course of ==180 degrees through 359 degrees==, any ==even thousand foot MSL altitude + 500 feet== (such as 4,500, 6,500, or 8,500).
+	- (b) When operating ==above 18,000 feet MSL, maintain the altitude or flight level assigned by ATC.==
+
+
+### Dropping Objects
+- ***§ 91.15 Dropping objects.***
+- No pilot in command of a civil aircraft may allow any object to be dropped from that aircraft in flight that creates a hazard to persons or property. *However, this section does not prohibit the dropping of any object if reasonable precautions are taken to avoid injury or damage to persons or property.*
+
+
+### VFR Fuel Requirements
+- ***§ 91.151 Fuel requirements for flight in VFR conditions.***
+	- (a) No person may begin a flight in an airplane under VFR conditions unless (considering wind and forecast weather conditions) there is enough fuel to fly to the first point of intended landing and, assuming normal cruising speed—
+		- (1) During the ==day, to fly after that for at least 30 minutes==; or
+		- (2) At ==night, to fly after that for at least 45 minutes.==
+	- (b) No person may begin a flight in a rotorcraft under VFR conditions unless (considering wind and forecast weather conditions) there is enough fuel to fly to the first point of ==intended landing== and, assuming normal cruising speed, to ==fly after that for at least 20 minutes.==
+- ***FOM § 6.4 Fuel Policy***
+	- ![](/images/ftafuelpolicy.png "")
+
+
+### Altimeter Settings
+- ***§ 91.121 Altimeter settings.***
+	- (a) Each person operating an aircraft shall maintain the cruising altitude or flight level of that aircraft, as the case may be, by reference to an altimeter that is set, when operating—
+		- (1) Below 18,000 feet MSL, to—
+			- (i) The current reported altimeter setting of a station along the route and ==within 100 nautical miles of the aircraft;==
+			- (ii) If there is no station within the area prescribed in [paragraph (a)(1)(i)](https://www.ecfr.gov/current/title-14/section-91.121#p-91.121\(a\)\(1\)\(i\)) of this section, the current reported altimeter setting of an appropriate available station; or
+			- (iii) In the case of an aircraft not equipped with a radio, the elevation of the departure airport or an appropriate altimeter setting available before departure; or
+		- (2) At or above 18,000 feet MSL, to 29.92″ Hg.
 
 ## Terminology and Definitions
 - *Q: WHAT IS NIGHT*

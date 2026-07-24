@@ -1,4 +1,52 @@
+function initHangingIndent() {
+  var content = document.querySelector(".content");
+  if (!content) return;
+
+  var items = content.querySelectorAll("li");
+  items.forEach(function (li) {
+    if (li.dataset.hangProcessed) return;
+    li.dataset.hangProcessed = "1";
+
+    // Grab only the leading inline content (stop at nested UL/OL)
+    var leadingNodes = [];
+    for (var i = 0; i < li.childNodes.length; i++) {
+      var node = li.childNodes[i];
+      if (node.nodeType === Node.ELEMENT_NODE && (node.tagName === "UL" || node.tagName === "OL")) break;
+      leadingNodes.push(node);
+    }
+    if (leadingNodes.length === 0) return;
+
+    // Wrap that leading content in its own block so nested lists are unaffected
+    var wrap = document.createElement("div");
+    wrap.className = "hang-wrap";
+    li.insertBefore(wrap, leadingNodes[0]);
+    leadingNodes.forEach(function (n) { wrap.appendChild(n); });
+
+    // Detect a leading label: § 91.123 / (a) / a. / 1. etc.
+    var firstNode = wrap.firstChild;
+    if (!firstNode || firstNode.nodeType !== Node.TEXT_NODE) return;
+
+    var match = firstNode.textContent.match(/^\s*(§\s*[\d.]+|\([^)]+\)|[A-Za-z0-9]+\.)\s*/);
+    if (!match) return;
+
+    var labelSpan = document.createElement("span");
+    labelSpan.className = "hang-label";
+    labelSpan.textContent = match[1];
+
+    var restNode = document.createTextNode(" " + firstNode.textContent.slice(match[0].length));
+    wrap.replaceChild(restNode, firstNode);
+    wrap.insertBefore(labelSpan, restNode);
+
+    // Measure the label and set hanging indent to match its width
+    var gap = 6; // px space between label and text
+    var indent = Math.ceil(labelSpan.getBoundingClientRect().width + gap);
+    wrap.style.paddingLeft = indent + "px";
+    wrap.style.textIndent = "-" + indent + "px";
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  initHangingIndent(); // run first, before the breadcrumb script touches the DOM
   var content = document.querySelector(".content");
   if (!content) return;
 
