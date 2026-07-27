@@ -76,13 +76,61 @@
     });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", buildChat);
-  } else {
-    buildChat();
+  // 5. Group everything under each H3 (until the next H1/H2/H3) into a
+  //    .rc-phase wrapper with a sticky vertical "rail" tag on the left,
+  //    so the current phase is visible even after you've scrolled past
+  //    the heading itself.
+  function groupPhases() {
+    var content = document.querySelector(
+      ".hextra-content, article, .main-content",
+    );
+    if (!content) return;
+
+    var h3s = Array.prototype.slice.call(content.querySelectorAll("h3"));
+    h3s.forEach(function (h3) {
+      if (h3.closest(".rc-phase")) return; // already grouped
+
+      var wrap = document.createElement("div");
+      wrap.className = "rc-phase";
+
+      h3.parentNode.insertBefore(wrap, h3);
+      wrap.appendChild(h3);
+
+      var node = wrap.nextSibling;
+      while (
+        node &&
+        !(node.nodeType === 1 && /^H[1-3]$/.test(node.tagName))
+      ) {
+        var next = node.nextSibling;
+        wrap.appendChild(node);
+        node = next;
+      }
+
+      var rail = document.createElement("div");
+      rail.className = "rc-phase-rail";
+
+      var tag = document.createElement("span");
+      tag.className = "rc-phase-tag";
+      // Swap to h3.textContent.trim().charAt(0) instead for a single-letter tag.
+      tag.textContent = h3.textContent.trim();
+
+      rail.appendChild(tag);
+      wrap.appendChild(rail);
+    });
   }
 
-  setInterval(buildChat, 300);
-  var obs = new MutationObserver(buildChat);
+  function processAll() {
+    buildChat();
+    groupPhases();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", processAll);
+  } else {
+    processAll();
+  }
+
+  setInterval(processAll, 300);
+  var obs = new MutationObserver(processAll);
   obs.observe(document.body, { childList: true, subtree: true });
 })();

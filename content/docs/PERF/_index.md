@@ -10,10 +10,21 @@
 ### Factors Affecting Performance
 ![](/images/perffac.png "")
 
-1. Takeoff
+### Takeoff
 - Takeoff starts from **break release** until **reaching screen height (50ft)**
 - Takeoff Roll (TOR) is measured from break release to liftoff of aircraft.
 - Takeoff Distance (TOD) is measured from break release to aircraft reaching 50ft AGL.
 ![](/images/todtor.png "")
 
 
+| **Factor**              | **Effect on TOD / TOR**                                                                                                                                           |
+|:----------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Weight                  | Weight \(\uparrow\) TOD / TOR \(\uparrow\)                                                                                                                        |
+| Configuration           | T/O flaps \(\Rightarrow\)  TOD / TOR \(\downarrow\)                                                                                                               |
+| Runway Surface          | Other than hard surface \(\Rightarrow\) TOD/TOR \(\uparrow\)                                                                                                      |
+| Runway Slope            | Uphill \(\Rightarrow\) TOR \(\uparrow\)                                                                                                                           | 
+| Environmental Condition | - \(L = \frac{1}{2} \rho v^2 \implies \rho \downarrow; \red{TAS} \uparrow \)<br>- Altitude/ Temperature/ Humidity \(\uparrow\) \(\Rightarrow TOD / TOR \uparrow\) |
+| Wind                    | - Headwind \(\Rightarrow TOD / TOR \downarrow\)<br>- Tailwind \(\Rightarrow TOD / TOR \uparrow\)                                                                  |
+
+
+### Climb

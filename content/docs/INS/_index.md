@@ -1,3 +1,3 @@
 ---
-title: INS
+title: INS/EE/RN2
 ---

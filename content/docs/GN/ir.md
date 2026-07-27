@@ -8,23 +8,68 @@ cssclasses:
 ![](/images/psmethod.png "")
 
 ## Departure (SID/ODP/Vector)
-General IFR Departure Options includes: **SID**, **ODP**, **Vectors**, and*VFR Departure* {{< tip "When conditions permit, depart under VFR and obtain clearance from ARTCC" >}} 
+### Departure Minimums
+If takeoff minimums are not prescribed for the airport, these standard takeoff minimums apply:
+- 1 statute mile visibility for aircraft with 1 or 2 engines.
+- 1/2 statute mile visibility for aircraft with 3 or more engines.
 
-A standard instrument departure (SID) is depicted **in graphic form** and is identified by an abbreviated name and numeral, then a dot followed by the name of the **exit or transition fix**. If you do not have the chart for the procedure with you, do not accept a SID clearance. If you do not want to use a SID, indicate "**NO SID**" in the remarks section of your flight plan.
+{{< callout type="info">}}
+**JOHNNY: 必考**\
+When operating under part 91, a good rule of thumb is to **stay on the ground unless the ceiling and visibility permit you to return and comfortably perform a normal instrument approach and landing in the event you encounter a problem soon after takeoff.**
+{{</ callout >}}
 
+![](/images/depmin.png "")
+
+### Departure Procedures
+- General IFR Departure Options includes: **SID**, **ODP**, **Vectors**, and*VFR Departure* {{< tip "When conditions permit, depart under VFR and obtain clearance from ARTCC" >}} 
+- A standard instrument departure (SID) is depicted **in graphic form** and is identified by an abbreviated name and numeral, then a dot followed by the name of the **exit or transition fix**. If you do not have the chart for the procedure with you, do not accept a SID clearance. If you do not want to use a SID, indicate "**NO SID**" in the remarks section of your flight plan.
 ![](/images/dp.png "")
 
+### Climb Via Consideration
+- **==Cleared== (via) SID**: **Lateral** clearance only. Not allowed to climb unless cleared by ATC.
+- **==Climb via== Clearance**: Comply SID’s lateral path and associated SPD and ALT restrictions.
+- **Climb and Maintain** : vacate current ALT and commence an unrestricted climb.
+- **Climb via SID Departure**: comply with all published ALT restrictions prior to reaching the instructed ALT.
+
+
 ## Enroute
-- Airways below 18,000 feet MSL are depicted on Low Altitude Enroute Charts and are called **Victor Airways.**
-- Airways at or above 18,000 feet MSL and up to FL450 are shown on High Altitude Enroute Charts and are called **Jet Routes.**
-- Victor Airways - Airway extends **more than 51 nm from each navaid** includes the airspace between lines **diverging at angles of 4.5 degrees** from the center of each navaid.
-- If use **GPS** for navigation, you might be using **RNAV routes.**
-	- Tango Routes (with letter T) are established around or through busy terminal areas.
-	- Waypoints (star symbol)
-	- **MEA might be lower for GPS/WAAS, designated with letter G**
+### Chart Depictions
 - Airports
 	- Military airports are round
 	- **Airports in BLUE have instrument approach**; brown(FAA)/Green(Jepp) have no instrument approach.
+
+### Airways
+- Ground-based VOR/VORTAC Airways
+	- Below 18,000 feet MSL are depicted on Low Altitude Enroute Charts and are called **Victor Airways.**
+		- Airway extends **more than 51 nm from each navaid** includes the airspace between lines **diverging at angles of 4.5 degrees** from the center of each navaid.
+		  - **Even number**: East and West, **Odd number**: North and South.
+	- At or above 18,000 feet MSL and up to FL450 are shown on High Altitude Enroute Charts and are called **Jet Routes.**
+- If use **GPS** for navigation, you might be using **RNAV routes.**
+	- T-Routes are established around or through busy terminal areas under 18,000 ft. **MEA might be lower for GPS/WAAS, designated with letter G**
+	- Q-Routes facilitate high altitude above 18,000 ft.
+
+### Alternates
+![](/images/alternates.png "")
+
+### Report Procedures
+![](/images/enroutereports.png "")
+
+
+### IFR Cruising Altitude
+- Magnetic course 
+	- 0° ~ 179° : Odd Thousand MSL 
+	- 180° ~ 359°: Even Thousand MSL.
+- RVSM: 1,000 ft between FL290 ~ FL410
+- **VFR-On-Top**
+	- **It's a IFR clearance**
+	- **Request ATC permission** to operate in any VFR cruising altitude flight **between the MEA and 18,000 feet MSL**, that allows you to remain in VFR conditions. 
+
+{{< callout >}}
+**VFR-Over-The-Top (VFR OTT)**\
+VFR-Over-The-Top (VFR OTT) is conducted entirely under Visual Flight Rules (VFR) to maintain legal cloud clearances for the entire flight, meaning you need a clear gap or hole to climb up through and descend back down through.
+{{</ callout >}}
+
+
 ### Holding Pattern
 | Altitude           | Inbound Leg Time | Airspeed (KIAS) |
 | :----------------- | :--------------- | --------------: |
@@ -48,7 +93,7 @@ A standard instrument departure (SID) is depicted **in graphic form** and is ide
 
 
 ## Approach (SID)
-### Performing Approach
+### Performing Approach (JDEFs)
 | Type                                     | Description / Condition                                                                                                                   |
 |:---------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------- |
 | **Straight-In ==Approach== (NoPT)**      | Published course reversal must not be performed. Used with DME Arc, Radar Vectors, fixes aligned with final course, or NoPT sectors.      |

@@ -149,3 +149,74 @@
   background-color: #1e3a8a;
   color: #dbeafe;
 }
+
+/* --- PHASE GROUPING (H3 sections) ---
+   Everything from an H3 up to (but not including) the next H1/H2/H3
+   gets wrapped in .rc-phase by rc-chat.js. A sticky vertical tag sits
+   in the left gutter so the current phase stays visible while you
+   scroll through a long stretch of dialogue. */
+.rc-phase {
+  position: relative;
+  padding-left: 2.6rem;
+  margin: 1.75rem 0;
+}
+.rc-phase-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2.6rem;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.rc-phase-rail::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  left: 50%;
+  width: 2px;
+  background: #e2e8f0;
+}
+.rc-phase-tag {
+  position: sticky;
+  top: 0.75rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.2rem;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  .rc-phase {
+    padding-left: 1.9rem;
+  }
+  .rc-phase-rail {
+    width: 1.9rem;
+  }
+  .rc-phase-tag {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.15rem;
+  }
+}
+
+.dark .rc-phase-rail::before {
+  background: #334155;
+}
+.dark .rc-phase-tag {
+  color: #cbd5e1;
+  background: #1e293b;
+  border-color: #334155;
+}

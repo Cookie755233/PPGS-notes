@@ -85,7 +85,6 @@ title: "@INS FINAL"
 ![](/images/essbus.png "")
 {{< /details >}}
 
-
 ## Complete Electrical System Failure **in Flight**
 Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 1. Circuit breakers............Check in
@@ -100,8 +99,86 @@ Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 7. HORIZON EMERGENCY Switch............ON
 
 ## Complete Electrical System Failure **on Ground**
-1. Engine speed............1,200 RPM
-2. Electrical equipment............OFF
+1. Engine speed............1,200 RPM {{< tip "around 30 AMPS" >}}
+2. **Electrical equipment............OFF** {{< tip "troubleshooting to make sure not the electrical equipment is the problem." >}}
 3. Ammeter............Check\
 *if the caution light does not extinguish, ammeter flashes and reads zero*\
 → Terminate flight preparation.
+
+## Overvoltage
+If a voltage in the upper red sector (**above 32 Volts**) is indicated
+1. Essential bus............ON, if installed
+2. Master Switch (ALT)............OFF\
+**WARNING: Leave (Avionic) Master switch (BAT) ON!**
+3. Equipment that is not needed, in particular Pitot heating............OFF
+4. Land on the nearest appropriate airfield
+
+## Ammeter
+- ==The ammeter displays the current with which the alternator is being loaded, if the alternator is not working, the ammeter will show 0.==
+- Ammeter is to be connected in **SERIES** with the electric circuit. 
+- - Since ammeter cannot withstand a high current, a shunt resistor is added to reduce the current. **Shunt resistor** is a **low resistance** device connected in **PARALLEL** to ammeter, so that a higher current can partially be bypassed.
+
+![](/images/ammeter.png "")
+
+## Voltmeter
+- ==The voltmeter displays the potential on the main bus. If the alternator is operating, the alternator voltage is shown otherwise it is that provided by the battery==
+- **Voltmeter** is connected to the system **PARALLEL** to the component to be measured.
+- A **series resistor** has a **high resistance**, is connected **SERIES** to the voltmeter, to allow a higher current to the component(load).
+![](/images/voltmeter.png "")
+
+## Transformer
+- Used to increase or decrease **alternating current** using **electromagnetic induction** at the same frequency by **connecting two electrically separated to an Iron core**
+- \(\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}{I_{output}}\)
+![](/images/transformer.png "")
+
+## TRU
+- **Transformer Rectifier Unit (TRU) {{< tip "整流器" >}} transformed AC voltage into DC voltage.** 
+- Its major components are **transformer** and **rectifiers**.
+- In commercial aircraft, TRUs are used for supplying the DC network.
+![](/images/tru.png "")
+
+## Inverter
+- **Transform DC to AC**. 
+- The **transistorized automatic switch** flips about 400 times per second, creating a changing magnetic field that induces an AC voltage.
+- **Static inverters** supply AC output of **115V 400HZ** and provide only **emergency** AC power to maintain essential services after AC generator failure.
+![](/images/inverter.png "")
+
+
+## Design of external connection with three contacts
+- Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
+- When connected, external power control relay connects the line and powers the Main Bus.
+
+## Series Field Motor
+- Large magnetic field
+- High starting torque at low numbers of revolutions.
+- Must never be operated without connected load
+- *Starter*
+
+## Shunt Field Motor
+- Constant number of revolutions regardless of the connected load
+- Low starting torque
+- Shunt motors may be operated without connected loads
+- *Cooling fans and pumps*
+
+## Switches per Checklist
+| Phase                  | AV  | ESS |   BAT    | ALT |
+| ---------------------- |:---:|:---:|:--------:|:---:|
+| Pre-Flight Inspection  | OFF | OFF | ON → OFF | OFF |
+| Before Starting Engine | OFF | OFF |    ON    | OFF |
+| Starting Engine        | OFF | OFF |    ON    | ON  |
+| Before Taxiing         | ON  | OFF |    ON    | ON  |
+| Before Takeoff         | ON  | OFF |    ON    | ON  |
+| Engine Shutdown        | OFF | OFF |    ON    | ON  |
+| Parking Check          | OFF | OFF |   OFF    | OFF |
+| Post-Flight Inspection | OFF | OFF |   OFF    | OFF |
+
+
+## Main Tie Circuit Breaker Tripped on Solo Flight
+1. Do not overheat the starter motor. 
+	- Do not operate the starter motor for more than 10 seconds.
+	- After operating the starter motor, let it cool off for 20 seconds. 
+	- After 6 attempts to start the engine, let the starter cool off for 30 minutes.
+2. Do not turn on alternator below 1,000 RPM.
+3. CB check should be done properly (visual and feel them with hands)
+4. Regular engine page check every 10 minutes.
+
