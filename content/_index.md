@@ -6,8 +6,6 @@ sidebar:
 toc: false      # Completely removes the right sidebar from this page
 ---
 
-Welcome to the PPGS Dictionary. Click a module below to start exploring terms.
-
 {{< cards >}}
   {{< card link="docs/far" title="FAR/AIM" icon="book-open" >}}
   {{< card link="docs/com" title="COM" icon="user-group" >}}

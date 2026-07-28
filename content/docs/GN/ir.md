@@ -47,26 +47,42 @@ When operating under part 91, a good rule of thumb is to **stay on the ground un
 - If use **GPS** for navigation, you might be using **RNAV routes.**
 	- T-Routes are established around or through busy terminal areas under 18,000 ft. **MEA might be lower for GPS/WAAS, designated with letter G**
 	- Q-Routes facilitate high altitude above 18,000 ft.
-
+	- Must be at least Required Navigation Performance of 2 **(RNP 2)**
 ### Alternates
 ![](/images/alternates.png "")
 
-### Report Procedures
+### Report Procedures 
+{{< callout >}}
+**REPORT ITEMS**\
+*Identification,  Position, Time, Altitude, ETA over next reporting fix, Next reporting point*
+> EVA800, Sidney, 15 (min past hour), 9,000, IFR, Akron 35, Thurman next
+{{</ callout >}}
+
+{{< callout type="info">}}
+ **JOHNNY: 必考**
+ ![](/images/nonradarreports.png "")
 ![](/images/enroutereports.png "")
 
+**NON-RADAR REPORTS**\
+1.Leaving FAF or OM inbound on final approach\
+2.Position reporting at compulsory reporting points\
+3.Revised ETA of more than three minutes
+
+ {{</ callout >}}
 
 ### IFR Cruising Altitude
 - Magnetic course 
 	- 0° ~ 179° : Odd Thousand MSL 
 	- 180° ~ 359°: Even Thousand MSL.
 - RVSM: 1,000 ft between FL290 ~ FL410
-- **VFR-On-Top**
-	- **It's a IFR clearance**
-	- **Request ATC permission** to operate in any VFR cruising altitude flight **between the MEA and 18,000 feet MSL**, that allows you to remain in VFR conditions. 
+- **At Pilot’s Discretion** means the pilot may begin the movement whenever the pilot choose. **Once you leave an altitude, you may not return to it.**
+
 
 {{< callout >}}
-**VFR-Over-The-Top (VFR OTT)**\
-VFR-Over-The-Top (VFR OTT) is conducted entirely under Visual Flight Rules (VFR) to maintain legal cloud clearances for the entire flight, meaning you need a clear gap or hole to climb up through and descend back down through.
+- **VFR-On-Top**
+	- ==**It's a IFR clearance**==. **Request ATC permission** to operate in any VFR cruising altitude flight **between the MEA and 18,000 feet MSL**, that allows you to remain in VFR conditions. 
+- **VFR-Over-The-Top (VFR OTT)**
+	- VFR-Over-The-Top (VFR OTT) is conducted ==entirely under Visual Flight Rules (VFR)== to maintain legal cloud clearances for the entire flight, meaning you need a clear gap or hole to climb up through and descend back down through.
 {{</ callout >}}
 
 
@@ -85,7 +101,7 @@ VFR-Over-The-Top (VFR OTT) is conducted entirely under Visual Flight Rules (VFR)
 - STARs are named according to point where a procedure begins. They are revised in numerical sequence *(COOKIE ONE ARRIVAL → COOKIE.COOKIE1)*
 - STARs altitudes are given in reference to **MSL**, courses are **magnetic**, and distances are in **nautical miles**.
 - If you do not want to use a STAR, indicate "**NO STAR**" in the remarks section of your flight plan.
-- To fly RNAV STAR, you must meet RNAV 1 standard. *Total system error (TSE) of no more than 1 nm for 95% of total flight time*
+- To fly RNAV STAR, you must meet RNAV 1 standard **(RPN 1)**. *Total system error (TSE) of no more than 1 nm for 95% of total flight time*
 - Waypoints
 	- Fly-by waypoints: Begin the turn so that you do not overshoot the next flight segment. *star symbol*
 	- Fly-over waypoints: Will not provide guidance UNTIL you pass over the waypoint. *star with circle*
