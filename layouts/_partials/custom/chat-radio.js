@@ -20,16 +20,8 @@
       if (p.dataset.processed === "true" || p.closest(".rc-bubble")) return;
 
       var text = p.innerHTML.trim();
-      var upperText = text.toUpperCase();
 
-      // 2. Identify Frequency Banners strictly by COM1 or COM2 tags
-      if (upperText.includes("COM1") || upperText.includes("COM2")) {
-        p.className = "rc-freq-banner";
-        p.dataset.processed = "true";
-        return;
-      }
-
-      // 3. Process Chat Speakers
+      // 2. Process Chat Speakers ("Name: message")
       var match = text.match(/^([^:\n]+):([\s\S]*)$/);
       if (match) {
         var speaker = match[1].trim();
@@ -69,17 +61,21 @@
         p.replaceWith(wrap);
         wrap.dataset.processed = "true";
       } else {
-        // 4. Clean Fallback: ANY text line without a colon becomes a flat status message
+        // 3. Fallback: any line without a colon is a flat status/remark line
+        //    (this also catches the *italic* stage-direction asides — the
+        //    bold "**...**" context line is handled separately below,
+        //    in groupPhases, before it would ever reach this fallback).
         p.className = "rc-action";
         p.dataset.processed = "true";
       }
     });
   }
 
-  // 5. Group everything under each H3 (until the next H1/H2/H3) into a
-  //    .rc-phase wrapper with a sticky vertical "rail" tag on the left,
-  //    so the current phase is visible even after you've scrolled past
-  //    the heading itself.
+  // 4. Group everything under each H3 (until the next H1/H2/H3) into a
+  //    .rc-phase wrapper, and merge the heading with its optional bold
+  //    "**COM2 on 133.3 — EVA Operations**" context line into a single
+  //    sticky header bar (.rc-phase-header), instead of leaving them as
+  //    two separate, redundant-looking blocks.
   function groupPhases() {
     var content = document.querySelector(
       ".hextra-content, article, .main-content",
@@ -106,16 +102,50 @@
         node = next;
       }
 
-      var rail = document.createElement("div");
-      rail.className = "rc-phase-rail";
+      // If the very next element after the heading is a paragraph made
+      // of nothing but a single <strong>, treat it as the context line
+      // and pull it out of the flow into the header.
+      var freqText = "";
+      var candidate = h3.nextElementSibling;
+      if (candidate && candidate.tagName === "P") {
+        var onlyChild =
+          candidate.children.length === 1 ? candidate.firstElementChild : null;
+        if (
+          onlyChild &&
+          onlyChild.tagName === "STRONG" &&
+          onlyChild.textContent.trim() === candidate.textContent.trim()
+        ) {
+          freqText = onlyChild.textContent.trim();
+          candidate.remove();
+        }
+      }
 
-      var tag = document.createElement("span");
-      tag.className = "rc-phase-tag";
-      // Swap to h3.textContent.trim().charAt(0) instead for a single-letter tag.
-      tag.textContent = h3.textContent.trim();
+      var card = document.createElement("div");
+      card.className = "rc-phase-card";
 
-      rail.appendChild(tag);
-      wrap.appendChild(rail);
+      var header = document.createElement("div");
+      header.className = "rc-phase-header";
+      header.appendChild(h3);
+
+      if (freqText) {
+        var freq = document.createElement("span");
+        freq.className = "rc-phase-freq";
+        freq.textContent = freqText;
+        header.appendChild(freq);
+      }
+      card.appendChild(header);
+
+      // Everything left in wrap at this point is the dialogue itself
+      // (h3 has already moved into header) — move it all into the
+      // rounded card body.
+      var body = document.createElement("div");
+      body.className = "rc-phase-body";
+      while (wrap.firstChild) {
+        body.appendChild(wrap.firstChild);
+      }
+      card.appendChild(body);
+
+      wrap.appendChild(card);
     });
   }
 

@@ -27,8 +27,7 @@
   padding: 0 !important;
 }
 
-/* --- Uniform Frequency & Plain Status Lines --- */
-.rc-freq-banner,
+/* --- Plain Status / Remark Lines --- */
 .rc-action {
   display: block;
   text-align: center;
@@ -36,17 +35,20 @@
   font-size: 0.75rem;
   font-weight: 600;
   font-style: normal !important;
-  margin: 0.6rem 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
   background: transparent !important;
   border: none !important;
   clear: both;
-  width: 100%;
+  margin-left: auto;
 }
-.rc-freq-banner {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
-  color: #555 !important;
-  font-weight: 700;
+
+.rc-phase-body .rc-action {
+  text-align: right;
+  width: auto;
+  font-size: 0.65rem;
+  margin: 0.4;
+  line-height: 1.5;
 }
 
 /* --- PILOT (Right Side / Green) --- */
@@ -112,10 +114,7 @@
   border-radius: 1rem 1rem 1rem 0.2rem;
 }
 
-/* --- DARK MODE --- */
-.dark .rc-freq-banner {
-  color: #999 !important;
-}
+/* --- DARK MODE (roles) --- */
 .dark .rc-action {
   color: #555 !important;
 }
@@ -150,73 +149,77 @@
   color: #dbeafe;
 }
 
-/* --- PHASE GROUPING (H3 sections) ---
-   Everything from an H3 up to (but not including) the next H1/H2/H3
-   gets wrapped in .rc-phase by rc-chat.js. A sticky vertical tag sits
-   in the left gutter so the current phase stays visible while you
-   scroll through a long stretch of dialogue. */
+/* --- PHASE CARD ---
+   Everything from an H3 up to (but not including) the next H1/H2/H3 is
+   wrapped in .rc-phase, then rebuilt as a single rounded card:
+     .rc-phase
+       .rc-phase-card                (the rounded box, sets the width)
+         .rc-phase-header            (sticky title + optional freq line)
+         .rc-phase-body              (the actual dialogue bubbles)
+   Narrower than the article column on purpose — a full-width column
+   reads more like body text than a chat log. Tweak max-width below to
+   taste. Adjust `top` on .rc-phase-header if your site has a sticky
+   navbar, so it docks under it instead of at the very top. */
 .rc-phase {
-  position: relative;
-  padding-left: 2.6rem;
-  margin: 1.75rem 0;
+  max-width: 640px;
+  margin: 1.75rem auto 2.25rem;
 }
-.rc-phase-rail {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 2.6rem;
-  display: flex;
-  justify-content: center;
-  pointer-events: none;
+.rc-phase-card {
+  background: #ffffff !important;
+  border: 2px solid #94a3b8 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
 }
-.rc-phase-rail::before {
-  content: "";
-  position: absolute;
-  top: 0.25rem;
-  bottom: 0.25rem;
-  left: 50%;
-  width: 2px;
-  background: #e2e8f0;
-}
-.rc-phase-tag {
+.rc-phase-header {
   position: sticky;
-  top: 0.75rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  font-size: 0.6rem;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 0.9rem;
+  padding: 0.65rem 1.1rem;
+  background: #f8fafc !important;
+  border-bottom: 1.5px solid #94a3b8 !important;
+  border-radius: 18px 18px 0 0;
+}
+.rc-phase-header h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.02rem !important;
+  line-height: 1.3 !important;
+}
+.rc-phase-freq {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
   color: #475569;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.35rem;
-  padding: 0.5rem 0.2rem;
   white-space: nowrap;
-  z-index: 1;
-  pointer-events: auto;
+}
+.rc-phase-body {
+  padding: 1rem 1.1rem 1.15rem;
+  border-radius: 0 0 18px 18px;
 }
 
 @media (max-width: 640px) {
-  .rc-phase {
-    padding-left: 1.9rem;
+  .rc-phase-header {
+    padding: 0.55rem 0.85rem;
   }
-  .rc-phase-rail {
-    width: 1.9rem;
-  }
-  .rc-phase-tag {
-    font-size: 0.55rem;
-    padding: 0.4rem 0.15rem;
+  .rc-phase-body {
+    padding: 0.85rem 0.85rem 1rem;
   }
 }
 
-.dark .rc-phase-rail::before {
-  background: #334155;
+.dark .rc-phase-card {
+  background: #111827 !important;
+  border-color: #475569 !important;
 }
-.dark .rc-phase-tag {
+.dark .rc-phase-header {
+  background: #0f172a !important;
+  border-bottom-color: #475569 !important;
+}
+.dark .rc-phase-freq {
   color: #cbd5e1;
-  background: #1e293b;
-  border-color: #334155;
 }

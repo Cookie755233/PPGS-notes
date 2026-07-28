@@ -147,6 +147,7 @@ If a voltage in the upper red sector (**above 32 Volts**) is indicated
 ## Design of external connection with three contacts
 - Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
 - When connected, external power control relay connects the line and powers the Main Bus.
+![](/images/extpower.png "")
 
 ## Series Field Motor
 - Large magnetic field

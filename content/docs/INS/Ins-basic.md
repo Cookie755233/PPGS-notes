@@ -1,5 +1,5 @@
 ---
-title: "0. Basic"
+title: BASIC
 ---
 
 ## What is ATIS? What information does it provide?
