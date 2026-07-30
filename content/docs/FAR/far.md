@@ -437,6 +437,13 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 			- (iii) In the case of an aircraft not equipped with a radio, the elevation of the departure airport or an appropriate altimeter setting available before departure; or
 		- (2) At or above 18,000 feet MSL, to 29.92″ Hg.
 
+
+### Airspeed Limitations
+- ***§ 91.117 Aircraft speed.***
+- (a) Unless otherwise authorized by the Administrator, no person may operate an aircraft ==below 10,000 feet MSL== at an indicated airspeed of more than ==250 knots== (288 m.p.h.).
+- (b) Unless otherwise authorized or required by ATC, no person may operate an aircraft ==at or below 2,500 feet above the surface within 4 nautical miles of the primary airport== of a Class C or Class D airspace area at an indicated airspeed of more than ==200 knots== (230 mph.). This [paragraph (b)](https://www.ecfr.gov/current/title-14/section-91.117#p-91.117\(b\)) does not apply to any operations within a Class B airspace area. Such operations shall comply with [paragraph (a)](https://www.ecfr.gov/current/title-14/section-91.117#p-91.117\(a\)) of this section.
+- (c) No person may operate an aircraft in the airspace underlying a Class B airspace area designated for an airport or in a ==VFR corridor== designated through such a Class B airspace area, at an indicated airspeed of more than ==200 knots== (230 mph).
+
 ## Terminology and Definitions
 - *Q: WHAT IS NIGHT*
 - ***Night Definition (§ 1.1)***

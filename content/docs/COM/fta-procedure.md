@@ -88,13 +88,13 @@ Pilot: Squawk VFR, frequency change approved, EVASTAR 805
 ### Entry to First Landing
 **COM1 on 122.9 (Franklin CTAF)**
 
-Pilot: **Franklin Traffic**, Diamond 875BR, 10/5/3 miles NorthEast, going to overfly midfield 1500, make right teardrop for left downwind 27, **Franklin** {{< tip "Must call  twice" >}}
+Pilot: **Franklin Traffic**, Diamond 875BR, *10/5/3 miles* {{< tip "report on 3/5/7 miles" >}}NorthEast, going to overfly midfield 1500, make right teardrop for left downwind 27, **Franklin** {{< tip "Must call  twice" >}}
 
-Pilot: Franklin Traffic, Diamond 875BR, overflying midfield 1500, making right teardrop for left downwind 27, Franklin
+Pilot: Franklin Traffic, Diamond 875BR, **overflying midfield** {{< tip "Enter an airport's traffic pattern" >}} 1500, making right teardrop for left downwind 27, Franklin
 
 Pilot: Franklin Traffic, Diamond 875BR, descending 1000, making right teardrop for left downwind 27, Franklin
 
-Pilot: Franklin Traffic, Diamond 875BR, joining left downwind 27 at a 45, Franklin
+Pilot: Franklin Traffic, Diamond 875BR, *joining left downwind* 27 at a 45, Franklin
 
 Pilot: Franklin Traffic, Diamond 875BR, left *downwind* 27, touch and go, Franklin
 
@@ -172,7 +172,7 @@ Pilot: EVA Traffic, EVASTAR 805, taxiing to park via T3
 *Pilot parks, shuts off engine, and prepares to block in*
 
 ### Block In
-**Time 1217 PM; Fuel 24.8 Gal; Maintenance required No (status green)**
+*Time 1217 PM; Fuel 24.8 Gal; Maintenance required No (status green)*
 
 Pilot: EVA Operations, EVASTAR 805, block in 17, fuel 25 gallons, status green
 

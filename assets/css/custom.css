@@ -169,3 +169,79 @@ td li {
   margin-block-start: 3px !important;
   margin-block-end: 3px !important;
 }
+
+
+/* =====================
+   Header — shrink height + auto-hide on scroll
+   ===================== */
+
+.hextra-nav-container {
+  transition: transform 0.25s ease-in-out;
+}
+
+.hextra-nav-container nav {
+  height: 3rem !important;       /* was h-16 = 4rem, now 3rem (48px) */
+}
+
+.hextra-nav-container img {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.hextra-nav-container .hextra-search-input {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+/* class toggled by JS when scrolling down */
+.hextra-nav-container.hx-nav-hidden {
+  transform: translateY(-100%);
+}
+
+/* =====================
+   Fix oversized list spacing in content
+   ===================== */
+
+article :where(ol, ul) {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+  margin-left: 1.25rem !important;
+}
+
+/* nested lists get even tighter spacing */
+article :where(ol, ul) :where(ol, ul) {
+  margin-top: 0 !important;
+  margin-bottom: 0.15rem !important;
+}
+
+article li {
+  margin-top: 0.15rem !important;
+  margin-bottom: 0.15rem !important;
+  line-height: 1.6 !important;
+}
+
+/* if a list item wraps its text in a <p>, kill that extra paragraph spacing */
+article li > p {
+  margin: 0 !important;
+}
+
+
+/* =====================
+   Fix figure/img spacing in content
+   ===================== */
+
+article figure {
+  margin: 0.75rem 0 !important;
+}
+
+article figure img,
+article > img,
+article p img {
+  margin-bottom: 0.25rem !important;
+  display: block;
+}
+
+article figcaption {
+  margin-top: 0 !important;
+  text-align: center;
+}

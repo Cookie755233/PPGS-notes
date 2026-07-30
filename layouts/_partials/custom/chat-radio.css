@@ -46,7 +46,9 @@
 .rc-phase-body .rc-action {
   text-align: right;
   width: auto;
+  font-family: "Courier New";
   font-size: 0.65rem;
+  font-weight: 600;
   margin: 0.4;
   line-height: 1.5;
 }
