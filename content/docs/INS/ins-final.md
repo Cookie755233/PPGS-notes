@@ -85,7 +85,17 @@ title: "@INS FINAL"
 ![](/images/essbus.png "")
 {{< /details >}}
 
-## Complete Electrical System Failure **in Flight**
+
+## ⭐️ Complete Failure of the Electrical System
+1. **All** circuit breakers should be **checked, pulled and re-set.**\
+*If this does not help—*
+2. Set **Emergency switch to ON** (if installed) 
+3. When necessary, use the **flood light for lighting** the instruments as well as levers and switches, etc.
+4. Set **power based on lever positions and engine noise.**
+5. Prepare **landing with flaps** in the given position.
+6. Land on the nearest appropriate *airfield*.
+
+## ⭐️ Alternator Failure **in Flight**
 Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 1. Circuit breakers............Check in
 2. ALT switch............OFF, then ON\
@@ -98,7 +108,7 @@ Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 *If PFD attitude lost prior to landing*
 7. HORIZON EMERGENCY Switch............ON
 
-## Complete Electrical System Failure **on Ground**
+## ⭐️ Alternator Failure **on Ground**
 *An alternator failure may also be indicated on ground with the engine running idle*
 1. Engine speed............1,200 RPM {{< tip "around 30 AMPS" >}}
 2. **Electrical equipment............OFF** {{< tip "troubleshooting to make sure not the electrical equipment is the problem." >}}
@@ -106,7 +116,7 @@ Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 *if the caution light does not extinguish, ammeter flashes and reads zero*\
 → Terminate flight preparation.
 
-## Overvoltage
+## ⭐️ zOvervoltage
 If a voltage in the upper red sector (**above 32 Volts**) is indicated
 1. **Essential bus............ON**, if installed
 2. Master Switch (ALT)............OFF\

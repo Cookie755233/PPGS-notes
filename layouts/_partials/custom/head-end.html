@@ -44,7 +44,12 @@ end }}
 </script>
 {{ end }}
 
-<!-- GLOBAL DEFAULT -->
+
+<!--
+////////////////////
+  GLOBAL DEFAULT
+////////////////////
+-->
 <style>
   {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
 </style>
@@ -53,6 +58,14 @@ end }}
   {{ readFile "layouts/_partials/custom/table-list.js" | safeJS }}
 </script>
 
+
+<!--Sticky Header -->
+<style>
+  {{ readFile "layouts/_partials/custom/sticky-header.css" | safeCSS }}
+</style>
+<script>
+  {{ readFile "layouts/_partials/custom/sticky-header.js" | safeJS }}
+</script>
 
 <!-- Auto Shrink Header -->
 <script>
@@ -63,23 +76,5 @@ end }}
     var lastScroll = window.scrollY;
     var threshold = 10;   // ignore tiny jitter scrolls
     var minScroll = 80;   // don't hide near the very top of the page
-
-    window.addEventListener(
-      "scroll",
-      function () {
-        var current = window.scrollY;
-
-        if (Math.abs(current - lastScroll) < threshold) return;
-
-        if (current > lastScroll && current > minScroll) {
-          header.classList.add("hx-nav-hidden");   // scrolling down
-        } else {
-          header.classList.remove("hx-nav-hidden"); // scrolling up
-        }
-
-        lastScroll = current;
-      },
-      { passive: true }
-    );
   });
 </script>

@@ -172,33 +172,6 @@ td li {
 
 
 /* =====================
-   Header — shrink height + auto-hide on scroll
-   ===================== */
-
-.hextra-nav-container {
-  transition: transform 0.25s ease-in-out;
-}
-
-.hextra-nav-container nav {
-  height: 3rem !important;       /* was h-16 = 4rem, now 3rem (48px) */
-}
-
-.hextra-nav-container img {
-  height: 16px !important;
-  width: 16px !important;
-}
-
-.hextra-nav-container .hextra-search-input {
-  padding-top: 0.35rem !important;
-  padding-bottom: 0.35rem !important;
-}
-
-/* class toggled by JS when scrolling down */
-.hextra-nav-container.hx-nav-hidden {
-  transform: translateY(-100%);
-}
-
-/* =====================
    Fix oversized list spacing in content
    ===================== */
 
@@ -244,4 +217,32 @@ article p img {
 article figcaption {
   margin-top: 0 !important;
   text-align: center;
+}
+
+
+/* =====================
+   Header — shrink height + auto-hide on scroll
+   ===================== */
+
+.hextra-nav-container {
+  transition: transform 0.25s ease-in-out;
+}
+
+.hextra-nav-container nav {
+  height: 3rem !important;       /* was h-16 = 4rem, now 3rem (48px) */
+}
+
+.hextra-nav-container img {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+.hextra-nav-container .hextra-search-input {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+/* class toggled by JS when scrolling down */
+.hextra-nav-container.hx-nav-hidden {
+  transform: translateY(-100%);
 }

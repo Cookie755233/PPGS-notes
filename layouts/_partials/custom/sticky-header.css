@@ -1,0 +1,15 @@
+#content h2,
+#content h3 {
+  position: sticky;
+  top: 3rem;              /* match your shrunk nav height */
+  z-index: 5;
+  background-color: #eff1f5;
+  transition: font-size 0.15s ease, padding 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+#content h2.hx-pinned,
+#content h3.hx-pinned {
+  font-size: 1rem !important;
+  padding: 0.4rem 0 !important;
+}
