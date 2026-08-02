@@ -1,21 +1,51 @@
-.quiz-target {
-  position: relative;
-  display: inline;
+/* ---- Inline taping (auto strong/mark + span.quiz) ---- */
+body.quiz-mode-active .quiz-inline:not(.revealed) {
+  color: transparent !important;
+  background-color: transparent !important; /* overrides mark's yellow bg */
+  background-image: repeating-linear-gradient(
+    135deg,
+    #cbd5e1,
+    #cbd5e1 6px,
+    #e2e8f0 6px,
+    #e2e8f0 12px
+  );
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  cursor: pointer;
 }
 
-.quiz-inline-block {
-  display: inline-block;
+.dark body.quiz-mode-active .quiz-inline:not(.revealed) {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #403d52,
+    #403d52 6px,
+    #2a2740 6px,
+    #2a2740 12px
+  );
+}
+
+body.quiz-mode-active .quiz-inline.revealed {
+  cursor: pointer;
+}
+
+/* ---- Block taping (<!--quiz-start--> ... <!--quiz-end-->) ---- */
+.quiz-block-target {
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
 .quiz-sticker {
   display: none;
 }
 
-body.quiz-mode-active .quiz-sticker {
-  display: inline-block;
+body.quiz-mode-active .quiz-block-target .quiz-sticker {
+  display: block;
   position: absolute;
   inset: 0;
-  border-radius: 3px;
+  border-radius: 6px;
   cursor: pointer;
   background: repeating-linear-gradient(
     135deg,
@@ -25,10 +55,9 @@ body.quiz-mode-active .quiz-sticker {
     #e2e8f0 12px
   );
   box-shadow: 0 0 0 1px rgba(0,0,0,.05);
-  transition: opacity 0.2s ease;
 }
 
-.dark body.quiz-mode-active .quiz-sticker {
+.dark body.quiz-mode-active .quiz-block-target .quiz-sticker {
   background: repeating-linear-gradient(
     135deg,
     #403d52,
@@ -39,11 +68,11 @@ body.quiz-mode-active .quiz-sticker {
   box-shadow: 0 0 0 1px rgba(255,255,255,.05);
 }
 
-body.quiz-mode-active .quiz-sticker.revealed {
-  opacity: 0.2;
-  /*pointer-events: none;*/
+body.quiz-mode-active .quiz-block-target .quiz-sticker.revealed {
+  opacity: 0;
 }
 
+/* ---- Toggle button ---- */
 #quiz-mode-toggle {
   position: fixed;
   bottom: 1.25rem;
@@ -79,15 +108,4 @@ body.quiz-mode-active .quiz-sticker.revealed {
 
 .dark #quiz-mode-toggle.active {
   background-color: #eb6f92;
-}
-
-.quiz-block-target {
-  display: block;
-  padding: 0.5rem;
-  border-radius: 6px;
-}
-
-body.quiz-mode-active .quiz-block-target .quiz-sticker {
-  position: absolute;
-  inset: 0;
 }

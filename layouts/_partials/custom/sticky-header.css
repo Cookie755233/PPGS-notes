@@ -18,15 +18,14 @@
   font-weight: 700;
   color: #4c4f69;
   background-color: #eff1f5;
-  box-shadow: 0 2px 4px rgba(0,0,0,.06);
   white-space: nowrap;
   overflow: hidden;
+  transition: top 0.25s ease-in-out;
 }
 
 .dark #hx-heading-pin {
   color: #e0def4;
   background-color: #191724;
-  box-shadow: 0 2px 4px rgba(0,0,0,.3);
 }
 
 #hx-heading-pin.visible {

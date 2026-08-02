@@ -81,7 +81,76 @@ end }}
     if (!header) return;
 
     var lastScroll = window.scrollY;
-    var threshold = 10;   // ignore tiny jitter scrolls
-    var minScroll = 80;   // don't hide near the very top of the page
+    var minScroll = 80;      // don't hide near the very top
+    var hideDelta = 24;      // must scroll down at least this much to hide
+    var showDelta = 8;       // must scroll up at least this much to show
+    var locked = false;
+    var lockTime = 300;      // ms to ignore scroll events after a toggle
+
+    function setState(hidden) {
+      if (locked) return;
+      var isHidden = header.classList.contains("hx-nav-hidden");
+      if (hidden === isHidden) return;
+
+      locked = true;
+      if (hidden) {
+        header.classList.add("hx-nav-hidden");
+        document.body.classList.add("hx-nav-collapsed");
+      } else {
+        header.classList.remove("hx-nav-hidden");
+        document.body.classList.remove("hx-nav-collapsed");
+      }
+      setTimeout(function () { locked = false; }, lockTime);
+    }
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        var current = window.scrollY;
+        var diff = current - lastScroll;
+
+        if (current <= minScroll) {
+          setState(false);
+        } else if (diff > hideDelta) {
+          setState(true);
+        } else if (diff < -showDelta) {
+          setState(false);
+        }
+
+        if (!locked) lastScroll = current;
+      },
+      { passive: true }
+    );
+  });
+</script>
+
+
+<!-- Footer fix -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var footer = document.querySelector(".hextra-footer");
+    if (!footer) return;
+
+    function adjustFooter() {
+      footer.style.marginTop = "0px";
+
+      var rect = footer.getBoundingClientRect();
+      var footerTop = rect.top;
+      var footerHeight = rect.height;
+      var availableSpace = window.innerHeight - footerTop - footerHeight;
+
+      if (availableSpace > 0) {
+        footer.style.marginTop = availableSpace + "px";
+      }
+    }
+
+    adjustFooter();
+    window.addEventListener("resize", adjustFooter);
+
+    if (document.readyState === "complete") {
+      adjustFooter();
+    } else {
+      window.addEventListener("load", adjustFooter);
+    }
   });
 </script>
