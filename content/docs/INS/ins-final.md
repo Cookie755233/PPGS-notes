@@ -3,7 +3,7 @@ title: "@INS FINAL"
 ---
 
 ## Static Discharge System
-- Static electricity is created by **friction** between aircraft and surrounding air.
+- Static electricity is created by **friction between aircraft and surrounding air.**
 - Two main parts, **the electrical bonding system** and the **surface static discharging system**. 
 - Location in DA40
 	- LH wing **tip**, trailing edge x2
@@ -24,7 +24,7 @@ title: "@INS FINAL"
 
 ## Circuit Breaker
 - In flight, 
-	- flight crew reset of a tripped circuit breaker is **not recommended.** 
+	- Flight crew **reset of a tripped circuit breaker is not recommended.** 
 	- However, a tripped circuit breaker **may be reset once**, after a short cooling period (approximately **2 minute**) **if no smoke is detected**, if in the judgment of the PIC, the situation resulting from the circuit breaker trip has a significant adverse effect on safety. 
 - On the ground,
 	- fight crew reset of tripped circuit breaker **should only be done after maintenance.**
@@ -62,7 +62,7 @@ title: "@INS FINAL"
 - If actual voltage is too low, 
 	1. the **regulating resistor** reduces resistance, total resistance reduces
 	2. V = IR, Current increases
-	3. Actual voltage from generator increases
+	3. **Actual voltage from generator increases**
 
 ## Reverse Current Protection
 ![](/images/reversecurr.png "")
@@ -76,7 +76,7 @@ title: "@INS FINAL"
 ## DA 40 Electrical System
 - DA 40 has **28 volt DC system.**
 - Power: **70 Ampère** alternator mounted **in front of the engine.**
-- **Battery: 13.6AH, 24V DC  Battery**
+- Battery: **13.6AH, 24V DC  Battery**
 
 ## Essential Bus
 ![](/images/essbushide.png "")
@@ -93,9 +93,10 @@ title: "@INS FINAL"
 3. When necessary, use the **flood light for lighting** the instruments as well as levers and switches, etc.
 4. Set **power based on lever positions and engine noise.**
 5. Prepare **landing with flaps** in the given position.
-6. Land on the nearest appropriate *airfield*.
+6. **Land on the nearest appropriate *airfield*.**
 
 ## ⭐️ Alternator Failure **in Flight**
+<!--quiz-start-->
 Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 1. Circuit breakers............Check in
 2. ALT switch............OFF, then ON\
@@ -107,25 +108,31 @@ Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
 6. Land within 30 minutes\
 *If PFD attitude lost prior to landing*
 7. HORIZON EMERGENCY Switch............ON
+<!--quiz-end-->
 
 ## ⭐️ Alternator Failure **on Ground**
+<!--quiz-start-->
 *An alternator failure may also be indicated on ground with the engine running idle*
 1. Engine speed............1,200 RPM {{< tip "around 30 AMPS" >}}
 2. **Electrical equipment............OFF** {{< tip "troubleshooting to make sure not the electrical equipment is the problem." >}}
 3. Ammeter............Check\
 *if the caution light does not extinguish, ammeter flashes and reads zero*\
 → Terminate flight preparation.
+<!--quiz-end-->
 
-## ⭐️ zOvervoltage
+
+## ⭐️ Overvoltage
+<!--quiz-start-->
 If a voltage in the upper red sector (**above 32 Volts**) is indicated
 1. **Essential bus............ON**, if installed
 2. Master Switch (ALT)............OFF\
 **WARNING: Leave (Avionic) Master switch (BAT) ON!**
 3. Equipment that is not needed, in particular Pitot heating............OFF
 4. Land on the nearest appropriate *airfield*
+<!--quiz-end-->
 
 ## Ammeter
-- ==The ammeter displays the current with which the alternator is being loaded, if the alternator is not working, the ammeter will show 0.==
+- ==**The ammeter displays the current with which the alternator is being loaded, if the alternator is not working, the ammeter will show 0**==
 - Ammeter is to be connected in **SERIES** with the electric circuit. 
 - - Since ammeter cannot withstand a high current, a shunt resistor is added to reduce the current. **Shunt resistor** is a **low resistance** device connected in **PARALLEL** to ammeter, so that a higher current can partially be bypassed.
 
@@ -160,7 +167,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 
 ## Design of external connection with three contacts
 - Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
-- When connected, external power control relay connects the line and powers the Main Bus.
+- When connected, **external power control relay connects the circuit** and powers the Main Bus.
 ![](/images/extpower.png "")
 
 
@@ -169,11 +176,11 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 
 | **Series Field Motor**                    | **Shunt Field Motor**                |
 |:----------------------------------------- |:------------------------------------ |
-| Large magnetic field                      | Smaller magnetic field               |
-| High starting torque at low RPM           | Low starting torque                  |
-| Speed varies with load                    | Constant RPM regardless of load      |
+| **Large** magnetic field                  | **Smaller** magnetic field           |
+| **High starting torque at low RPM**       | **Low starting torque**              |
+| Speed varies with load                    | Constant **RPM** regardless of load  |
 | **Must never be operated without a load** | Can be operated without a load       |
-| **Typical use:** Starter                  | **Typical use:** Cooling fans, pumps |
+| Typical use: **Starter**                  | Typical use: **Cooling fans, pumps** |
 
 ## Switches per Checklist
 | Phase                  |   AV   | ESS |     BAT      |   ALT   |
@@ -211,18 +218,18 @@ Before entering or crossing any runway, unsure **landing, taxi, position, and st
 - A **flashlight** is required (MEL)
 - **Position, strobe, landing, instrument, and flood lights** are required *(all except for taxi lights)*
 - **Indicator lights on flaps position indicator**. If you don't see flap lights, verify instrument and flood lights are turned fully counterclockwise prior to calling EVA operations.
-- Takeoff for VFR/IFR night flights with an empty **battery** is not permitted
+- Takeoff for VFR/IFR night flights with an **empty battery is not permitted**
 
 ## DA40 Bus
 ![](/images/bus.png "")
-1. BAT ON: Battery{{< tip "24V DC" >}} powers essential bus, main bus, avionics
-2. STARTER ON: Battery powers starter motor\
+1. BAT ON: **Battery{{< tip "24V DC" >}} powers essential bus, main bus, avionics**
+2. STARTER ON: **Battery powers starter motor**\
 *WHEN > 1,000 RPM*
-3. ALT ON: Alternator{{< tip "28V DC" >}} becomes the main power source. Since Alternator has a greater voltage than the battery, it becomes the main power source and also charges the battery.
-4. AVIONICS ON: When Avionics switch is ON, the Current can flow from main bus to avionics for GIA63 and TAS600 (*GPS/NAV2, COM2, TAS*)\
+3. ALT ON: **Alternator{{< tip "28V DC" >}} becomes the main power source**. Since Alternator has a greater voltage than the battery, it becomes the main power source and also charges the battery.
+4. AVIONICS ON: When Avionics switch is ON, **current can flow from main bus to avionics for GIA63 and TAS600 (*GPS/NAV2, COM2, TAS*)**\
 *WHEN ALTERNATOR FAILS*
 5. **ESS ON**: 
-	- When alternator fails, essential bus switch on,**MAIN TIE / ESS TIE CURCUIT OPEN**, Battery take over. A **diode** is set between main tie and essential tie so that current cannot flow through main bus, thus only essential bus is powered. 
+	- When alternator fails, essential bus switch on,**MAIN TIE / ESS TIE CIRCUIT OPEN**, Battery take over. A **diode** is set between main tie and essential tie so that current cannot flow through main bus, thus only essential bus is powered. 
 	- Avionics *can* be powered by battery, but it's better to switch it OFF.
 *WHEN BATTERY DIES*
 6. **Emergency Switch ON**: Emergency Battery powers up the backup instruments *(STBY ATT GYRO)*

@@ -87,7 +87,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 - *Q: CAN YOU TAKE OTHERS TO FLY?*
 - ***§ 61.113 Private pilot privileges and limitations: Pilot in command.***
 	- (a) Except as provided in [paragraphs (b)](https://www.ecfr.gov/current/title-14/section-61.113#p-61.113\(b\)) through [(h)](https://www.ecfr.gov/current/title-14/section-61.113#p-61.113\(h\)) of this section, no person who holds a private pilot certificate may act as pilot in command of an aircraft that is carrying passengers or property for compensation or hire; nor may that person, for compensation or hire, act as pilot in command of an aircraft.
-	- (b)A private pilot may, for compensation or hire, act as pilot in command of an aircraft in connection with any business or employment if:
+	- (b) A private pilot may, for compensation or hire, act as pilot in command of an aircraft in connection with any business or employment if:
 		- (1) The flight is ==only incidental=={{< tip "non-profit" >}} to that business or employment; and
 		- (2) The aircraft does not carry passengers or property for compensation or hire.
 	- (c) A private pilot ==may not pay less than the pro rata{{< tip "proportional to" >}} share of the operating expenses of a flight with passengers==, provided the expenses involve only fuel, oil, airport expenditures, or rental fees.

@@ -178,7 +178,7 @@ td li {
 article :where(ol, ul) {
   margin-top: 0 !important;
   margin-bottom: 0.5rem !important;
-  margin-left: 1.25rem !important;
+  /*margin-left: 1.25rem !important;*/
 }
 
 /* nested lists get even tighter spacing */

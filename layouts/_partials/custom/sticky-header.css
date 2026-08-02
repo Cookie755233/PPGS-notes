@@ -1,15 +1,51 @@
 #content h2,
 #content h3 {
-  position: sticky;
-  top: 3rem;              /* match your shrunk nav height */
-  z-index: 5;
-  background-color: #eff1f5;
-  transition: font-size 0.15s ease, padding 0.15s ease, box-shadow 0.15s ease;
+  position: static !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
+#hx-heading-pin {
+  position: sticky;
+  top: 3rem;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.5rem;
+  padding: 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4c4f69;
+  background-color: #eff1f5;
+  box-shadow: 0 2px 4px rgba(0,0,0,.06);
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-#content h2.hx-pinned,
-#content h3.hx-pinned {
-  font-size: 1rem !important;
-  padding: 0.4rem 0 !important;
+.dark #hx-heading-pin {
+  color: #e0def4;
+  background-color: #191724;
+  box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+#hx-heading-pin.visible {
+  display: flex;
+}
+
+#hx-heading-pin .hx-pin-h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#hx-heading-pin .hx-pin-sep {
+  opacity: 0.45;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+#hx-heading-pin .hx-pin-h3 {
+  opacity: 0.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

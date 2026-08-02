@@ -58,8 +58,15 @@ end }}
   {{ readFile "layouts/_partials/custom/table-list.js" | safeJS }}
 </script>
 
+<!-- Quiz Mode -->
+<style>
+  {{ readFile "layouts/_partials/custom/quiz-mode.css" | safeCSS }}
+</style>
+<script>
+  {{ readFile "layouts/_partials/custom/quiz-mode.js" | safeJS }}
+</script>
 
-<!--Sticky Header -->
+<!-- Sticky Header -->
 <style>
   {{ readFile "layouts/_partials/custom/sticky-header.css" | safeCSS }}
 </style>

@@ -9,17 +9,17 @@ cssclasses:
 
 ## ATC Services
 ### ADS-B
-- Automatic Dependent Surveillance Broadcast
+- Name**Automatic Dependent Surveillance Broadcast**
 - **GPS-based** location information to ATC
-- Effective range of 100 nautical miles
+- Effective range of **100** nautical miles
 - **Traffic information, Flight info service (FIS), TFRs, Special Use Airspaces information**
 - Frequencies
-	- 1090 MHz; above 18,000
+	- **1090 MHz; above 18,000**
 	- 978 MHz; below 18,000 
 
 
 ### ARTCC (Center)
-- Air Route Traffic Control Center *(CENTER)*
+- Name: **Air Route Traffic Control Center** *(CENTER)*
 - Nationwide monitoring for IFR primarily during enroute. **Seperate IFR/VFR** and **VFR advisories**.
 - When weather is **below VFR minimums**, you **must file and IFR flight plan and obtain an IFR flight plan clearance before departing from within, or prior to entering a controlled airspace.**
 
@@ -27,7 +27,7 @@ cssclasses:
 
 {{< callout type="info">}}
 **JOHNNY VIP: Pilot Responsibilities**
-1. Know the requirements for IFR Flights
+1. Know the **requirements** for IFR Flights
 2. Know wen an IFR clearance is required
 3. May not act as PIC of IFR unless instrument rating
 4. Aircraft must meet equipment and inspection requirements of FAR 91
@@ -35,9 +35,9 @@ cssclasses:
 {{</ callout >}}
 
 
-
 {{< callout type="info">}}
 **JOHNNY VIP: ARTCC Services?**
+
 1. IFR Flight plan processing
 2. IFR clearance
 3. **Separation IFR traffic**; If workload permits, provide VFR traffic advisories
@@ -97,24 +97,23 @@ When operating under part 91, a good rule of thumb is to **stay on the ground un
 ![](/images/alternates.png "")
 
 ### Report Procedures 
-{{< callout >}}
-**REPORT ITEMS**\
-*Identification,  Position, Time, Altitude, ETA over next reporting fix, Next reporting point*
+Items to report: **Identification,  Position, Time, Altitude, ETA over next reporting fix, Next reporting point**
 > EVA800, Sidney, 15 (min past hour), 9,000, IFR, Akron 35, Thurman next
-{{</ callout >}}
 
 {{< callout type="info">}}
  **JOHNNY VIP**
- ![](/images/nonradarreports.png "")
-![](/images/enroutereports.png "")
+![](/images/nonradarreportchart.png "") 
+<!--quiz-start-->
+![Enroute Report Items](/images/enroutereports.png "Enroute Report Items")
+<!--quiz-end-->
  {{</ callout >}}
 
 ### IFR Cruising Altitude
 - Magnetic course 
-	- 0° ~ 179° : Odd Thousand MSL 
-	- 180° ~ 359°: Even Thousand MSL.
-- RVSM: 1,000 ft between FL290 ~ FL410
-- **At Pilot’s Discretion** means the pilot may begin the movement whenever the pilot choose. **Once you leave an altitude, you may not return to it.**
+	- **0° ~ 179° : Odd Thousand MSL** 
+	- **180° ~ 359°: Even Thousand MSL.**
+- RVSM: 1,000 ft between **FL290 ~ FL410**
+- At Pilot’s Discretion means **the pilot may begin the movement whenever the pilot choose. Once you leave an altitude, you may not return to it.**
 
 
 {{< callout >}}
@@ -143,18 +142,18 @@ When operating under part 91, a good rule of thumb is to **stay on the ground un
 - To fly **RNAV STAR**, you must meet RNAV 1 standard **(RPN 1)**. *Total system error (TSE) of no more than 1 nm for 95% of total flight time*
 - Waypoints
 	- Fly-by waypoints: Begin the turn so that you do not overshoot the next flight segment. *star symbol*
-	- Fly-over waypoints: Will not provide guidance UNTIL you pass over the waypoint. *star with circle*
+	- Fly-over waypoints: Will not provide guidance *UNTIL* you pass over the waypoint. *star with circle*
 
 
 
 ## Approach (SID)
 ### Performing Approach (JDEFs)
-| Type                                     | Description / Condition                                                                                                                   |
-|:---------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Straight-In ==Approach== (NoPT)**      | Published course reversal must not be performed. Used with DME Arc, Radar Vectors, fixes aligned with final course, or NoPT sectors.      |
-| **Course Reversal**                      | Turns the aircraft around 180 degrees to align with the runway and allows descent to a reasonable final approach altitude.                |
-| **Straight-In ==Landing==**              | Used when the final approach course is aligned within 30° of the runway and minimal maneuvering is required to land.                      |
-| **Circling-to-Land (Circling Approach)** | Executed when the approach is not properly aligned with the runway or landing on a different runway is required; circling minimums apply. |
+| Type                                 | Description / Condition                                                                                                                   |
+|:------------------------------------ |:----------------------------------------------------------------------------------------------------------------------------------------- |
+| Straight-In ==Approach== (NoPT)      | **Published course reversal must not be performed. Used with DME Arc, Radar Vectors, fixes aligned with final course, or NoPT sectors.**  |
+| Course Reversal                      | Turns the aircraft around 180 degrees to align with the runway and allows descent to a reasonable final approach altitude.                |
+| Straight-In ==Landing==              | **Used when the final approach course is aligned within 30° of the runway and minimal maneuvering is required to land.**                  |
+| Circling-to-Land (Circling Approach) | Executed when the approach is not properly aligned with the runway or landing on a different runway is required; circling minimums apply. |
 
 ### GPS Equipment
 ![](/images/gpsequipment.png "")
@@ -166,10 +165,10 @@ When operating under part 91, a good rule of thumb is to **stay on the ground un
  ![](/images/approachseg.png "")
 
 ### Approach Minimums (FAR 91.175)
-- **Operation below DA/DH or MDA.** Except as provided in [§ 91.176 of this chapter](https://www.ecfr.gov/current/title-14/section-91.176), where a DA/DH or MDA is applicable, no pilot may operate an aircraft, except a military aircraft of the United States, below the authorized MDA or continue an approach below the authorized DA/DH unless—
-	- (1) The aircraft is continuously in a position from which a descent to a landing on the intended runway can be made ==at a normal rate of descent== using ==normal maneuvers==, and for operations conducted under part 121 or part 135 unless that descent rate will allow touchdown to occur within the touchdown zone of the runway of intended landing;
-	- (2) The ==flight visibility is not less than the visibility prescribed in the standard instrument approach being used==; and
-	- (3) Except for a Category II or Category III approach where any necessary visual reference requirements are specified by the Administrator, ==at least one== of the following ==visual references== for the intended runway is distinctly visible and identifiable to the pilot:
+- *Operation below DA/DH or MDA.* Except as provided in [§ 91.176 of this chapter](https://www.ecfr.gov/current/title-14/section-91.176), where a DA/DH or MDA is applicable, no pilot may operate an aircraft, except a military aircraft of the United States, below the authorized MDA or continue an approach below the authorized DA/DH unless—
+	- (1) The aircraft is continuously in a position from which a descent to a landing on the intended runway can be made ==**at a normal rate of descent**== using ==**normal maneuvers**==, and for operations conducted under part 121 or part 135 unless that descent rate will allow touchdown to occur within the touchdown zone of the runway of intended landing;
+	- (2) The ==**flight visibility is not less than the visibility prescribed in the standard instrument approach being used**==; and
+	- (3) Except for a Category II or Category III approach where any necessary visual reference requirements are specified by the Administrator, **==at least one== of the following ==visual references==** for the intended runway is distinctly visible and identifiable to the pilot:
 
 ### Simultaneous Approaches to Parallel Runway
 ![](/images/simapr.png "")
