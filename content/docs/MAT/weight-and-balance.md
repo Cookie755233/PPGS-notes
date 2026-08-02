@@ -5,9 +5,9 @@ title: "3. Weight and Balance"
 ## Weight Definitions
 ![](/images/weightdef.png "")
 
-- Empty weight (dry): Weight or airframe, power plant, and equipment before any oil or fuel added.
-- Empty weight (wet): Empty weight (dry) + Unusable fuel/oil + Hydraulic fluid
-- **Basic Empty Weight (BEW): The empty weight (wet) plus weights of engine oil.**
+- Empty weight (dry): **Weight or airframe, power plant, and equipment before any oil or fuel added.**
+- Empty weight (wet): **Empty weight (dry) + Unusable fuel/oil + Hydraulic fluid**
+- Basic Empty Weight (BEW): **The empty weight (wet) plus weights of engine oil.**
 - Zero fuel weight: BEW plus payload (weights of passengers, baggages and pilots)
 - Takeoff weight: Zero fuel weight plus takeoff fuel (TOF)
 - Ramp weight: Takeoff weight plus fuel weights on start, taxiing and run up.

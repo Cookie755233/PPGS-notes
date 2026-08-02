@@ -66,7 +66,9 @@ title: "@INS FINAL"
 
 ## Reverse Current Protection
 ![](/images/reversecurr.png "")
-- When voltage of generator below the voltage of the battery, current would flow from battery to generator, which is unwanted. 
+- When voltage of generator below the voltage of the battery, *current would flow from battery to generator, which is unwanted.* 
+
+Types of reverse current protection:
 - **Reverse current diode** 
 	- Diode acts like a one-way valve to prevent reverse current flow
 - **Reverse current relay**
@@ -74,8 +76,8 @@ title: "@INS FINAL"
 	- When generator has a lower voltage, the coil disconnects to prevent reverse flow.
 
 ## DA 40 Electrical System
-- DA 40 has **28 volt DC system.**
-- Power: **70 Ampère** alternator mounted **in front of the engine.**
+- DA 40 has **28 volt DC** system. {{< tip "28V DC Alternator" >}}
+- Power: **70 Ampère alternator** mounted **in front of the engine.**
 - Battery: **13.6AH, 24V DC  Battery**
 
 ## Essential Bus
@@ -134,7 +136,7 @@ If a voltage in the upper red sector (**above 32 Volts**) is indicated
 ## Ammeter
 - ==**The ammeter displays the current with which the alternator is being loaded, if the alternator is not working, the ammeter will show 0**==
 - Ammeter is to be connected in **SERIES** with the electric circuit. 
-- - Since ammeter cannot withstand a high current, a shunt resistor is added to reduce the current. **Shunt resistor** is a **low resistance** device connected in **PARALLEL** to ammeter, so that a higher current can partially be bypassed.
+- Since ammeter cannot withstand a high current, a **shunt resistor** is added to reduce the current. **Shunt resistor** is a **low resistance** device connected in **PARALLEL** to ammeter, so that a higher current can partially be bypassed.
 
 ![](/images/ammeter.png "")
 
@@ -160,7 +162,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 
 ## Inverter (變頻器 DC→AC)
 - **Transform DC to AC**. 
-- The **transistorized automatic switch** flips about 400 times per second, creating a changing magnetic field that induces an AC voltage.
+- The **transistorized automatic switch** flips about 400 times per second, creating a **changing magnetic field** that induces an AC voltage.
 - **Static inverters** supply AC output of **115V 400HZ** and provide only **emergency** AC power to maintain essential services after AC generator failure.
 ![](/images/inverter.png "")
 

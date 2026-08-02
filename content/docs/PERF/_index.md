@@ -1,11 +1,15 @@
+---
+title: PERF
+---
+
 ## What Is Performance
-- The ability of an aircraft to accomplish certain things for certain purposes.
+- The ability of an aircraft to **accomplish certain things for certain purposes.**
 - To understand airplane under different circumstances
-- Find the airworthiness certificate in approved flight manual or AFM
+- Find the airworthiness certificate in **approved flight manual or AFM**
 
 ### Performance Legislation
-- Airworthiness requirements according to CS/FAR 23 (small aircraft) and CS/FAR 25 (large aircraft)
-- Normal, Utility, Aerobatic
+- Airworthiness requirements according to **CS/FAR 23** (small aircraft) and **CS/FAR 25** (large aircraft)
+- Classes: **Normal, Utility, Aerobatic**
 
 ### Factors Affecting Performance
 ![](/images/perffac.png "")
@@ -15,8 +19,8 @@
 Takeoff starts from **break release** until **reaching screen height (50ft)**
 {{</ callout >}}
 
-- Takeoff Roll (TOR) is measured from break release to liftoff of aircraft.
-- Takeoff Distance (TOD) is measured from break release to aircraft reaching 50ft AGL.
+- Takeoff Roll (TOR) is measured from **break release to liftoff of aircraft.**
+- Takeoff Distance (TOD) is measured from **break release to aircraft reaching 50ft AGL.**
 ![](/images/todtor.png "")
 
 
@@ -56,28 +60,33 @@ $$
 \begin{aligned}
 \text{Rate of climb} (R/C): \\
 R/C
-&= V\sin{\gamma} = 
-\frac{\overbrace{
-T_{thrust} \cdot V_{speed}}^{\substack{
-\text{Power} = \frac{Work}{\Delta t} = \frac{F \cdot S}{\Delta t}
-= F\times V
-}
-}
--D \cdot V}{W} \\
+&= V\sin{\gamma} =
+\frac{
+    \overbrace{
+        T_{thrust} \cdot V_{speed}
+    }^{
+        \substack{
+            \text{Power} = \frac{Work}{\Delta t}
+            = \frac{F \cdot S}{\Delta t} \\
+            = F\times V
+        }
+    }
+    - D \cdot V
+}{W} \\
 &= \frac{P_a-P_r}{W} \\
 &= \frac{\text{Excess Power}}{W}
 \\[1em]
 \text{where} \qquad
 P_a &= \text{Power Available (from engine)}, \\
-P_r &= \red{Power Required}
+P_r &= \text{\color{red}{Power Required}}
 = D \times V
-= \red{{Total Drag} \times {TAS}}
+= \text{\color{red}{Total Drag}} \times \text{TAS}
 \end{aligned}
 $$
 
 {{< callout type="info" icon="sparkles" >}}
-**VIPPP - An ==climb== is due to (Excess) ==Thrust > Drag==**\
-\(\implies\) The reason a airplane does not climb: *Too little thrust or too much drag.*\
+**DANNY VIP: A Climb is due to ==(Excess) Thrust > Drag==**\
+\(\implies\) The reason a airplane does not climb: **Too little thrust or too much drag.**\
 \(\implies\) This is why after climb, **flaps up to reduce drag.**
 
 *⚠️ During a climb, \(L = W \cos(\gamma)\) \(\implies\) Lift is actually smaller than weight.*
