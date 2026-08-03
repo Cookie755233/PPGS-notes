@@ -101,7 +101,7 @@ Types of reverse current protection:
 
 ## ⭐️ Alternator Failure **in Flight**
 <!--quiz-start-->
-Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.
+How do identify: **Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.**
 1. Circuit breakers............Check in
 2. ALT switch............OFF, then ON\
 *If alternator does not come back*
@@ -229,10 +229,9 @@ Before entering or crossing any runway, ensure **landing, taxi, position, and st
 2. STARTER ON: **Battery powers starter motor**\
 *WHEN > 1,000 RPM*
 3. ALT ON: **Alternator{{< tip "28V DC" >}} becomes the main power source**. Since Alternator has a greater voltage than the battery, it becomes the main power source and also charges the battery.
-4. AVIONICS ON: When Avionics switch is ON, **current can flow from main bus to avionics for GIA63 and TAS600 (*GPS/NAV2, COM2, TAS*)**\
+4. AVIONICS ON: When Avionics switch is ON, *relay connects main bus and avionics bus*. **Current can flow ==from main bus to avionics bus== for GIA63 and TAS600** *(GPS/NAV2, COM2, TAS)*\
 *WHEN ALTERNATOR FAILS*
 5. **ESS ON**: 
-	- When alternator fails, essential bus switch on,**MAIN TIE / ESS TIE CIRCUIT OPEN**, Battery take over. A **diode** is set between main tie and essential tie so that current cannot flow through main bus, thus only essential bus is powered. 
-	- Avionics *can* be powered by battery, but it's better to switch it OFF.
+	- When alternator fails, essential bus switch on,**MAIN TIE / ESS TIE CIRCUIT OPEN**, Battery take over. A **diode** is set between main tie and essential tie so that current cannot flow through main bus, thus only essential bus is powered.\
 *WHEN BATTERY DIES*
 6. **Emergency Switch ON**: Emergency Battery powers up the backup instruments *(STBY ATT GYRO)*
