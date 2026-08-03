@@ -154,3 +154,54 @@ end }}
     }
   });
 </script>
+
+<!-- Header fix -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var nav = document.querySelector(".hextra-nav-container nav");
+    var logo = nav ? nav.querySelector("a") : null;
+    var searchWrapper = nav ? nav.querySelector(".hextra-search-wrapper") : null;
+    if (!nav || !logo || !searchWrapper) return;
+
+    function getDocsBase() {
+      var link = document.querySelector('.hextra-sidebar-container a[href*="/docs/"]');
+      if (!link) return "/docs/";
+      var href = link.getAttribute("href");
+      var idx = href.indexOf("/docs/");
+      return href.slice(0, idx + "/docs/".length);
+    }
+
+    var base = getDocsBase();
+    var topics = [
+      { label: "COM", slug: "com" },
+      { label: "FAR/AIM", slug: "far" },
+      { label: "GN|RN & IR", slug: "gn" },
+      { label: "INS & EE|RN2", slug: "ins" },
+      { label: "MAT", slug: "mat" },
+      { label: "MET", slug: "met" },
+      { label: "PERF", slug: "perf" }
+    ];
+
+    var path = window.location.pathname;
+
+    var topicNav = document.createElement("div");
+    topicNav.id = "header-topic-nav";
+
+    topics.forEach(function (t) {
+      var a = document.createElement("a");
+      a.href = base + t.slug + "/";
+      a.textContent = t.label;
+      var segment = "/" + t.slug + "/";
+      if (path.indexOf(base + t.slug + "/") === 0) {
+        a.classList.add("active");
+      }
+      topicNav.appendChild(a);
+    });
+
+    var divider = document.createElement("div");
+    divider.id = "header-topic-divider";
+
+    nav.insertBefore(topicNav, searchWrapper);
+    nav.insertBefore(divider, searchWrapper);
+  });
+</script>

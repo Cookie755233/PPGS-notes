@@ -61,21 +61,70 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sibling) sibling.remove();
   });
 
-  // ---- Toggle button ----
+  // ---- Hard Mode: group everything under each heading into one section ----
+  function attachHardSticker(wrapper) {
+    var sticker = document.createElement("span");
+    sticker.className = "hard-sticker";
+    wrapper.appendChild(sticker);
+    sticker.addEventListener("click", function (e) {
+      e.stopPropagation();
+      sticker.classList.toggle("revealed");
+    });
+  }
+
+  var kids = Array.from(content.children);
+  var seenHeading = false;
+  var wrap = null;
+
+  kids.forEach(function (node) {
+    if (node.matches && node.matches("h2, h3")) {
+      seenHeading = true;
+      wrap = null;
+      return;
+    }
+    if (!seenHeading) return;
+    if (!wrap) {
+      wrap = document.createElement("div");
+      wrap.className = "hard-section";
+      node.parentNode.insertBefore(wrap, node);
+      attachHardSticker(wrap);
+    }
+    wrap.appendChild(node);
+  });
+
+  // ---- Toggle button: Normal -> Quiz -> Hard -> Normal ----
   var btn = document.createElement("button");
   btn.id = "quiz-mode-toggle";
   btn.type = "button";
   btn.textContent = "\uD83C\uDFAF Quiz Mode";
   document.body.appendChild(btn);
 
+  var modes = ["normal", "quiz", "hard"];
+  var modeIndex = 0;
+
   btn.addEventListener("click", function () {
-    var active = document.body.classList.toggle("quiz-mode-active");
-    btn.classList.toggle("active", active);
-    btn.textContent = active ? "\u2705 Quiz Mode: ON" : "\uD83C\uDFAF Quiz Mode";
-    if (active) {
-      content.querySelectorAll(".revealed").forEach(function (el) {
+    modeIndex = (modeIndex + 1) % modes.length;
+    var mode = modes[modeIndex];
+
+    document.body.classList.remove("quiz-mode-active", "hard-mode-active");
+    btn.classList.remove("active");
+
+    if (mode === "quiz") {
+      document.body.classList.add("quiz-mode-active");
+      btn.classList.add("active");
+      btn.textContent = "\u2705 Quiz Mode: ON";
+      content.querySelectorAll(".quiz-inline.revealed, .quiz-sticker.revealed").forEach(function (el) {
         el.classList.remove("revealed");
       });
+    } else if (mode === "hard") {
+      document.body.classList.add("hard-mode-active");
+      btn.classList.add("active");
+      btn.textContent = "\uD83D\uDD25 Hard Mode: ON";
+      content.querySelectorAll(".hard-sticker.revealed").forEach(function (el) {
+        el.classList.remove("revealed");
+      });
+    } else {
+      btn.textContent = "\uD83C\uDFAF Quiz Mode";
     }
   });
 });

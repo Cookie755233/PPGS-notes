@@ -268,3 +268,90 @@ body.hx-nav-collapsed .hextra-toc .hextra-scrollbar {
 body.hx-nav-collapsed #hx-heading-pin {
   top: 0 !important;
 }
+
+/* =====================
+   Sidebar: fully removed, replaced by header nav
+   ===================== */
+.hextra-sidebar-container {
+  display: none !important;
+}
+
+/* TOC stays as before — visible down to md (768px) */
+@media (max-width: 767px) {
+  .hextra-toc {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .hextra-toc {
+    display: block !important;
+  }
+}
+
+/* =====================
+   Header topic nav
+   ===================== */
+#header-topic-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+#header-topic-nav::-webkit-scrollbar {
+  display: none;
+}
+
+#header-topic-nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+#header-topic-nav a:hover {
+  color: #1e293b;
+}
+
+#header-topic-nav a.active {
+  color: #1e66f5;
+  font-weight: 700;
+}
+
+.dark #header-topic-nav a {
+  color: #a1a1aa;
+}
+
+.dark #header-topic-nav a:hover {
+  color: #f4f4f5;
+}
+
+.dark #header-topic-nav a.active {
+  color: #9ccfd8;
+}
+
+/* Move TOC to the left side of the article row */
+article.hx\:mx-auto {
+  display: flex;
+}
+
+.hextra-toc {
+  order: -1;
+}
+
+#header-topic-divider {
+  width: 1px;
+  height: 1.5rem;
+  background-color: #d1d5db;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.dark #header-topic-divider {
+  background-color: #404040;
+}

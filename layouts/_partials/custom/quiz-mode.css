@@ -109,3 +109,44 @@ body.quiz-mode-active .quiz-block-target .quiz-sticker.revealed {
 .dark #quiz-mode-toggle.active {
   background-color: #eb6f92;
 }
+
+
+/* ---- Hard Mode: hide entire section content ---- */
+.hard-section {
+  position: relative;
+}
+
+.hard-sticker {
+  display: none;
+}
+
+body.hard-mode-active .hard-section .hard-sticker {
+  display: block;
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  background: repeating-linear-gradient(
+    135deg,
+    #fecaca,
+    #fecaca 6px,
+    #fee2e2 6px,
+    #fee2e2 12px
+  );
+  box-shadow: 0 0 0 1px rgba(0,0,0,.05);
+}
+
+.dark body.hard-mode-active .hard-section .hard-sticker {
+  background: repeating-linear-gradient(
+    135deg,
+    #4c1d24,
+    #4c1d24 6px,
+    #3a161b 6px,
+    #3a161b 12px
+  );
+  box-shadow: 0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.hard-mode-active .hard-section .hard-sticker.revealed {
+  opacity: 0;
+}

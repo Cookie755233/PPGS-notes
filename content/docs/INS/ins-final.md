@@ -6,14 +6,14 @@ title: "@INS FINAL"
 - Static electricity is created by **friction between aircraft and surrounding air.**
 - Two main parts, **the electrical bonding system** and the **surface static discharging system**. 
 - Location in DA40
-	- LH wing **tip**, trailing edge x2
-	- RH wing **tip** trailing edge x2
-	- LH horizontal **tail tip**, trailing edge x1
-	- RH horizontal **tail tip**,  trailing edge x1 
+	- LH **wing tip**, trailing edge x2
+	- RH **wing tip** trailing edge x2
+	- LH **horizontal tail tip**, trailing edge x1
+	- RH **horizontal tail tip**,  trailing edge x1 
 	- Rudder, trailing edge, **bottom** x1
 - Refilling
-	- connections from the fueling truck to the airplane must be established
-	- Aircraft is earthed
+	- connections **from the fueling truck to the airplane must be established**
+	- **Aircraft is earthed**
 
 ## Ohm's Law (V = IR)
  The current that passes through a wire is proportional to the voltage applied across it, provided the resistance/temperature remain constant. 
@@ -41,8 +41,8 @@ title: "@INS FINAL"
 - A value for the energy that can be stored in a battery is called the capacity of the battery. The unit is **Ampere-hours (Ah) .**
 - Battery capacity may drop as the temperature decreases.
 - **DA 40 uses 13.6 Ah, 24 V battery at the right forward side of the firewall.**
-	- a. power for **starter**/GND operation prior to engine starting
-	- b. **absorption** of voltage and amperage **spikes** in  the electrical system
+	- a. power for **starter/GND operation prior to engine starting**
+	- b. **absorption of voltage and amperage spikes** in  the electrical system
 	- c. reserve for **emergencies** should alternator fails
 
 ## DC Generator (Commutator/Alternator)
@@ -58,7 +58,7 @@ title: "@INS FINAL"
 
 ## Voltage Regulator
 ![](/images/voltreg.png "")
-- to make sure the voltage is constant.
+- Main function is to make sure the voltage is constant.
 - If actual voltage is too low, 
 	1. the **regulating resistor** reduces resistance, total resistance reduces
 	2. V = IR, Current increases
@@ -89,6 +89,7 @@ Types of reverse current protection:
 
 
 ## ⭐️ Complete Failure of the Electrical System
+<!--quiz-start-->
 1. **All** circuit breakers should be **checked, pulled and re-set.**\
 *If this does not help—*
 2. Set **Emergency switch to ON** (if installed) 
@@ -96,6 +97,7 @@ Types of reverse current protection:
 4. Set **power based on lever positions and engine noise.**
 5. Prepare **landing with flaps** in the given position.
 6. **Land on the nearest appropriate *airfield*.**
+<!--quiz-end-->
 
 ## ⭐️ Alternator Failure **in Flight**
 <!--quiz-start-->
@@ -148,7 +150,6 @@ If a voltage in the upper red sector (**above 32 Volts**) is indicated
 
 ## Transformer (變壓器)
 - Used to increase or decrease **alternating current** using **electromagnetic induction** at the same frequency by **connecting two electrically separated to an Iron core**
-
 
 $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}{I_{output}}$$
 
@@ -214,7 +215,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 | Position Lights | ON from **sunset to sunrise** and in daylight when **weather conditions are below VFR minimums**.                                                                                                                                    |
 | Strobe Lights   | - ON from **prior to engine** start until **after engine shutdown.**<br> - May be turned OFF *(close range to others at night or in clouds, fog, or haze)* by PIC if determined to be a hazard to pilots on board or other aircraft. |
 
-Before entering or crossing any runway, unsure **landing, taxi, position, and strobe lights** are illuminated.
+Before entering or crossing any runway, ensure **landing, taxi, position, and strobe lights** are illuminated.
 
 ### Check for Night Flights
 - A **flashlight** is required (MEL)
