@@ -1,5 +1,7 @@
 ---
 title: PERF
+cssclasses:
+- ultra-wide-view
 ---
 
 ## What Is Performance
@@ -23,6 +25,7 @@ Takeoff starts from **break release** until **reaching screen height (50ft)**
 - Takeoff Distance (TOD) is measured from **break release to aircraft reaching 50ft AGL.**
 ![](/images/todtor.png "")
 
+### Takeoff Variables
 
 | **Factor**              | **Effect on TOD / TOR**                                                                                                                                           |
 |:----------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,7 +70,7 @@ R/C
     }^{
         \substack{
             \text{Power} = \frac{Work}{\Delta t}
-            = \frac{F \cdot S}{\Delta t} \\
+            = \frac{F \cdot S}{\Delta t}
             = F\times V
         }
     }
@@ -109,5 +112,28 @@ efficiency and **engine cooling.** *Preferable when no obstacle is present.*
 {{</ callout >}}
 
 
+### Climb Variables
+{{< table width="3,2,2,2,2,2,6" >}}
 
+| Factors                | Best A/C {{tip:Angle of Climb}} | Best R/C {{tip:Rate of Climb}} | Vx             | Vy             | Perf.          | Remarks                                                                                                                                                                                                                                                                                                                                                                                      |
+|:---------------------- |:------------------------------- |:------------------------------ |:-------------- |:-------------- |:-------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Weight \(\uparrow\)    | \(\downarrow\)                  | \(\downarrow\)                 | \(\uparrow\)   | \(\uparrow\)   | \(\downarrow\) | **Induced** Drag \(\uparrow\)                                                                                                                                                                                                                                                                                                                                                                    |
+| Flaps \(\downarrow\)   | \(\downarrow\)                  | \(\downarrow\)                 | \(\downarrow\) | \(\downarrow\) | \(\downarrow\) | **Parasite** Drag \(\uparrow\)                                                                                                                                                                                                                                                                                                                                                                   |
+| Density \(\downarrow\) | \(\downarrow\)                  | \(\downarrow\)                 | \(\uparrow\)   | \(\uparrow\)   | \(\downarrow\) | - **Induced** Drag \(\uparrow\); **Parasite** Drag \(\downarrow\)<br>- Power Available \(\downarrow\)<br>- **Minimum Drag unchanged; speed for min drag increases<br>- Power Required shifts up along the slope (\(\uparrow\))**<br>- Area of Excess Power \(\downarrow\)<br>- Service Ceiling: **pressure altitude** where **max R/C = 100 ft/min**; *Absolute Ceiling: P.A. where R/C = 0 (Excess power = 0)* |
+| Wind                   | -                               | -                              | -              | -              | -              | - Flight *Path* is affected<br>- Climb time is not changed, but the TOC is shifted                                                                                                                                                                                                                                                                                                           |
 
+{{< /table >}}
+
+#### Weight
+![](/images/weighttoclimb.png "")
+![](/images/weighttoclimb2.png "")
+
+#### Configuration (Flaps)
+![](/images/configtoclimb.png "")
+![](/images/configtoclimb2.
+
+#### Density
+![](/images/densitytoclimb.png "")
+![](/images/densitytoclimb2.png "")
+
+#### Wind

@@ -12,10 +12,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function isStandaloneTitleLine(el) {
+    var paragraph = el.closest("p");
+    if (!paragraph) return false;
+
+    // Check that nothing except whitespace appears before <strong>
+    // anywhere within the paragraph.
+    var beforeRange = document.createRange();
+    beforeRange.selectNodeContents(paragraph);
+    beforeRange.setEndBefore(el);
+
+    if (beforeRange.toString().trim() !== "") {
+      return false;
+    }
+
+    // Find the next meaningful node after <strong>.
+    var current = el;
+
+    while (current && current !== paragraph) {
+      var next = current.nextSibling;
+
+      while (
+        next &&
+        (
+          next.nodeType === Node.COMMENT_NODE ||
+          (next.nodeType === Node.TEXT_NODE && next.textContent.trim() === "")
+        )
+      ) {
+        next = next.nextSibling;
+      }
+
+      if (next) {
+        return (
+          next.nodeType === Node.ELEMENT_NODE &&
+          next.tagName === "BR"
+        );
+      }
+
+      current = current.parentNode;
+    }
+
+    // Also treat a paragraph containing only the title as standalone.
+    var paragraphText = paragraph.textContent.trim();
+    var titleText = el.textContent.trim();
+
+    return paragraphText === titleText;
+  }
+
   Array.from(content.querySelectorAll("strong, mark")).forEach(function (el) {
     if (el.closest("h1, h2, h3, h4, h5, h6")) return;
-    if (/VIP\s*:/.test(el.textContent)) return;
+    if (/\bVIP\b/.test(el.textContent)) return;
     if (/^§\s*[\d.]+/.test(el.textContent.trim())) return;
+    if (isStandaloneTitleLine(el)) return;
     makeInlineQuizzable(el);
   });
 

@@ -50,6 +50,48 @@ cssclasses:
 ![Terminal Facilities: TRACON and Control Tower](/images/terminal.png "Terminal Facilities: TRACON and Control Tower")
 
 
+## ATC Clearance
+An ATC Clearance is required before entering **Class A and Class B** airspace, or Class C, D, E when **the weather is below VFR minimums**
+### Elements of ATC clearance (CRAFT)
+| Item                     | Description                                                                                              |
+|:------------------------ |:-------------------------------------------------------------------------------------------------------- |
+| **==C==learance Limit**  | - Destination or waypoint<br>- **Expect Further Clearance (EFC)** could be given                         |
+| **==R==oute**            | SIDs, STARs, waypoints, or airways.                                                                      |
+| **==A==ltitude**         | Initial and step climbs.                                                                                 |
+| **==F==requency**        | - ATC communication frequency<br>- ATC may assign a **cruise clearance\*** when route is relatively short. | 
+| **==T==ransponder Code** | Radar visibility (assigned squawk code).                                                                 |
+
+{{< callout >}}
+**CRUISE CLEARANCE** 
+> EVASTAR800, cleared to Mather Airport, *cruise 8,000.* 
+
+Which means you may use all the airspace between MEA to 8,000 MSL with no restrictions. No report is required when changing altitudes
+{{</ callout >}}
+
+### Abbreviated IFR Departure Clearance 
+**Cleared as filed**: You are cleared to fly the route as filed in your IFR flight plan.
+> *(C)* Cleared to Los Angeles Airport, \
+> *(R)* Rockies 3 Departure, Dove Transition, *then as filed*. \
+> *(A)* Maintain 10,000 expect flight level 270 within 10 minutes. \
+> *(F)* Departure frequency 126.1. \
+> *(T)* Squawk 5417. 
+
+### Departure Restrictions
+- **Hold for release**: specifies the *earliest time* you may depart.
+- **Clearance void if ...**: specifies the *latest time* you may depart. If you do not comply, you **must advise ATC** but no longer than **30 minutes after the void time.**
+
+
+### VFR On Top
+- ATC **cannot** initiate a VFR On Top clearance.
+- ==**It's a IFR clearance**==. 
+- **Request ATC permission** to operate in any *VFR cruising altitude* {{< tip "0~179 = Odd+500| 180~359 = Even+500" >}} flight **between the MEA and 18,000 feet MSL**, that allows you to remain in VFR conditions. 
+- You should also follow the VFR cloud separation rules.
+
+{{< callout >}}
+**VFR Over the Top**\
+VFR Over The Top (VFR OTT) is conducted ==entirely under Visual Flight Rules (VFR)== to maintain legal cloud clearances for the entire flight, meaning you need a clear gap or hole to climb up through and descend back down through.
+{{</ callout >}}
+
 
 
 ## Departure (SID/ODP/Vector)
@@ -109,19 +151,11 @@ Items to report: **Identification,  Position, Time, Altitude, ETA over next repo
  {{</ callout >}}
 
 ### IFR Cruising Altitude
-- Magnetic course 
+- Magnetic **COURSE** 
 	- **0° ~ 179° : Odd Thousand MSL** 
 	- **180° ~ 359°: Even Thousand MSL.**
 - RVSM: 1,000 ft between **FL290 ~ FL410**
 - At Pilot’s Discretion means **the pilot may begin the movement whenever the pilot choose. Once you leave an altitude, you may not return to it.**
-
-
-{{< callout >}}
-- **VFR-On-Top**
-	- ==**It's a IFR clearance**==. **Request ATC permission** to operate in any VFR cruising altitude flight **between the MEA and 18,000 feet MSL**, that allows you to remain in VFR conditions. 
-- **VFR-Over-The-Top (VFR OTT)**
-	- VFR-Over-The-Top (VFR OTT) is conducted ==entirely under Visual Flight Rules (VFR)== to maintain legal cloud clearances for the entire flight, meaning you need a clear gap or hole to climb up through and descend back down through.
-{{</ callout >}}
 
 
 ### Holding Pattern
@@ -182,5 +216,4 @@ Items to report: **Identification,  Position, Time, Altitude, ETA over next repo
 | Term                                         | Description & Requirements                                                                                                                                                                                                                                                                                                                                                                        |
 |:-------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Departure End of Runway (DER)                | The physical end of the runway opposite the landing threshold used for an aircraft's takeoff.                                                                                                                                                                                                                                                                                                     |
-| Air Route Traffic Control **Center** (ARTCC) | A facility established to provide air traffic control service to aircraft operating on instrument flight rules (IFR) flight plans within controlled airspace.                                                                                                                                                                                                                                     |
 | Terminal Instrument Procedures (TERPs)       | Standards for a specific clearance from obstacle at a given distance from the runway based on an aircraft’s climbing at least **200 feet per nautical mile.**                                                                                                                                                                                                                                     |

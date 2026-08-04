@@ -12,19 +12,16 @@ title: "@INS FINAL"
 	- LH **horizontal tail tip**, trailing edge x1
 	- RH **horizontal tail tip**,  trailing edge x1 
 	- Rudder, trailing edge, **bottom** x1
-- Refilling
-	- connections **from the fueling truck to the airplane must be established**
-	- **Aircraft is earthed**
 
 ## Refueling 
 - Connect the refueling truck to the airplane is required.
-- Aircraft is earthed.
-- Refueling bowser is earthed.
+- **Aircraft** is earthed.
+- **Refueling bowser** is earthed.
 
 ## Aircraft bonding
-- Each electrical consumer inside an aircraft is not only connected to a busbar but also to the fuselage through an additional cable.
+- Each electrical consumer inside an aircraft is not only connected to a busbar but also to the **fuselage** through an additional cable.
 - Aircraft **BODY** used as a ground connection:
-	- Reducing cable connections {{< tip "Wayne: 這樣就不會有很多線" >}}
+	- **Reducing cable connections** {{< tip "Wayne: 這樣就不會有很多線" >}}
 	- Reducing electronic interference
 	- Supplying the entire aircraft with *voltage reference* 
 
@@ -37,7 +34,8 @@ title: "@INS FINAL"
 
 ## Circuit Breaker
 - Thermal CBs are based on **bi-metallic spring**. When the current is too high, the spring bends through the impact of heat.
-- CB label shows the maximum allowable current.
+- CB label shows the maximum allowable **current**.
+
 ### CB Reset Rules - FTA FCTM 
 - In flight, 
 	- Flight crew **reset of a tripped circuit breaker is not recommended.** 
@@ -73,7 +71,7 @@ title: "@INS FINAL"
 	- multiple loop commutator could make the voltage more constant.
 - **==Alternator==**
 	- **rotating magnet type generator.**
-	- 4 diodes can form a conductor loop, generating full wave bridge
+	- 4 diodes can form a conductor loop, generating *full wave bridge*
 	- use **3 coil stator to create stable DC current.**
 ![](/images/alternator.png "")
 
@@ -101,10 +99,10 @@ Types of reverse current protection:
 - Power: **70 Ampère alternator** mounted **in front of the engine.**
 - Battery: **13.6AH, 24V DC  Battery**
 
-## Essential Bus
+## ⭐️ Essential Bus
 ![](/images/essbushide.png "")
 
-{{< details title="Reveal Essential Bus" closed="true" >}}
+{{< details title="> Reveal Essential Bus" closed="true" >}}
 ![](/images/essbus.png "")
 {{< /details >}}
 
@@ -145,7 +143,6 @@ How do identify: **Red ALTERNATOR message would show on bottom right of PFD, and
 → Terminate flight preparation.
 <!--quiz-end-->
 
-
 ## ⭐️ Overvoltage
 <!--quiz-start-->
 If a voltage in the upper red sector (**above 32 Volts**) is indicated
@@ -164,7 +161,7 @@ If a voltage in the upper red sector (**above 32 Volts**) is indicated
 ![](/images/ammeter.png "")
 
 ## Voltmeter
-- ==The voltmeter displays the potential on the main bus. If the alternator is operating, the alternator voltage is shown otherwise it is that provided by the battery==
+- ==The voltmeter displays the **potential** on the main bus. If the alternator is operating, the alternator voltage is shown otherwise it is that provided by the battery==
 - **Voltmeter** is connected to the system **PARALLEL** to the component to be measured.
 - A **series resistor** has a **high resistance**, is connected **SERIES** to the voltmeter, to allow a higher current to the component(load).
 ![](/images/voltmeter.png "")
@@ -179,7 +176,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 ## TRU (整流器 AC→DC)
 - **Transformer Rectifier Unit (TRU) transformed AC voltage into DC voltage.** 
 - Its major components are **transformer** and **rectifiers**.
-- In commercial aircraft, TRUs are used for supplying the DC network.
+- In commercial aircraft, TRUs are used for *supplying the DC network.*
 ![](/images/tru.png "")
 
 ## Inverter (變頻器 DC→AC)
@@ -191,7 +188,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 
 ## Design of external connection with three contacts
 - Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
-- When connected, **external power control relay connects the circuit** and powers the Main Bus.
+- When connected, **external power control ==relay== connects the circuit** and powers the Main Bus.
 ![](/images/extpower.png "")
 
 
@@ -207,6 +204,8 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 | Typical use: **Starter**                  | Typical use: **Cooling fans, pumps** |
 
 ## Switches per Checklist
+{{< table width="3,1,1,1,1">}}
+
 | Phase                  |   AV   | ESS |     BAT      |   ALT   |
 | ---------------------- |:------:|:---:|:------------:|:-------:|
 | Pre-Flight Inspection  |  OFF   | OFF | **ON → OFF** |   OFF   |
@@ -217,6 +216,8 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 | Engine Shutdown        |  OFF   | OFF |      ON      |   ON    |
 | Parking Check          |  OFF   | OFF |     OFF      |   OFF   |
 | Post-Flight Inspection |  OFF   | OFF |     OFF      |   OFF   |
+
+{{</ table >}}
 
 
 ## Main Tie Circuit Breaker Tripped (What can we learn?)
@@ -244,7 +245,7 @@ Before entering or crossing any runway, ensure **landing, taxi, position, and st
 - **Indicator lights on flaps position indicator**. If you don't see flap lights, verify instrument and flood lights are turned fully counterclockwise prior to calling EVA operations.
 - Takeoff for VFR/IFR night flights with an **empty battery is not permitted**
 
-## DA40 Bus
+## ⭐️ DA40 Bus
 ![](/images/bus.png "")
 1. BAT ON: **Battery{{< tip "24V DC" >}} powers Essential Bus, Main Bus**
 2. STARTER ON: **Battery powers Starter motor**\
@@ -264,3 +265,47 @@ Before entering or crossing any runway, ensure **landing, taxi, position, and st
 4. **ESS** ON → Relay **OPEN**
 5. *External Power Relay: **Close** when connected to external power source correctly. Used for starting of APU and engines, maintenance, etc.*
 {{</ callout >}}
+
+
+
+## VOR
+- Full name: **VHF Omnidirectional *Radio* Range**
+- The **reference phase** omnidirectional master signal, the **variable phase** is a directional signal that rotates around the station **30 times per second. (30 Hz).**
+- Frequencies:
+	- **108.0 ~ 117.95** MHz
+		- Terminal: **108.0 ~ 111.85 MHz Even decimal digits** 
+		- Enroute: **112.0 ~ 117.95 MHz all**
+- Station identification number has **3** digits *morse code*
+
+### CVOR & DVOR
+| **Conventional** VOR                                                    | **Doppler** VOR                                                                                                                                                     |
+|:----------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| - Clear area of at least 1,500 ft in radius<br>- **Larger error (±2%)** | - Using **Doppler** effect **(Changes in frequency)**<br> - DVOR is practical in **crowded areas**<br>- Requires a **big structure**<br>- **Smaller error (±0.5%)** | 
+
+### Types of VOR
+![](/images/vortypes.png "")
+
+### VOR Receiver Check
+1. VOT or radiated test signal from repair station.
+	- VOT only send **single radial** in **360** radial. 
+	- VOR may only deviate from VOT by **4 degrees on the ground**, or **6 degrees airborne**, to legally fly IFR.
+	- VOR must be  checked within **30 days** to perform IFR.
+	- VOT frequency can be found in **Airport/Facility Directory (A/FD)**
+2. *Certified* **airborne** and **airport surface** check point
+	- Can be found in **Airport/Facility Directory (A/FD)**
+3. Dual VOR Check
+	- 2 independent VOR sharing the same antenna
+	- Turn both systems to **the same VOR ground facility**. Maximum variation is **4 degrees**.
+	- **==D==ate of check, ==P==lace of check, bearing ==E==rror, ==S==ignature** should be recorded in the logbook *(DPEs)*
+
+### VOR/DME VORTAC
+- VOR /DME or VORTAC provides additional distance information.
+- VOR identification can be heard *3 times* with tone of *1,020 Hz*; DME identifier is broadcast *1 times* but with a higher pitch of *1,350 Hz.*
+
+## HSI (不要鐵尺 :D )
+![](/images/hsihide.png "")
+
+{{< details title="> Reveal HSI" closed="true" >}}
+![](/images/hsi.png "")
+{{< /details >}}
+

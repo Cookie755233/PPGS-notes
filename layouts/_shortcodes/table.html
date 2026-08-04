@@ -1,0 +1,31 @@
+{{ $widthStr := .Get "width" }}
+{{ $id := printf "hx-table-%d" .Ordinal }}
+
+{{ $inner := .Inner }}
+{{ $tipTpl := `<sup class="hx-tip" tabindex="0">ⓘ<span class="hx-tip-text">$1</span></sup>` }}
+{{ $inner = replaceRE `\{\{tip:([^}]+)\}\}` $tipTpl $inner }}
+
+<div id="{{ $id }}" class="hx-table{{ with .Get "class" }} {{ . }}{{ end }}">
+
+{{ $inner | markdownify }}
+
+</div>
+
+{{ with $widthStr }}
+  {{ $parts := split . "," }}
+  {{ $sum := 0 }}
+  {{ range $parts }}{{ $sum = add $sum (int .) }}{{ end }}
+  <style>
+  #{{ $id }} table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  {{ range $i, $w := $parts }}
+  #{{ $id }} table th:nth-child({{ add $i 1 }}),
+  #{{ $id }} table td:nth-child({{ add $i 1 }}) {
+    width: {{ div (mul (int $w) 100) $sum }}%;
+  }
+  {{ end }}
+
+  </style>
+{{ end }}
