@@ -170,6 +170,12 @@ td li {
   margin-block-end: 3px !important;
 }
 
+/* blockquote */
+blockquote {
+  margin-top: 0px !important;
+  margin-bottom: 1.5rem !important;
+}
+
 
 /* =====================
    Fix oversized list spacing in content
@@ -354,4 +360,9 @@ article.hx\:mx-auto {
 
 .dark #header-topic-divider {
   background-color: #404040;
+}
+
+/* Collapse the TOC column entirely when it has no items */
+.hextra-toc:empty {
+  display: none !important;
 }

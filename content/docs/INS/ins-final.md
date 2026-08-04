@@ -2,10 +2,11 @@
 title: "@INS FINAL"
 ---
 
-## Static Discharge System
-- Static electricity is created by **friction between aircraft and surrounding air.**
+## Static Discharger
+- Static electricity is created by **friction between aircraft and surrounding air.** Generated on the **surface** of the **non-conductive** materials.
 - Two main parts, **the electrical bonding system** and the **surface static discharging system**. 
-- Location in DA40
+- Static discharger is **low resistance and attracts high current.**
+- Locations in DA40
 	- LH **wing tip**, trailing edge x2
 	- RH **wing tip** trailing edge x2
 	- LH **horizontal tail tip**, trailing edge x1
@@ -15,20 +16,40 @@ title: "@INS FINAL"
 	- connections **from the fueling truck to the airplane must be established**
 	- **Aircraft is earthed**
 
+## Refueling 
+- Connect the refueling truck to the airplane is required.
+- Aircraft is earthed.
+- Refueling bowser is earthed.
+
+## Aircraft bonding
+- Each electrical consumer inside an aircraft is not only connected to a busbar but also to the fuselage through an additional cable.
+- Aircraft **BODY** used as a ground connection:
+	- Reducing cable connections {{< tip "Wayne: 這樣就不會有很多線" >}}
+	- Reducing electronic interference
+	- Supplying the entire aircraft with *voltage reference* 
+
 ## Ohm's Law (V = IR)
  The current that passes through a wire is proportional to the voltage applied across it, provided the resistance/temperature remain constant. 
 
 ## Relay
-- The heart of a relay is an **electromagnet** (a coil of wire that becomes a temporary magnet when electricity flows through it) .
-- **switch operated by a relatively small electric current that can turn on or off a much larger electric current.** 
+- A relay is an **electromagnet** switch that control a higher current with a relatively small current.
+- Does *not* connect to the higher current → **Safer**
 
 ## Circuit Breaker
+- Thermal CBs are based on **bi-metallic spring**. When the current is too high, the spring bends through the impact of heat.
+- CB label shows the maximum allowable current.
+### CB Reset Rules - FTA FCTM 
 - In flight, 
 	- Flight crew **reset of a tripped circuit breaker is not recommended.** 
 	- However, a tripped circuit breaker **may be reset once**, after a short cooling period (approximately **2 minute**) **if no smoke is detected**, if in the judgment of the PIC, the situation resulting from the circuit breaker trip has a significant adverse effect on safety. 
 - On the ground,
 	- fight crew reset of tripped circuit breaker **should only be done after maintenance.**
 	-  Flight crew cycling of a Circuit breaker to clear a non-normal condition is not recommended, **unless directed by a non-normal checklist.** 
+
+
+## Diode
+- Usually made of **semiconductor** elements, usually **silicon**, wth 2 ends.
+- Diode is a device that only allows current to flow in **one-way direction.**
 
 ## Battery
 - Charging Battery: Connect the battery to a **DC** charge unit. **Plus to plus and minus to minus.**
@@ -40,7 +61,7 @@ title: "@INS FINAL"
 	- Should **fill up with distilled water.**
 - A value for the energy that can be stored in a battery is called the capacity of the battery. The unit is **Ampere-hours (Ah) .**
 - Battery capacity may drop as the temperature decreases.
-- **DA 40 uses 13.6 Ah, 24 V battery at the right forward side of the firewall.**
+- **DA 40 uses 13.6 Ah, 24 V battery at the ==right forward side== of the firewall.**
 	- a. power for **starter/GND operation prior to engine starting**
 	- b. **absorption of voltage and amperage spikes** in  the electrical system
 	- c. reserve for **emergencies** should alternator fails
@@ -104,13 +125,13 @@ Types of reverse current protection:
 How do identify: **Red ALTERNATOR message would show on bottom right of PFD, and ammeter shows 0.**
 1. Circuit breakers............Check in
 2. ALT switch............OFF, then ON\
-*If alternator does not come back*
+*--- If alternator does not come back ---*
 3. ESS BUS switch............ON
 4. XPDR Circuit Breaker............PULL\
-*Transponder and ADS-B out will be unavailable*
+*--- Transponder and ADS-B out will be unavailable ---*
 5. Switch off any non-essential electrical loads
 6. Land within 30 minutes\
-*If PFD attitude lost prior to landing*
+*--- If PFD attitude lost prior to landing ---*
 7. HORIZON EMERGENCY Switch............ON
 <!--quiz-end-->
 
@@ -120,7 +141,7 @@ How do identify: **Red ALTERNATOR message would show on bottom right of PFD, and
 1. Engine speed............1,200 RPM {{< tip "around 30 AMPS" >}}
 2. **Electrical equipment............OFF** {{< tip "troubleshooting to make sure not the electrical equipment is the problem." >}}
 3. Ammeter............Check\
-*if the caution light does not extinguish, ammeter flashes and reads zero*\
+*--- If the caution light does not extinguish, ammeter flashes and reads zero ---*\
 → Terminate flight preparation.
 <!--quiz-end-->
 
@@ -130,7 +151,7 @@ How do identify: **Red ALTERNATOR message would show on bottom right of PFD, and
 If a voltage in the upper red sector (**above 32 Volts**) is indicated
 1. **Essential bus............ON**, if installed
 2. Master Switch (ALT)............OFF\
-**WARNING: Leave (Avionic) Master switch (BAT) ON!**
+**WARNING: Leave BAT switch and Avionics Master ON**
 3. Equipment that is not needed, in particular Pitot heating............OFF
 4. Land on the nearest appropriate *airfield*
 <!--quiz-end-->
@@ -225,13 +246,21 @@ Before entering or crossing any runway, ensure **landing, taxi, position, and st
 
 ## DA40 Bus
 ![](/images/bus.png "")
-1. BAT ON: **Battery{{< tip "24V DC" >}} powers essential bus, main bus, avionics**
-2. STARTER ON: **Battery powers starter motor**\
-*WHEN > 1,000 RPM*
+1. BAT ON: **Battery{{< tip "24V DC" >}} powers Essential Bus, Main Bus**
+2. STARTER ON: **Battery powers Starter motor**\
+*--- WHEN > 1,000 RPM ---*
 3. ALT ON: **Alternator{{< tip "28V DC" >}} becomes the main power source**. Since Alternator has a greater voltage than the battery, it becomes the main power source and also charges the battery.
-4. AVIONICS ON: When Avionics switch is ON, *relay connects main bus and avionics bus*. **Current can flow ==from main bus to avionics bus== for GIA63 and TAS600** *(GPS/NAV2, COM2, TAS)*\
-*WHEN ALTERNATOR FAILS*
-5. **ESS ON**: 
-	- When alternator fails, essential bus switch on,**MAIN TIE / ESS TIE CIRCUIT OPEN**, Battery take over. A **diode** is set between main tie and essential tie so that current cannot flow through main bus, thus only essential bus is powered.\
-*WHEN BATTERY DIES*
+4. AVIONICS ON: When Avionics switch is ON, **relay close and  connects main bus and avionics bus**. Current can flow from **main bus to avionics bus** to GIA63 and TAS600 *(GPS/NAV2, COM2, TAS)*\
+*--- WHEN ALTERNATOR FAILS ---*
+5. **ESS ON**: When alternator fails, essential bus switch on,**MAIN TIE / ESS TIE CIRCUIT OPEN**, Battery take over. A **diode** is set between main tie and essential tie so that current cannot flow through main bus, thus only essential bus is powered.\
+*--- WHEN BATTERY DIES ---*
 6. **Emergency Switch ON**: Emergency Battery powers up the backup instruments *(STBY ATT GYRO)*
+
+{{< callout >}}
+**RELAYS IN DA40**
+1. **BAT** ON → Relay **CLOSE**
+2. **STARTER** ON → Relay **CLOSE**
+3. **AVIONICS** ON → Relay **CLOSE**
+4. **ESS** ON → Relay **OPEN**
+5. *External Power Relay: **Close** when connected to external power source correctly. Used for starting of APU and engines, maintenance, etc.*
+{{</ callout >}}
