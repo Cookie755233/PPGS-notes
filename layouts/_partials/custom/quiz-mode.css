@@ -45,6 +45,7 @@ body.quiz-mode-active .quiz-block-target .quiz-sticker {
   display: block;
   position: absolute;
   inset: 0;
+  z-index: 1; /* stack above the block's own positioned content */
   border-radius: 6px;
   cursor: pointer;
   background: repeating-linear-gradient(
@@ -124,6 +125,7 @@ body.hard-mode-active .hard-section .hard-sticker {
   display: block;
   position: absolute;
   inset: 0;
+  z-index: 2; /* must sit above nested .quiz-block-target / .quiz-sticker */
   border-radius: 6px;
   cursor: pointer;
   background: repeating-linear-gradient(

@@ -94,10 +94,10 @@ Types of reverse current protection:
 	- Normal operation, the voltage of **voltage coil is higher than current coil**, the wire connects and the current flows from generator to bus/battery.
 	- When generator has a lower voltage, the coil disconnects to prevent reverse flow.
 
-## DA 40 Electrical System
-- DA 40 has **28 volt DC** system. {{< tip "28V DC Alternator" >}}
-- Power: **70 Ampère alternator** mounted **in front of the engine.**
+## DA 40 Power Sources
+- Power: **28V DC 70 Ampère alternator** mounted **in front of the engine.**
 - Battery: **13.6AH, 24V DC  Battery**
+- External Power: **28V DC**
 
 ## ⭐️ Essential Bus
 ![](/images/essbushide.png "")
@@ -176,7 +176,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 ## TRU (整流器 AC→DC)
 - **Transformer Rectifier Unit (TRU) transformed AC voltage into DC voltage.** 
 - Its major components are **transformer** and **rectifiers**.
-- In commercial aircraft, TRUs are used for *supplying the DC network.*
+- In commercial aircraft, TRUs are used for **supplying the DC network**.
 ![](/images/tru.png "")
 
 ## Inverter (變頻器 DC→AC)
@@ -188,7 +188,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 
 ## Design of external connection with three contacts
 - Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
-- When connected, **external power control ==relay== connects the circuit** and powers the Main Bus.
+- When **aux** is connected, **external power control ==relay== connects the circuit** and powers the Main Bus.
 ![](/images/extpower.png "")
 
 
