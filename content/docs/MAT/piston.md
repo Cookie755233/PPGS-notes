@@ -95,7 +95,7 @@ The permanent magnets rotate and create a change in the magnetic field.\
 - Switch position: **Off, RIGHT, LEFT, BOTH, START**
 - **When switch is off, the breaker points are short-circuited to ground**
 
-## ⭐️Magneto Check
+## ⭐️ Magneto Check
 ### Fixed-pitch propeller
 The amount of fuel/air mixture is controlled by the **throttle lever (tachometer) and the mixture lever(not indicated)**
 

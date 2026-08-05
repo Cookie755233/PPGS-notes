@@ -74,3 +74,10 @@ params:
 
   # imageZoom:
   #   enable: true
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      index: heading
+      tokenize: forward

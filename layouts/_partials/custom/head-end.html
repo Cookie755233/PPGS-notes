@@ -1,8 +1,9 @@
 <!-- FRONTMATTER -->
-{{ if .Params.use_collapsible }} {{ partial "collapsable-header.html" . }} {{
-end }}
+{{ if .Params.use_collapsible }}
+  {{ partial "collapsable-header.html" . }}
+{{ end }}
 
-<!--special rule (FAR/AIM)-->
+<!-- Special rule (FAR/AIM) -->
 {{ if index .Page.Params "set-special-rule" }}
 <style>
   {{ readFile "layouts/_partials/custom/special-rule.css" | safeCSS }}
@@ -12,7 +13,7 @@ end }}
 </script>
 {{ end }}
 
-<!--sticky list-->
+<!-- Sticky list -->
 {{ if index .Page.Params "sticky-list" }}
 <style>
   {{ readFile "layouts/_partials/custom/sticky-list.css" | safeCSS }}
@@ -22,7 +23,7 @@ end }}
 </script>
 {{ end }}
 
-<!--hide toc-->
+<!-- Hide TOC -->
 {{ if .Params.hide_toc }}
 <style>
   .hextra-toc {
@@ -31,7 +32,7 @@ end }}
 </style>
 {{ end }}
 
-<!--custom radio format-->
+<!-- Custom radio format -->
 {{ if index .Page.Params "chat_radio" }}
 <style>
   {{ readFile "layouts/_partials/custom/chat-radio.css" | safeCSS }}
@@ -44,12 +45,12 @@ end }}
 </script>
 {{ end }}
 
-
 <!--
 ////////////////////
   GLOBAL DEFAULT
 ////////////////////
 -->
+
 <style>
   {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
 </style>
@@ -80,50 +81,200 @@ end }}
     var header = document.querySelector(".hextra-nav-container");
     if (!header) return;
 
+    var hamburger = document.querySelector(".hextra-hamburger-menu");
+
+    var headerSearchWrapper = header.querySelector(
+      ".hextra-search-wrapper"
+    );
+
+    var headerSearchInput = headerSearchWrapper
+      ? headerSearchWrapper.querySelector(".hextra-search-input")
+      : null;
+
     var lastScroll = window.scrollY;
-    var minScroll = 80;      // don't hide near the very top
-    var hideDelta = 24;      // must scroll down at least this much to hide
-    var showDelta = 8;       // must scroll up at least this much to show
-    var locked = false;
-    var lockTime = 300;      // ms to ignore scroll events after a toggle
+    var accumulatedDown = 0;
+    var accumulatedUp = 0;
 
-    function setState(hidden) {
-      if (locked) return;
-      var isHidden = header.classList.contains("hx-nav-hidden");
-      if (hidden === isHidden) return;
+    var minScroll = 80;
+    var hideDistance = 24;
+    var showDistance = 8;
 
-      locked = true;
-      if (hidden) {
-        header.classList.add("hx-nav-hidden");
-        document.body.classList.add("hx-nav-collapsed");
-      } else {
-        header.classList.remove("hx-nav-hidden");
-        document.body.classList.remove("hx-nav-collapsed");
+    var ticking = false;
+
+    function showHeader() {
+      header.classList.remove("hx-nav-hidden");
+      document.body.classList.remove("hx-nav-collapsed");
+    }
+
+    function isMobileMenuOpen() {
+      return !!(
+        hamburger &&
+        hamburger.getAttribute("aria-expanded") === "true"
+      );
+    }
+
+    function isHeaderSearchResultsVisible() {
+      if (!headerSearchWrapper) return false;
+
+      var results = headerSearchWrapper.querySelector(
+        ".hextra-search-results"
+      );
+
+      if (!results) return false;
+
+      return !results.classList.contains("hx:hidden");
+    }
+
+    function isHeaderSearchFocused() {
+      return !!(
+        headerSearchWrapper &&
+        document.activeElement &&
+        headerSearchWrapper.contains(document.activeElement)
+      );
+    }
+
+    function isHeaderSearchActive() {
+      return (
+        isHeaderSearchFocused() ||
+        isHeaderSearchResultsVisible()
+      );
+    }
+
+    function hideHeader() {
+      if (isHeaderSearchActive() || isMobileMenuOpen()) return;
+
+      header.classList.add("hx-nav-hidden");
+      document.body.classList.add("hx-nav-collapsed");
+    }
+
+    function updateHeaderState() {
+      if (isHeaderSearchActive() || isMobileMenuOpen()) {
+        showHeader();
       }
-      setTimeout(function () { locked = false; }, lockTime);
+    }
+
+    if (headerSearchWrapper) {
+      headerSearchWrapper.addEventListener("focusin", function () {
+        showHeader();
+      });
+
+      headerSearchWrapper.addEventListener("focusout", function () {
+        setTimeout(updateHeaderState, 0);
+      });
+
+      headerSearchWrapper.addEventListener("input", function () {
+        showHeader();
+        setTimeout(updateHeaderState, 0);
+      });
+
+      headerSearchWrapper.addEventListener("keydown", function () {
+        showHeader();
+        setTimeout(updateHeaderState, 0);
+      });
+
+      headerSearchWrapper.addEventListener("click", function () {
+        showHeader();
+        setTimeout(updateHeaderState, 0);
+      });
+
+      var searchObserver = new MutationObserver(function () {
+        updateHeaderState();
+      });
+
+      searchObserver.observe(headerSearchWrapper, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["class"]
+      });
+    }
+
+    if (hamburger) {
+      hamburger.addEventListener("click", function () {
+        setTimeout(function () {
+          if (isMobileMenuOpen()) {
+            showHeader();
+          }
+        }, 0);
+      });
+    }
+
+    document.addEventListener("pointerdown", function (event) {
+      if (
+        headerSearchWrapper &&
+        headerSearchWrapper.contains(event.target)
+      ) {
+        return;
+      }
+
+      if (headerSearchInput) {
+        headerSearchInput.blur();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && headerSearchInput) {
+        headerSearchInput.blur();
+      }
+    });
+
+    function processScroll() {
+      ticking = false;
+
+      var currentScroll = Math.max(window.scrollY, 0);
+      var difference = currentScroll - lastScroll;
+
+      if (isHeaderSearchActive() || isMobileMenuOpen()) {
+        showHeader();
+        lastScroll = currentScroll;
+        accumulatedDown = 0;
+        accumulatedUp = 0;
+        return;
+      }
+
+      if (currentScroll <= minScroll) {
+        showHeader();
+        lastScroll = currentScroll;
+        accumulatedDown = 0;
+        accumulatedUp = 0;
+        return;
+      }
+
+      if (difference > 0) {
+        accumulatedDown += difference;
+        accumulatedUp = 0;
+
+        if (accumulatedDown >= hideDistance) {
+          hideHeader();
+          accumulatedDown = 0;
+        }
+      } else if (difference < 0) {
+        accumulatedUp += Math.abs(difference);
+        accumulatedDown = 0;
+
+        if (accumulatedUp >= showDistance) {
+          showHeader();
+          accumulatedUp = 0;
+        }
+      }
+
+      lastScroll = currentScroll;
     }
 
     window.addEventListener(
       "scroll",
       function () {
-        var current = window.scrollY;
-        var diff = current - lastScroll;
+        if (ticking) return;
 
-        if (current <= minScroll) {
-          setState(false);
-        } else if (diff > hideDelta) {
-          setState(true);
-        } else if (diff < -showDelta) {
-          setState(false);
-        }
-
-        if (!locked) lastScroll = current;
+        ticking = true;
+        requestAnimationFrame(processScroll);
       },
       { passive: true }
     );
+
+    showHeader();
   });
 </script>
-
 
 <!-- Footer fix -->
 <script>
@@ -137,7 +288,8 @@ end }}
       var rect = footer.getBoundingClientRect();
       var footerTop = rect.top;
       var footerHeight = rect.height;
-      var availableSpace = window.innerHeight - footerTop - footerHeight;
+      var availableSpace =
+        window.innerHeight - footerTop - footerHeight;
 
       if (availableSpace > 0) {
         footer.style.marginTop = availableSpace + "px";
@@ -145,6 +297,7 @@ end }}
     }
 
     adjustFooter();
+
     window.addEventListener("resize", adjustFooter);
 
     if (document.readyState === "complete") {
@@ -155,23 +308,42 @@ end }}
   });
 </script>
 
-<!-- Header fix -->
+<!-- Header topic navigation -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var nav = document.querySelector(".hextra-nav-container nav");
-    var logo = nav ? nav.querySelector("a") : null;
-    var searchWrapper = nav ? nav.querySelector(".hextra-search-wrapper") : null;
-    if (!nav || !logo || !searchWrapper) return;
+    var nav = document.querySelector(
+      ".hextra-nav-container nav"
+    );
+
+    if (!nav) return;
+
+    if (document.getElementById("header-topic-nav")) return;
+
+    var searchWrapper =
+      nav.querySelector(".hextra-search-wrapper") ||
+      nav.querySelector(".search-wrapper") ||
+      nav.querySelector('[class*="search-wrapper"]') ||
+      nav.querySelector("[data-search]") ||
+      nav.querySelector('button[aria-label*="Search"]') ||
+      nav.querySelector('a[aria-label*="Search"]');
 
     function getDocsBase() {
-      var link = document.querySelector('.hextra-sidebar-container a[href*="/docs/"]');
+      var link = document.querySelector(
+        '.hextra-sidebar-container a[href*="/docs/"]'
+      );
+
       if (!link) return "/docs/";
-      var href = link.getAttribute("href");
-      var idx = href.indexOf("/docs/");
-      return href.slice(0, idx + "/docs/".length);
+
+      var href = link.getAttribute("href") || "";
+      var index = href.indexOf("/docs/");
+
+      if (index === -1) return "/docs/";
+
+      return href.slice(0, index + "/docs/".length);
     }
 
     var base = getDocsBase();
+
     var topics = [
       { label: "COM", slug: "com" },
       { label: "FAR/AIM", slug: "far" },
@@ -187,22 +359,50 @@ end }}
 
     var topicNav = document.createElement("div");
     topicNav.id = "header-topic-nav";
+    topicNav.setAttribute(
+      "aria-label",
+      "Document topics"
+    );
 
-    topics.forEach(function (t) {
-      var a = document.createElement("a");
-      a.href = base + t.slug + "/";
-      a.textContent = t.label;
-      var segment = "/" + t.slug + "/";
-      if (path.indexOf(base + t.slug + "/") === 0) {
-        a.classList.add("active");
+    topics.forEach(function (topic) {
+      var link = document.createElement("a");
+
+      link.href = base + topic.slug + "/";
+      link.textContent = topic.label;
+
+      var topicPath = base + topic.slug + "/";
+
+      if (
+        path === topicPath ||
+        path.indexOf(topicPath) === 0
+      ) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
       }
-      topicNav.appendChild(a);
+
+      topicNav.appendChild(link);
     });
 
     var divider = document.createElement("div");
     divider.id = "header-topic-divider";
+    divider.setAttribute("aria-hidden", "true");
 
-    nav.insertBefore(topicNav, searchWrapper);
-    nav.insertBefore(divider, searchWrapper);
+    if (searchWrapper) {
+      var insertionTarget = searchWrapper;
+
+      while (
+        insertionTarget.parentElement &&
+        insertionTarget.parentElement !== nav
+      ) {
+        insertionTarget =
+          insertionTarget.parentElement;
+      }
+
+      nav.insertBefore(topicNav, insertionTarget);
+      nav.insertBefore(divider, insertionTarget);
+    } else {
+      nav.appendChild(topicNav);
+      nav.appendChild(divider);
+    }
   });
 </script>

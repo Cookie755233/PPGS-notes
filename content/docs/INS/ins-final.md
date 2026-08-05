@@ -2,6 +2,13 @@
 title: "@INS FINAL"
 ---
 
+## Ohm's Law (V = IR)
+ The current that passes through a wire is proportional to the voltage applied across it, provided the resistance/temperature remain constant. 
+ 
+## Alternating Current
+- Electric current that varies in **strength and direction** over time and whose **direction** reverses cyclically. *(sine wave)*
+- AC can be generated through induction and inverters.
+
 ## Static Discharger
 - Static electricity is created by **friction between aircraft and surrounding air.** Generated on the **surface** of the **non-conductive** materials.
 - Two main parts, **the electrical bonding system** and the **surface static discharging system**. 
@@ -18,15 +25,12 @@ title: "@INS FINAL"
 - **Aircraft** is earthed.
 - **Refueling bowser** is earthed.
 
-## Aircraft bonding
+## Aircraft Bonding
 - Each electrical consumer inside an aircraft is not only connected to a busbar but also to the **fuselage** through an additional cable.
 - Aircraft **BODY** used as a ground connection:
 	- **Reducing cable connections** {{< tip "Wayne: 這樣就不會有很多線" >}}
-	- Reducing electronic interference
-	- Supplying the entire aircraft with *voltage reference* 
-
-## Ohm's Law (V = IR)
- The current that passes through a wire is proportional to the voltage applied across it, provided the resistance/temperature remain constant. 
+	- **Reducing electronic interference**
+	- Supplying the entire aircraft with **voltage reference** 
 
 ## Relay
 - A relay is an **electromagnet** switch that control a higher current with a relatively small current.
@@ -71,7 +75,7 @@ title: "@INS FINAL"
 	- multiple loop commutator could make the voltage more constant.
 - **==Alternator==**
 	- **rotating magnet type generator.**
-	- 4 diodes can form a conductor loop, generating *full wave bridge*
+	- 4 diodes can form a **conductor loop**, generating **full wave bridge**
 	- use **3 coil stator to create stable DC current.**
 ![](/images/alternator.png "")
 
@@ -85,7 +89,7 @@ title: "@INS FINAL"
 
 ## Reverse Current Protection
 ![](/images/reversecurr.png "")
-- When voltage of generator below the voltage of the battery, *current would flow from battery to generator, which is unwanted.* 
+*When voltage of generator below the voltage of the battery, current would flow from battery to generator, which is unwanted.* 
 
 Types of reverse current protection:
 - **Reverse current diode** 
@@ -102,7 +106,7 @@ Types of reverse current protection:
 ## ⭐️ Essential Bus
 ![](/images/essbushide.png "")
 
-{{< details title="> Reveal Essential Bus" closed="true" >}}
+{{< details title="👉🏻 Reveal Essential Bus" closed="true" >}}
 ![](/images/essbus.png "")
 {{< /details >}}
 
@@ -305,7 +309,7 @@ Before entering or crossing any runway, ensure **landing, taxi, position, and st
 ## HSI (不要鐵尺 :D )
 ![](/images/hsihide.png "")
 
-{{< details title="> Reveal HSI" closed="true" >}}
+{{< details title="👉🏻 Reveal HSI" closed="true" >}}
 ![](/images/hsi.png "")
 {{< /details >}}
 
