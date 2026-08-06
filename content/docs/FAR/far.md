@@ -1,7 +1,6 @@
 ---
 title: "@FAR"
 set-special-rule: true
-sticky-list: true
 weight: 1
 ---
 
@@ -82,7 +81,7 @@ Part 91: General Operation and flight rules
 
 ## ⭐️ PPL Limitations
 {{< callout >}}
-**TL;DR**\
+**TL;DR - PPL Limitations**\
 Except incidental, pro rata, search and location operations, charitable or non-profit, flight test, salesman, light-sport category. Read [AC 61-142](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-142.pdf)
 {{</ callout >}}
 
@@ -115,7 +114,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 			- (ii) Privileges of a **commercial pilot certificate** in an aircraft other than a balloon or glider; 
 		- (3) Must hold at least a third-class medical certificate ==(PPL)==
 			- (i) When exercising the **privileges of a private pilot certificate**, recreational pilot certificate, or student pilot certificate, except when operating under the conditions and limitations set forth in [§ 61.113(i)](https://www.ecfr.gov/current/title-14/section-61.113#p-61.113\(i\));
-	- *Q: AFTER EXPIRED, ARE YOU LEGALLY TO FLY?*
+	- *Q: AFTER MEDICAL EXPIRED, ARE YOU LEGALLY TO FLY?*
 	- (c) Operations requiring either a ==medical certificate or U.S. driver's license.==
 		- (1) A person must hold and possess either a medical certificate issued under [part 67 of this chapter](https://www.ecfr.gov/current/title-14/part-67) or a U.S. driver's license when—
 			- (v) Exercising the privileges of a student, recreational or private pilot certificate if the flight is conducted under the conditions and limitations set forth in [§ 61.113(i)](https://www.ecfr.gov/current/title-14/section-61.113#p-61.113\(i\));
@@ -223,10 +222,10 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- (b) Shall ==ensure that maintenance personnel make appropriate entries in the aircraft maintenance records== indicating the aircraft has been approved for return to service;
 
 {{< callout >}}
-**TL;DR - Who can maintain an aircraft?** 
+**TL;DR - Who can MAINTAIN an aircraft?** 
 - Mechanics, Repairmen
-- Pilots at least PPL, but only for **preventive maintenance** under **[Appendix A to Part 43 (c)](<https://www.ecfr.gov/current/title-14/appendix-Appendix%20A%20to%20Part%2043#p-Appendix-A-to-Part-43(c)>)**
-	- Installation of landing gear **tires**; replacement of **hydraulics oil**; safety belts; replacing service batteries, bulbs; etc.
+- **Pilots at least PPL**, but only for **preventive maintenance** under **[Appendix A to Part 43 (c)](<https://www.ecfr.gov/current/title-14/appendix-Appendix%20A%20to%20Part%2043#p-Appendix-A-to-Part-43(c)>)**
+	- *Installation of landing gear ==tires==; replacement of ==hydraulics oil==; safety belts; replacing service batteries, bulbs; etc.*
 {{</ callout >}}
 
 - *Q: CAN WE DO THE MAINTENANCE ON THE AIRCRAFT?*
@@ -454,7 +453,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 - ***§ 91.107 Use of safety belts, shoulder harnesses, and child restraint systems.***
 	- (For *all persons/passengers* on board.)
 - ***FOM 7.3.8 Use of Seat Belts and Shoulder Harness***
-	- All crewmembers shall wear seat belts and shoulder harness from prior to engine start until engine shutdown.
+	- All crewmembers shall wear seat belts and shoulder harness ==from prior to engine start until engine shutdown==.
 
 - *Q: WHEN DO YOU NEED TO WEAR PARACHUTE?*
 - ***§ 91.307 Parachutes and parachuting.***
@@ -544,7 +543,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 
 ### ⭐️ Airworthiness Conflicts
 - ***§ 39.27 What do I do if the airworthiness directive conflicts with the service document on which it is based?***
-	- In some cases an airworthiness directive incorporates by reference a manufacturer's service document. In these cases, the service document becomes part of the airworthiness directive. In some cases the directions in the service document may be modified by the airworthiness directive. If there is a conflict between the service document and the airworthiness directive, you must follow the requirements of the airworthiness directive.
+	- In some cases an airworthiness directive incorporates by reference a manufacturer's service document. In these cases, the service document becomes part of the airworthiness directive. In some cases the directions in the service document may be modified by the airworthiness directive. ==If there is a conflict between the service document and the airworthiness directive, you must follow the requirements of the airworthiness directive.==
 
 ### ⭐️ Who May Check Your Certificates?
 - ***§ 61.3 Requirement for certificates, ratings, privileges, and authorizations.***

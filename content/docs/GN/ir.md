@@ -80,7 +80,6 @@ Which means you may use all the airspace between MEA to 8,000 MSL with no restri
 - **Hold for release**: specifies the *earliest time* you may depart.
 - **Clearance void if ...**: specifies the *latest time* you may depart. If you do not comply, you **must advise ATC** but no longer than **30 minutes after the void time.**
 
-
 ### VFR On Top
 - ATC **cannot** initiate a VFR On Top clearance.
 - ==**It's a IFR clearance**==. 
@@ -92,6 +91,18 @@ Which means you may use all the airspace between MEA to 8,000 MSL with no restri
 VFR Over The Top (VFR OTT) is conducted ==entirely under Visual Flight Rules (VFR)== to maintain legal cloud clearances for the entire flight, meaning you need a clear gap or hole to climb up through and descend back down through.
 {{</ callout >}}
 
+### Approach Clearance
+| Contact Approach                                                                                                                                                                                                | Visual Approach                                                                                                                                                         |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pilot only; ATC cannot initiate**                                                                                                                                                                             | Pilot or ATC                                                                                                                                                            |
+| - Ground visibility at least **1 SM**<br>- At least **1 SM flight visibility throughout the approach**<br>- Remain **clear of clouds**<br>- Pilot is responsible for obstruction clearance and avoiding VFR traffic | - Pilot must have the **airport** or the **preceding aircraft to follow** in sight<br>- ATC authorizes the visual approach in place of the published approach procedure |
+
+### Composite Flight Plan
+![](/images/compositefp.png "")
+
+### Tower Enroute Control Clearance (TEC)
+- **Tower Enroute Control** permits short, low-altitude flight between **terminal areas.**
+- Below **10,000 feet** MSL; Duration less than **30 minutes.**
 
 
 ## Departure (SID/ODP/Vector)
