@@ -1,3 +1,8 @@
+/* Global font change*/
+.content {
+  font-family: 'IBM Plex Serif', serif;
+}
+
 /* =====================
    LIGHT MODE — Catppuccin Latte
    ===================== */

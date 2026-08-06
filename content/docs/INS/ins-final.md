@@ -12,6 +12,7 @@ title: "@INS FINAL"
 ## Static Discharger
 - Static electricity is created by **friction between aircraft and surrounding air.** Generated on the **surface** of the **non-conductive** materials.
 - Two main parts, **the electrical bonding system** and the **surface static discharging system**. 
+- Surfaces are covered with a **special conductive filler** which allows the electricity flows to the static discharger.
 - Static discharger is **low resistance and attracts high current.**
 - Locations in DA40
 	- LH **wing tip**, trailing edge x2
@@ -210,17 +211,16 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 ## Switches per Checklist
 {{< table width="3,1,1,1,1">}}
 
-| Phase                  |   AV   | ESS |     BAT      |   ALT   |
-| ---------------------- |:------:|:---:|:------------:|:-------:|
-| Pre-Flight Inspection  |  OFF   | OFF | **ON → OFF** |   OFF   |
-| Before Starting Engine |  OFF   | OFF |    **ON**    | **OFF** |
-| Starting Engine        |  OFF   | OFF |    **ON**    | **ON**  |
-| Before Taxiing         | **ON** | OFF |    **ON**    | **ON**  |
-| Before Takeoff         | **ON** | OFF |    **ON**    | **ON**  |
-| Engine Shutdown        |  OFF   | OFF |      ON      |   ON    |
-| Parking Check          |  OFF   | OFF |     OFF      |   OFF   |
-| Post-Flight Inspection |  OFF   | OFF |     OFF      |   OFF   |
-
+| Phase                  | ESS |  AV   |   BAT   |  ALT  |
+| ---------------------- |:---:|:-----:|:-------:|:-----:|
+| Pre-Flight Inspection  |  ×  |   ×   | **○→×** |   ×   |
+| Before Starting Engine |  ×  |   ×   |  **○**  |   ×   |
+| Starting Engine        |  ×  |   ×   |  **○**  | **○** |
+| Before Taxiing         |  ×  | **○** |  **○**  | **○** |
+| Before Takeoff         |  ×  | **○** |  **○**  | **○** |
+| Engine Shutdown        |  ×  |   ×   |  **○**  | **○** |
+| Parking Check          |  ×  |   ×   |    ×    |   ×   |
+| Post-Flight Inspection |  ×  |   ×   |    ×    |   ×   |
 {{</ table >}}
 
 

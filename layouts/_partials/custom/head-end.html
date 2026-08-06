@@ -1,9 +1,9 @@
-<!-- FRONTMATTER -->
+<!-- Collapsible Header -->
 {{ if .Params.use_collapsible }}
   {{ partial "collapsable-header.html" . }}
 {{ end }}
 
-<!-- Special rule (FAR/AIM) -->
+<!-- Special rule (basically "truncate list") (FAR/AIM) -->
 {{ if index .Page.Params "set-special-rule" }}
 <style>
   {{ readFile "layouts/_partials/custom/special-rule.css" | safeCSS }}
@@ -13,7 +13,7 @@
 </script>
 {{ end }}
 
-<!-- Sticky list -->
+<!-- Sticky list (should be "show current section") but whatever-->
 {{ if index .Page.Params "sticky-list" }}
 <style>
   {{ readFile "layouts/_partials/custom/sticky-list.css" | safeCSS }}
@@ -32,7 +32,7 @@
 </style>
 {{ end }}
 
-<!-- Custom radio format -->
+<!-- Custom chatbox format (COMM)-->
 {{ if index .Page.Params "chat_radio" }}
 <style>
   {{ readFile "layouts/_partials/custom/chat-radio.css" | safeCSS }}
@@ -50,6 +50,10 @@
   GLOBAL DEFAULT
 ////////////////////
 -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
   {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
@@ -77,332 +81,15 @@
 
 <!-- Auto Shrink Header -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var header = document.querySelector(".hextra-nav-container");
-    if (!header) return;
-
-    var hamburger = document.querySelector(".hextra-hamburger-menu");
-
-    var headerSearchWrapper = header.querySelector(
-      ".hextra-search-wrapper"
-    );
-
-    var headerSearchInput = headerSearchWrapper
-      ? headerSearchWrapper.querySelector(".hextra-search-input")
-      : null;
-
-    var lastScroll = window.scrollY;
-    var accumulatedDown = 0;
-    var accumulatedUp = 0;
-
-    var minScroll = 80;
-    var hideDistance = 24;
-    var showDistance = 8;
-
-    var ticking = false;
-
-    function showHeader() {
-      header.classList.remove("hx-nav-hidden");
-      document.body.classList.remove("hx-nav-collapsed");
-    }
-
-    function isMobileMenuOpen() {
-      return !!(
-        hamburger &&
-        hamburger.getAttribute("aria-expanded") === "true"
-      );
-    }
-
-    function isHeaderSearchResultsVisible() {
-      if (!headerSearchWrapper) return false;
-
-      var results = headerSearchWrapper.querySelector(
-        ".hextra-search-results"
-      );
-
-      if (!results) return false;
-
-      return !results.classList.contains("hx:hidden");
-    }
-
-    function isHeaderSearchFocused() {
-      return !!(
-        headerSearchWrapper &&
-        document.activeElement &&
-        headerSearchWrapper.contains(document.activeElement)
-      );
-    }
-
-    function isHeaderSearchActive() {
-      return (
-        isHeaderSearchFocused() ||
-        isHeaderSearchResultsVisible()
-      );
-    }
-
-    function hideHeader() {
-      if (isHeaderSearchActive() || isMobileMenuOpen()) return;
-
-      header.classList.add("hx-nav-hidden");
-      document.body.classList.add("hx-nav-collapsed");
-    }
-
-    function updateHeaderState() {
-      if (isHeaderSearchActive() || isMobileMenuOpen()) {
-        showHeader();
-      }
-    }
-
-    if (headerSearchWrapper) {
-      headerSearchWrapper.addEventListener("focusin", function () {
-        showHeader();
-      });
-
-      headerSearchWrapper.addEventListener("focusout", function () {
-        setTimeout(updateHeaderState, 0);
-      });
-
-      headerSearchWrapper.addEventListener("input", function () {
-        showHeader();
-        setTimeout(updateHeaderState, 0);
-      });
-
-      headerSearchWrapper.addEventListener("keydown", function () {
-        showHeader();
-        setTimeout(updateHeaderState, 0);
-      });
-
-      headerSearchWrapper.addEventListener("click", function () {
-        showHeader();
-        setTimeout(updateHeaderState, 0);
-      });
-
-      var searchObserver = new MutationObserver(function () {
-        updateHeaderState();
-      });
-
-      searchObserver.observe(headerSearchWrapper, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ["class"]
-      });
-    }
-
-    if (hamburger) {
-      hamburger.addEventListener("click", function () {
-        setTimeout(function () {
-          if (isMobileMenuOpen()) {
-            showHeader();
-          }
-        }, 0);
-      });
-    }
-
-    document.addEventListener("pointerdown", function (event) {
-      if (
-        headerSearchWrapper &&
-        headerSearchWrapper.contains(event.target)
-      ) {
-        return;
-      }
-
-      if (headerSearchInput) {
-        headerSearchInput.blur();
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && headerSearchInput) {
-        headerSearchInput.blur();
-      }
-    });
-
-    function processScroll() {
-      ticking = false;
-
-      var currentScroll = Math.max(window.scrollY, 0);
-      var difference = currentScroll - lastScroll;
-
-      if (isHeaderSearchActive() || isMobileMenuOpen()) {
-        showHeader();
-        lastScroll = currentScroll;
-        accumulatedDown = 0;
-        accumulatedUp = 0;
-        return;
-      }
-
-      if (currentScroll <= minScroll) {
-        showHeader();
-        lastScroll = currentScroll;
-        accumulatedDown = 0;
-        accumulatedUp = 0;
-        return;
-      }
-
-      if (difference > 0) {
-        accumulatedDown += difference;
-        accumulatedUp = 0;
-
-        if (accumulatedDown >= hideDistance) {
-          hideHeader();
-          accumulatedDown = 0;
-        }
-      } else if (difference < 0) {
-        accumulatedUp += Math.abs(difference);
-        accumulatedDown = 0;
-
-        if (accumulatedUp >= showDistance) {
-          showHeader();
-          accumulatedUp = 0;
-        }
-      }
-
-      lastScroll = currentScroll;
-    }
-
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (ticking) return;
-
-        ticking = true;
-        requestAnimationFrame(processScroll);
-      },
-      { passive: true }
-    );
-
-    showHeader();
-  });
+  {{ readFile "layouts/_partials/custom/auto-shrink-header.js" | safeJS }}
 </script>
 
 <!-- Footer fix -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var footer = document.querySelector(".hextra-footer");
-    if (!footer) return;
-
-    function adjustFooter() {
-      footer.style.marginTop = "0px";
-
-      var rect = footer.getBoundingClientRect();
-      var footerTop = rect.top;
-      var footerHeight = rect.height;
-      var availableSpace =
-        window.innerHeight - footerTop - footerHeight;
-
-      if (availableSpace > 0) {
-        footer.style.marginTop = availableSpace + "px";
-      }
-    }
-
-    adjustFooter();
-
-    window.addEventListener("resize", adjustFooter);
-
-    if (document.readyState === "complete") {
-      adjustFooter();
-    } else {
-      window.addEventListener("load", adjustFooter);
-    }
-  });
+  {{ readFile "layouts/_partials/custom/footer-fix.js" | safeJS }}
 </script>
 
 <!-- Header topic navigation -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var nav = document.querySelector(
-      ".hextra-nav-container nav"
-    );
-
-    if (!nav) return;
-
-    if (document.getElementById("header-topic-nav")) return;
-
-    var searchWrapper =
-      nav.querySelector(".hextra-search-wrapper") ||
-      nav.querySelector(".search-wrapper") ||
-      nav.querySelector('[class*="search-wrapper"]') ||
-      nav.querySelector("[data-search]") ||
-      nav.querySelector('button[aria-label*="Search"]') ||
-      nav.querySelector('a[aria-label*="Search"]');
-
-    function getDocsBase() {
-      var link = document.querySelector(
-        '.hextra-sidebar-container a[href*="/docs/"]'
-      );
-
-      if (!link) return "/docs/";
-
-      var href = link.getAttribute("href") || "";
-      var index = href.indexOf("/docs/");
-
-      if (index === -1) return "/docs/";
-
-      return href.slice(0, index + "/docs/".length);
-    }
-
-    var base = getDocsBase();
-
-    var topics = [
-      { label: "COM", slug: "com" },
-      { label: "FAR/AIM", slug: "far" },
-      { label: "JOHNNY", slug: "gn" },
-      { label: "SAM", slug: "ins" },
-      { label: "WAYNE", slug: "mat" },
-      { label: "BECKY", slug: "met" },
-      { label: "DANNY", slug: "perf" },
-      { label: "SEAN", slug: "pof" }
-    ];
-
-    var path = window.location.pathname;
-
-    var topicNav = document.createElement("div");
-    topicNav.id = "header-topic-nav";
-    topicNav.setAttribute(
-      "aria-label",
-      "Document topics"
-    );
-
-    topics.forEach(function (topic) {
-      var link = document.createElement("a");
-
-      link.href = base + topic.slug + "/";
-      link.textContent = topic.label;
-
-      var topicPath = base + topic.slug + "/";
-
-      if (
-        path === topicPath ||
-        path.indexOf(topicPath) === 0
-      ) {
-        link.classList.add("active");
-        link.setAttribute("aria-current", "page");
-      }
-
-      topicNav.appendChild(link);
-    });
-
-    var divider = document.createElement("div");
-    divider.id = "header-topic-divider";
-    divider.setAttribute("aria-hidden", "true");
-
-    if (searchWrapper) {
-      var insertionTarget = searchWrapper;
-
-      while (
-        insertionTarget.parentElement &&
-        insertionTarget.parentElement !== nav
-      ) {
-        insertionTarget =
-          insertionTarget.parentElement;
-      }
-
-      nav.insertBefore(topicNav, insertionTarget);
-      nav.insertBefore(divider, insertionTarget);
-    } else {
-      nav.appendChild(topicNav);
-      nav.appendChild(divider);
-    }
-  });
+  {{ readFile "layouts/_partials/custom/header-nav.js" | safeJS }}
 </script>
