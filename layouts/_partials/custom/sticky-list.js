@@ -54,6 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
   bar.id = "sticky-breadcrumb";
   content.append(bar);
 
+  var mainEl = document.querySelector("main");
+
+  function positionBreadcrumb() {
+    if (!mainEl) return;
+    var rect = mainEl.getBoundingClientRect();
+    bar.style.left = rect.left + "px";
+    bar.style.width = rect.width + "px";
+  }
+
+  positionBreadcrumb();
+  window.addEventListener("resize", positionBreadcrumb, { passive: true });
+
   var currentActive = null;
 
   function extractLabel(li) {
@@ -113,7 +125,13 @@ document.addEventListener("DOMContentLoaded", function () {
     while (el) {
       if (el.tagName === "LI") {
         var label = extractLabel(el);
-        if (label) parts.unshift(label);
+        if (label) {
+          parts.unshift(label);
+          // A "§ X.Y" label is the top of its own section — stop climbing
+          // past the nearest one, even if the DOM has it wrongly nested
+          // inside a sibling section.
+          if (/^§/.test(label)) break;
+        }
       }
       var parentLi = el.parentElement ? el.parentElement.closest("li") : null;
       el = parentLi;

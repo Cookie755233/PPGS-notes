@@ -192,7 +192,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 
 ## Design of external connection with three contacts
 - Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
-- When **aux** is connected, **external power control ==relay== connects the circuit** and powers the Main Bus.
+- When **aux** is connected, **external power control ==relay== connects the circuit** and powers the system.
 ![](/images/extpower.png "")
 
 

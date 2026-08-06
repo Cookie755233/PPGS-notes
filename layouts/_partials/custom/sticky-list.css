@@ -1,19 +1,20 @@
 #sticky-breadcrumb {
-  position: sticky;
+  position: fixed;
+  left: 0;
+  right: 5rem;
   bottom: 0;
-  z-index: 50;
-  background: #fff;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: none;
+  z-index: 40;
+  background: linear-gradient(to right, #fff 0%, #fff 30%, transparent 70%,transparent 100%);
+  border: none;
   padding: 4px 12px;
   font-size: 0.85rem;
   font-weight: 600;
   color: #475569;
 }
 
+
 .dark #sticky-breadcrumb {
-  background: #171717;
-  border-color: #404040;
+  background: linear-gradient(to right, #171717 0%, #171717 30%, transparent 70%, transparent 100%);
   color: #cbd5e1;
 }
 
@@ -33,4 +34,9 @@
 
 .content li .hang-label {
   white-space: nowrap;
+}
+
+
+.content {
+  padding-bottom: 2.5rem;
 }

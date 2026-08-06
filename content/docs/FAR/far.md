@@ -4,6 +4,7 @@ set-special-rule: true
 sticky-list: true
 weight: 1
 ---
+
 {{< callout >}}
 Part 61: Certification: Pilots, flight instructors, and ground instructors\
 Part 91: General Operation and flight rules
@@ -79,8 +80,9 @@ Part 91: General Operation and flight rules
 			- (ii) State that the student's preflight planning and preparation is correct and that the student is prepared to make the flight safely under the known conditions; and
 			- (iii) State that any limitations required by the student's authorized instructor are met.
 
-## PPL Limitations
+## ⭐️ PPL Limitations
 {{< callout >}}
+**TL;DR**\
 Except incidental, pro rata, search and location operations, charitable or non-profit, flight test, salesman, light-sport category. Read [AC 61-142](https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_61-142.pdf)
 {{</ callout >}}
 
@@ -113,6 +115,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 			- (ii) Privileges of a **commercial pilot certificate** in an aircraft other than a balloon or glider; 
 		- (3) Must hold at least a third-class medical certificate ==(PPL)==
 			- (i) When exercising the **privileges of a private pilot certificate**, recreational pilot certificate, or student pilot certificate, except when operating under the conditions and limitations set forth in [§ 61.113(i)](https://www.ecfr.gov/current/title-14/section-61.113#p-61.113\(i\));
+	- *Q: AFTER EXPIRED, ARE YOU LEGALLY TO FLY?*
 	- (c) Operations requiring either a ==medical certificate or U.S. driver's license.==
 		- (1) A person must hold and possess either a medical certificate issued under [part 67 of this chapter](https://www.ecfr.gov/current/title-14/part-67) or a U.S. driver's license when—
 			- (v) Exercising the privileges of a student, recreational or private pilot certificate if the flight is conducted under the conditions and limitations set forth in [§ 61.113(i)](https://www.ecfr.gov/current/title-14/section-61.113#p-61.113\(i\));
@@ -144,13 +147,14 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- (a) Training time and aeronautical experience.  Each person must document and record the following time in a manner acceptable to the Administrator:
 		- (1)==Training and aeronautical experience== used to meet the requirements for a certificate, rating, or flight review of this part.
 		- (2) The aeronautical experience required for meeting the recent flight experience requirements of this part.  {{< tip "recency flight time" >}}
-	- *WHEN CAN YOU LOG PIC TIME*
+	- *WHEN CAN YOU LOG PIC TIME?*
 	- (4) ==A student pilot may log pilot-in-command== time only when the student pilot—
 		- (i) ==Is the sole occupant of the aircraft or is performing the duties of pilot of command of an airship requiring more than one pilot flight crewmember;==
 		- (ii) Has a solo flight endorsement as required under [§ 61.87 of this part](https://www.ecfr.gov/current/title-14/part-61/section-61.87); and
 		- (iii) Is undergoing training for a pilot certificate or rating.
 
-- ***§ 61.31 Type rating requirements, additional training, and authorization requirements.***
+## Type Rating 
+- ***⭐️ § 61.31 Type rating requirements, additional training, and authorization requirements.***
 	- *Q: DO YOU NEED A TYPE RATING?*
 	- (a) ==Type ratings required==.  A person who acts as a pilot in command of any of the following aircraft must hold a type rating for that aircraft:
 		- (1) ==Large aircraft=={{< tip ">12,500 lbs" >}} (except lighter-than-air). 
@@ -161,6 +165,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- *Q: LIMITATIONS ON THE CARRIAGE OF PERSON & OPERATING AS THE PIC*
 	- (c) Aircraft category, class, and type ratings: Limitations on the carriage of persons, or operating for compensation or hire.  Unless a person holds a category, class, and type rating (if a class and type rating is required) that applies to the aircraft, ==that person may not act as pilot in command of an aircraft that is carrying another person, or is operated for compensation or hire==. That person also may not act as pilot in command of that aircraft for compensation or hire. 
 
+## Offensive Involving Alcohol or Drugs
 - ***§ 61.15 Offenses involving alcohol or drugs***
 	- (a)Click to open paragraph tools A conviction for the violation of any Federal or State statute relating to the growing, processing, manufacture, sale, disposition, possession, transportation, or importation of narcotic drugs, marijuana, or depressant or stimulant drugs or substances is grounds for ==up to 1 year== after the date of final conviction.
 	- (c) Motor vehicle action means ... ==while impaired by alcohol or a drug, or while under the influence of alcohol or a drug.==
@@ -168,7 +173,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- (f) Failure to comply with [paragraph (e)](https://www.ecfr.gov/current/title-14/section-61.15#p-61.15\(e\)) of this section is grounds for:
 		- (1) Denial of an application for any certificate, rating, or authorization issued under this part for a period of up to 1 year after the date of the motor vehicle action; 
 
-## Aircraft Category & Class
+## ⭐️ Aircraft Category & Class
 - *Q: WHAT IS AIRCRAFT CATEGORY/CLASS?*
 - ***§ 1.1 General definitions.***
 	- **Category**
@@ -192,28 +197,36 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 {{</ callout >}}
 
 - ***§ 61.56 Flight review.***
-	- (c) Except as provided in [paragraphs (d)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(d\)), [(e)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(e\)), and [(g)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(g\)) of this section, no person may act as pilot in command of an aircraft unless, since the beginning of the ==24th calendar month before the month in which that pilot acts as pilot in command==, that person has—
+	- (c) Except as provided in [paragraphs (d)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(d\)), [(e)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(e\)), and [(g)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(g\)) of this section, no person may act as pilot in command of an aircraft unless, since the beginning of the ==**24th calendar month** before the month in which that pilot acts as pilot in command==, that person has—
 		- (1) Accomplished a flight review given in an aircraft for which that pilot is rated by an authorized instructor and
 		- (2) A logbook endorsed from an authorized instructor ==who gave the review certifying that the person has satisfactorily completed the review.==
 	- (a) Except as provided in paragraphs (b) and (f) of this section, a ==flight review consists of a minimum of 1 hour of flight training and 1 hour of ground training==. The review must include —
 	- (f) A person who ==holds a flight instructor== certificate need not accomplish the one hour of ground training specified in [paragraph (a)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(a\)) of this section if that person has, within the period specified in [paragraph (c)](https://www.ecfr.gov/current/title-14/section-61.56#p-61.56\(c\)) of this section, met one of the following requirements—
 	- (g) A ==student pilot== need not accomplish the flight review required by this section provided the student pilot is undergoing training for a certificate and has a current solo flight endorsement as required under [§ 61.87 of this part](https://www.ecfr.gov/current/title-14/part-61/section-61.87).
 
-- ***§ 61.57 Recent flight experience: Pilot in command***
+### ⭐️ Recent Flight Experience
+- *Q: IF YOU HAVEN'T FLOWN FOR 20 MONTHS SINCE LAST FLIGHT REVIEW, CAN YOU STILL FLY?*
+- ***⭐️ § 61.57 Recent flight experience: Pilot in command***
 	- (a) General experience {{< tip "passengers not allowed, solo flight ok" >}} 
-		- (1) Except as provided in paragraph (e) of this section, ==no person may act as a pilot in command== of an aircraft carrying persons or of an aircraft certificated for more than one pilot flight crewmember unless that person ==has made at least three takeoffs and three landings within the preceding 90 days==, and—
+		- (1) Except as provided in paragraph (e) of this section, ==no person may act as a pilot in command== of an aircraft carrying persons or of an aircraft certificated for more than one pilot flight crewmember unless that person ==has made at least **3 takeoffs and 3 landings** within the preceding **90 days**==, and—
 			- (i) The person acted as the sole manipulator of the flight controls; and
-			- (ii) The required takeoffs and landings were ==performed in an aircraft of the same category, class, and type== (if a class or type rating is required), and, if the aircraft to be flown is an airplane with a tailwheel, the takeoffs and landings ==must have been made to a full stop in an airplane with a tailwheel.==
+			- (ii) The required takeoffs and landings were ==performed in an aircraft of the same category, class, and type== (if a class or type rating is required), and, if the aircraft to be flown is an airplane with a tailwheel, the takeoffs and landings ==must have been made to a **full stop** in an airplane with a tailwheel.==
 		- (2) For the purpose of meeting the requirements of [paragraph (a)(1)](https://www.ecfr.gov/current/title-14/section-61.57#p-61.57\(a\)\(1\)) of this section, a person may act as a pilot in command of an aircraft under day VFR or day IFR, ==provided no persons or property are carried on board the aircraft, other than those necessary for the conduct of the flight.==
 		- (3) The takeoffs and landings required by [paragraph (a)(1)](https://www.ecfr.gov/current/title-14/section-61.57#p-61.57\(a\)\(1\)) of this section ==may be accomplished in a full flight simulator or flight training device== that is—
 	- (b) **Night** takeoff and landing experience. 
 		- (1) Except as provided in paragraph (e) of this section, no person may act as pilot in command of an aircraft carrying persons during the period beginning 1 hour after sunset and ending 1 hour before sunrise, ==unless within the preceding 90 days that person has made at least three takeoffs and three landings to a full stop during the period beginning 1 hour after sunset and ending 1 hour before sunrise==, and—
 
 ## Maintenance
+- ***§ 91.405 Maintenance required.***
+- Each ==owner or operator== of an aircraft—
+	- (a) Shall have that aircraft inspected as prescribed in [subpart E of this part](https://www.ecfr.gov/current/title-14/part-91/subpart-E) and shall between required inspections, except as provided in [paragraph (c)](https://www.ecfr.gov/current/title-14/section-91.405#p-91.405\(c\)) of this section, have discrepancies repaired as prescribed in [part 43 of this chapter](https://www.ecfr.gov/current/title-14/part-43);
+	- (b) Shall ==ensure that maintenance personnel make appropriate entries in the aircraft maintenance records== indicating the aircraft has been approved for return to service;
+
 {{< callout >}}
-**TL;DR - Who can maintain an aircraft?** ?\
-• Mechanics, Repairmen\
-• Pilots at least PPL, but only for **preventive maintenance** under **[Appendix A to Part 43 (c)](<https://www.ecfr.gov/current/title-14/appendix-Appendix%20A%20to%20Part%2043#p-Appendix-A-to-Part-43(c)>)**
+**TL;DR - Who can maintain an aircraft?** 
+- Mechanics, Repairmen
+- Pilots at least PPL, but only for **preventive maintenance** under **[Appendix A to Part 43 (c)](<https://www.ecfr.gov/current/title-14/appendix-Appendix%20A%20to%20Part%2043#p-Appendix-A-to-Part-43(c)>)**
+	- Installation of landing gear **tires**; replacement of **hydraulics oil**; safety belts; replacing service batteries, bulbs; etc.
 {{</ callout >}}
 
 - *Q: CAN WE DO THE MAINTENANCE ON THE AIRCRAFT?*
@@ -221,7 +234,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- (a) Except as provided in this section and § 43.17, no person may maintain, rebuild, alter, or perform preventive maintenance on an aircraft, airframe, aircraft engine, propeller, appliance, or component part to which this part applies. Those items, the performance of which is a major alteration, a major repair, or preventive maintenance, are listed in appendix A.
 	- (b) The holder of a ==mechanic certificate== may perform maintenance, preventive maintenance, and alterations as provided in [Part 65 of this chapter](https://www.ecfr.gov/current/title-14/part-65).
 	- (c) The holder of a ==repairman certificate== may perform maintenance, preventive maintenance, and alterations as provided in [part 65 of this chapter](https://www.ecfr.gov/current/title-14/part-65).
-	- (g) Except for holders of a sport pilot certificate, ==the **holder** of a pilot certificate issued under part 61== may perform *preventive maintenance* on any aircraft owned or operated by that pilot which is not used under [part 121](https://www.ecfr.gov/current/title-14/part-121), [129](https://www.ecfr.gov/current/title-14/part-129), or [135 of this chapter](https://www.ecfr.gov/current/title-14/part-135). The holder of a sport pilot certificate may perform preventive maintenance on an aircraft owned or operated by that pilot and issued a special airworthiness certificate in the light-sport category.
+	- (g) Except for holders of a sport pilot certificate, ==the **holder** of a pilot certificate issued under part 61 may perform *preventive maintenance*== on any aircraft owned or operated by that pilot which is not used under [part 121](https://www.ecfr.gov/current/title-14/part-121), [129](https://www.ecfr.gov/current/title-14/part-129), or [135 of this chapter](https://www.ecfr.gov/current/title-14/part-135). The holder of a sport pilot certificate may perform preventive maintenance on an aircraft owned or operated by that pilot and issued a special airworthiness certificate in the light-sport category.
 - ***§ 65.81 General privileges and limitations. (of mechanics)***
 	- (a) A certificated mechanic may perform or supervise the maintenance, preventive maintenance or alteration of an aircraft or appliance, or a part thereof, for which that person is rated (but excluding major repairs to, and major alterations of, propellers, and any repair to, or alteration of, instruments), and may perform additional duties in accordance with [§§ 65.85](https://www.ecfr.gov/current/title-14/section-65.85), [65.87](https://www.ecfr.gov/current/title-14/section-65.87), and [65.95](https://www.ecfr.gov/current/title-14/section-65.95).{{< tip "人話：證照綁人" >}}
 - ***§ 65.103 Repairman certificate: Privileges and limitations.***
@@ -232,6 +245,7 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (1) It has ==been approved for return to service== by a person authorized under [§ 43.7 of this chapter](https://www.ecfr.gov/current/title-14/section-43.7); and
 		- (2) The maintenance ==record entry== required by [§ 43.9](https://www.ecfr.gov/current/title-14/section-43.9) or [§ 43.11](https://www.ecfr.gov/current/title-14/section-43.11), as applicable, of this chapter has been made.
 
+### ⭐️ Return to Service
 {{< callout >}}
 **TL;DR - Who can RETURN to service an aircraft?** ?\
 • Mechanics, \
@@ -248,13 +262,14 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 - *Q: WHAT DO WE NEED TO HAVE BEFORE RETURN THE SERVICE THE AIRCRAFT?*
 - ***§ 43.5 Approval for return to service after maintenance, preventive maintenance, rebuilding, or alteration***
 	- (a) The maintenance record entry required by [§ 43.9](https://www.ecfr.gov/current/title-14/section-43.9) or [§ 43.11](https://www.ecfr.gov/current/title-14/section-43.11), as appropriate, has been made;
+	- (b) The repair or alteration form *authorized* by or furnished by the Administrator has been executed in a manner prescribed by the Administrator; and
 - ***§ 43.9 Content, form, and disposition of ==maintenance==, preventive maintenance, rebuilding, and alteration records*** 
 	- (a) _Maintenance record entries._ Except as provided in [paragraphs (b)](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(b\)) and [(c)](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(c\)) of this section, each person who maintains, performs preventive maintenance, rebuilds, or alters an aircraft, airframe, aircraft engine, propeller, appliance, or component part shall make an entry in the maintenance record of that equipment containing the following information:
 		- (1) A ==description== (or reference to data acceptable to the Administrator) of work performed.
 		- (2) The ==date of completion== of the work performed.
 		- (3) The ==name of the person== performing the work if other than the person specified in [paragraph (a)(4)](https://www.ecfr.gov/current/title-14/section-43.9#p-43.9\(a\)\(4\)) of this section.
-		- (4) If the work performed on the aircraft, airframe, aircraft engine, propeller, appliance, or component part has been performed satisfactorily, ==the signature, certificate number==, and kind of certificate held by the person approving the work. The signature constitutes the approval for return to service only for the work performed.
-- ***§ 43.11 Content, form, and disposition of records for ==inspections== conducted under parts 91 and 125 and [§ 135.411(a)(1)](https://www.ecfr.gov/current/title-14/section-135.411#p-135.411\(a\)\(1\)) and [135.419 of this chapter](https://www.ecfr.gov/current/title-14/section-135.419).***
+		- (4) If the work performed on the aircraft, airframe, aircraft engine, propeller, appliance, or component part has been performed satisfactorily, ==the **signature**, certificate number==, and kind of certificate held by the person approving the work. The signature constitutes the approval for return to service only for the work performed.
+- ***§ 43.11 Content, form, and disposition of records for ==inspections== conducted under parts 91 and 125 and § 135.411(a)(1) and 135.419 of this chapter***
 	- (a) _Maintenance record entries._ The person approving or disapproving for return to service an aircraft, airframe, aircraft engine, propeller, appliance, or component part after any inspection performed in accordance with part 91, 125, [§ 135.411(a)(1)](https://www.ecfr.gov/current/title-14/section-135.411#p-135.411\(a\)\(1\)), or [§ 135.419](https://www.ecfr.gov/current/title-14/section-135.419) shall make an entry in the maintenance record of that equipment containing the following information:
 		- (1) The ==type of inspection== and a brief description of the extent of the inspection.
 		- (2) The ==date of the inspection== and aircraft total time in service.
@@ -337,14 +352,15 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 {{</ callout >}}
 
 
-
 ## Minimum Safe Altitude
+- *Q: HOW LOW CAN YOU FLY?*
+- (JOHNNY IS WATCHING YOU 👀)
 - ***§ 91.119 Minimum safe altitudes: General.***
-- Except when necessary for takeoff or landing, no person may operate an aircraft below the following altitudes:
-	- (a) _Anywhere._ An altitude allowing, if a power unit fails, an emergency landing without undue hazard to persons or property on the surface.
-	- (b) _Over congested areas._ Over any congested area of a city, town, or settlement, or over any open air assembly of persons, an altitude of 1,000 feet above the highest obstacle within a horizontal radius of 2,000 feet of the aircraft.
-	- (c) _Over other than congested areas._ An altitude of 500 feet above the surface, except over open water or sparsely populated areas. In those cases, the aircraft may not be operated closer than 500 feet to any person, vessel, vehicle, or structure.
-- ***FTA FOM § 6.3.7 Minimum Maneuver Altitudes***
+	- Except when necessary for takeoff or landing, no person may operate an aircraft below the following altitudes:
+		- (a) **==Anywhere==** {{< tip "看到就選一下啦" >}}. An altitude allowing, *if a power unit fails*, an emergency landing without undue hazard to persons or property on the surface.
+		- (b) _Over congested areas._ Over any congested area of a city, town, or settlement, or over any open air assembly of persons, an altitude of 1,000 feet above the highest obstacle within a horizontal radius of 2,000 feet of the aircraft.
+		- (c) _Over other than congested areas._ An altitude of 500 feet above the surface, except over open water or sparsely populated areas. In those cases, the aircraft may not be operated closer than 500 feet to any person, vessel, vehicle, or structure.
+- ***FTA FOM 6.3.7 Minimum Maneuver Altitudes***
 	- a. **Stalls and Slow flight**: execution and recovery shall be accomplished at or above 3,000 feet AGL.
 	- b. **Steep turns**: at or above 2,000 feet AGL.
 	- c. **Simulated emergency landing**
@@ -355,7 +371,49 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- e. **Emergency Descent**: recovery at or above 1500 feet AGL.
 
 
+## ⭐️ Immediate Notification to NTSB
+- *Q: DIFFERENCE BETWEEN INCIDENT AND ACCIDENT*
+- ***§ 830.2 Definitions***
+	- _Aircraft accident_ means an occurrence associated with the operation of an aircraft which takes place between the time any person boards the aircraft with the intention of flight and all such persons have disembarked, and in which any person suffers death or serious injury, or in which the aircraft receives substantial damage. For purposes of this part, the definition of “aircraft accident” includes “unmanned aircraft accident,” as defined herein.
+	- _Incident_ means an occurrence other than an accident, associated with the operation of an aircraft, which affects or could affect the safety of operations.
+- *Q: WHEN TO IMMINENTLY REPORT TO NTSB?*
+- ***§ 830.5 Immediate notification.***
+	- The operator of any civil aircraft, or any public aircraft not operated by the Armed Forces or an intelligence agency of the United States, or any foreign aircraft shall immediately, and by the most expeditious means available, notify the nearest ==National Transportation Safety Board (NTSB)== office, when:
+		- (a) An aircraft accident or any of the following listed serious incidents occur:
+			- (1) ==Flight control system malfunction or failure==;
+			- (2) ==Inability of any required flight crewmember== to perform normal flight duties as a result of injury or illness;
+			- (3) Failure of any internal turbine engine component that results in the ==escape of debris== other than out the exhaust path;
+			- (4) In-flight ==fire==;
+			- (5) Aircraft ==collision== in flight;
+			- (6) ==Damage to property==, other than the aircraft, estimated to exceed ==$25,000== for repair (including materials and labor) or fair market value in the event of total loss, whichever is less.
+			- (7) For large multiengine aircraft (more than 12,500 pounds maximum certificated takeoff weight):
+- *Q: WHEN/WHERE TO FILE THE REPORT?*
+	- ***§ 830.15 Reports and statements to be filed.***
+		- (a) _Reports._ The operator of a civil, public (as specified in [§ 830.5](https://www.ecfr.gov/current/title-49/section-830.5)), or foreign aircraft shall file a report on Board Form 6120. 1⁄2 (OMB No. 3147-0001)[[2](#830.15-footnote-2)] ==within 10 days after an accident==, or after ==7 days if an overdue aircraft is still missing==. A report on an incident for which immediate notification is required by [§ 830.5(a)](https://www.ecfr.gov/current/title-49/section-830.5#p-830.5\(a\)) shall be filed only as requested by an authorized representative of the Board.
+		- (b) _Crewmember statement._ Each crewmember, if physically able at the time the report is submitted, shall attach a statement setting forth the facts, conditions, and circumstances relating to the accident or incident as they appear to him. If the crewmember is incapacitated, he shall submit the statement as soon as he is physically able.
+		- (c) _Where to file the reports._ The operator of an aircraft shall file any report with the field office of the Board nearest the accident or incident.
+
+## ⭐️ Alcohol or Drugs
+- ***§ 91.17 Alcohol or drugs.***
+	- (a) No person may act or attempt to act as a crewmember of a civil aircraft—
+		- (1) Within ==8 hours== after the consumption of any alcoholic beverage;
+		- (2) While under the influence of alcohol;
+		- (3) While using any drug that affects the person's faculties in any way contrary to safety; or
+		- (4) While having an alcohol ==concentration of 0.04 or greater== in a blood or breath specimen. Alcohol concentration means grams of alcohol per deciliter of blood or grams of alcohol per 210 liters of breath.
+- ***AFM 3.5.2 Consumption of Alcohol***
+	- All pilots:
+		- a. Must not consume any alcohol within ==twelve (12) hours== prior to commencing any flight duty. _NOTE: Flight duty is deemed to commence at reporting time for a flight or series of flights._
+		- b. ==Must not consume any alcohol in a public place== whilst wearing an EVA FTA issued uniform which includes the wearing of rank and insignia.
+
+
 ## Others
+### ⭐️ Night 
+- *Q: WHAT IS NIGHT*
+- ***Night Definition (§ 1.1)***
+	- The hours between ==the end of evening civil twilight and the beginning of morning civil twilight== or such other period between sunset and sunrise as may be specified by the appropriate authority.
+- ***§ 91.209 Aircraft lights***
+	- During the period from sunset to sunrise, operate an aircraft unless it has lighted position lights;
+
 ### Change of Address
 - *Q: SHOULD YOU NOTIFY FAA WHEN CHANGING ADDRESS?*
 - ***§ 61.60 Change of address.***
@@ -365,12 +423,15 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 - *Q: WHEN CAN YOU DEVIATE FROM THE LAW?*
 - ***§ 91.123 Compliance with ATC clearances and instructions.***
 	- (a) When an ATC clearance has been obtained, no pilot in command may deviate from that clearance unless an amended clearance is obtained, an emergency exists, or the deviation is in response to a traffic alert and collision avoidance system resolution advisory. However, except in Class A airspace, a pilot may cancel an IFR flight plan if the operation is being conducted in VFR weather conditions. When a pilot is uncertain of an ATC clearance, that pilot shall immediately request clarification from ATC.
--***§ 91.3 Responsibility and authority of the pilot in command.***
+	- (c) Each pilot in command who, in an ==emergency, or in response to a traffic alert and collision avoidance system resolution advisory, deviates from an ATC== clearance or instruction ==shall notify ATC== of that deviation as soon as possible.
+	- (d) Each pilot in command who (though not deviating from a rule of this subpart) is given priority by ATC in an emergency, shall ==submit a detailed report== of that emergency ==within **48** hours to the manager of that ATC facility==, if requested by ATC.
+- ***§ 91.3 Responsibility and authority of the pilot in command.***
 	- (b) In an in-flight ==emergency== requiring immediate action, the pilot in command may deviate from any rule of this part to the extent required to meet that emergency.
 
-### Right of Way
+### ⭐️ Right of Way
 - *Q: RIGHT OF WAY?*
 - ***§ 91.113 Right-of-way rules: Except water operations.***
+- (JOHNNY IS WATCHING YOU 👀)
 
 ### Oxygen
 - *Q: WHEN DO YOU NEED OXYGEN?*
@@ -384,27 +445,33 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 ### Seat Belts & Safety Harnesses
 - *Q: WHEN DO YOU NEED TO WEAR SEAT BELT*
 - ***§ 91.105 Flight CREWMEMEBERS at stations.***
-	- (a) During ==takeoff and landing, and while en route==, each required flight crewmember shall—
+	- (a) During ==takeoff and landing, and while en route==, each required flight _**ertificates: Requirement and**_crewmember shall—
 		- (1) Be at the crewmember station unless the absence is necessary to perform duties in connection with the operation of the aircraft or in connection with physiological needs; and
 		- (2) Keep the safety belt fastened while at the crewmember station.
 	- (b) Each required flight crewmember of a U.S.-registered civil aircraft shall, during takeoff and landing, keep his or her shoulder harness fastened while at his or her assigned duty station. This paragraph does not apply if—
 		- (1) The seat at the crewmember's station is not equipped with a shoulder harness; or
 		- (2) The crewmember would be unable to perform required duties with the shoulder harness fastened.
 - ***§ 91.107 Use of safety belts, shoulder harnesses, and child restraint systems.***
-	- (For *all persons* on board.)
+	- (For *all persons/passengers* on board.)
 - ***FOM 7.3.8 Use of Seat Belts and Shoulder Harness***
 	- All crewmembers shall wear seat belts and shoulder harness from prior to engine start until engine shutdown.
 
 - *Q: WHEN DO YOU NEED TO WEAR PARACHUTE?*
 - ***§ 91.307 Parachutes and parachuting.***
+- (a) No pilot of a civil aircraft may allow a parachute that is available for emergency use to be carried in that aircraft unless it is an approved type and has been packed by a certificated and appropriately rated parachute rigger—
+	- (1) Within the preceding ==180 days==, if its canopy, shrouds, and harness are composed exclusively of nylon, rayon, or other similar synthetic fiber or materials that are substantially resistant to damage from mold, mildew, or other fungi and other rotting agents propagated in a moist environment; or
+	- (2) Within the preceding 60 days, if any part of the parachute is composed of silk, pongee, or other natural fiber or materials not specified in [paragraph (a)(1)](https://www.ecfr.gov/current/title-14/section-91.307#p-91.307\(a\)\(1\)) of this section.
+	- (c) Unless each occupant of the aircraft is wearing an approved parachute, no pilot of a civil aircraft carrying any person (other than a crewmember) may execute any intentional maneuver that exceeds—
+		- (1) A ==bank of 60 degrees== relative to the horizon; or
+		- (2) A ==nose-up or nose-down attitude of 30 degrees== relative to the horizon.
 
 ### ATC Light Signals
 - *Q: WHAT IF RADIO FAILS AND DOESN’T KNOW IF CLEARED TO LAND?*
 - ***§ 91.125 ATC Light Signals***
 	- ![](/images/atclight.png "")
 
-### VFR Minimum Cruising Altitude
-- *Q: CAN YOU FLY ANY RANDOM ALTITUDE?*
+### ⭐️ VFR Minimum Cruising Altitude
+- *Q: CAN YOU FLY ANY RANDOM ALTITUDE DURING CROSS COUNTRY?*
 - ***§ 91.159 VFR Cruising Altitude or Flight Level***
 	- Except while holding in a holding pattern of 2 minutes or less, or while turning, each person operating an aircraft under VFR in level cruising flight more than 3,000 feet above the surface shall maintain the appropriate altitude or flight level prescribed below, unless otherwise authorized by ATC:
 	- (a) When operating below 18,000 feet MSL and—
@@ -412,11 +479,10 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (2) On a magnetic course of ==180 degrees through 359 degrees==, any ==even thousand foot MSL altitude + 500 feet== (such as 4,500, 6,500, or 8,500).
 	- (b) When operating ==above 18,000 feet MSL, maintain the altitude or flight level assigned by ATC.==
 
-
-### Dropping Objects
+### ⭐️ Dropping Objects
+- *Q: CAN YOU TRHOW OUT GARBAGE?*
 - ***§ 91.15 Dropping objects.***
 - No pilot in command of a civil aircraft may allow any object to be dropped from that aircraft in flight that creates a hazard to persons or property. *However, this section does not prohibit the dropping of any object if reasonable precautions are taken to avoid injury or damage to persons or property.*
-
 
 ### VFR Fuel Requirements
 - ***§ 91.151 Fuel requirements for flight in VFR conditions.***
@@ -424,11 +490,12 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (1) During the ==day, to fly after that for at least 30 minutes==; or
 		- (2) At ==night, to fly after that for at least 45 minutes.==
 	- (b) No person may begin a flight in a rotorcraft under VFR conditions unless (considering wind and forecast weather conditions) there is enough fuel to fly to the first point of ==intended landing== and, assuming normal cruising speed, to ==fly after that for at least 20 minutes.==
-- ***FOM § 6.4 Fuel Policy***
+- ***FOM 6.4 Fuel Policy***
 	- ![](/images/ftafuelpolicy.png "")
 
 
 ### Altimeter Settings
+- *Q: HOW DO WE  SET OUT ALTIMETER*
 - ***§ 91.121 Altimeter settings.***
 	- (a) Each person operating an aircraft shall maintain the cruising altitude or flight level of that aircraft, as the case may be, by reference to an altimeter that is set, when operating—
 		- (1) Below 18,000 feet MSL, to—
@@ -438,17 +505,51 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (2) At or above 18,000 feet MSL, to 29.92″ Hg.
 
 
-### Airspeed Limitations
+### ⭐️ Airspeed Limitations
 - ***§ 91.117 Aircraft speed.***
-- (a) Unless otherwise authorized by the Administrator, no person may operate an aircraft ==below 10,000 feet MSL== at an indicated airspeed of more than ==250 knots== (288 m.p.h.).
-- (b) Unless otherwise authorized or required by ATC, no person may operate an aircraft ==at or below 2,500 feet above the surface within 4 nautical miles of the primary airport== of a Class C or Class D airspace area at an indicated airspeed of more than ==200 knots== (230 mph.). This [paragraph (b)](https://www.ecfr.gov/current/title-14/section-91.117#p-91.117\(b\)) does not apply to any operations within a Class B airspace area. Such operations shall comply with [paragraph (a)](https://www.ecfr.gov/current/title-14/section-91.117#p-91.117\(a\)) of this section.
-- (c) No person may operate an aircraft in the airspace underlying a Class B airspace area designated for an airport or in a ==VFR corridor== designated through such a Class B airspace area, at an indicated airspeed of more than ==200 knots== (230 mph).
+	- (a) Unless otherwise authorized by the Administrator, no person may operate an aircraft ==below 10,000 feet MSL== at an indicated airspeed of more than ==250 knots== (288 m.p.h.).
+	- (b) Unless otherwise authorized or required by ATC, no person may operate an aircraft ==at or below 2,500 feet above the surface within 4 nautical miles of the primary airport== of a Class C or Class D airspace area at an indicated airspeed of more than ==200 knots== (230 mph.). This [paragraph (b)](https://www.ecfr.gov/current/title-14/section-91.117#p-91.117\(b\)) does not apply to any operations within a Class B airspace area. Such operations shall comply with [paragraph (a)](https://www.ecfr.gov/current/title-14/section-91.117#p-91.117\(a\)) of this section.
+	- (c) No person may operate an aircraft in the airspace underlying a Class B airspace area designated for an airport or in a ==VFR corridor== designated through such a Class B airspace area, at an indicated airspeed of more than ==200 knots== (230 mph).
 
-## Terminology and Definitions
-- *Q: WHAT IS NIGHT*
-- ***Night Definition (§ 1.1)***
-	- The hours between ==the end of evening civil twilight and the beginning of morning civil twilight== or such other period between sunset and sunrise as may be specified by the appropriate authority.
-- ***§ 91.209 Aircraft lights***
-	- During the period from sunset to sunrise, operate an aircraft unless it has lighted position lights;
+### ⭐️ Operating Near Other Aircraft
+- *Q: CAN WE FLY NEAR OTHER AIRCRAFT?*
+- ***§ 91.111 Operating near other aircraft.***
+	- (a) No person may operate an aircraft so close to another aircraft as to create a collision hazard.
+	- (b) No person may operate an aircraft in formation flight except by arrangement with the pilot in command of each aircraft in the formation.
+	- (c) No person may operate an aircraft, carrying passengers for hire, in formation flight.
 
+### Aerobatic Flight
+- ***§ 91.303 Aerobatic flight.*** 
+	- ==No== person may operate an aircraft in aerobatic flight—
+		- (a) Over any ==congested area== of a city, town, or settlement;
+		- (b) Over an open air assembly of persons;
+		- (c) Within the ==lateral boundaries of the surface areas of Class B, Class C, Class D, or Class E== airspace designated for an airport;
+		- (d) Within ==4 nautical miles of the center line of any Federal airway==;
+		- (e) ==Below an altitude of 1,500 feet== above the surface; or
+		- (f) When flight ==visibility is less than 3 statute== miles.
 
+### ⭐️ VFR Minimums
+- *Q: HOW DO YOU KNOW THE WEATHER IS GOOD ENOUGH TO FLY?*
+- ***§ 91.155 Basic VFR weather minimums.***
+	- (JOHNNY IS WATCHING YOU 👀)
+- ***§ 91.157 Special VFR weather minimums.***
+	- (b) Special VFR operations may only be conducted—
+		- (1) With an ATC ==clearance==;
+		- (2) ==Clear of clouds==;
+		- (3) Except for helicopters, when flight ==visibility is at least 1 statute mile==; and
+		- (4) Except for helicopters, ==between sunrise and sunset== (or in Alaska, when the sun is 6 degrees or less below the horizon)
+- ***FOM 6.3.2/6.3.3 VFR Weather Minimums***
+	- Solo: VIS > 5 sm, CIG: 2,000'; Dual: VIS > 3 sm, CIG: 1,500'
+	- Solo cross-country: VIS > 5 sm, CIG  > 5,000'; Dual: VIS > 3 sm, CIG > 3 sm
+
+### ⭐️ Airworthiness Conflicts
+- ***§ 39.27 What do I do if the airworthiness directive conflicts with the service document on which it is based?***
+	- In some cases an airworthiness directive incorporates by reference a manufacturer's service document. In these cases, the service document becomes part of the airworthiness directive. In some cases the directions in the service document may be modified by the airworthiness directive. If there is a conflict between the service document and the airworthiness directive, you must follow the requirements of the airworthiness directive.
+
+### ⭐️ Who May Check Your Certificates?
+- ***§ 61.3 Requirement for certificates, ratings, privileges, and authorizations.***
+	- (l) _Inspection of certificate._ Each person who holds an airman certificate, temporary document in accordance with [paragraph (a)(1)(v)](https://www.ecfr.gov/current/title-14/section-61.3#p-61.3\(a\)\(1\)\(v\)) or [(vi)](https://www.ecfr.gov/current/title-14/section-61.3#p-61.3\(a\)\(1\)\(vi\)) of this section, medical certificate, documents establishing alternative medical qualification under [part 68 of this chapter](https://www.ecfr.gov/current/title-14/part-68), authorization, or license required by this part must present it and their photo identification as described in [paragraph (a)(2)](https://www.ecfr.gov/current/title-14/section-61.3#p-61.3\(a\)\(2\)) of this section for inspection upon a request from:
+		- (1) The Administrator;
+		- (2) An authorized representative of the National Transportation Safety Board;
+		- (3) ==Any Federal, State, or local law enforcement officer==; or
+		- (4) An authorized representative of the Transportation Security Administration.

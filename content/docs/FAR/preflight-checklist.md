@@ -23,7 +23,7 @@ weight: 2
 
 ## A - AIRCRAFT
 ### Required Documents & Manuals (A.R.R.O.W + G)
-| Letter | Document / Manual                 | Location & Details                               | Reference                   |
+| Letter | Document / Manual                 | Location & Details                               | Regulation                  |
 |:------:|:--------------------------------- |:------------------------------------------------ |:--------------------------- |
 | **A**  | **A**irworthiness certificate     | Must be visible in the cabin/cockpit             | ==§91.203(b)==              |
 | **R**  | **R**egistration certificate      | Initial registration is valid for 7 years        | ==§91.203(a)== / ==§47.40== |
@@ -33,37 +33,37 @@ weight: 2
 | **+G** | **G**1000 cockpit reference guide | Supplemental requirement                         | ==G1000 STC Section 2==     |
 
 ### Maintenance & Inspections (A.V.1.A.T.E.S)
-| Letter | Inspection Type                                   | Required Frequency                                | Reference                |
-|:------:|:------------------------------------------------- |:------------------------------------------------- |:------------------------ |
-| **A**  | **A**nnual Inspection                             | Every 12 calendar months                          | ==§91.409(a)==           |
-| **V**  | **V**OR check                                     | Every 30 days (for IFR operations)                | ==§91.171==              |
-| **1**  | **1**00-hour Inspection                           | Every 100 hours (if carrying passengers for hire) | ==§91.409(b)==           |
-| **A**  | **A**irworthiness Directives & life-limited parts | As specified in the directive / compliance record | ==§91.403(a)== / ==§39== |
-| **T**  | **T**ransponder check                             | Every 24 calendar months                          | ==§91.413(a)==           |
-| **E**  | **E**LT inspection & battery                      | Every 12 calendar months / 1 hour cumulative use  | ==§91.207==              |
-| **S**  | **S**tatic & pitot system                         | Every 24 calendar months                          | ==§91.411==              |
+| Letter | Inspection Type                                   | Required Frequency                                                         | Regulation               |
+| :----: | :------------------------------------------------ | :------------------------------------------------------------------------- | :----------------------- |
+| **A**  | **A**nnual Inspection                             | Every 12 calendar months                                                   | ==§91.409(a)==           |
+| **V**  | **V**OR check                                     | Every 30 days (for IFR operations)                                         | ==§91.171==              |
+| **1**  | **1**00-hour Inspection                           | Every 100 hours (if carrying passengers for hire)                          | ==§91.409(b)==           |
+| **A**  | **A**irworthiness Directives & life-limited parts | **Owner or operator**; <br>As specified in the directive/compliance record | ==§91.403(a)== / ==§39== |
+| **T**  | **T**ransponder check                             | Every 24 calendar months                                                   | ==§91.413(a)==           |
+| **E**  | **E**LT inspection & battery                      | Every 12 calendar months / 1 hour cumulative use                           | ==§91.207==              |
+| **S**  | **S**tatic & pitot system                         | Every 24 calendar months                                                   | ==§91.411==              |
 
 ### Required Instruments & Equipment (VFR)
-| Mode          | Acronym                | Letter | Required Equipment                                         | Regulation                      |
-|:------------- |:---------------------- |:------:|:---------------------------------------------------------- |:------------------------------- |
-| **VFR DAY**   | **A TOMATO<br>FLAMES** | **A**  | Altimeter                                                  | ==§91.205(b)==                  |
-|               |                        | **T**  | Tachometer                                                 |                                 |
-|               |                        | **O**  | Oil pressure gauge                                         |                                 |
-|               |                        | **M**  | Manifold pressure gauge                                    |                                 |
-|               |                        | **A**  | Airspeed indicator                                         |                                 |
-|               |                        | **T**  | Temperature gauge (for liquid-cooled engines)              |                                 |
-|               |                        | **O**  | Oil temperature gauge                                      |                                 |
-|               |                        | **F**  | Fuel quantity gauge                                        |                                 |
-|               |                        | **L**  | Landing gear position indicator                            |                                 |
-|               |                        | **A**  | Anti-collision light (for small civil airplanes)           |                                 |
-|               |                        | **M**  | Magnetic compass                                           |                                 |
-|               |                        | **E**  | ELT                                                        |                                 |
-|               |                        | **S**  | Seat belts and shoulder harnesses                          | [==§91.105==](/docs/far/safety) |
-| **VFR NIGHT** | **F.L.A.P.S.**         | **F**  | Fuses (one spare set, or 3 spares of each kind)            | ==§91.205(c)==                  |
-|               |                        | **L**  | Landing light (if operated for hire)                       |                                 |
-|               |                        | **A**  | Anti-collision lights (all U.S.-registered civil aircraft) |                                 |
-|               |                        | **P**  | Position lights (navigation lights)                        |                                 |
-|               |                        | **S**  | Source of electrical power                                 |                                 |
+| Mode          | Acronym                | Letter | Required Equipment                                         | Regulation     |
+|:------------- |:---------------------- |:------:|:---------------------------------------------------------- |:-------------- |
+| **VFR DAY**   | **A TOMATO<br>FLAMES** | **A**  | Altimeter                                                  | ==§91.205(b)== |
+|               |                        | **T**  | Tachometer                                                 |                |
+|               |                        | **O**  | Oil pressure gauge                                         |                |
+|               |                        | **M**  | Manifold pressure gauge                                    |                |
+|               |                        | **A**  | Airspeed indicator                                         |                |
+|               |                        | **T**  | Temperature gauge (for liquid-cooled engines)              |                |
+|               |                        | **O**  | Oil temperature gauge                                      |                |
+|               |                        | **F**  | Fuel quantity gauge                                        |                |
+|               |                        | **L**  | Landing gear position indicator                            |                |
+|               |                        | **A**  | Anti-collision light (for small civil airplanes)           |                |
+|               |                        | **M**  | Magnetic compass                                           |                |
+|               |                        | **E**  | ELT                                                        |                |
+|               |                        | **S**  | Seat belts and shoulder harnesses                          | ==§91.105==    | 
+| **VFR NIGHT** | **F.L.A.P.S.**         | **F**  | Fuses (one spare set, or 3 spares of each kind)            | ==§91.205(c)== |
+|               |                        | **L**  | Landing light (if operated for hire)                       |                |
+|               |                        | **A**  | Anti-collision lights (all U.S.-registered civil aircraft) |                |
+|               |                        | **P**  | Position lights (navigation lights)                        |                |
+|               |                        | **S**  | Source of electrical power                                 |                |
 
 ## V - enVironment
 ### Preflight Action (N.W.K.R.A.F.T)
@@ -74,7 +74,7 @@ weight: 2
 | **K**  | **K**nown ATC delays              | Traffic delays advised by ATC              |             |
 | **R**  | **R**unway lengths                | For all airports of intended use           |             |
 | **A**  | **A**lternate airports            | Available options if destination is missed |             |
-| **F**  | **F**uel requirements             | Calculated minimum fuel required           |             |
+| **F**  | **F**uel requirements             | Calculated minimum fuel required           | ==§91.151== |
 | **T**  | **T**akeoff and landing distances | Performance data calculation               |             |
 
 
