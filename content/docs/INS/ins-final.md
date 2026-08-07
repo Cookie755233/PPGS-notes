@@ -77,7 +77,7 @@ title: "@INS FINAL"
 - **==Alternator==**
 	- **rotating magnet type generator.**
 	- 4 diodes can form a **conductor loop**, generating **full wave bridge**
-	- use **3 coil stator to create stable DC current.**
+	- use **3 coil stator** to create stable DC current.
 ![](/images/alternator.png "")
 
 ## Voltage Regulator
@@ -191,7 +191,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 ![](/images/inverter.png "")
 
 
-## Design of external connection with three contacts
+## Design of External Connection with Three Contacts
 - Consisting of a **large negative pin**, a **large positive pin**, and an **auxiliary positive control pin**
 - When **aux** is connected, **external power control ==relay== connects the circuit** and powers the system.
 ![](/images/extpower.png "")
@@ -207,6 +207,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 | Speed varies with load                    | Constant **RPM** regardless of load  |
 | **Must never be operated without a load** | Can be operated without a load       |
 | Typical use: **Starter**                  | Typical use: **Cooling fans, pumps** |
+
 
 ## Switches per Checklist
 {{< table width="3,1,1,1,1">}}
@@ -232,6 +233,7 @@ $$\frac{V_{input}}{V_{output}} = \frac{N_{input}}{N_{output}} = \frac{I_{input}}
 2. **Do not turn on alternator below 1,000 RPM.**
 3. CB check should be done properly (visual and *feel* them with hands)
 4. Regular engine page **check every 10 minutes.**
+
 
 ## Lights +
 | Aircraft Lights | Timing                                                                                                                                                                                                                               |
