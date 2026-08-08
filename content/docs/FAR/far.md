@@ -1,6 +1,7 @@
 ---
 title: "@FAR"
-set-special-rule: true
+special-list: true
+show-curr-sect: true
 weight: 1
 ---
 
@@ -209,11 +210,11 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- (a) General experience {{< tip "passengers not allowed, solo flight ok" >}} 
 		- (1) Except as provided in paragraph (e) of this section, ==no person may act as a pilot in command== of an aircraft carrying persons or of an aircraft certificated for more than one pilot flight crewmember unless that person ==has made at least **3 takeoffs and 3 landings** within the preceding **90 days**==, and—
 			- (i) The person acted as the sole manipulator of the flight controls; and
-			- (ii) The required takeoffs and landings were ==performed in an aircraft of the same category, class, and type== (if a class or type rating is required), and, if the aircraft to be flown is an airplane with a tailwheel, the takeoffs and landings ==must have been made to a **full stop** in an airplane with a tailwheel.==
+			- (ii) The required takeoffs and landings were ==performed in an aircraft of the **same category, class, and type**== (if a class or type rating is required), and, if the aircraft to be flown is an airplane with a tailwheel, the takeoffs and landings ==must have been made to a **full stop** in an airplane with a tailwheel.==
 		- (2) For the purpose of meeting the requirements of [paragraph (a)(1)](https://www.ecfr.gov/current/title-14/section-61.57#p-61.57\(a\)\(1\)) of this section, a person may act as a pilot in command of an aircraft under day VFR or day IFR, ==provided no persons or property are carried on board the aircraft, other than those necessary for the conduct of the flight.==
 		- (3) The takeoffs and landings required by [paragraph (a)(1)](https://www.ecfr.gov/current/title-14/section-61.57#p-61.57\(a\)\(1\)) of this section ==may be accomplished in a full flight simulator or flight training device== that is—
 	- (b) **Night** takeoff and landing experience. 
-		- (1) Except as provided in paragraph (e) of this section, no person may act as pilot in command of an aircraft carrying persons during the period beginning 1 hour after sunset and ending 1 hour before sunrise, ==unless within the preceding 90 days that person has made at least three takeoffs and three landings to a full stop during the period beginning 1 hour after sunset and ending 1 hour before sunrise==, and—
+		- (1) Except as provided in paragraph (e) of this section, no person may act as pilot in command of an aircraft carrying persons during the period beginning 1 hour after sunset and ending 1 hour before sunrise, ==unless within the preceding 90 days that person has made at least three takeoffs and three landings to a full stop during the period beginning **1 hour after sunset and ending 1 hour before sunrise**==, and—
 
 ## Maintenance
 - ***§ 91.405 Maintenance required.***
@@ -418,6 +419,12 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 - ***§ 61.60 Change of address.***
 	- The holder of a pilot, flight instructor, or ground instructor certificate who has made a change in permanent mailing address may not, ==after 30 days from that date==, exercise the privileges of the certificate unless the holder has notified in writing the FAA, Airman Certification Branch, P.O. Box 25082, Oklahoma City, OK 73125, of the new permanent mailing address, or if the permanent mailing address includes a post office box number, then the holder's current residential address.
 
+### IFR Flight Plan
+- ***§ 91.173 ATC clearance and flight plan required.***
+- No person may operate an aircraft in ==controlled airspace under IFR== unless that person has—
+	- (a) ==Filed an IFR flight plan==; and
+	- (b) Received an appropriate ATC ==clearance==.
+
 ### Deviation
 - *Q: WHEN CAN YOU DEVIATE FROM THE LAW?*
 - ***§ 91.123 Compliance with ATC clearances and instructions.***
@@ -438,16 +445,16 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 	- (a) General.  No person may operate a civil aircraft of U.S. registry—
 		- (1) At cabin pressure altitudes above **12,500 feet (MSL) up to and including 14,000 feet (MSL)** unless the required minimum flight crew is provided with and uses supplemental oxygen for that part of the flight at those altitudes that is of more than **30** minutes duration;
 		- (2) At cabin pressure altitudes above **14,000 feet (MSL)** unless the required minimum flight crew is provided with and uses supplemental oxygen during the entire flight time at those altitudes; and
-		- (3) At cabin pressure altitudes above **15,000 feet (MSL)** unless each occupant of the aircraft is provided with supplemental oxygen
+		- (3) At cabin pressure altitudes above **15,000 feet (MSL)** ~unless each occupant of the aircraft is provided with supplemental oxygen~
 - *Read more at [AIM 8-1-2](https://faraim.org/faa/aim/chapter-8/section-8-1-2.html*
 
 ### Seat Belts & Safety Harnesses
 - *Q: WHEN DO YOU NEED TO WEAR SEAT BELT*
-- ***§ 91.105 Flight CREWMEMEBERS at stations.***
-	- (a) During ==takeoff and landing, and while en route==, each required flight _**ertificates: Requirement and**_crewmember shall—
+- ***§ 91.105 Flight ==CREWMEMEBERS== at stations.***
+	- (a) During ==takeoff and landing, and while en route==, each required flight crewmember shall—
 		- (1) Be at the crewmember station unless the absence is necessary to perform duties in connection with the operation of the aircraft or in connection with physiological needs; and
-		- (2) Keep the safety belt fastened while at the crewmember station.
-	- (b) Each required flight crewmember of a U.S.-registered civil aircraft shall, during takeoff and landing, keep his or her shoulder harness fastened while at his or her assigned duty station. This paragraph does not apply if—
+		- (2) ==Keep the ~safety belt~ fastened while at the crewmember station.==
+	- (b) Each required flight crewmember of a U.S.-registered civil aircraft shall, during ==takeoff and landing==, keep his or her ==**shoulder harness**== fastened while at his or her assigned duty station. This paragraph does not apply if—
 		- (1) The seat at the crewmember's station is not equipped with a shoulder harness; or
 		- (2) The crewmember would be unable to perform required duties with the shoulder harness fastened.
 - ***§ 91.107 Use of safety belts, shoulder harnesses, and child restraint systems.***
@@ -552,3 +559,14 @@ Except incidental, pro rata, search and location operations, charitable or non-p
 		- (2) An authorized representative of the National Transportation Safety Board;
 		- (3) ==Any Federal, State, or local law enforcement officer==; or
 		- (4) An authorized representative of the Transportation Security Administration.
+
+### ⭐️ IFR Minimums
+- ***§ 135.223 ==IFR==: Alternate airport requirements.***
+	- (a) Except as provided in [paragraph (b)](https://www.ecfr.gov/current/title-14/section-135.223#p-135.223\(b\)) of this section, no person may operate an aircraft in ==IFR== conditions unless it carries enough ==fuel== (considering weather reports or forecasts or any combination of them) to—
+		- (1) Complete the flight to the first airport of intended landing;
+		- (2) Fly from that airport to the alternate airport; and
+		- (3) ==Fly after that for **45** minutes at **normal cruising speed**== or, for helicopters, fly after that for 30 minutes at normal cruising speed.
+	- (b) [Paragraph (a)(2)](https://www.ecfr.gov/current/title-14/section-135.223#p-135.223\(a\)\(2\)) of this section does not apply if [part 97 of this chapter](https://www.ecfr.gov/current/title-14/part-97) prescribes a standard instrument approach procedure for the first airport of intended landing and, for ==at least **1 hour** before and after the estimated time of arrival, the appropriate weather reports or forecasts==, or any combination of them, indicate that—
+		- (1) The ceiling will be ~at least 1,500 feet above the lowest circling approach MDA~; or
+		- (2) If a circling instrument approach is not authorized for the airport, the ceiling will be at least 1,500 feet above the ==lowest published minimum or **2,000 feet** above the airport elevation==, whichever is higher; and
+		- (3) ==Visibility for that airport is forecast to be at least **3 miles**==, or ~two miles more than the lowest applicable visibility minimums, whichever is the greater~, for the instrument approach procedure to be used at the destination airport.

@@ -315,3 +315,17 @@ Before entering or crossing any runway, ensure **landing, taxi, position, and st
 ![](/images/hsi.png "")
 {{< /details >}}
 
+
+## DME
+- UHF band from **960 MHz to 1215 MHz**
+- The frequency cannot be selected in the aircraft but would automatically paired to certain VHF frequencies.
+- The signal comes **from** the aircraft {{< tip "DME: AC→Station; XPDR: Station→AC" >}}
+- The receiver receives the signal and responds, after a delay of 50 µs, with the frequency difference of 63 MHz.
+- DME Mode:
+	- **Search** Mode: If synchronisation has not been achieved *after 15,000 pulses*, the interrogator reduces frequency *down to 60 pulses per second.*
+	- **Tracking** Mode: If synced, DME is now reliable.
+	- **Memory** Mode: Tracking is impossible for 10~15 second, DME reverts to Memory Mode showing the last know distance. After that, the distance indication is removed and a warning flag appears.
+- VOR *(lower tone)* and DME *(higher tone)* has the same identification. 
+	- Transmission pattern: VOR (1,020 Hz) x3 and DME (1,350 Hz) x1
+- Range of DME is limited by line of sight. *Range(nm) = 1.23 ⋅\(\sqrt{\text{Station Elev.} (ft)}\)⋅\(\sqrt{\text{Aircraft ALT} (ft)}\)*
+- Range displayed on the DME is **Slant Range (nm)**. The most difference between slant range and actual distance is when **High cruising altitude** and **approaching the DME station**.

@@ -1,137 +1,107 @@
-/* Global font change*/
+/* ================================================================
+   1. GLOBAL DEFAULTS
+   ================================================================ */
+
+/* --- Font --- */
 .content {
   font-family: 'IBM Plex Serif', serif;
 }
 
-/* =====================
-   LIGHT MODE — Catppuccin Latte
-   ===================== */
-
+/* --- Light Mode (Catppuccin Latte) --- */
 body {
   background-color: #eff1f5;
   color: #4c4f69;
 }
-
 h1,
 h2,
 h3,
 h4 {
   color: #fe640b; /* Peach */
 }
-
 strong {
   color: #d20f39; /* Red */
   font-weight: 600;
 }
-
 em {
   color: #8839ef; /* Mauve */
   font-style: italic;
 }
-
 a:not([class*="bg-primary"]) {
   color: #1e66f5; /* Blue */
 }
-
 a:not([class*="bg-primary"]):hover {
   color: #04a5e5; /* Sky */
 }
-
 code {
   background-color: #e6e9ef;
   color: #4c4f69;
 }
 
-/* =====================
-   DARK MODE — Rosé Pine
-   ===================== */
-
+/* --- Dark Mode (Rosé Pine) --- */
 .dark body {
   background-color: #191724;
   color: #e0def4;
 }
-
 .dark h1,
 .dark h2,
 .dark h3,
 .dark h4 {
   color: #f6c177; /* Gold */
 }
-
 .dark strong {
   color: #eb6f92; /* Rose */
   font-weight: 600;
 }
-
 .dark em {
   color: #c4a7e7; /* Iris */
   font-style: italic;
 }
-
 .dark a:not([class*="bg-primary"]) {
   color: #9ccfd8; /* Foam */
 }
-
 .dark a:not([class*="bg-primary"]):hover {
   color: #ebbcba; /* Rose light */
 }
-
 .dark code {
   background-color: #26233a;
   color: #e0def4;
 }
 
-/* =====================
-   Cards — Light Mode
-   ===================== */
-
+/* --- Cards --- */
 .hextra-card {
   background-color: #ffffff !important;
   border-color: #ccd0da !important;
 }
-
 .hextra-card:hover {
   background-color: #e7f6ff !important;
   border-color: #bcc0cc !important;
 }
-
-/* =====================
-   Cards — Dark Mode
-   ===================== */
-
 .dark .hextra-card {
   background-color: #26233f !important;
   border-color: #403d52 !important;
 }
-
 .dark .hextra-card:hover {
   background-color: #2a2740 !important;
   border-color: #524f67 !important;
 }
 
-/* =====================
-   Fix hardcoded white boxes
-   (sidebar theme toggle + TOC edit footer)
-   ===================== */
-
+/* --- Fix hardcoded white boxes (sidebar theme toggle + TOC edit footer) --- */
 [class*="shadow-[0_-12px_16px_#fff]"],
 [class*="shadow-[0_-12px_16px_white]"] {
   background-color: #eff1f5 !important;
   box-shadow: 0 -12px 16px #eff1f5 !important;
 }
-
 .dark [class*="shadow-[0_-12px_16px_#fff]"],
 .dark [class*="shadow-[0_-12px_16px_white]"] {
   background-color: #191724 !important;
   box-shadow: 0 -12px 16px #191724 !important;
 }
-
 .dark [class*="shadow-[0_-12px_16px_#111]"] {
   background-color: #191724 !important;
   box-shadow: 0 -12px 16px #191724 !important;
 }
 
-/* Latex */
+/* --- LaTeX (KaTeX) --- */
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
@@ -146,7 +116,12 @@ code {
   padding: 3px 2px 1px;
 }
 
-/* TOC */
+
+/* ================================================================
+   2. TOC FIX
+   ================================================================ */
+
+/* --- Base structure (border, spacing, font-size) --- */
 aside[class*="sidebar"] nav#TableOfContents {
   font-size: 0.875rem;
   border-left: 2px solid #e2e8f0;
@@ -157,137 +132,55 @@ aside[class*="sidebar"] nav#TableOfContents {
   border-left-color: #404040;
 }
 
-mark {
-  background-color: #fff59d;
-  color: inherit;
-  padding: 0.05em 0.2em;
-  border-radius: 2px;
+/* --- Heading-level styling (Size-Based, H2 Distinct) — Light Mode --- */
+/* H2 (base/top-level TOC entries): slightly larger + distinct color */
+[class*="hextra-toc"] ul li a {
+  font-size: calc(1em + 1px) !important;
+  color: #1e66f5 !important; /* Full Blue */
 }
-mark:is(html[class~="dark"] *) {
-  background-color: #a68b00;
-  color: #fff;
+/* H3–H6: original size, single shared color (no per-level fading) */
+[class*="hextra-toc"] ul li a[class*="pl-4"],
+[class*="hextra-toc"] ul li a[class*="pl-8"],
+[class*="hextra-toc"] ul li a[class*="pl-12"],
+[class*="hextra-toc"] ul li a[class*="pl-16"] {
+  font-size: 1em !important;
+  color: #3b7cf6 !important; /* Softer blue, same for all sub-levels */
 }
-
-td li {
-  margin: 3px 0 !important;
-  margin-block: 3px !important;
-  margin-block-start: 3px !important;
-  margin-block-end: 3px !important;
-}
-
-/* blockquote */
-blockquote {
-  margin-top: 0px !important;
-  margin-bottom: 1rem !important;
+/* Active Highlight Indicator State */
+[class*="hextra-toc"] ul li a.hextra-toc-active {
+  font-weight: 700 !important;
+  color: orangered !important;
 }
 
-
-/* =====================
-   Fix oversized list spacing in content
-   ===================== */
-
-article :where(ol, ul) {
-  margin-top: 0 !important;
-  margin-bottom: 0.5rem !important;
-  /*margin-left: 1.25rem !important;*/
+/* --- Heading-level styling (Size-Based, H2 Distinct) — Dark Mode --- */
+.dark [class*="hextra-toc"] ul li a {
+  font-size: calc(1em + 1px) !important;
+  color: #9ccfd8 !important; /* Full Foam */
+}
+.dark [class*="hextra-toc"] ul li a[class*="pl-4"],
+.dark [class*="hextra-toc"] ul li a[class*="pl-8"],
+.dark [class*="hextra-toc"] ul li a[class*="pl-12"],
+.dark [class*="hextra-toc"] ul li a[class*="pl-16"] {
+  font-size: 1em !important;
+  color: #b0dae1 !important; /* Lighter Foam, same for all sub-levels */
+}
+.dark [class*="hextra-toc"] ul li a.hextra-toc-active {
+  font-weight: 700 !important;
+  color: #eb6f92 !important;
 }
 
-/* nested lists get even tighter spacing */
-article :where(ol, ul) :where(ol, ul) {
-  margin-top: 0 !important;
-  margin-bottom: 0.15rem !important;
+/* --- Layout position (move TOC to the left side of article row) --- */
+article.hx\:mx-auto {
+  display: flex;
 }
-
-article li {
-  margin-top: 0.15rem !important;
-  margin-bottom: 0.15rem !important;
-  line-height: 1.6 !important;
+.hextra-toc {
+  order: -1;
 }
-
-/* if a list item wraps its text in a <p>, kill that extra paragraph spacing */
-article li > p {
-  margin: 0 !important;
-}
-
-
-/* =====================
-   Fix figure/img spacing in content
-   ===================== */
-
-article figure {
-  margin: 0.75rem 0 !important;
-}
-
-article figure img,
-article > img,
-article p img {
-  margin-bottom: 0.25rem !important;
-  display: block;
-}
-
-article figcaption {
-  margin-top: 0 !important;
-  text-align: center;
-}
-
-/* =====================
-   Header — shrink height + collapse on scroll
-   ===================== */
-
-.hextra-nav-container {
-  overflow: hidden;
-  max-height: 3.5rem; /* enough to fit the 3rem nav + shadow */
-  transition: max-height 0.25s ease-in-out;
-}
-
-.hextra-nav-container nav {
-  height: 3rem !important;
-}
-
-.hextra-nav-container img {
-  height: 16px !important;
-  width: 16px !important;
-}
-
-.hextra-nav-container .hextra-search-input {
-  padding-top: 0.35rem !important;
-  padding-bottom: 0.35rem !important;
-}
-
-/* collapse the header's actual box height, so everything below moves up */
-.hextra-nav-container.hx-nav-hidden {
-  max-height: 0;
-}
-
-/* =====================
-   Shift sidebar / TOC / heading-pin up when nav is collapsed
-   ===================== */
-
-.hextra-sidebar-container,
-.hextra-toc .hextra-scrollbar {
-  transition: top 0.25s ease-in-out;
-}
-
-body.hx-nav-collapsed .hextra-sidebar-container {
-  top: 0 !important;
-}
-
-body.hx-nav-collapsed .hextra-toc .hextra-scrollbar {
-  top: 0 !important;
-}
-
-body.hx-nav-collapsed #hx-heading-pin {
-  top: 0 !important;
-}
-
-/* =====================
-   Sidebar: fully removed, replaced by header nav
-   ===================== */
-.hextra-sidebar-container {
+/* Collapse the TOC column entirely when it has no items */
+.hextra-toc:empty {
   display: none !important;
 }
-
-/* TOC stays as before — visible down to md (768px) */
+/* Visible down to md (768px) */
 @media (max-width: 767px) {
   .hextra-toc {
     display: none !important;
@@ -299,9 +192,181 @@ body.hx-nav-collapsed #hx-heading-pin {
   }
 }
 
-/* =====================
-   Header topic nav
-   ===================== */
+
+/* ================================================================
+   3. CONTENT FIX
+   ================================================================ */
+
+/* Table margin fix*/
+table { margin-bottom: 5px !important; }
+
+/* --- Highlight / mark --- */
+mark {
+  background-color: #fff59d;
+  color: inherit;
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+mark:is(html[class~="dark"] *) {
+  background-color: #a68b00;
+  color: #fff;
+}
+
+/* --- Table list spacing --- */
+td li {
+  margin: 3px 0 !important;
+  margin-block: 3px !important;
+  margin-block-start: 3px !important;
+  margin-block-end: 3px !important;
+}
+
+/* --- Blockquote: base spacing --- */
+blockquote {
+  margin-top: 0px !important;
+  margin-bottom: 1rem !important;
+}
+
+/* --- Fix oversized list spacing --- */
+article :where(ol, ul) {
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem !important;
+  /*margin-left: 1.25rem !important;*/
+}
+/* nested lists get even tighter spacing */
+article :where(ol, ul) :where(ol, ul) {
+  margin-top: 0 !important;
+  margin-bottom: 0.15rem !important;
+}
+article li {
+  margin-top: 0.15rem !important;
+  margin-bottom: 0.15rem !important;
+  line-height: 1.6 !important;
+}
+/* if a list item wraps its text in a <p>, kill that extra paragraph spacing */
+article li > p {
+  margin: 0 !important;
+}
+
+/* --- Fix figure/img spacing --- */
+article figure {
+  margin: 0.75rem 0 !important;
+}
+article figure img,
+article > img,
+article p img {
+  margin-bottom: 0.25rem !important;
+  display: block;
+}
+article figcaption {
+  margin-top: 0 !important;
+  text-align: center;
+}
+
+/* --- Subtle definition blockquotes (offset bar to the right) --- */
+body article main blockquote {
+  margin-top: 10px !important;
+  background-color: transparent !important;
+  /* Shifts the BAR right */
+  margin-left: calc(var(--hx-spacing) * 4) !important;
+  padding-left: calc(var(--hx-spacing) * 2) !important;
+}
+/* Clear native overrides directly off the nested paragraph elements */
+body article main blockquote p {
+  margin-top: 0 !important;
+  line-height: 1.5 !important;
+  /* Strip all native layout side padding/margins from the text row */
+  padding-left: 10px !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* Light Mode — Catppuccin Latte Color Mapping */
+body article main blockquote {
+  border-left-color: rgba(254, 100, 11, 0.4) !important;
+}
+body article main blockquote p {
+  color: #4c4f69 !important;
+  background-color: rgba(254, 100, 11, 0.05) !important; /* Soft Peach tint */
+}
+/* Dark Mode — Rosé Pine Color Mapping */
+.dark body article main blockquote {
+  background-color: rgba(246, 193, 119, 0.05) !important; /* Soft Gold tint */
+  border-left-color: rgba(246, 193, 119, 0.35) !important;
+}
+.dark body article main blockquote p {
+  color: #e0def4 !important;
+}
+
+/* --- Heading + paragraph / figure spacing tweaks --- */
+/* Reduce paragraph top spacing ONLY when it sits directly under a heading */
+body article main :is(h1, h2, h3, h4, h5, h6) + p {
+  margin-top: calc(var(--hx-spacing) * 2) !important;
+}
+/* Strip the bottom margin directly off the image inside the figure */
+body div article main figure img {
+  margin-block: calc(var(--hx-spacing) * 4) 0px !important;
+  margin-bottom: 0px !important;
+}
+figcaption {
+  font-style: italic;
+  margin-top: 5px !important;
+}
+
+/* --- Strikethrough / del underline style --- */
+del, s {
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+}
+
+
+/* ================================================================
+   4. AUTOHIDE / HEADER NAV
+   ================================================================ */
+
+/* --- Header: shrink height + collapse on scroll --- */
+.hextra-nav-container {
+  overflow: hidden;
+  max-height: 3.5rem; /* enough to fit the 3rem nav + shadow */
+  transition: max-height 0.25s ease-in-out;
+}
+.hextra-nav-container nav {
+  height: 3rem !important;
+}
+.hextra-nav-container img {
+  height: 16px !important;
+  width: 16px !important;
+}
+.hextra-nav-container .hextra-search-input {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+/* collapse the header's actual box height, so everything below moves up */
+.hextra-nav-container.hx-nav-hidden {
+  max-height: 0;
+}
+
+/* --- Shift sidebar / TOC / heading-pin up when nav is collapsed --- */
+.hextra-sidebar-container,
+.hextra-toc .hextra-scrollbar {
+  transition: top 0.25s ease-in-out;
+}
+body.hx-nav-collapsed .hextra-sidebar-container {
+  top: 0 !important;
+}
+body.hx-nav-collapsed .hextra-toc .hextra-scrollbar {
+  top: 0 !important;
+}
+body.hx-nav-collapsed #hx-heading-pin {
+  top: 0 !important;
+}
+
+/* --- Sidebar: fully removed, replaced by header nav --- */
+.hextra-sidebar-container {
+  display: none !important;
+}
+
+/* --- Header topic nav --- */
 #header-topic-nav {
   display: flex;
   align-items: center;
@@ -311,11 +376,9 @@ body.hx-nav-collapsed #hx-heading-pin {
   white-space: nowrap;
   margin-right: 1rem;
 }
-
 #header-topic-nav::-webkit-scrollbar {
   display: none;
 }
-
 #header-topic-nav a {
   font-size: 0.875rem;
   font-weight: 500;
@@ -324,37 +387,22 @@ body.hx-nav-collapsed #hx-heading-pin {
   white-space: nowrap;
   transition: color 0.15s ease;
 }
-
 #header-topic-nav a:hover {
   color: #1e293b;
 }
-
 #header-topic-nav a.active {
   color: #1e66f5;
   font-weight: 700;
 }
-
 .dark #header-topic-nav a {
   color: #a1a1aa;
 }
-
 .dark #header-topic-nav a:hover {
   color: #f4f4f5;
 }
-
 .dark #header-topic-nav a.active {
   color: #9ccfd8;
 }
-
-/* Move TOC to the left side of the article row */
-article.hx\:mx-auto {
-  display: flex;
-}
-
-.hextra-toc {
-  order: -1;
-}
-
 #header-topic-divider {
   width: 1px;
   height: 1.5rem;
@@ -362,12 +410,6 @@ article.hx\:mx-auto {
   margin-right: 1rem;
   flex-shrink: 0;
 }
-
 .dark #header-topic-divider {
   background-color: #404040;
-}
-
-/* Collapse the TOC column entirely when it has no items */
-.hextra-toc:empty {
-  display: none !important;
 }

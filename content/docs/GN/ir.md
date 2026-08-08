@@ -7,6 +7,11 @@ cssclasses:
 ## Primary/Support Methods
 ![](/images/psmethod.png "")
 
+
+## ⭐️ IFR Altitudes
+![IFR Altitudes](/images/ifralt.png "IFR Altitudes")
+
+
 ## ATC Services
 ### ADS-B
 - Name**Automatic Dependent Surveillance Broadcast**
@@ -28,7 +33,7 @@ cssclasses:
 {{< callout type="info">}}
 **JOHNNY VIP: Pilot Responsibilities**
 1. Know the **requirements** for IFR Flights
-2. Know wen an IFR clearance is required
+2. Know when an IFR clearance is required
 3. May not act as PIC of IFR unless instrument rating
 4. Aircraft must meet equipment and inspection requirements of FAR 91
 5. File IFR flight plan under VFR minimums before departure or prior to entering controlled airspace
@@ -219,11 +224,29 @@ Items to report: **Identification,  Position, Time, Altitude, ETA over next repo
 ![](/images/simapr.png "")
 
 
-## Terminology
-### Altitudes
-![](/images/ifralt.png "")
+## Aviation Weather
 
-### Others
+
+
+![VFR, MVFR, IFR, LFIR](/images/vfrmvfrifrlifr.png "VFR, MVFR, IFR, LFIR")
+
+### Winds and Temperatures Aloft Forecast (FD)
+![](/images/weatheraloft.png "")
+
+- A winds and temperatures aloft forecast (FD) provides an estimate of wind direction in relation to **true north**, wind speed in knots, and the temperature in degrees Celsius for selected altitudes. Depending on the station elevation, winds and temperatures are usually forecast for nine levels between 3,000 and 39,000 feet. 
+- Wind speeds between 100 and 199 knots are encoded so direction and speed can be represented by four digits. This is done by adding 50 to the two-digit wind direction and subtracting 100 from the velocity. 
+	- e.g. `730540` indicates **Wind 230 at 105 knots with -40°C**
+- A code of 9900 indicates **light and variable winds** (less than five knots).
+
+### AIRMETs and SIGMETs
+| Type                       | Valid | Covers                                                                                                                                           |
+|:-------------------------- |:-----:|:------------------------------------------------------------------------------------------------------------------------------------------------ |
+| AIRMET<br>(WA)             | 6 hr  | **S**ierra → IFR / obscured visibility<br>**T**ango → Turbulence / sustained wind >30 kt<br>**Z**ulu → Icing                                     |
+| SIGMET<br>(WS)             | 4 hr  | Severe icing<br>Severe/extreme turbulence or CAT<br>Dust/sandstorm visibility <3 SM<br>Volcanic ash                                              |
+| Convective SIGMET<br>(WST) | 2 hr  | **Severe or greater turbulence, turbulence, icing**<br>Tornadoes<br>Lines of thunderstorms<br>Hail ≥ 3/4 in diameter<br>Wind gusts ≥ 50 kt | 
+
+## Other Terminologies
+
 | Term                                         | Description & Requirements                                                                                                                                                                                                                                                                                                                                                                        |
 |:-------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Departure End of Runway (DER)                | The physical end of the runway opposite the landing threshold used for an aircraft's takeoff.                                                                                                                                                                                                                                                                                                     |

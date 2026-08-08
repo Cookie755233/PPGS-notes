@@ -4,6 +4,14 @@ set-special-rule: true
 weight: 2
 ---
 
+
+## Quizzes
+1. [Quiz 1](/quizzes/FAR_AIM_Test_Sheet_50Q.html) - [*Answer*](/quizzes/FAR_AIM_Test_Sheet_50Q_Answers.html)
+2. [Quiz 2](/quizzes/FAR_AIM_MOCK_2.html) - [*Answer*](/quizzes/FAR_AIM_MOCK_2_Answers.html)
+3. [Quiz 3](/quizzes/FAR_AIM_MOCK_3.html) - [*Answer*](/quizzes/FAR_AIM_MOCK_3_Answers.html)
+
+
+
 ## Student Pilots
 
 - *Q1: WHAT ARE THE WEATHER AND OPERATING LIMITATIONS FOR A STUDENT PILOT?*

@@ -1,27 +1,36 @@
 <!-- Collapsible Header -->
-{{ if .Params.use_collapsible }}
-  {{ partial "collapsable-header.html" . }}
+{{ if .Params.collapsible }}
+  {{ partial "custom/collapsable-header.html" . }}
 {{ end }}
+
 
 <!-- Special rule (basically "truncate list") (FAR/AIM) -->
-{{ if index .Page.Params "set-special-rule" }}
-<style>
-  {{ readFile "layouts/_partials/custom/special-rule.css" | safeCSS }}
-</style>
-<script>
-  {{ readFile "layouts/_partials/custom/special-rule.js" | safeJS }}
-</script>
+{{ if index .Page.Params "special-list" }}
+
+  {{ with resources.Get "css/special-list.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
+  {{ with resources.Get "js/special-list.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{ end }}
+
 {{ end }}
 
-<!-- Sticky list (should be "show current section") but whatever-->
-{{ if index .Page.Params "sticky-list" }}
-<style>
-  {{ readFile "layouts/_partials/custom/sticky-list.css" | safeCSS }}
-</style>
-<script>
-  {{ readFile "layouts/_partials/custom/sticky-list.js" | safeJS }}
-</script>
+
+<!-- Sticky list (should be "show current section") but whatever -->
+{{ if index .Page.Params "show-curr-sect" }}
+
+  {{ with resources.Get "css/sticky-list.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
+  {{ with resources.Get "js/sticky-list.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{ end }}
+
 {{ end }}
+
 
 <!-- Hide TOC -->
 {{ if .Params.hide_toc }}
@@ -32,18 +41,24 @@
 </style>
 {{ end }}
 
-<!-- Custom chatbox format (COMM)-->
+
+<!-- Custom chatbox format (COMM) -->
 {{ if index .Page.Params "chat_radio" }}
-<style>
-  {{ readFile "layouts/_partials/custom/chat-radio.css" | safeCSS }}
-</style>
-<script>
-  {{ readFile "layouts/_partials/custom/chat-radio.js" | safeJS }}
-</script>
-<script>
-  document.documentElement.classList.add("chat-radio-page");
-</script>
+
+  {{ with resources.Get "css/chat-radio.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+
+  {{ with resources.Get "js/chat-radio.js" }}
+    <script src="{{ .RelPermalink }}"></script>
+  {{ end }}
+
+  <script>
+    document.documentElement.classList.add("chat-radio-page");
+  </script>
+
 {{ end }}
+
 
 <!--
 ////////////////////
@@ -51,45 +66,58 @@
 ////////////////////
 -->
 
+
+<!-- Font: IBM Plex Serif -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-<style>
-  {{ readFile "layouts/_partials/custom/tooltip.css" | safeCSS }}
-</style>
 
-<script>
-  {{ readFile "layouts/_partials/custom/table-list.js" | safeJS }}
-</script>
+<!-- Tooltip -->
+{{ with resources.Get "css/tooltip.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
+
+
+<!-- Table List -->
+{{ with resources.Get "js/table-list.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
 
 <!-- Quiz Mode -->
-<style>
-  {{ readFile "layouts/_partials/custom/quiz-mode.css" | safeCSS }}
-</style>
-<script>
-  {{ readFile "layouts/_partials/custom/quiz-mode.js" | safeJS }}
-</script>
+{{ with resources.Get "css/quiz-mode.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
+
+{{ with resources.Get "js/quiz-mode.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
 
 <!-- Sticky Header -->
-<style>
-  {{ readFile "layouts/_partials/custom/sticky-header.css" | safeCSS }}
-</style>
-<script>
-  {{ readFile "layouts/_partials/custom/sticky-header.js" | safeJS }}
-</script>
+{{ with resources.Get "css/sticky-header.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
+
+{{ with resources.Get "js/sticky-header.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
 
 <!-- Auto Shrink Header -->
-<script>
-  {{ readFile "layouts/_partials/custom/auto-shrink-header.js" | safeJS }}
-</script>
+{{ with resources.Get "js/auto-shrink-header.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
 
 <!-- Footer fix -->
-<script>
-  {{ readFile "layouts/_partials/custom/footer-fix.js" | safeJS }}
-</script>
+{{ with resources.Get "js/footer-fix.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
 
 <!-- Header topic navigation -->
-<script>
-  {{ readFile "layouts/_partials/custom/header-nav.js" | safeJS }}
-</script>
+{{ with resources.Get "js/header-nav.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{ end }}
